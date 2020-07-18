@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/bluepower/vui-vc-next/issues"
   },
-  "homepage": "https://github.com/bluepower/vui-vc-next/tree/master/#readme",
+  "homepage": "https://github.com/bluepower/vui-vc-next/blob/dev/README.md",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
