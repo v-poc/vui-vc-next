@@ -1,10 +1,12 @@
-# @vui/vc-next
+# vui-vc-next
 
 ## Mobile/Tablet UI components based on Vue 3 and Vite
 
 ### Status
 
-In early stage experimental status. Currently JavaScript version only, will provide TypeScript version later.
+- In early stage experimental status.
+- Currently JavaScript version only, will provide TypeScript version later.
+- About project test, will provide unit and e2e test later.
 
 ## Project setup
 ```
