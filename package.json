@@ -1,0 +1,30 @@
+{
+  "name": "@vui/vc-next",
+  "version": "0.0.1",
+  "description": "Mobile/Tablet UI components based on Vue 3 and Vite",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluepower/vui-vc-next.git"
+  },
+  "author": "Niko Ni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bluepower/vui-vc-next/issues"
+  },
+  "homepage": "https://github.com/bluepower/vui-vc-next/tree/master/#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },  
+  "dependencies": {
+    "vue": "^3.0.0-rc.1",
+    "vue-router": "^4.0.0-beta.2"
+  },
+  "devDependencies": {
+    "vite": "^1.0.0-rc.1",
+    "@vue/compiler-sfc": "^3.0.0-rc.1"
+  }
+}
