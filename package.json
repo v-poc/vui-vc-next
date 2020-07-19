@@ -1,6 +1,6 @@
 {
   "name": "vui-vc-next",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Mobile/Tablet UI components based on Vue 3 and Vite",
   "repository": {
     "type": "git",
@@ -14,9 +14,9 @@
   "homepage": "https://github.com/bluepower/vui-vc-next/blob/dev/README.md",
   "scripts": {
     "dev": "vite",
-    "dev:docs": "cd docs && npm i -D vitepress && npx vitepress",
+    "dev:docs": "cd docs && npx vitepress",
     "build": "vite build",
-    "build:docs": "cd docs && npm i -D vitepress && npx vitepress build"
+    "build:docs": "cd docs && npx vitepress build"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0-rc.1",

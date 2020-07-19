@@ -21,7 +21,7 @@ import { defineComponent, computed } from 'vue'
 import { SKELETON_WIDTH } from '../../constants/index'
 
 export default defineComponent({
-  name: 'm-skeleton',
+  name: 'v-skeleton',
 
   props: {
     // Whether display the skeleton placeholders loading

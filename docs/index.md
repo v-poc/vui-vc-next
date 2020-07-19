@@ -7,3 +7,4 @@ sidebar: auto
 ## Reference
 
 - [`Skeleton`](./skeleton.html)
+- [`Tag`](./tag.html)
