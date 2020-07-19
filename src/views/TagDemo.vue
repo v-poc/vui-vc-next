@@ -2,7 +2,7 @@
   <div id="app">
     <router-link to="/" class="m-back">&lt; Home</router-link>
     <div class="m-example">
-      <p>Tag Share - Circle</p>
+      <p>Tag Shape - Circle</p>
       <v-tag type="fill" size="tiny" shape="circle" fill-color="#FC5353">100</v-tag>
       <v-tag type="fill" size="small" shape="circle" fill-color="#36C" font-color="#FFF">promotion</v-tag>
       <v-tag type="ghost" size="small" shape="circle">10%</v-tag>

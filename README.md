@@ -1,6 +1,6 @@
 # vui-vc-next
 
-## Mobile/Tablet UI components based on Vue 3 and Vite
+## Mobile web UI components based on Vue 3 and Vite
 
 ### Status
 
@@ -25,7 +25,7 @@ npm run build
 
 ### Customize configuration
 
-About vite, please check [Configuration Reference](https://github.com/vitejs/vite).
+About vite and vitepress, please check Configuration Reference - [vite](https://github.com/vitejs/vite), [vitepress](https://github.com/vuejs/vitepress).
 
 ## License
 
