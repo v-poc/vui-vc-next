@@ -28,10 +28,14 @@ export default defineComponent({
 
 .nav-wrapper p {
   padding: 0.2rem 0;
+  font-size: 0.3rem;
 }
 
-.nav-wrapper p.title {
+.nav-wrapper .title {
+  margin-right: 0.2rem;
   text-transform: uppercase;
+  font-size: 0.5rem;
+  font-weight: bold;
 }
 
 .nav-wrapper ul {

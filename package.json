@@ -14,19 +14,20 @@
   "homepage": "https://github.com/bluepower/vui-vc-next/blob/dev/README.md",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "dev:docs": "cd docs && npm i -D vitepress && npx vitepress",
+    "build": "vite build",
+    "build:docs": "cd docs && npm i -D vitepress && npx vitepress build"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-rc.1",
+    "vite": "^1.0.0-rc.1",
+    "vitepress": "^0.4.1",
     "vue": "^3.0.0-rc.1",
     "vue-router": "^4.0.0-beta.2"
   },
-  "devDependencies": {
-    "vite": "^1.0.0-rc.1",
-    "@vue/compiler-sfc": "^3.0.0-rc.1"
-  },
   "engines": {
     "node": ">=10.0.0"
-  },    
+  },
   "browserslist": [
     "iOS >= 8",
     "Android > 4.0"

@@ -1,27 +1,36 @@
 <template>
-  <router-link to="/" class="m-back">Home</router-link>
+  <router-link to="/" class="m-back">&lt; Home</router-link>
   <div class="m-example">
     <p>Skeleton Content loading</p>
     <p>
-      <button @click="startContentLoading" :disabled="state.contentLoading">Test Content loading (delay 3s)</button>
+      <button
+        @click="startContentLoading"
+        :disabled="state.contentLoading"
+      >Test Content loading (delay 3s)</button>
     </p>
-    <m-skeleton v-if="state.showContent" title :row="6" :loading="state.contentLoading">
+    <v-skeleton
+      v-if="state.showContent"
+      title
+      title-width="80%"
+      :row="7"
+      :loading="state.contentLoading"
+    >
       <img src="../assets/images/kongfu.gif" />
-    </m-skeleton>
+    </v-skeleton>
   </div>
   <div class="m-example">
     <p>Skeleton Title placeholders</p>
-    <m-skeleton title></m-skeleton>
+    <v-skeleton title></v-skeleton>
   </div>
   <div class="m-example">
     <p>Skeleton Avatar placeholders</p>
-    <m-skeleton title avatar></m-skeleton>
+    <v-skeleton title avatar avatar-size="lg"></v-skeleton>
   </div>
 </template>
 
 <script>
 import { defineComponent, reactive } from 'vue'
-import MSkeleton from '../components/skeleton/index.vue'
+import VSkeleton from '../components/skeleton/index.vue'
 
 export default defineComponent({
   name: 'skeleton-demo',
@@ -29,7 +38,7 @@ export default defineComponent({
   inheritAttrs: false,
 
   components: {
-    MSkeleton
+    VSkeleton
   },
 
   setup() {
@@ -61,6 +70,8 @@ export default defineComponent({
 .m-back {
   display: block;
   margin: 0.2rem;
+  font-size: 0.3rem;
+  text-decoration: none;
 }
 
 .m-example {
