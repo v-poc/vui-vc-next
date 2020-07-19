@@ -44,25 +44,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.m-back {
-  display: block;
-  margin: 0.2rem;
-  font-size: 0.3rem;
-  text-decoration: none;
-}
-
-.m-example {
-  margin: 0.2rem;
-  padding-bottom: 0.4rem;
-  font-size: 0.4rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.m-example p {
-  padding-bottom: 0.2rem;
-}
-
-.m-example .m-tag {
-  margin-right: 0.5rem;
-}
+@import '../assets/styles/example.css';
 </style>

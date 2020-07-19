@@ -4,7 +4,7 @@
 
 ### Status
 
-- In early stage experimental status.
+- In early stage experimental status. Copy components manually for any usage.
 - Currently JavaScript version only, will provide TypeScript version later.
 - About project test, will provide unit and e2e test later.
 
