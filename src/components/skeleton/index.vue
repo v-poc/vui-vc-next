@@ -127,5 +127,57 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss">
+@mixin placeHolder() {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #f3f3f6 8%, #f8faff 18%, #f3f3f6 33%);
+  background-size: 10rem 1.04rem;
+}
+.m-skeleton {
+  box-sizing: border-box;
+  display: flex;
+  .m-skeleton-avatar {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.32rem;
+    border-radius: 50%;
+    @include placeHolder();
+    &.m-skeleton-avatar-large {
+      width: 0.96rem;
+      height: 0.96rem;
+    }
+    &.m-skeleton-avatar-small {
+      width: 0.64rem;
+      height: 0.64rem;
+    }
+  }
+  .m-skeleton-content {
+    flex: 1;
+  }
+  .m-skeleton-title,
+  .m-skeleton-row {
+    box-sizing: border-box;
+    height: 0.32rem;
+    margin-bottom: 0.24rem;
+    border: 0;
+    border-radius: 0;
+    @include placeHolder();
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -4.68rem 0;
+  }
+  100% {
+    background-position: 4.68rem 0;
+  }
+}
 </style>

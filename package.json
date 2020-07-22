@@ -20,7 +20,8 @@
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0-rc.2",
-    "vite": "^1.0.0-rc.2",
+    "sass": "^1.26.10",
+    "vite": "^1.0.0-rc.3",
     "vitepress": "^0.4.1",
     "vue": "^3.0.0-rc.2",
     "vue-router": "^4.0.0-beta.3"

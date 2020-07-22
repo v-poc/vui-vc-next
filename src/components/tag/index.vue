@@ -156,5 +156,160 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss">
+$color-primary: #2F86F6;
+$font-body-normal: 0.26rem;
+$font-minor-normal: 0.2rem;
+$color-text-base: #111A34;
+$color-text-base-inverse: #FFF;
+$radius-circle: 50%;
+$tag-color: $color-primary;
+$tag-fillet-radius: 0.02rem;
+$tag-large-font-size: $font-body-normal;
+$tag-small-font-size: $font-minor-normal;
+$tag-tiny-font-size: 0.12rem;
+
+.m-tag {
+  color: $color-text-base;
+  font-size: 0.28rem;
+  text-align: center;
+  display: inline-block;
+  -webkit-user-select: none;
+  .default {
+    background: rgba(0, 0, 0, 0);
+    color: $tag-color;
+    border-color: $tag-color;
+  }
+  .shape-square {
+    padding: 0 0.12rem;
+    border-radius: 0;
+  }
+  .shape-fillet {
+    padding: 0.02rem 0.08rem;
+    border-radius: $tag-fillet-radius;
+  }
+  .shape-quarter {
+    position: relative;
+    display: flex;
+    width: 0.56rem;
+    height: 0.56rem;
+    background: transparent !important;
+    overflow: hidden;
+    .quarter-content {
+      position: relative;
+      left: 10%;
+      bottom: 10%;
+      display: flex;
+      flex: 1;
+      z-index: 2;
+      justify-content: center;
+      align-items: center;
+    }
+    .quarter-bg {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      border-radius: $radius-circle;
+    }
+    .quarter-wrap {
+      display: inline-block;
+      padding: 0.16rem 0.12rem 0.1rem 0.26rem;
+    }
+    .quarter-wrap-hidden {
+      visibility: hidden;
+      display: inline-block;
+      padding: 0.16rem 0.12rem 0.1rem 0.26rem;
+    }
+    &.size-small {
+      width: 0.4rem;
+      height: 0.4rem;
+    }
+    &.size-tiny {
+      width: 0.24rem;
+      height: 0.24rem;
+    }
+  }
+  .shape-coupon {
+    position: relative;
+    padding: 0 0.1rem;
+    background: transparent !important;
+    .coupon-container {
+      padding: 0.02rem 0;
+    }
+    .left-coupon,
+    .right-coupon {
+      position: absolute;
+      top: 0;
+      width: 0.1rem;
+      height: 100%;
+    }
+    .left-coupon {
+      left: 0;
+    }
+    .right-coupon {
+      right: 0;
+    }
+    &.size-small {
+      padding: 0 0.08rem;
+      .left-coupon,
+      .right-coupon {
+        width: 0.08rem;
+      }
+    }
+    &.size-tiny {
+      padding: 0 0.05rem;
+      .left-coupon,
+      .right-coupon {
+        width: 0.05rem;
+      }
+    }
+  }
+  .shape-bubble {
+    width: 0.5rem;
+    padding: 0.06rem 0;
+    border-radius: $radius-circle;
+    border-bottom-left-radius: 0;
+    box-sizing: border-box;
+    &.size-small {
+      width: 0.38rem;
+      padding: 0.03rem 0;
+    }
+    &.size-tiny {
+      width: 0.24rem;
+      padding: 0.02rem 0;
+    }
+  }
+  .size-large {
+    font-size: $tag-large-font-size;
+  }
+  .size-small {
+    font-size: $tag-small-font-size;
+  }
+  .size-tiny {
+    font-size: $tag-tiny-font-size;
+  }
+  .type-fill {
+    color: $color-text-base-inverse;
+    background: $tag-color;
+  }
+  .type-ghost {
+    border: 1px solid $tag-color;
+    background: rgba(0, 0, 0, 0);
+  }
+  .font-weight-normal {
+    font-weight: 400;
+  }
+  .font-weight-bold {
+    font-weight: 700;
+  }
+  .font-weight-bolder {
+    font-weight: bolder;
+  }
+  .m-icon.icon-font {
+    font-size: inherit;
+    transform: scale(1.2);
+  }
+}
 </style>
