@@ -2,8 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './routers/index'
 
-import './assets/styles/common.css'
-// import './assets/styles/vui.css'
+import './assets/styles/common.scss'
 
 createApp(App)
   .use(router)

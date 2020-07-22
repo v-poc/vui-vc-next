@@ -41,6 +41,6 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
-@import '../assets/styles/example.css';
+<style lang="scss" scoped>
+@import '../assets/styles/example.scss';
 </style>

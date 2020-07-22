@@ -1,6 +1,7 @@
 # 0.0.3 (2020-07-19)
 
-Added Tag demo.
+- Added Tag demo.
+- Added sass support.
 
 # 0.0.2 (2020-07-19)
 
