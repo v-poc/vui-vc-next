@@ -6,6 +6,7 @@ import {
 import Home from '../views/IndexDemo.vue'
 const SkeletonDemo = () => import('../views/SkeletonDemo.vue')
 const TagDemo = () => import('../views/TagDemo.vue')
+const PopupDemo = () => import('../views/PopupDemo.vue')
 
 const router = createRouter({
   history: createWebHistory(),
@@ -24,7 +25,12 @@ const router = createRouter({
       path: '/tag-demo',
       name: 'tag-demo',
       component: TagDemo
-    }    
+    },
+    {
+      path: '/popup-demo',
+      name: 'popup-demo',
+      component: PopupDemo
+    }   
   ]
 })
 

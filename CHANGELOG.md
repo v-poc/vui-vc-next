@@ -1,3 +1,7 @@
+# 0.0.4 (2020-07-24)
+
+- Added Popup demo.
+
 # 0.0.3 (2020-07-19)
 
 - Added Tag demo.

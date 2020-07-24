@@ -128,15 +128,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@mixin placeHolder() {
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-name: placeHolderShimmer;
-  animation-timing-function: linear;
-  background: linear-gradient(to right, #f3f3f6 8%, #f8faff 18%, #f3f3f6 33%);
-  background-size: 10rem 1.04rem;
-}
+@import '../../assets/styles/vui.scss';
+
 .m-skeleton {
   box-sizing: border-box;
   display: flex;
@@ -169,15 +162,6 @@ export default defineComponent({
     &:last-child {
       margin-bottom: 0;
     }
-  }
-}
-
-@keyframes placeHolderShimmer {
-  0% {
-    background-position: -4.68rem 0;
-  }
-  100% {
-    background-position: 4.68rem 0;
   }
 }
 </style>

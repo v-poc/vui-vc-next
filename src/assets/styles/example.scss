@@ -55,5 +55,54 @@
   
   .m-tag {
     margin-right: 0.5rem;
-  }  
+  }
+  
+  .m-popup.left .m-popup-box,
+  .m-popup.right .m-popup-box {
+    width: 60%;
+  }
+}
+
+.m-example-popup {
+  position: relative;
+  font-size: 28px;
+  font-weight: 500;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #FFF;
+}
+
+.m-example-popup-center {
+  padding: 50px;
+  border-radius: radius-normal;
+}
+
+.m-example-popup-top {
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  background: #4a4c5b;
+  color: #fff;
+  button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.m-example-popup-bottom {
+  width: 100%;
+  padding: 100px 0;
+  p {
+    line-height: 50px;
+  }
+}
+
+.m-example-popup-left,
+.m-example-popup-right {
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
 }

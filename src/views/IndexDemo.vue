@@ -9,6 +9,9 @@
       <li>
         <router-link to="/tag-demo">Tag</router-link>
       </li>
+      <li>
+        <router-link to="/popup-demo">Popup</router-link>
+      </li>      
     </ul>
   </div>
 </template>

@@ -8,3 +8,4 @@ sidebar: auto
 
 - [`Skeleton`](./skeleton.html)
 - [`Tag`](./tag.html)
+- [`Popup`](./popup.html)

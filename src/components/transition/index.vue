@@ -1,5 +1,11 @@
 <template>
-  <transition :name="name">
+  <transition
+    :name="name"
+    @before-enter="$_onPopupTransitionStart"
+    @before-leave="$_onPopupTransitionStart"
+    @after-enter="$_onPopupTransitionEnd"
+    @after-leave="$_onPopupTransitionEnd"
+  >
     <slot></slot>
   </transition>
 </template>
@@ -17,6 +23,23 @@ export default defineComponent({
       type: String,
       default: 'm-fade',
       required: true
+    },
+    transitionStart: {
+      type: Function,
+      default: () => {}
+    },
+    transitionEnd: {
+      type: Function,
+      default: () => {}
+    },
+  },
+
+  methods: {
+    $_onPopupTransitionStart() {
+      this.transitionStart()
+    },
+    $_onPopupTransitionEnd() {
+      this.transitionEnd()
     }
   }
 })

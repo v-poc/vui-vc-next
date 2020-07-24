@@ -157,17 +157,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-$color-primary: #2F86F6;
-$font-body-normal: 0.26rem;
-$font-minor-normal: 0.2rem;
-$color-text-base: #111A34;
-$color-text-base-inverse: #FFF;
-$radius-circle: 50%;
-$tag-color: $color-primary;
-$tag-fillet-radius: 0.02rem;
-$tag-large-font-size: $font-body-normal;
-$tag-small-font-size: $font-minor-normal;
-$tag-tiny-font-size: 0.12rem;
+@import '../../assets/styles/vui.scss';
 
 .m-tag {
   color: $color-text-base;
