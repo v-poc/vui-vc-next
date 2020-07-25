@@ -7,7 +7,7 @@
       @click="$_onPopupMaskClick"
     ></div>
     <transition
-      :name="transition"
+      :name="state.transition"
       @before-enter="$_onPopupTransitionStart"
       @before-leave="$_onPopupTransitionStart"
       @after-enter="$_onPopupTransitionEnd"
@@ -23,11 +23,14 @@
 <script>
 import { defineComponent, computed, reactive, ref, watchEffect, onMounted } from 'vue'
 import usePopupBase from '../../composables/usePopupBase'
+import useTransition from '../../composables/useTransition'
 
 export default defineComponent({
   name: 'v-popup',
 
   props: {
+    // merge base props
+    ...usePopupBase(),    
     // The position of popup
     position: {
       type: String,
@@ -36,28 +39,7 @@ export default defineComponent({
     // The animation effect of popup
     transition: {
       type: String,
-      default() {
-        let effect
-        // TODO - reference props.position
-        const position = typeof props !== 'undefined' ? props.position : 'center'
-        switch (position) {
-          case 'top':
-            effect = 'm-slide-down'
-            break
-          case 'right':
-            effect = 'm-slide-left'
-            break
-          case 'bottom':
-            effect = 'm-slide-up'
-            break
-          case 'left':
-            effect = 'm-slide-right'
-            break
-          default:
-            effect = 'm-fade'
-        }
-        return effect
-      }
+      default: ''
     },
     // Whether prevent scroll
     preventScroll: {
@@ -70,17 +52,20 @@ export default defineComponent({
       default() {
         return ''
       }
-    },
-    // merge base props
-    ...usePopupBase()  
+    } 
   },
 
   setup(props, { emit }) {
     const root = ref(null)
     const state = reactive({
-      isPopupShow: false, // take effect on mask and popup box
-      isPopupBoxShow: false, // take effect on popup box only
-      isAnimation: false // whether display animation effect
+      // take effect on mask and popup box
+      isPopupShow: false,
+      // take effect on popup box only
+      isPopupBoxShow: false,
+      // whether display animation effect
+      isAnimation: false,
+      // The animation effect of popup
+      transition: props.transition || useTransition(props.position)
     })
 
     const $_cls = computed(() => {

@@ -22,7 +22,7 @@
   </div>
   <div class="m-example">
     <p>Tag Shape - No fill color</p>
-    <v-tag type="fill" shape="square" fill-color="rgba(0, 0, 0, 0)">&pound;100</v-tag>
+    <v-tag type="fill" shape="square" fill-color="">&pound;100</v-tag>
   </div>
 </template>
 

@@ -95,9 +95,16 @@ export default defineComponent({
     // color style
     const $_colorStyle = computed(() => {
       const result = {}
-      if (props.type === 'fill' && props.fillColor) {
-        result.background = props.fillColor
-      }
+      // if (props.type === 'fill' && props.fillColor) {
+      //   result.background = props.fillColor
+      // }
+      if (props.type === 'fill') {
+        if (props.fillColor) {
+          result.background = props.fillColor
+        } else {
+          result.background = 'rgba(0, 0, 0, 0)'
+        }        
+      }      
 
       if (props.fontColor) {
         if (props.type === 'ghost') {
