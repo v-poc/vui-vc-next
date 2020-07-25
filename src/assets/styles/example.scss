@@ -61,6 +61,20 @@
   .m-popup.right .m-popup-box {
     width: 60%;
   }
+
+  &-item {
+    display: inline-block;
+    margin-left: 0.6rem;
+    p {
+      font-size: 0.2rem;
+      color: #666;
+      text-align: center;
+    }
+  }
+  
+  &-invert {
+    -webkit-filter: invert(1);
+  } 
 }
 
 .m-example-popup {

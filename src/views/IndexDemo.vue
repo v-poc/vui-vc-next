@@ -11,7 +11,10 @@
       </li>
       <li>
         <router-link to="/popup-demo">Popup</router-link>
-      </li>      
+      </li>
+      <li>
+        <router-link to="/icon-demo">Icon</router-link>
+      </li>           
     </ul>
   </div>
 </template>

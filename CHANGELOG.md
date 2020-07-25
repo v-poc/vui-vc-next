@@ -1,3 +1,7 @@
+# 0.0.5 (2020-07-25)
+
+Added Icon demo.
+
 # 0.0.4 (2020-07-24)
 
 Added Popup demo.

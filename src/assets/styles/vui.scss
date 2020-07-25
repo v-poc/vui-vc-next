@@ -16,6 +16,12 @@ $popup-title-bar-radius: 8px;
 $popup-title-bar-radius-large: 40px;
 $popup-mask-bg: $color-mask;
 $popup-zindex: 1000;
+$icon-size-xss: 16px;
+$icon-size-xs: 20px;
+$icon-size-sm: 24px;
+$icon-size-md: 32px;
+$icon-size-lg: 42px;
+$icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/iconfont.ttf") format("truetype");
 
 // common util styles
 @mixin absolute-pos($t: 0, $r: 0, $b: 0, $l: 0) {
