@@ -3,7 +3,7 @@
     <div
       v-show="hasMask && state.isPopupBoxShow"
       ref="popupMask"
-      class="m-popup-mask"
+      class="v-popup-mask"
       @click="$_onPopupMaskClick"
     ></div>
     <transition
@@ -13,7 +13,7 @@
       @after-enter="$_onPopupTransitionEnd"
       @after-leave="$_onPopupTransitionEnd"
     >
-      <div v-show="state.isPopupBoxShow" ref="popupBox" class="m-popup-box">
+      <div v-show="state.isPopupBoxShow" ref="popupBox" class="v-popup-box">
         <slot></slot>
       </div>
     </transition>
@@ -70,7 +70,7 @@ export default defineComponent({
 
     const $_cls = computed(() => {
       return [
-        'm-popup',
+        'v-popup',
         { 'with-mask': props.hasMask },
         { 'large-radius': props.largeRadius },
         props.position
@@ -182,7 +182,7 @@ export default defineComponent({
 <style lang="scss">
 @import '../../assets/styles/vui.scss';
 
-.m-popup {
+.v-popup {
   @include absolute-pos();
   position: fixed;
   display: flex;
@@ -195,45 +195,47 @@ export default defineComponent({
   &.top {
     flex-direction: column;
     justify-content: flex-start;
-    .m-popup-box {
+    .v-popup-box {
       width: 100%;
     }
   }
   &.bottom {
     flex-direction: column;
     justify-content: flex-end;
-    .m-popup-box {
+    .v-popup-box {
       width: 100%;
     }
   }
   &.left {
     justify-content: flex-start;
-    .m-popup-box {
+    .v-popup-box {
       height: 100%;
     }
   }
   &.right {
     justify-content: flex-end;
-    .m-popup-box {
+    .v-popup-box {
       height: 100%;
     }
   }
-  &.inner-popup .m-popup-box {
+  &.inner-popup .v-popup-box {
     background-color: $color-bg-inverse;
     border-radius: $popup-title-bar-radius $popup-title-bar-radius 0 0;
   }
-  &.large-radius.inner-popup .m-popup-box {
+  &.large-radius.inner-popup .v-popup-box {
     border-radius: $popup-title-bar-radius-large $popup-title-bar-radius-large 0 0;
   }
 }
-.m-popup-mask {
+
+.v-popup-mask {
   @include absolute-pos();
   position: absolute;
   pointer-events: auto;
   z-index: 1;
   background-color: $popup-mask-bg;
 }
-.m-popup-box {
+
+.v-popup-box {
   position: relative;
   pointer-events: auto;
   z-index: 2;
@@ -241,7 +243,8 @@ export default defineComponent({
   max-height: 100%;
   overflow: auto;
 }
-.m-mask-fade {
+
+.v-mask-fade {
   &-enter,
   &-leave-to {
     opacity: 0.01;

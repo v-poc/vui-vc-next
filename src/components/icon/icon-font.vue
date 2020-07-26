@@ -33,8 +33,8 @@ export default defineComponent({
   setup(props, { emit }) {
     const $_cls = computed(() => {
       return [
-        'm-icon icon-font',
-        `m-icon-${props.name}`,
+        'v-icon icon-font',
+        `v-icon-${props.name}`,
         props.name,
         props.size
       ]
@@ -62,7 +62,7 @@ export default defineComponent({
 <style lang="scss">
 @import '../../assets/styles/vui.scss';
 
-.m-icon.icon-font {
+.v-icon.icon-font {
   font-family: "VC-Icon" !important;
   font-size: 16px;
   font-style: normal;
@@ -75,244 +75,244 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
 }
-.m-icon.icon-font.xss {
+.v-icon.icon-font.xss {
   // font-size: $icon-size-xxs;
   font-size: 16px;
 }
-.m-icon.icon-font.xs {
+.v-icon.icon-font.xs {
   // font-size: $icon-size-xs;
   font-size: 20px;
 }
-.m-icon.icon-font.sm {
+.v-icon.icon-font.sm {
   // font-size: $icon-size-sm;
   font-size: 24px;
 }
-.m-icon.icon-font.md {
+.v-icon.icon-font.md {
   // font-size: $icon-size-md;
   font-size: 32px;
 }
-.m-icon.icon-font.lg {
+.v-icon.icon-font.lg {
   // font-size: $icon-size-lg;
   font-size: 42px;
 }
-.m-icon.icon-font:before {
+.v-icon.icon-font:before {
   position: relative;
   z-index: 2;
 }
 
-.m-icon-rectangle:before {
+.v-icon-rectangle:before {
   content: "\e900";
 }
 
-.m-icon-invisible:before {
+.v-icon-invisible:before {
   content: "\e601";
 }
 
-.m-icon-visible:before {
+.v-icon-visible:before {
   content: "\e602";
 }
 
-.m-icon-right:before {
+.v-icon-right:before {
   content: "\e905";
 }
 
-.m-icon-wrong:before {
+.v-icon-wrong:before {
   content: "\e906";
 }
 
-.m-icon-info:before {
+.v-icon-info:before {
   content: "\e605";
 }
 
-.m-icon-service:before {
+.v-icon-service:before {
   content: "\e606";
 }
 
-.m-icon-edit:before {
+.v-icon-edit:before {
   content: "\e607";
 }
 
-.m-icon-refresh:before {
+.v-icon-refresh:before {
   content: "\e901";
 }
 
-.m-icon-question:before {
+.v-icon-question:before {
   content: "\e608";
 }
 
-.m-icon-setting:before {
+.v-icon-setting:before {
   content: "\e609";
 }
 
-.m-icon-wait:before {
+.v-icon-wait:before {
   content: "\e902";
 }
 
-.m-icon-check:before {
+.v-icon-check:before {
   content: "\e904";
 }
 
-.m-icon-check-disabled:before {
+.v-icon-check-disabled:before {
   content: "\e903";
 }
 
-.m-icon-checked:before, .m-icon-success:before {
+.v-icon-checked:before, .v-icon-success:before {
   content: "\e908";
 }
 
-.m-icon-clear:before, .m-icon-fail:before {
+.v-icon-clear:before, .v-icon-fail:before {
   content: "\e60e";
 }
 
-.m-icon-info-solid:before {
+.v-icon-info-solid:before {
   content: "\e907";
 }
 
-.m-icon-warn:before {
+.v-icon-warn:before {
   content: "\e60b";
 }
 
-.m-icon-security:before {
+.v-icon-security:before {
   content: "\e60f";
 }
 
-.m-icon-rmb:before {
+.v-icon-rmb:before {
   content: "\e610";
 }
 
-.m-icon-scan:before {
+.v-icon-scan:before {
   content: "\e611";
 }
 
-.m-icon-share:before {
+.v-icon-share:before {
   content: "\e612";
 }
 
-.m-icon-back:before {
+.v-icon-back:before {
   content: "\e613";
 }
 
-.m-icon-card-bag:before {
+.v-icon-card-bag:before {
   content: "\e614";
 }
 
-.m-icon-message:before {
+.v-icon-message:before {
   content: "\e615";
 }
 
-.m-icon-order:before {
+.v-icon-order:before {
   content: "\e616";
 }
 
-.m-icon-balance:before {
+.v-icon-balance:before {
   content: "\e617";
 }
 
-.m-icon-coupon:before {
+.v-icon-coupon:before {
   content: "\e618";
 }
 
-.m-icon-sort:before {
+.v-icon-sort:before {
   content: "\e619";
 }
 
-.m-icon-address-book:before {
+.v-icon-address-book:before {
   content: "\e61a";
 }
 
-.m-icon-mobile-phone:before {
+.v-icon-mobile-phone:before {
   content: "\e61b";
 }
 
-.m-icon-home:before {
+.v-icon-home:before {
   content: "\e61c";
 }
 
-.m-icon-discovery:before {
+.v-icon-discovery:before {
   content: "\e61d";
 }
 
-.m-icon-calendar:before {
+.v-icon-calendar:before {
   content: "\e61e";
 }
 
-.m-icon-user:before {
+.v-icon-user:before {
   content: "\e61f";
 }
 
-.m-icon-time:before {
+.v-icon-time:before {
   content: "\e620";
 }
 
-.m-icon-search:before {
+.v-icon-search:before {
   content: "\e621";
 }
 
-.m-icon-switch:before {
+.v-icon-switch:before {
   content: "\e622";
 }
 
-.m-icon-camera:before {
+.v-icon-camera:before {
   content: "\e623";
 }
 
-.m-icon-clock:before {
+.v-icon-clock:before {
   content: "\e624";
 }
 
-.m-icon-profession:before {
+.v-icon-profession:before {
   content: "\e625";
 }
 
-.m-icon-delete:before {
+.v-icon-delete:before {
   content: "\e626";
 }
 
-.m-icon-id-card:before {
+.v-icon-id-card:before {
   content: "\e627";
 }
 
-.m-icon-filter:before {
+.v-icon-filter:before {
   content: "\e628";
 }
 
-.m-icon-location:before {
+.v-icon-location:before {
   content: "\e629";
 }
 
-.m-icon-authentication:before {
+.v-icon-authentication:before {
   content: "\e62a";
 }
 
-.m-icon-motor-vehicle:before {
+.v-icon-motor-vehicle:before {
   content: "\e62b";
 }
 
-.m-icon-phone:before {
+.v-icon-phone:before {
   content: "\e62c";
 }
 
-.m-icon-volumn:before {
+.v-icon-volumn:before {
   content: "\e62d";
 }
 
-.m-icon-arrow-left:before {
+.v-icon-arrow-left:before {
   content: "\e603";
 }
 
-.m-icon-arrow-right:before {
+.v-icon-arrow-right:before {
   content: "\e630";
 }
 
-.m-icon-arrow-up:before {
+.v-icon-arrow-up:before {
   content: "\e633";
 }
 
-.m-icon-arrow-down:before {
+.v-icon-arrow-down:before {
   content: "\e634";
 }
 
-.m-icon-close:before {
+.v-icon-close:before {
   content: "\e604";
 }
 

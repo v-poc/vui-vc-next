@@ -21,7 +21,7 @@ export default defineComponent({
   props: {
     name: {
       type: String,
-      default: 'm-fade',
+      default: 'v-fade',
       required: true
     },
     transitionStart: {

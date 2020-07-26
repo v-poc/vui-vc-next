@@ -1,10 +1,10 @@
 <template>
-  <div class="m-skeleton" v-if="loading">
+  <div class="v-skeleton" v-if="loading">
     <div v-if="avatar" :class="$_avatarCls"></div>
-    <div class="m-skeleton-content">
-      <h4 class="m-skeleton-title" v-if="title" :style="$_titleWidthStyle"></h4>
+    <div class="v-skeleton-content">
+      <h4 class="v-skeleton-title" v-if="title" :style="$_titleWidthStyle"></h4>
       <div
-        class="m-skeleton-row"
+        class="v-skeleton-row"
         v-for="index in row"
         :key="`row${index}`"
         :style="$_rowWidthStyle(index)"
@@ -65,10 +65,10 @@ export default defineComponent({
     // avatar css class
     const $_avatarCls = computed(() => {
       return [
-        'm-skeleton-avatar',
+        'v-skeleton-avatar',
         {
-          'm-skeleton-avatar-large': props.avatarSize === 'lg',
-          'm-skeleton-avatar-small': props.avatarSize === 'sm'
+          'v-skeleton-avatar-large': props.avatarSize === 'lg',
+          'v-skeleton-avatar-small': props.avatarSize === 'sm'
         }
       ]
     })
@@ -130,29 +130,29 @@ export default defineComponent({
 <style lang="scss">
 @import '../../assets/styles/vui.scss';
 
-.m-skeleton {
+.v-skeleton {
   box-sizing: border-box;
   display: flex;
-  .m-skeleton-avatar {
+  .v-skeleton-avatar {
     width: 0.8rem;
     height: 0.8rem;
     margin-right: 0.32rem;
     border-radius: 50%;
     @include placeHolder();
-    &.m-skeleton-avatar-large {
+    &.v-skeleton-avatar-large {
       width: 0.96rem;
       height: 0.96rem;
     }
-    &.m-skeleton-avatar-small {
+    &.v-skeleton-avatar-small {
       width: 0.64rem;
       height: 0.64rem;
     }
   }
-  .m-skeleton-content {
+  .v-skeleton-content {
     flex: 1;
   }
-  .m-skeleton-title,
-  .m-skeleton-row {
+  .v-skeleton-title,
+  .v-skeleton-row {
     box-sizing: border-box;
     height: 0.32rem;
     margin-bottom: 0.24rem;

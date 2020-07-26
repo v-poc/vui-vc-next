@@ -1,5 +1,13 @@
 <template>
+  <v-icon-svg
+    v-if="svg || $_isDefaultSvg"
+    :name="name"
+    :size="size"
+    :color="color"
+    @icon-click="$_onIconClick"
+  ></v-icon-svg>
   <v-icon-font
+    v-else
     :name="name"
     :size="size"
     :color="color"
@@ -8,14 +16,17 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
 import VIconFont from './icon-font.vue'
+import VIconSvg from './icon-svg.vue'
+import useDefaultSvgList from '../../composables/useDefaultSvgList'
 
 export default defineComponent({
   name: 'v-icon',
 
   components: {
-    VIconFont
+    VIconFont,
+    VIconSvg
   },
 
   props: {
@@ -42,11 +53,17 @@ export default defineComponent({
   },
   
   setup(props, { emit }) {
+    const $_isDefaultSvg = computed(() => {
+      const defaultSvgList = useDefaultSvgList()
+      return defaultSvgList[props.name]
+    })
+
     const $_onIconClick = (evt) => {
       emit('click', evt)
     }
 
     return {
+      $_isDefaultSvg,
       $_onIconClick
     }
   }
@@ -54,7 +71,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.m-icon {
+.v-icon {
   background-size: contain;
   fill: currentColor;
   -webkit-backface-visibility: hidden;

@@ -1,6 +1,6 @@
 <template>
-  <router-link to="/" class="m-back">&lt; Home</router-link>
-  <div class="m-example">
+  <router-link to="/" class="v-back">&lt; Home</router-link>
+  <div class="v-example">
     <p>Skeleton Content loading</p>
     <p>
       <button
@@ -18,11 +18,11 @@
       <img src="../assets/images/kongfu.gif" />
     </v-skeleton>
   </div>
-  <div class="m-example">
+  <div class="v-example">
     <p>Skeleton Title placeholders</p>
     <v-skeleton title></v-skeleton>
   </div>
-  <div class="m-example">
+  <div class="v-example">
     <p>Skeleton Avatar placeholders</p>
     <v-skeleton title avatar avatar-size="lg"></v-skeleton>
   </div>

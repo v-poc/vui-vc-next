@@ -31,14 +31,14 @@
   }
 }
 
-.m-back {
+.v-back {
   display: block;
   margin: 0.2rem;
   font-size: 0.3rem;
   text-decoration: none;
 }
 
-.m-example {
+.v-example {
   margin: 0.2rem;
   padding-bottom: 0.4rem;
   font-size: 0.4rem;
@@ -47,18 +47,22 @@
   p {
     padding-bottom: 0.2rem;
   }
+
+  > p {
+    font-weight: 600;
+  }
   
   img {
     width: 100%;
     height: auto;
   }
   
-  .m-tag {
+  .v-tag {
     margin-right: 0.5rem;
   }
   
-  .m-popup.left .m-popup-box,
-  .m-popup.right .m-popup-box {
+  .v-popup.left .v-popup-box,
+  .v-popup.right .v-popup-box {
     width: 60%;
   }
 
@@ -77,21 +81,25 @@
   } 
 }
 
-.m-example-popup {
+.v-example-popup {
   position: relative;
   font-size: 28px;
   font-weight: 500;
   box-sizing: border-box;
   text-align: center;
   background-color: #FFF;
+
+  p {
+    margin-bottom: 0.3rem;
+  }
 }
 
-.m-example-popup-center {
+.v-example-popup-center {
   padding: 50px;
   border-radius: radius-normal;
 }
 
-.m-example-popup-top {
+.v-example-popup-top {
   width: 100%;
   height: 75px;
   line-height: 75px;
@@ -105,7 +113,7 @@
   }
 }
 
-.m-example-popup-bottom {
+.v-example-popup-bottom {
   width: 100%;
   padding: 100px 0;
   p {
@@ -113,10 +121,19 @@
   }
 }
 
-.m-example-popup-left,
-.m-example-popup-right {
+.v-example-popup-left,
+.v-example-popup-right {
   height: 100%;
   padding: 0 15px;
   display: flex;
   align-items: center;
+}
+
+.v-example-svg {
+  display: flex;
+  align-items: center;
+
+  .icon-svg {
+    margin-right: 0.2rem;
+  }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div ref="root" class="m-tag">
+  <div ref="root" class="v-tag">
     <template v-if="shape === 'quarter'">
       <div :class="$_containerCls">
         <div class="quarter-content">
@@ -166,7 +166,7 @@ export default defineComponent({
 <style lang="scss">
 @import '../../assets/styles/vui.scss';
 
-.m-tag {
+.v-tag {
   color: $color-text-base;
   font-size: 0.28rem;
   text-align: center;
@@ -304,7 +304,7 @@ export default defineComponent({
   .font-weight-bolder {
     font-weight: bolder;
   }
-  .m-icon.icon-font {
+  .v-icon.icon-font {
     font-size: inherit;
     transform: scale(1.2);
   }

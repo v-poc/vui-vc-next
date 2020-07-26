@@ -1,4 +1,4 @@
-// style variables
+// global style variables
 $color-primary: #2F86F6;
 $font-body-normal: 0.26rem;
 $font-minor-normal: 0.2rem;
@@ -16,11 +16,11 @@ $popup-title-bar-radius: 8px;
 $popup-title-bar-radius-large: 40px;
 $popup-mask-bg: $color-mask;
 $popup-zindex: 1000;
-$icon-size-xss: 16px;
-$icon-size-xs: 20px;
-$icon-size-sm: 24px;
-$icon-size-md: 32px;
-$icon-size-lg: 42px;
+// $icon-size-xss: 16px;
+// $icon-size-xs: 20px;
+// $icon-size-sm: 24px;
+// $icon-size-md: 32px;
+// $icon-size-lg: 42px;
 $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/iconfont.ttf") format("truetype");
 
 // common util styles
@@ -193,7 +193,6 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   line-height: $height;
 }
 
-// common transition styles
 @mixin placeHolder() {
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -204,16 +203,8 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   background-size: 10rem 1.04rem;
 }
 
-@keyframes placeHolderShimmer {
-  0% {
-    background-position: -4.68rem 0;
-  }
-  100% {
-    background-position: 4.68rem 0;
-  }
-}
-
-.m-bounce {
+// common transition styles
+.v-bounce {
   &-enter-active {
     animation: bounce-in 300ms linear;
   }
@@ -222,7 +213,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-zoom {
+.v-zoom {
   &-enter,
   &-leave-to {
     opacity: 0.01;
@@ -236,7 +227,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-punch {
+.v-punch {
   &-enter,
   &-leave-to {
     opacity: 0.01;
@@ -250,7 +241,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-slide-up {
+.v-slide-up {
   &-enter,
   &-leave-to {
     transform: translate3d(0, 100%, 0);
@@ -263,7 +254,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-slide-right {
+.v-slide-right {
   &-enter,
   &-leave-to {
     transform: translate3d(-100%, 0, 0);
@@ -276,7 +267,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-slide-left {
+.v-slide-left {
   &-enter,
   &-leave-to {
     transform: translate3d(100%, 0, 0);
@@ -289,7 +280,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-slide-down {
+.v-slide-down {
   &-enter,
   &-leave-to {
     transform: translate3d(0, -100%, 0);
@@ -302,7 +293,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-fade {
+.v-fade {
   &-enter,
   &-leave-to {
     opacity: 0.01;
@@ -315,7 +306,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-fade-up {
+.v-fade-up {
   &-enter,
   &-leave-to {
     opacity: 0.01;
@@ -329,7 +320,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-fade-down {
+.v-fade-down {
   &-enter,
   &-leave-to {
     opacity: 0.01;
@@ -343,7 +334,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-fade-right {
+.v-fade-right {
   &-enter,
   &-leave-to {
     opacity: 0.01;
@@ -357,7 +348,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-fade-left {
+.v-fade-left {
   &-enter,
   &-leave-to {
     opacity: 0.01;
@@ -371,7 +362,7 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   }
 }
 
-.m-fly {
+.v-fly {
   &-enter-active {
     animation: fly-in 600ms;
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -414,5 +405,14 @@ $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/ico
   to {
     opacity: 0.01;
     transform: scale(0.75);
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -4.68rem 0;
+  }
+  100% {
+    background-position: 4.68rem 0;
   }
 }

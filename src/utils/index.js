@@ -1,5 +1,5 @@
 /**
- * kebab-case -> camelCase
+ * Convert kebab-case to camelCase
  */
 export const transformCamelCase = function (str) {
   const re = /-(\w)/g
