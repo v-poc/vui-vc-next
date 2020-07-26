@@ -15,6 +15,9 @@
       <li>
         <router-link to="/icon-demo">Icon</router-link>
       </li>
+      <li>
+        <router-link to="/button-demo">Button</router-link>
+      </li>      
     </ul>
   </div>
 </template>

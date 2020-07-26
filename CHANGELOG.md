@@ -1,3 +1,7 @@
+# 0.0.6 (2020-07-26)
+
+Added Button demo.
+
 # 0.0.5 (2020-07-25)
 
 Added Icon demo.

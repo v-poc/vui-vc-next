@@ -8,6 +8,7 @@ const SkeletonDemo = () => import('../views/SkeletonDemo.vue')
 const TagDemo = () => import('../views/TagDemo.vue')
 const PopupDemo = () => import('../views/PopupDemo.vue')
 const IconDemo = () => import('../views/IconDemo.vue')
+const ButtonDemo = () => import('../views/ButtonDemo.vue')
 
 const router = createRouter({
   history: createWebHistory(),
@@ -36,7 +37,12 @@ const router = createRouter({
       path: '/icon-demo',
       name: 'icon-demo',
       component: IconDemo
-    }
+    },
+    {
+      path: '/button-demo',
+      name: 'button-demo',
+      component: ButtonDemo
+    }    
   ]
 })
 
