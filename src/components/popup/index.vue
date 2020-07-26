@@ -21,7 +21,14 @@
 </template>
 
 <script>
-import { defineComponent, computed, reactive, ref, watchEffect, onMounted } from 'vue'
+import {
+  defineComponent,
+  computed,
+  reactive,
+  ref,
+  watchEffect,
+  onMounted
+} from 'vue'
 import usePopupBase from '../../composables/usePopupBase'
 import useTransition from '../../composables/useTransition'
 
@@ -30,7 +37,7 @@ export default defineComponent({
 
   props: {
     // merge base props
-    ...usePopupBase(),    
+    ...usePopupBase(),
     // The position of popup
     position: {
       type: String,
@@ -52,7 +59,7 @@ export default defineComponent({
       default() {
         return ''
       }
-    } 
+    }
   },
 
   setup(props, { emit }) {
@@ -164,7 +171,7 @@ export default defineComponent({
 
       const val = props.preventScrollExclude
       $_preventScrollExclude(false, val) // remove old listener first
-      $_preventScrollExclude(true, val) // add new listener later      
+      $_preventScrollExclude(true, val) // add new listener later
     })
 
     return {
@@ -223,7 +230,8 @@ export default defineComponent({
     border-radius: $popup-title-bar-radius $popup-title-bar-radius 0 0;
   }
   &.large-radius.inner-popup .v-popup-box {
-    border-radius: $popup-title-bar-radius-large $popup-title-bar-radius-large 0 0;
+    border-radius: $popup-title-bar-radius-large $popup-title-bar-radius-large 0
+      0;
   }
 }
 

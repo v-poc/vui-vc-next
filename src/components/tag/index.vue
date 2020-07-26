@@ -103,8 +103,8 @@ export default defineComponent({
           result.background = props.fillColor
         } else {
           result.background = 'rgba(0, 0, 0, 0)'
-        }        
-      }      
+        }
+      }
 
       if (props.fontColor) {
         if (props.type === 'ghost') {

@@ -1,12 +1,6 @@
 <template>
-  <svg
-    :class="$_cls"
-    :style="$_style"
-    @click="$_onIconClick"
-  >
-    <use
-      :xlink:href="`#${name}`"
-    />
+  <svg :class="$_cls" :style="$_style" @click="$_onIconClick">
+    <use :xlink:href="`#${name}`" />
   </svg>
 </template>
 
@@ -37,11 +31,7 @@ export default defineComponent({
 
   setup(props, { emit }) {
     const $_cls = computed(() => {
-      return [
-        'v-icon icon-svg',
-        `v-icon-${props.name}`,
-        props.size
-      ]
+      return ['v-icon icon-svg', `v-icon-${props.name}`, props.size]
     })
 
     const $_style = computed(() => {
@@ -62,7 +52,7 @@ export default defineComponent({
       $_cls,
       $_style,
       $_onIconClick
-    }    
+    }
   }
 })
 </script>

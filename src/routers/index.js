@@ -36,7 +36,7 @@ const router = createRouter({
       path: '/icon-demo',
       name: 'icon-demo',
       component: IconDemo
-    }      
+    }
   ]
 })
 

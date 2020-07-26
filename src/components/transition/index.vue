@@ -31,7 +31,7 @@ export default defineComponent({
     transitionEnd: {
       type: Function,
       default: () => {}
-    },
+    }
   },
 
   methods: {

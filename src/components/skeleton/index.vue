@@ -91,7 +91,7 @@ export default defineComponent({
     }
 
     // get row width
-    const $_getRowWidth = index => {
+    const $_getRowWidth = (index) => {
       if (props.rowWidth) {
         if (Array.isArray(props.rowWidth)) {
           return typeof props.rowWidth[index] === 'number'
@@ -107,7 +107,7 @@ export default defineComponent({
     }
 
     // row width style
-    const $_rowWidthStyle = index => {
+    const $_rowWidthStyle = (index) => {
       return {
         width:
           index === props.row
