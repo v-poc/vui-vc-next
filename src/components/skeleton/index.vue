@@ -1,8 +1,18 @@
 <template>
-  <div class="v-skeleton" v-if="loading">
-    <div v-if="avatar" :class="$_avatarCls"></div>
+  <div
+    class="v-skeleton"
+    v-if="loading"
+  >
+    <div
+      v-if="avatar"
+      :class="$_avatarCls"
+    ></div>
     <div class="v-skeleton-content">
-      <h4 class="v-skeleton-title" v-if="title" :style="$_titleWidthStyle"></h4>
+      <h4
+        class="v-skeleton-title"
+        v-if="title"
+        :style="$_titleWidthStyle"
+      ></h4>
       <div
         class="v-skeleton-row"
         v-for="index in row"

@@ -1,5 +1,8 @@
 <template>
-  <router-link to="/" class="v-back">&lt; Home</router-link>
+  <router-link
+    to="/"
+    class="v-back"
+  >&lt; Home</router-link>
   <div class="v-example">
     <button @click="showPopup('center', true)">Test popup from center</button>
     <v-popup
@@ -9,9 +12,11 @@
       @input="val => showPopup('center', val)"
     >
       <div class="v-example-popup v-example-popup-center">
-        <!-- popup from center -->
         <p>popup from center</p>
-        <img src="../assets/images/kongfu.gif" style="width: 4.5rem" />
+        <img
+          src="../assets/images/kongfu.gif"
+          style="width: 4.5rem"
+        />
       </div>
     </v-popup>
   </div>
@@ -41,7 +46,11 @@
   </div>
   <div class="v-example">
     <button @click="showPopup('left', true)">Test popup from left</button>
-    <v-popup position="left" :value="state.popupShow.left" @input="val => showPopup('left', val)">
+    <v-popup
+      position="left"
+      :value="state.popupShow.left"
+      @input="val => showPopup('left', val)"
+    >
       <div class="v-example-popup v-example-popup-left">popup from left</div>
     </v-popup>
   </div>

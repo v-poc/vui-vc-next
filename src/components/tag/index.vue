@@ -1,24 +1,42 @@
 <template>
-  <div ref="root" class="v-tag">
+  <div
+    ref="root"
+    class="v-tag"
+  >
     <template v-if="shape === 'quarter'">
       <div :class="$_containerCls">
         <div class="quarter-content">
           <slot></slot>
         </div>
-        <div class="quarter-bg" :style="$_colorStyle"></div>
+        <div
+          class="quarter-bg"
+          :style="$_colorStyle"
+        ></div>
       </div>
     </template>
     <template v-if="shape === 'coupon'">
       <div :class="$_containerCls">
-        <div class="coupon-container" :style="$_colorStyle">
-          <div class="left-coupon" :style="$_bgStyle(fillColor, 'left')"></div>
+        <div
+          class="coupon-container"
+          :style="$_colorStyle"
+        >
+          <div
+            class="left-coupon"
+            :style="$_bgStyle(fillColor, 'left')"
+          ></div>
           <slot></slot>
-          <div class="right-coupon" :style="$_bgStyle(fillColor, 'right')"></div>
+          <div
+            class="right-coupon"
+            :style="$_bgStyle(fillColor, 'right')"
+          ></div>
         </div>
       </div>
     </template>
     <template v-else>
-      <div :class="$_containerCls" :style="$_containerStyle">
+      <div
+        :class="$_containerCls"
+        :style="$_containerStyle"
+      >
         <slot></slot>
       </div>
     </template>

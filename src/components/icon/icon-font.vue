@@ -1,5 +1,9 @@
 <template>
-  <i :class="$_cls" :style="$_style" @click="$_onIconClick"></i>
+  <i
+    :class="$_cls"
+    :style="$_style"
+    @click="$_onIconClick"
+  ></i>
 </template>
 
 <script>

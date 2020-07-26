@@ -1,50 +1,89 @@
 <template>
-  <router-link to="/" class="v-back">&lt; Home</router-link>
+  <router-link
+    to="/"
+    class="v-back"
+  >&lt; Home</router-link>
   <div class="v-example">
     <p>Icon Font</p>
-    <div v-for="item in iconList" :key="item">
-      <v-icon size="xs" color="green" :name="item.split('/')[0]"></v-icon>
+    <div
+      v-for="item in iconList"
+      :key="item"
+    >
+      <v-icon
+        size="xs"
+        color="green"
+        :name="item.split('/')[0]"
+      ></v-icon>
       {{ item }}
     </div>
   </div>
   <div class="v-example">
     <p>Icon Size</p>
     <div class="v-example-item">
-      <v-icon name="location" size="xs"></v-icon>
+      <v-icon
+        name="location"
+        size="xs"
+      ></v-icon>
       <p>xs</p>
     </div>
     <div class="v-example-item">
-      <v-icon name="location" size="sm"></v-icon>
+      <v-icon
+        name="location"
+        size="sm"
+      ></v-icon>
       <p>sm</p>
     </div>
     <div class="v-example-item">
-      <v-icon name="location" size="md"></v-icon>
+      <v-icon
+        name="location"
+        size="md"
+      ></v-icon>
       <p>md</p>
     </div>
     <div class="v-example-item">
-      <v-icon name="location" size="lg"></v-icon>
+      <v-icon
+        name="location"
+        size="lg"
+      ></v-icon>
       <p>lg</p>
     </div>
   </div>
   <div class="v-example">
     <p>Icon Color</p>
     <div class="v-example-item">
-      <v-icon name="rectangle" color="orange"></v-icon>
+      <v-icon
+        name="rectangle"
+        color="orange"
+      ></v-icon>
       <p>Orange</p>
     </div>
     <div class="v-example-item">
-      <v-icon name="rectangle" color="blue"></v-icon>
+      <v-icon
+        name="rectangle"
+        color="blue"
+      ></v-icon>
       <p>Blue</p>
     </div>
     <div class="v-example-item">
-      <v-icon name="rectangle" color="purple"></v-icon>
+      <v-icon
+        name="rectangle"
+        color="purple"
+      ></v-icon>
       <p>Purple</p>
     </div>
   </div>
   <div class="v-example">
     <p>SVG Icon</p>
-    <div class="v-example-svg" v-for="svgIcon in svgList" :key="svgIcon">
-      <v-icon :name="svgIcon" :class="{ 'v-example-invert': svgIcon === 'spinner' }" size="lg"></v-icon>
+    <div
+      class="v-example-svg"
+      v-for="svgIcon in svgList"
+      :key="svgIcon"
+    >
+      <v-icon
+        :name="svgIcon"
+        :class="{ 'v-example-invert': svgIcon === 'spinner' }"
+        size="lg"
+      ></v-icon>
       {{ svgIcon }}
     </div>
   </div>

@@ -1,5 +1,9 @@
 <template>
-  <div v-show="state.isPopupShow" ref="root" :class="$_cls">
+  <div
+    v-show="state.isPopupShow"
+    ref="root"
+    :class="$_cls"
+  >
     <div
       v-show="hasMask && state.isPopupBoxShow"
       ref="popupMask"
@@ -13,7 +17,11 @@
       @after-enter="$_onPopupTransitionEnd"
       @after-leave="$_onPopupTransitionEnd"
     >
-      <div v-show="state.isPopupBoxShow" ref="popupBox" class="v-popup-box">
+      <div
+        v-show="state.isPopupBoxShow"
+        ref="popupBox"
+        class="v-popup-box"
+      >
         <slot></slot>
       </div>
     </transition>

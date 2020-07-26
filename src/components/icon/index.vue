@@ -6,7 +6,13 @@
     :color="color"
     @icon-click="$_onIconClick"
   ></v-icon-svg>
-  <v-icon-font v-else :name="name" :size="size" :color="color" @icon-click="$_onIconClick"></v-icon-font>
+  <v-icon-font
+    v-else
+    :name="name"
+    :size="size"
+    :color="color"
+    @icon-click="$_onIconClick"
+  ></v-icon-font>
 </template>
 
 <script>

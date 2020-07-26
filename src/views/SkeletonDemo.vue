@@ -1,5 +1,8 @@
 <template>
-  <router-link to="/" class="v-back">&lt; Home</router-link>
+  <router-link
+    to="/"
+    class="v-back"
+  >&lt; Home</router-link>
   <div class="v-example">
     <p>Skeleton Content loading</p>
     <p>
@@ -24,7 +27,11 @@
   </div>
   <div class="v-example">
     <p>Skeleton Avatar placeholders</p>
-    <v-skeleton title avatar avatar-size="lg"></v-skeleton>
+    <v-skeleton
+      title
+      avatar
+      avatar-size="lg"
+    ></v-skeleton>
   </div>
 </template>
 

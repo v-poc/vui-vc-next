@@ -1,5 +1,9 @@
 <template>
-  <svg :class="$_cls" :style="$_style" @click="$_onIconClick">
+  <svg
+    :class="$_cls"
+    :style="$_style"
+    @click="$_onIconClick"
+  >
     <use :xlink:href="`#${name}`" />
   </svg>
 </template>
