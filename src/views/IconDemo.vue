@@ -10,7 +10,6 @@
       :key="item"
     >
       <v-icon
-        size="xs"
         color="green"
         :name="item.split('/')[0]"
       ></v-icon>
@@ -52,21 +51,21 @@
     <p>Icon Color</p>
     <div class="v-example-item">
       <v-icon
-        name="rectangle"
+        name="triangle"
         color="orange"
       ></v-icon>
       <p>Orange</p>
     </div>
     <div class="v-example-item">
       <v-icon
-        name="rectangle"
+        name="triangle"
         color="blue"
       ></v-icon>
       <p>Blue</p>
     </div>
     <div class="v-example-item">
       <v-icon
-        name="rectangle"
+        name="triangle"
         color="purple"
       ></v-icon>
       <p>Purple</p>

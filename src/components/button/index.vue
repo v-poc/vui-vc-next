@@ -138,15 +138,15 @@ export default defineComponent({
 }
 .v-button-loading {
   .v-activity-indicator-svg {
-    width: 35px !important;
-    height: 35px !important;
+    width: 0.35rem !important;
+    height: 0.35rem !important;
     margin-right: 10px;
   }
 }
 .v-button-content {
   display: flex;
   align-items: center;
-  padding: 0 6px;
+  padding: 0 0.06rem;
   .v-icon {
     padding: 0;
   }
@@ -157,7 +157,7 @@ export default defineComponent({
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 6px;
+    padding: 0 0.06rem;
   }
   &.default {
     background: $button-default-fill;

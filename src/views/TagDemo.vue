@@ -49,6 +49,7 @@
     <v-tag
       type="fill"
       shape="bubble"
+      fill-color="#999"
       font-color="#FFF"
     >88</v-tag>
   </div>

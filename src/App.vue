@@ -4,6 +4,14 @@
   </div>
 </template>
 
+<script>
+import './assets/styles/responsive'
+
+export default {
+  name: 'App'
+}
+</script>
+
 <style scoped>
 .main-wrapper {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

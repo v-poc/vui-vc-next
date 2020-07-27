@@ -64,7 +64,7 @@ export default defineComponent({
 
 .v-icon.icon-font {
   font-family: 'VC-Icon' !important;
-  font-size: 16px;
+  font-size: 0.16rem;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -81,25 +81,26 @@ export default defineComponent({
 }
 .v-icon.icon-font.xs {
   // font-size: $icon-size-xs;
-  font-size: 20px;
+  font-size: 0.2rem;
 }
 .v-icon.icon-font.sm {
   // font-size: $icon-size-sm;
-  font-size: 24px;
+  font-size: 0.24rem;
 }
 .v-icon.icon-font.md {
   // font-size: $icon-size-md;
-  font-size: 32px;
+  font-size: 0.32rem;
 }
 .v-icon.icon-font.lg {
   // font-size: $icon-size-lg;
-  font-size: 42px;
+  font-size: 0.42rem;
 }
 .v-icon.icon-font:before {
   position: relative;
   z-index: 2;
 }
 
+.v-icon-triangle:before,
 .v-icon-rectangle:before {
   content: '\e900';
 }
