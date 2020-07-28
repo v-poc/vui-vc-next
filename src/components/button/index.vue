@@ -69,7 +69,7 @@ export default defineComponent({
       type: Boolean,
       default: false
     },
-    // THe inactive state
+    // The inactive state
     inactive: {
       type: Boolean,
       default: false

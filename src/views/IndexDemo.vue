@@ -17,7 +17,10 @@
       </li>
       <li>
         <router-link to="/button-demo">Button</router-link>
-      </li>      
+      </li>
+      <li>
+        <router-link to="/transition-demo">Transition</router-link>
+      </li>            
     </ul>
   </div>
 </template>
