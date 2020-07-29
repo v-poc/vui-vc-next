@@ -11,3 +11,4 @@ sidebar: auto
 - [`Popup`](./popup.html)
 - [`Icon`](./icon.html)
 - [`Button`](./button.html)
+- [`Transition`](./transition.html)
