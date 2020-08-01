@@ -1,12 +1,11 @@
 <template>
   <div
-    v-show="state.isPopupShow"
     ref="root"
+    v-show="state.isPopupShow"    
     :class="$_cls"
   >
     <div
       v-show="hasMask && state.isPopupBoxShow"
-      ref="popupMask"
       class="v-popup-mask"
       @click="$_onPopupMaskClick"
     ></div>
@@ -19,7 +18,6 @@
     >
       <div
         v-show="state.isPopupBoxShow"
-        ref="popupBox"
         class="v-popup-box"
       >
         <slot></slot>
@@ -67,7 +65,7 @@ export default defineComponent({
       default() {
         return ''
       }
-    }
+    }    
   },
 
   setup(props, { emit }) {
@@ -109,8 +107,8 @@ export default defineComponent({
 
     const $_preventScroll = (isBind) => {
       const handler = `${isBind ? 'add' : 'remove'}EventListener`
-      const popupMask = ref('popupMask')
-      const popupBox = ref('popupBox')
+      const popupMask = root.value.querySelector('.v-popup-mask')
+      const popupBox = root.value.querySelector('.v-popup-box')
 
       popupMask && popupMask[handler]('touchmove', $_preventDefault, false)
       popupBox && popupBox[handler]('touchmove', $_preventDefault, false)
@@ -164,22 +162,22 @@ export default defineComponent({
 
     onMounted(() => {
       props.value && $_showPopupBox()
-    })
 
-    watchEffect(() => {
-      if (props.value) {
-        if (state.isAnimation) {
-          setTimeout($_showPopupBox, 50)
+      watchEffect(() => {
+        if (props.value) {
+          if (state.isAnimation) {
+            setTimeout($_showPopupBox, 50)
+          } else {
+            $_showPopupBox()
+          }
         } else {
-          $_showPopupBox()
+          $_hidePopupBox()
         }
-      } else {
-        $_hidePopupBox()
-      }
 
-      const val = props.preventScrollExclude
-      $_preventScrollExclude(false, val) // remove old listener first
-      $_preventScrollExclude(true, val) // add new listener later
+        const val = props.preventScrollExclude
+        $_preventScrollExclude(false, val) // remove old listener first
+        $_preventScrollExclude(true, val) // add new listener later
+      })
     })
 
     return {

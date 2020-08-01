@@ -8,7 +8,7 @@
     <v-popup
       position="center"
       transition="v-punch"
-      :value="state.popupShow.center"
+      :value="popupShow.center"
       @input="val => showPopup('center', val)"
     >
       <div class="v-example-popup v-example-popup-center">
@@ -24,7 +24,7 @@
     <button @click="showPopup('bottom', true)">Test popup from bottom</button>
     <v-popup
       position="bottom"
-      :value="state.popupShow.bottom"
+      :value="popupShow.bottom"
       @input="val => showPopup('bottom', val)"
     >
       <div class="v-example-popup v-example-popup-bottom">popup from bottom</div>
@@ -34,7 +34,7 @@
     <button @click="showPopup('top', true)">Test popup from top</button>
     <v-popup
       position="top"
-      :value="state.popupShow.top"
+      :value="popupShow.top"
       @input="val => showPopup('top', val)"
       :hasMask="false"
     >
@@ -48,7 +48,7 @@
     <button @click="showPopup('left', true)">Test popup from left</button>
     <v-popup
       position="left"
-      :value="state.popupShow.left"
+      :value="popupShow.left"
       @input="val => showPopup('left', val)"
     >
       <div class="v-example-popup v-example-popup-left">popup from left</div>
@@ -58,7 +58,7 @@
     <button @click="showPopup('right', true)">Test popup from right</button>
     <v-popup
       position="right"
-      :value="state.popupShow.right"
+      :value="popupShow.right"
       @input="val => showPopup('right', val)"
     >
       <div class="v-example-popup v-example-popup-right">popup from right</div>
@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import { defineComponent, reactive } from 'vue'
+import { defineComponent, ref } from 'vue'
 import VPopup from '../components/popup/index.vue'
 
 export default defineComponent({
@@ -80,16 +80,15 @@ export default defineComponent({
   },
 
   setup() {
-    const state = reactive({
-      popupShow: {}
-    })
+    const popupShow = ref({})
 
+    // show/hide popup
     const showPopup = (pos, isShow) => {
-      state.popupShow[pos] = isShow
+      popupShow.value[pos] = isShow
     }
 
     return {
-      state,
+      popupShow: popupShow.value,
       showPopup
     }
   }

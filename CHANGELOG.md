@@ -1,6 +1,11 @@
+# 0.0.7 (2020-07-30)
+
+Added Landscape demo.
+
 # 0.0.6 (2020-07-26)
 
-Added Button demo.
+- Added Button demo.
+- Added Transition demo.
 
 # 0.0.5 (2020-07-25)
 

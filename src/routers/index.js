@@ -10,6 +10,7 @@ const PopupDemo = () => import('../views/PopupDemo.vue')
 const IconDemo = () => import('../views/IconDemo.vue')
 const ButtonDemo = () => import('../views/ButtonDemo.vue')
 const TransitionDemo = () => import('../views/TransitionDemo.vue')
+const LandscapeDemo = () => import('../views/LandscapeDemo.vue')
 
 const router = createRouter({
   history: createWebHistory(),
@@ -48,7 +49,12 @@ const router = createRouter({
       path: '/transition-demo',
       name: 'transition-demo',
       component: TransitionDemo
-    }       
+    },
+    {
+      path: '/landscape-demo',
+      name: 'landscape-demo',
+      component: LandscapeDemo
+    }    
   ]
 })
 

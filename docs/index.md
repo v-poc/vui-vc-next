@@ -12,3 +12,4 @@ sidebar: auto
 - [`Icon`](./icon.html)
 - [`Button`](./button.html)
 - [`Transition`](./transition.html)
+- [`Landscape`](./landscape.html)

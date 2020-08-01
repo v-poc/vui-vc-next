@@ -20,7 +20,10 @@
       </li>
       <li>
         <router-link to="/transition-demo">Transition</router-link>
-      </li>            
+      </li>
+      <li>
+        <router-link to="/landscape-demo">Landscape</router-link>
+      </li>                  
     </ul>
   </div>
 </template>
