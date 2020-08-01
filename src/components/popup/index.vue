@@ -49,11 +49,6 @@ export default defineComponent({
       type: String,
       default: 'center'
     },
-    // The animation effect of popup
-    transition: {
-      type: String,
-      default: ''
-    },
     // Whether prevent scroll
     preventScroll: {
       type: Boolean,

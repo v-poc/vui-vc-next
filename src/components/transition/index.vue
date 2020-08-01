@@ -34,12 +34,18 @@ export default defineComponent({
     }
   },
 
-  methods: {
-    $_onPopupTransitionStart() {
-      this.transitionStart()
-    },
-    $_onPopupTransitionEnd() {
-      this.transitionEnd()
+  setup(props) {
+    const $_onPopupTransitionStart = () => {
+      props.transitionStart()
+    }
+
+    const $_onPopupTransitionEnd = () => {
+      props.transitionEnd()
+    }
+
+    return {
+      $_onPopupTransitionStart,
+      $_onPopupTransitionEnd
     }
   }
 })

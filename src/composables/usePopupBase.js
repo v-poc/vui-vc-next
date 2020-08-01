@@ -19,7 +19,12 @@ const usePopupBase = function () {
     largeRadius: {
       type: Boolean,
       default: false
-    }
+    },
+    // The animation effect of popup
+    transition: {
+      type: String,
+      default: ''
+    }    
   }
 }
 

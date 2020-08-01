@@ -40,6 +40,7 @@ export default defineComponent({
   },
 
   props: {
+    // merge base props
     ...usePopupBase(),
     // Whether scroll enabled
     scroll: {
@@ -50,11 +51,6 @@ export default defineComponent({
     fullscreen: {
       type: Boolean,
       default: false
-    },
-    // The animation effect of popup
-    transition: {
-      type: String,
-      default: ''
     },
     // Whether click upon mask to close popup
     maskClosable: {
