@@ -9,12 +9,12 @@
     <v-button
       type="default"
       inactive
-    >Default Button(inactive)</v-button>
-    <v-button type="primary">Primary Button</v-button>
+    >Default Button (inactive)</v-button>
+    <v-button type="primary" icon="security" round>Primary Button</v-button>
     <v-button
       type="primary"
       inactive
-    >Primary Button(inactive)</v-button>
+    >Primary Button (inactive)</v-button>
   </div>
   <div class="v-example">
     <p>Button Text link</p>

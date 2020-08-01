@@ -12,6 +12,7 @@
       >Test Content loading (delay 3s)</button>
     </p>
     <v-skeleton
+      class="v-example-img"
       v-if="state.showContent"
       title
       title-width="80%"
