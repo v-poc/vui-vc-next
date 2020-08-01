@@ -11,7 +11,7 @@
       @show="showInfo('show landscape popup')"
       @hide="showInfo('hide landscape popup')"
     >
-      <img src="../assets/images/kongfu.gif" />
+      <img src="../assets/images/mj.png" />
     </v-landscape>
   </div>
   <div class="v-example">
@@ -22,7 +22,7 @@
       :mask-closable="true"
       transition="v-bounce"
     >
-      <img src="../assets/images/kongfu.gif" />
+      <img src="../assets/images/mj.png" />
     </v-landscape>
   </div>
   <div class="v-example">
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, nextTick } from 'vue'
+import { defineComponent, ref } from 'vue'
 import VLandscape from '../components/landscape/index.vue'
 
 export default defineComponent({

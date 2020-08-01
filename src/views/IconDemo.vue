@@ -6,7 +6,7 @@
   <div class="v-example">
     <p>Icon Font</p>
     <div
-      v-for="item in iconList"
+      v-for="item in state.iconList"
       :key="item"
     >
       <v-icon
@@ -15,6 +15,10 @@
       ></v-icon>
       {{ item }}
     </div>
+    <button
+      v-if="state.iconList.length < 4"
+      @click="showMore"
+    >Show more</button>
   </div>
   <div class="v-example">
     <p>Icon Size</p>
@@ -75,7 +79,7 @@
     <p>SVG Icon</p>
     <div
       class="v-example-svg"
-      v-for="svgIcon in svgList"
+      v-for="svgIcon in state.svgList"
       :key="svgIcon"
     >
       <v-icon
@@ -89,7 +93,7 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { defineComponent, reactive } from 'vue'
 import VIcon from '../components/icon/index.vue'
 
 export default defineComponent({
@@ -102,13 +106,73 @@ export default defineComponent({
   },
 
   setup() {
-    const iconList = ref(['checked/success', 'check-disabled', 'clear/fail'])
+    const state = reactive({
+      iconList: ['checked/success', 'check-disabled', 'clear/fail'],
+      svgList: ['spinner', 'warn-color', 'success-color']
+    })
 
-    const svgList = ref(['spinner', 'warn-color', 'success-color'])
+    const showMore = () => {
+      state.iconList = [
+        'rectangle',
+        'right',
+        'wrong',
+        'arrow-left',
+        'arrow-right',
+        'arrow-up',
+        'arrow-down',
+        'invisible',
+        'visible',
+        'service',
+        'setting',
+        'close',
+        'refresh',
+        'edit',
+        'sort',
+        'info',
+        'question',
+        'security',
+        'rmb',
+        'wait',
+        'check',
+        'checked/success',
+        'check-disabled',
+        'clear/fail',
+        'warn',
+        'info-solid',
+        'scan',
+        'share',
+        'back',
+        'card-bag',
+        'message',
+        'order',
+        'balance',
+        'coupon',
+        'address-book',
+        'mobile-phone',
+        'calendar',
+        'home',
+        'discovery',
+        'switch',
+        'time',
+        'search',
+        'user',
+        'camera',
+        'clock',
+        'delete',
+        'profession',
+        'id-card',
+        'authentication',
+        'location',
+        'filter',
+        'motor-vehicle',
+        'phone',
+        'volumn'
+      ]
+    }
 
     return {
-      iconList: iconList.value,
-      svgList: svgList.value
+      state,
+      showMore
     }
   }
 })

@@ -10,7 +10,11 @@
       type="default"
       inactive
     >Default Button (inactive)</v-button>
-    <v-button type="primary" icon="security" round>Primary Button</v-button>
+    <v-button
+      type="primary"
+      icon="security"
+      round
+    >Primary Button</v-button>
     <v-button
       type="primary"
       inactive
