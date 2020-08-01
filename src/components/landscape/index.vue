@@ -10,6 +10,7 @@
       @input="val => $_onInput(val)"
       @show="$_onShow"
       @hide="$_onHide"
+      @mask-click="$_onMaskClick"
     >
       <div :class="$_bodyCls">
         <div class="v-landscape-content">
@@ -63,13 +64,13 @@ export default defineComponent({
     const popupShow = ref({})
 
     const $_effect = computed(() => {
-      let res = ''
+      let effect = 'v-bounce'
       if (props.transition) {
-        res = props.transition
+        effect = props.transition
       } else {
-        res = props.fullscreen ? 'v-fade' : 'v-punch'
+        effect = props.fullscreen ? 'v-fade' : 'v-punch'
       }
-      return res  
+      return effect
     })
 
     const $_iconName = computed(() => {
@@ -124,6 +125,11 @@ export default defineComponent({
       emit('hide')
     }
 
+    // click upon mask
+    const $_onMaskClick = () => {
+      emit('mask-click')
+    }
+
     // close popup
     const $_close = () => {
       $_showPopup('landscape', false)
@@ -144,6 +150,7 @@ export default defineComponent({
       $_onInput,
       $_onShow,
       $_onHide,
+      $_onMaskClick,
       $_close
     }
   }

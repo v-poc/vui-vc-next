@@ -27,6 +27,9 @@ Vue.component(VLandscape.name, VLandscape)
 
 #### Landscape Events
 
+##### @mask-click()
+Click upon mask
+
 ##### @show()
 Display popup
 

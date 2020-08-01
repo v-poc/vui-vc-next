@@ -27,17 +27,17 @@ Vue.component(VPopup.name, VPopup)
 
 #### Popup Events
 
-#### @mask-click()
+##### @mask-click()
 Click upon mask
 
-#### @before-show()
+##### @before-show()
 Popup will be shown
 
-#### @show()
+##### @show()
 Show popup
 
-#### @before-hide()
+##### @before-hide()
 Popup will be hiden
 
-#### @hide()
+##### @hide()
 Hide popup

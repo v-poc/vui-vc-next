@@ -19,10 +19,11 @@
     <v-landscape
       :value="popupShow.maskClosableMode"
       @input="val => showPopup('maskClosableMode', val)"
+      @mask-click="showInfo('click mask to close landscape popup')"
       :mask-closable="true"
       transition="v-bounce"
     >
-      <img src="../assets/images/mj.png" />
+      <img src="../assets/images/grid.png" />
     </v-landscape>
   </div>
   <div class="v-example">

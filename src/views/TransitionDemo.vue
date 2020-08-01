@@ -8,7 +8,7 @@
     v-for="(item, index) in effects"
     :key="`effect${index}`"
   >
-    <button @click="showPopup(index, true)">{{ item }}</button>
+    <button @click="showPopup(index, true)">{{ detailInfo(item) }}</button>
     <v-popup
       :value="popupShow[index]"
       @input="val => showPopup(index, val)"
@@ -59,6 +59,12 @@ export default defineComponent({
       popupShow.value[index] = isShow
     }
 
+    const detailInfo = (name) => {
+      const arr = name.split(' ')
+      arr.length > 1 && arr.splice(1, 0, 'from')
+      return arr.length === 1 ? name : arr.join(' ') 
+    }
+
     const convertName = (name) => {
       const arr = name.split(' ')
       const nameLowerCase = arr.map((item) => item.toLowerCase()).join('-')
@@ -69,6 +75,7 @@ export default defineComponent({
       effects: effects.value,
       popupShow: popupShow.value,
       showPopup,
+      detailInfo,
       convertName
     }
   }
