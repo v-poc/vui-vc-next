@@ -1,7 +1,7 @@
 <template>
   <div
     ref="root"
-    v-show="state.isPopupShow"    
+    v-show="state.isPopupShow"
     :class="$_cls"
   >
     <div
@@ -37,12 +37,13 @@ import {
 } from 'vue'
 import usePopupBase from '../../composables/usePopupBase'
 import useTransition from '../../composables/useTransition'
+import useEventListener from '../../composables/useEventListener'
 
 export default defineComponent({
   name: 'v-popup',
 
   props: {
-    // merge base props
+    // Merge base props
     ...usePopupBase(),
     // The position of popup
     position: {
@@ -60,7 +61,7 @@ export default defineComponent({
       default() {
         return ''
       }
-    }    
+    }
   },
 
   setup(props, { emit }) {
@@ -101,24 +102,34 @@ export default defineComponent({
     }
 
     const $_preventScroll = (isBind) => {
-      const handler = `${isBind ? 'add' : 'remove'}EventListener`
-      const popupMask = root.value.querySelector('.v-popup-mask')
-      const popupBox = root.value.querySelector('.v-popup-box')
+      [
+        root.value.querySelector('.v-popup-mask'),
+        root.value.querySelector('.v-popup-box')
+      ].forEach((node) => {
+        useEventListener({
+          isBind,
+          node,
+          name: 'touchmove',
+          handler: $_preventDefault
+        })()
+      })
 
-      popupMask && popupMask[handler]('touchmove', $_preventDefault, false)
-      popupBox && popupBox[handler]('touchmove', $_preventDefault, false)
       $_preventScrollExclude(isBind)
     }
 
     const $_preventScrollExclude = (isBind, preventScrollExclude) => {
-      const handler = `${isBind ? 'add' : 'remove'}EventListener`
       preventScrollExclude = preventScrollExclude || props.preventScrollExclude
       const excluder =
         preventScrollExclude && typeof preventScrollExclude === 'string'
           ? root.value.querySelector(preventScrollExclude)
           : preventScrollExclude
-      excluder &&
-        excluder[handler]('touchmove', $_stopImmediatePropagation, false)
+
+      useEventListener({
+        isBind,
+        node: excluder,
+        name: 'touchmove',
+        handler: $_stopImmediatePropagation
+      })()
     }
 
     const $_preventDefault = (event) => {
@@ -132,7 +143,7 @@ export default defineComponent({
     const $_onPopupMaskClick = () => {
       if (props.maskClosable) {
         $_hidePopupBox()
-        emit('maskClick')
+        emit('mask-click')
       }
     }
 

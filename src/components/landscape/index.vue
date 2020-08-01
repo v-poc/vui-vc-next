@@ -40,7 +40,7 @@ export default defineComponent({
   },
 
   props: {
-    // merge base props
+    // Merge base props
     ...usePopupBase(),
     // Whether scroll enabled
     scroll: {

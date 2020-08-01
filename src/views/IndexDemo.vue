@@ -1,6 +1,6 @@
 <template>
   <div class="nav-wrapper">
-    <p class="title">vui</p>
+    <p><span class="title">vui</span><sup>v{{ state.version }}</sup></p>
     <p>[Examples]</p>
     <ul>
       <li>
@@ -23,16 +23,26 @@
       </li>
       <li>
         <router-link to="/landscape-demo">Landscape</router-link>
-      </li>                  
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, reactive } from 'vue'
+import packageData from '../../package.json'
 
 export default defineComponent({
-  name: 'index-demo'
+  name: 'index-demo',
+  setup() {
+    const state = reactive({
+      version: packageData.version
+    })
+
+    return {
+      state
+    }
+  }
 })
 </script>
 
