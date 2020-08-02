@@ -30,7 +30,7 @@
       type="primary"
       inline
       round
-      @click="showToast()"
+      @click="showToast"
     >Test to show toast</v-button>
     <v-toast
       ref="toastNode"
@@ -89,7 +89,7 @@ export default defineComponent({
     const toastNode = ref('toastNode')
 
     const showToast = () => {
-      toastNode.value.show()
+      toastNode && toastNode.value.show()
     }
 
     return {

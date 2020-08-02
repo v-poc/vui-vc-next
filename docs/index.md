@@ -13,3 +13,4 @@ sidebar: auto
 - [`Button`](./button.html)
 - [`Transition`](./transition.html)
 - [`Landscape`](./landscape.html)
+- [`Toast`](./toast.html)

@@ -61,7 +61,7 @@ export default defineComponent({
     // if set duration as `0`, the toast will always be visible
     duration: {
       type: Number,
-      default: 0
+      default: 3000
     },
     // The display position
     position: {
