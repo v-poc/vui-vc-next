@@ -1,3 +1,7 @@
+# 0.0.8 (2020-08-02)
+
+Added Toast demo.
+
 # 0.0.7 (2020-07-30)
 
 Added Landscape demo.
