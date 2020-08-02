@@ -24,6 +24,9 @@
       <li>
         <router-link to="/landscape-demo">Landscape</router-link>
       </li>
+      <li>
+        <router-link to="/toast-demo">Toast</router-link>
+      </li>
     </ul>
   </div>
 </template>

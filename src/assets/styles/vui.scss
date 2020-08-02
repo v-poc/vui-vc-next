@@ -18,6 +18,7 @@ $color-bg-disabled: #E2E4EA;
 $color-mask: rgba(37, 38, 45, 0.7);
 $radius-normal: 4px;
 $radius-circle: 50%;
+$h-gap-xs: 0.08rem;
 $h-gap-md: 0.2rem;
 $opacity-disabled: 0.3;
 $button-primary-fill: $color-primary;
@@ -58,6 +59,12 @@ $popup-mask-bg: $color-mask;
 $popup-zindex: 1000;
 $font-family-normal: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
 $icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/iconfont.ttf") format("truetype");
+$toast-fill: rgba(65, 72, 93, .77);
+$toast-font-size: $font-body-large;
+$toast-color: #FFF;
+$toast-radius: $radius-normal;
+$toast-padding: 0.2rem 0.3rem;
+$toast-zindex: 1700;
 
 // common util styles
 @mixin absolute-pos($t: 0, $r: 0, $b: 0, $l: 0) {
