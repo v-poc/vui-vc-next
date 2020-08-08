@@ -232,7 +232,7 @@ $toast-zindex: 1700;
 }
 
 @mixin vertical-height($height) {
-  $height: $height;
+  height: $height;
   line-height: $height;
 }
 

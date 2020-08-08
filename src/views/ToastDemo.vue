@@ -23,6 +23,7 @@
   <div class="v-example">
     <v-button
       type="primary"
+      size="small"
       inline
       round
       @click="showToast"
@@ -31,7 +32,7 @@
       ref="toastRef"
       :duration="1500"
       icon="security"
-      content="Some message text by local component"
+      content="Some msg by local component"
     ></v-toast>
   </div>
 </template>

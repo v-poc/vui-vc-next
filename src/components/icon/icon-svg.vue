@@ -65,27 +65,27 @@ export default {
 @import '../../assets/styles/vui.scss';
 
 .v-icon.icon-svg.xss {
-  width: 16px;
-  @include vertical-height(16px);
+  width: 0.16rem;
+  @include vertical-height(0.16rem);
 }
 
 .v-icon.icon-svg.xs {
-  width: 20px;
-  @include vertical-height(20px);
+  width: 0.2rem;
+  @include vertical-height(0.2rem);
 }
 
 .v-icon.icon-svg.sm {
-  width: 24px;
-  @include vertical-height(24px);
+  width: 0.24rem;
+  @include vertical-height(0.24rem);
 }
 
 .v-icon.icon-svg.md {
-  width: 32px;
-  @include vertical-height(32px);
+  width: 0.32rem;
+  @include vertical-height(0.32rem);
 }
 
 .v-icon.icon-svg.lg {
-  width: 42px;
-  @include vertical-height(42px);
+  width: 0.42rem;
+  @include vertical-height(0.42rem);
 }
 </style>

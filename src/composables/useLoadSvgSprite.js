@@ -2,11 +2,13 @@ import useDefaultSvgList from './useDefaultSvgList'
 
 const defaultSvgList = useDefaultSvgList()
 
+const SVG_SPRITE_NODE_ID = '__VC_SVG_SPRITE_NODE__'
+
 const svgSprite = (contents) => `
 <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  id="__VC_SVG_SPRITE_NODE__"
+  id=${SVG_SPRITE_NODE_ID}
   style="position:absolute;width:0;height:0"
 >
   <defs>
@@ -29,7 +31,7 @@ const loadSvgSprite = () => {
   if (!document) {
     return
   }
-  const svgNode = document.getElementById('__VC_SVG_SPRITE_NODE__')
+  const svgNode = document.getElementById(`${SVG_SPRITE_NODE_ID}`)
   const mountNode = document.body
 
   if (!svgNode) {
