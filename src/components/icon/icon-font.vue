@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import { defineComponent, computed } from 'vue'
+import { computed } from 'vue'
 
-export default defineComponent({
+export default {
   name: 'v-icon-font',
 
   props: {
@@ -56,7 +56,7 @@ export default defineComponent({
       $_onIconClick
     }
   }
-})
+}
 </script>
 
 <style lang="scss">

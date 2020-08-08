@@ -32,10 +32,10 @@
 </template>
 
 <script>
-import { defineComponent, reactive } from 'vue'
+import { reactive } from 'vue'
 import packageData from '../../package.json'
 
-export default defineComponent({
+export default {
   name: 'index-demo',
   setup() {
     const state = reactive({
@@ -46,7 +46,7 @@ export default defineComponent({
       state
     }
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

@@ -34,7 +34,7 @@ const Toast = function(props) {
     vm.mount(container)
     Toast.$_instance = vm
 
-    setTimeout(() => {
+    duration && setTimeout(() => {
       vm.unmount(container)
       parentNode.removeChild(container)
       Toast.$_instance = null

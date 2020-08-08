@@ -15,7 +15,7 @@
       :transition="convertName(item)"
     >
       <div class="v-example-popup v-example-popup-center">
-        <p>{{ item }}</p>
+        <p>{{ detailInfo(item) }}</p>
         <img
           src="../assets/images/kongfu.gif"
           style="width: 4.5rem"
@@ -26,10 +26,10 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { ref } from 'vue'
 import VPopup from '../components/popup/index.vue'
 
-export default defineComponent({
+export default {
   name: 'transition-demo',
 
   inheritAttrs: false,
@@ -79,7 +79,7 @@ export default defineComponent({
       convertName
     }
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

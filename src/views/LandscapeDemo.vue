@@ -39,10 +39,10 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { ref } from 'vue'
 import VLandscape from '../components/landscape/index.vue'
 
-export default defineComponent({
+export default {
   name: 'landscape-demo',
 
   inheritAttrs: false,
@@ -70,7 +70,7 @@ export default defineComponent({
       showInfo
     }
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

@@ -93,10 +93,10 @@
 </template>
 
 <script>
-import { defineComponent, reactive } from 'vue'
+import { reactive } from 'vue'
 import VIcon from '../components/icon/index.vue'
 
-export default defineComponent({
+export default {
   name: 'icon-demo',
 
   inheritAttrs: false,
@@ -175,7 +175,7 @@ export default defineComponent({
       showMore
     }
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import { defineComponent, computed, onMounted } from 'vue'
+import { computed, onMounted } from 'vue'
 import useLoadSvgSprite from '../../composables/useLoadSvgSprite'
 
-export default defineComponent({
+export default {
   name: 'v-icon-svg',
 
   props: {
@@ -58,7 +58,7 @@ export default defineComponent({
       $_onIconClick
     }
   }
-})
+}
 </script>
 
 <style lang="scss">

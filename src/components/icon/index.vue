@@ -16,12 +16,12 @@
 </template>
 
 <script>
-import { defineComponent, computed } from 'vue'
+import { computed } from 'vue'
 import VIconFont from './icon-font.vue'
 import VIconSvg from './icon-svg.vue'
 import useDefaultSvgList from '../../composables/useDefaultSvgList'
 
-export default defineComponent({
+export default {
   name: 'v-icon',
 
   components: {
@@ -67,7 +67,7 @@ export default defineComponent({
       $_onIconClick
     }
   }
-})
+}
 </script>
 
 <style lang="scss">

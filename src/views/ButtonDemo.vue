@@ -40,11 +40,10 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
 import VButton from '../components/button/index.vue'
 import VIcon from '../components/icon/index.vue'
 
-export default defineComponent({
+export default {
   name: 'button-demo',
 
   inheritAttrs: false,
@@ -53,7 +52,7 @@ export default defineComponent({
     VButton,
     VIcon
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

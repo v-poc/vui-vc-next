@@ -44,10 +44,10 @@
 </template>
 
 <script>
-import { defineComponent, computed, ref, onMounted } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { transformCamelCase } from '../../utils/index'
 
-export default defineComponent({
+export default {
   name: 'v-tag',
 
   props: {
@@ -178,7 +178,7 @@ export default defineComponent({
       $_bgStyle
     }
   }
-})
+}
 </script>
 
 <style lang="scss">

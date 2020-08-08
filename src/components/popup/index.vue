@@ -28,7 +28,6 @@
 
 <script>
 import {
-  defineComponent,
   computed,
   reactive,
   ref,
@@ -39,7 +38,7 @@ import usePopupBase from '../../composables/usePopupBase'
 import useTransition from '../../composables/useTransition'
 import useEventListener from '../../composables/useEventListener'
 
-export default defineComponent({
+export default {
   name: 'v-popup',
 
   props: {
@@ -195,7 +194,7 @@ export default defineComponent({
       $_onPopupTransitionEnd
     }
   }
-})
+}
 </script>
 
 <style lang="scss">

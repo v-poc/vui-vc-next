@@ -37,10 +37,10 @@
 </template>
 
 <script>
-import { defineComponent, reactive } from 'vue'
+import { reactive } from 'vue'
 import VSkeleton from '../components/skeleton/index.vue'
 
-export default defineComponent({
+export default {
   name: 'skeleton-demo',
 
   inheritAttrs: false,
@@ -71,7 +71,7 @@ export default defineComponent({
       startContentLoading
     }
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

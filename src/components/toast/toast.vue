@@ -29,11 +29,11 @@
 </template>
 
 <script>
-import { defineComponent, reactive, ref, computed, onUnmounted } from 'vue'
+import { reactive, ref, computed, onUnmounted } from 'vue'
 import VPopup from '../popup/index.vue'
 import VIcon from '../icon/index.vue'
 
-export default defineComponent({
+export default {
   name: 'v-toast',
 
   components: {
@@ -111,7 +111,9 @@ export default defineComponent({
     const show = () => {
       state.visible = true
       $_timer && clearTimeout($_timer)
-      $_timer = setTimeout(hide, props.duration)
+      if (props.duration) {
+        $_timer = setTimeout(hide, props.duration)
+      }
     }
 
     const hide = () => {
@@ -131,7 +133,7 @@ export default defineComponent({
       hide
     }
   }
-})
+}
 </script>
 
 <style lang="scss">
@@ -150,7 +152,7 @@ export default defineComponent({
   }
   .v-popup {
     .v-popup-box {
-      width: 540px;
+      width: 5.4rem;
       display: flex;
       justify-content: center;
     }
@@ -161,7 +163,7 @@ export default defineComponent({
   &.bottom {
     .v-popup .v-popup-box {
       position: absolute;
-      bottom: 50px;
+      bottom: 0.5rem;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -169,7 +171,7 @@ export default defineComponent({
   &.top {
     .v-popup .v-popup-box {
       position: absolute;
-      top: 50px;
+      top: 0.5rem;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -180,7 +182,7 @@ export default defineComponent({
   display: inline-flex;
   align-items: center;
   max-width: 100%;
-  min-width: 80px;
+  min-width: 0.8rem;
   padding: $toast-padding;
   border-radius: $toast-radius;
   font-size: $toast-font-size;

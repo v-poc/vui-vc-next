@@ -64,10 +64,9 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
 import VTag from '../components/tag/index.vue'
 
-export default defineComponent({
+export default {
   name: 'tag-demo',
 
   inheritAttrs: false,
@@ -75,7 +74,7 @@ export default defineComponent({
   components: {
     VTag
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

@@ -27,10 +27,10 @@
 </template>
 
 <script>
-import { defineComponent, computed } from 'vue'
+import { computed } from 'vue'
 import { SKELETON_WIDTH } from '../../constants/index'
 
-export default defineComponent({
+export default {
   name: 'v-skeleton',
 
   props: {
@@ -134,7 +134,7 @@ export default defineComponent({
       $_rowWidthStyle
     }
   }
-})
+}
 </script>
 
 <style lang="scss">

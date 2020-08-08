@@ -27,12 +27,12 @@
 </template>
 
 <script>
-import { defineComponent, computed, ref, watchEffect } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 import VPopup from '../popup/index.vue'
 import VIcon from '../icon/index.vue'
 import usePopupBase from '../../composables/usePopupBase'
 
-export default defineComponent({
+export default {
   name: 'v-landscape',
 
   components: {
@@ -154,7 +154,7 @@ export default defineComponent({
       $_close
     }
   }
-})
+}
 </script>
 
 <style lang="scss">

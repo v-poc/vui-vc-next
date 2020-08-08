@@ -28,7 +28,7 @@
       @click="showToast"
     >Test to show toast</v-button>
     <v-toast
-      ref="toastNode"
+      ref="toastRef"
       :duration="1500"
       icon="security"
       content="Some message text by local component"
@@ -37,12 +37,12 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { ref } from 'vue'
 import Toast from '../components/toast/index'
 import VToast from '../components/toast/toast.vue'
 import VButton from '../components/button/index.vue'
 
-export default defineComponent({
+export default {
   name: 'toast-demo',
 
   inheritAttrs: false,
@@ -76,10 +76,10 @@ export default defineComponent({
       })
     }
 
-    const toastNode = ref('toastNode')
+    const toastRef = ref('toastRef')
 
     const showToast = () => {
-      toastNode && toastNode.value.show()
+      toastRef && toastRef.value.show()
     }
 
     return {
@@ -88,11 +88,11 @@ export default defineComponent({
       showFailed,
       showLoading,
       showPosition,
-      toastNode,
+      toastRef,
       showToast
     }
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

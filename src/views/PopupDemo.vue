@@ -67,10 +67,10 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { ref } from 'vue'
 import VPopup from '../components/popup/index.vue'
 
-export default defineComponent({
+export default {
   name: 'popup-demo',
 
   inheritAttrs: false,
@@ -92,7 +92,7 @@ export default defineComponent({
       showPopup
     }
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

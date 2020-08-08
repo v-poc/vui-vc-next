@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import { defineComponent, computed } from 'vue'
+import { computed } from 'vue'
 import VIcon from '../icon/index.vue'
 
-export default defineComponent({
+export default {
   name: 'v-button',
 
   components: {
@@ -100,7 +100,7 @@ export default defineComponent({
       $_cls
     }
   }
-})
+}
 </script>
 
 <style lang="scss">

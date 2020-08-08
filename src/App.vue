@@ -8,7 +8,7 @@
 import './assets/styles/responsive'
 
 export default {
-  name: 'App'
+  name: 'vc-app'
 }
 </script>
 
