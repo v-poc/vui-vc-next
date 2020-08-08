@@ -31,3 +31,5 @@ Added Skeleton demo.
 # 0.0.1 (2020-07-18)
 
 Initial commit.
+
+> [Vue 3 is now in RC](https://github.com/vuejs/rfcs/issues/189). It's time to start this project.

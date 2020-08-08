@@ -71,8 +71,9 @@ export default {
 
     const showPosition = () => {
       Toast({
-        content: 'Customized position by js-api',
-        position: 'top'
+        content: 'Customized position with mask by js-api',
+        position: 'top',
+        hasMask: true
       })
     }
 
