@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import ToastOptions from './toast.vue'
 
 /**
@@ -20,33 +20,26 @@ const Toast = function(props) {
 
   let vm = Toast.$_instance
   if (!vm) {
-    const ToastConstructor = Vue.extend(ToastOptions)
-    vm = new ToastConstructor({
-      propsData: {
-        icon,
-        iconSvg,
-        content,
-        duration,
-        position,
-        hasMask
-      }
+    vm = createApp(ToastOptions, {
+      value: true,
+      icon,
+      iconSvg,
+      content,
+      duration,
+      position,
+      hasMask
     })
+    const container = document.createElement('div')
+    parentNode.appendChild(container)
+    vm.mount(container)
     Toast.$_instance = vm
-    vm.$mount()
+
+    setTimeout(() => {
+      vm.unmount(container)
+      parentNode.removeChild(container)
+      Toast.$_instance = null
+    }, duration)
   }
-
-  if (!vm.$el.parentNode) {
-    parentNode.appendChild(vm.$el)
-  }
-
-  vm.icon = icon
-  vm.iconSvg = iconSvg
-  vm.content = content
-  vm.duration = duration
-  vm.position = position
-  vm.hasMask = hasMask
-
-  vm.show()
 
   return vm
 }
@@ -151,16 +144,6 @@ Toast.loading = function(
     hasMask,
     parentNode
   })
-}
-
-/**
- * Hide toast
- */
-Toast.hide = function() {
-  const ToastConstructor = Vue.extend(ToastOptions)
-  if (Toast.$_instance instanceof ToastConstructor && Toast.$_instance.visible) {
-    Toast.$_instance.hide()
-  }
 }
 
 export default Toast

@@ -3,7 +3,7 @@
     :class="$_cls"
   >
     <v-popup
-      :value="state.visible"
+      :value="value || state.visible"
       :hasMask="hasMask"
       :maskClosable="false"
       @show="$_onShow"
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { defineComponent, reactive, computed, onUnmounted } from 'vue'
+import { defineComponent, reactive, ref, computed, onUnmounted } from 'vue'
 import VPopup from '../popup/index.vue'
 import VIcon from '../icon/index.vue'
 
@@ -42,6 +42,11 @@ export default defineComponent({
   },
 
   props: {
+    // Whether display toast
+    value: {
+      type: Boolean,
+      default: false
+    },
     // The icon name
     icon: {
       type: String,
