@@ -31,7 +31,7 @@ const loadSvgSprite = () => {
   if (!document) {
     return
   }
-  const svgNode = document.getElementById(`${SVG_SPRITE_NODE_ID}`)
+  const svgNode = document.getElementById(SVG_SPRITE_NODE_ID)
   const mountNode = document.body
 
   if (!svgNode) {
