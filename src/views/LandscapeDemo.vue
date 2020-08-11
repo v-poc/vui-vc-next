@@ -4,7 +4,13 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <button @click="showPopup('eventListenerMode', true)">Test event handler</button>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="showPopup('eventListenerMode', true)"
+    >Test event handler</v-button>
     <v-landscape
       :value="popupShow.eventListenerMode"
       @input="val => showPopup('eventListenerMode', val)"
@@ -15,7 +21,13 @@
     </v-landscape>
   </div>
   <div class="v-example">
-    <button @click="showPopup('maskClosableMode', true)">Test mask closable</button>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="showPopup('maskClosableMode', true)"
+    >Test mask closable</v-button>
     <v-landscape
       :value="popupShow.maskClosableMode"
       @input="val => showPopup('maskClosableMode', val)"
@@ -27,7 +39,13 @@
     </v-landscape>
   </div>
   <div class="v-example">
-    <button @click="showPopup('fullscreenMode', true)">Test fullscreen mode</button>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="showPopup('fullscreenMode', true)"
+    >Test fullscreen mode</v-button>
     <v-landscape
       :value="popupShow.fullscreenMode"
       @input="val => showPopup('fullscreenMode', val)"
@@ -41,6 +59,7 @@
 <script>
 import { ref } from 'vue'
 import VLandscape from '../components/landscape/index.vue'
+import VButton from '../components/button/index.vue'
 
 export default {
   name: 'landscape-demo',
@@ -48,7 +67,8 @@ export default {
   inheritAttrs: false,
 
   components: {
-    VLandscape
+    VLandscape,
+    VButton
   },
 
   setup() {

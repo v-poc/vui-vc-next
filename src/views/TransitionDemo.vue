@@ -8,7 +8,13 @@
     v-for="(item, index) in effects"
     :key="`effect${index}`"
   >
-    <button @click="showPopup(index, true)">{{ detailInfo(item) }}</button>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="showPopup(index, true)"
+    >{{ detailInfo(item) }}</v-button>
     <v-popup
       :value="popupShow[index]"
       @input="val => showPopup(index, val)"
@@ -28,6 +34,7 @@
 <script>
 import { ref } from 'vue'
 import VPopup from '../components/popup/index.vue'
+import VButton from '../components/button/index.vue'
 
 export default {
   name: 'transition-demo',
@@ -35,7 +42,8 @@ export default {
   inheritAttrs: false,
 
   components: {
-    VPopup
+    VPopup,
+    VButton
   },
 
   setup() {

@@ -13,7 +13,7 @@
         color="green"
         :name="item.split('/')[0]"
       ></v-icon>
-      {{ item }}
+      <span>{{ item }}</span>
     </div>
     <button
       v-if="state.iconList.length < 4"
@@ -87,7 +87,7 @@
         :class="{ 'v-example-invert': svgIcon === 'spinner' }"
         size="lg"
       ></v-icon>
-      {{ svgIcon }}
+      <span>{{ svgIcon }}</span>
     </div>
   </div>
 </template>

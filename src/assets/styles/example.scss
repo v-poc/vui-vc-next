@@ -57,6 +57,11 @@
     width: 100%;
     height: auto;
   }
+
+  span {
+    margin-left: 0.2rem;
+    font-size: 75%;
+  }  
   
   .v-tag {
     margin-right: 0.5rem;
@@ -138,9 +143,14 @@
 .v-example-svg {
   display: flex;
   align-items: center;
+  margin-bottom: 0.2rem;
 
   .icon-svg {
     margin-right: 0.2rem;
+  }
+
+  span {
+    font-size: 75%;
   }
 }
 
