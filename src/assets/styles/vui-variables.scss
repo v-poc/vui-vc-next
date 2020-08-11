@@ -1,0 +1,78 @@
+// global style variables
+$color-primary: #2F86F6;
+
+$font-body-large: 0.28rem;
+$font-body-normal: 0.26rem;
+$font-caption-large: 0.36rem;
+$font-minor-normal: 0.2rem;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+
+$color-border-element: #C5CAD5;
+$color-text-base: #111A34;
+$color-text-base-inverse: #FFF;
+$color-text-error: #FF5257;
+$color-bg-base: #F9FAFB;
+$color-text-body: #41485D;
+$color-text-disabled: #C5CAD5;
+$color-bg-inverse: #FFF;
+$color-bg-disabled: #E2E4EA;
+$color-mask: rgba(37, 38, 45, 0.7);
+
+$radius-normal: 4px;
+$radius-circle: 50%;
+
+$h-gap-xs: 0.08rem;
+$h-gap-md: 0.2rem;
+
+$opacity-disabled: 0.3;
+
+$button-primary-fill: $color-primary;
+$button-default-fill: $color-bg-inverse;
+$button-disabled-fill: $color-bg-disabled;
+$button-warning-fill: $color-text-error;
+$button-primary-active-fill: #2A78DC;
+$button-default-active-fill: $color-bg-base;
+$button-warning-active-fill: #E9424F;
+$button-primary-plain-active-fill: #EAF2FE;
+$button-default-plain-active-fill: $color-bg-base;
+$button-warning-plain-active-fill: #FAC3C6;
+$button-default-color: $color-text-body;
+$button-primary-color: $color-text-base-inverse;
+$button-disabled-color: $color-text-base-inverse;
+$button-warning-color: $color-text-base-inverse;
+$button-default-plain-color: $button-default-color;
+$button-primary-plain-color: $button-primary-fill;
+$button-warning-plain-color: $button-warning-fill;
+$button-disabled-plain-color: $color-text-disabled;
+$button-height: 1rem;
+$button-font-size: $font-caption-large;
+$button-font-weight: $font-weight-medium;
+$button-small-height: 0.64rem;
+$button-small-font-size: $font-body-large;
+$button-radius: $radius-normal;
+
+$landscape-width: 5.4rem;
+$landscape-fullscreen-bg: $color-bg-inverse;
+$landscape-zindex: 1600;
+
+$tag-color: $color-primary;
+$tag-fillet-radius: 0.02rem;
+$tag-large-font-size: $font-body-normal;
+$tag-small-font-size: $font-minor-normal;
+$tag-tiny-font-size: 0.12rem;
+
+$popup-title-bar-radius: 8px;
+$popup-title-bar-radius-large: 0.4rem;
+$popup-mask-bg: $color-mask;
+$popup-zindex: 1000;
+
+$font-family-normal: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+$icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/iconfont.ttf") format("truetype");
+
+$toast-fill: rgba(65, 72, 93, .77);
+$toast-font-size: $font-body-large;
+$toast-color: #FFF;
+$toast-radius: $radius-normal;
+$toast-padding: 0.2rem 0.3rem;
+$toast-zindex: 1700;
