@@ -33,7 +33,7 @@
       @input="val => showPopup('fullscreenMode', val)"
       fullscreen
     >
-      <img src="../assets/images/kongfu.gif" />
+      <img src="../assets/images/kongfu.png" />
     </v-landscape>
   </div>
 </template>

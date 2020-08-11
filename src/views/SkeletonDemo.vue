@@ -19,7 +19,7 @@
       :row="7"
       :loading="state.contentLoading"
     >
-      <img src="../assets/images/kongfu.gif" />
+      <img src="../assets/images/kongfu.png" />
     </v-skeleton>
   </div>
   <div class="v-example">
