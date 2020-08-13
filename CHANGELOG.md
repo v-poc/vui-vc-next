@@ -1,3 +1,7 @@
+# 0.0.9 (2020-08-13)
+
+Updated Button demo.
+
 # 0.0.8 (2020-08-02)
 
 Added Toast demo.
