@@ -27,6 +27,9 @@
       <li>
         <router-link to="/toast-demo">Toast</router-link>
       </li>
+      <li>
+        <router-link to="/amount-demo">Amount</router-link>
+      </li>
     </ul>
   </div>
 </template>

@@ -1,4 +1,4 @@
-export const noop = function() {}
+export const noop = function () { }
 
 /**
  * Convert kebab-case to camelCase

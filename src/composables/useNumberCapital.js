@@ -15,7 +15,7 @@ const cnNegative = '\u8d1f' // 负
 // Maximum number
 const maxNum = 999999999999999.9999
 
-const useNumberCapital = function(number) {
+const useNumberCapital = function (number) {
   let negative
   let integerNum // Integral part
   let decimalNum // Decimal part

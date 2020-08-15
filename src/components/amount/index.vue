@@ -1,7 +1,5 @@
 <template>
-  <span
-    :class="$_cls"
-  >
+  <span :class="$_cls">
     <template v-if="!isCapital">
       {{ doFormat(doPrecision(state.formatValue, $_legalPrecision, isRoundUp), hasSeparator, separator) }}
     </template>
@@ -12,16 +10,10 @@
 </template>
 
 <script>
-import {
-  reactive,
-  onMounted,
-  computed,
-  watchEffect
-} from 'vue'
-
-import { noop, isInBrowser, formatValueByGapStep } from '../../utils/index'
+import { reactive, onMounted, computed, watchEffect } from 'vue'
 import useAnimate from '../../composables/useAnimate'
 import useNumberCapital from '../../composables/useNumberCapital'
+import { noop, isInBrowser, formatValueByGapStep } from '../../utils/index'
 
 export default {
   name: 'v-amount',
@@ -85,10 +77,7 @@ export default {
     })
 
     const $_cls = computed(() => {
-      return [
-        'v-amount',
-        { 'numerical': !props.isCapital }
-      ]
+      return ['v-amount', { 'numerical': !props.isCapital }]
     })
 
     // Calculate legal precision
@@ -118,12 +107,14 @@ export default {
         isAdd: 1,
         oldValue: ''
       })
-      return decimalValue ? `${formatResult.value}.${decimalValue}` : `${formatResult.value}`
+      return decimalValue
+        ? `${formatResult.value}.${decimalValue}`
+        : `${formatResult.value}`
     }
 
     const doCapital = (value) => {
       return useNumberCapital(value)
-    }    
+    }
 
     const $_doAnimate = (fromValue = 0, toValue = 0) => {
       const step = (percent) => {
@@ -147,17 +138,16 @@ export default {
         $_doAnimate(0, props.value)
       } else {
         state.formatValue = props.value
-      }      
-    })    
-    
+      }
+    })
+
     return {
       state,
       $_cls,
       $_legalPrecision,
       doPrecision,
       doFormat,
-      doCapital,
-      $_doAnimate
+      doCapital
     }
   }
 }
