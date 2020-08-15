@@ -1,16 +1,11 @@
-const cnNums = ['\u96f6', '\u58f9', '\u8d30', '\u53c1', '\u8086', '\u4f0d', '\u9646', '\u67d2', '\u634c', '\u7396']
-
-const cnIntRadice = ['', '\u62fe', '\u4f70', '\u4edf'] // 拾 \u62fe 佰 \u4f70 仟 \u4edf
-
-const cnIntUnits = ['', '\u4e07', '\u4ebf', '兆'] // 万 \u4e07 亿 \u4ebf 兆 \u5146
-
-const cnDecUnits = ['\u89d2', '\u5206', '\u5398', '\u6beb'] // 角 \u89d2 分 \u5206 厘 \u5398 毫 \u6beb
-
-const cnInteger = '\u6574' // 整 \u6574
-
-const cnIntLast = '\u5143' // 元 \u5143
-
-const cnNegative = '\u8d1f' // 负
+import { CN_AMOUNT } from '../constants/index'
+const cnNums = CN_AMOUNT.NUMS
+const cnIntRadice = CN_AMOUNT.INT_RADICE // 拾 \u62fe 佰 \u4f70 仟 \u4edf
+const cnIntUnits = CN_AMOUNT.INT_UNITS // 万 \u4e07 亿 \u4ebf 兆 \u5146
+const cnDecUnits = CN_AMOUNT.DEC_UNITS // 角 \u89d2 分 \u5206 厘 \u5398 毫 \u6beb
+const cnInteger = CN_AMOUNT.INTEGER // 整 \u6574
+const cnIntLast = CN_AMOUNT.INT_LAST // 元 \u5143
+const cnNegative = CN_AMOUNT.NEGATIVE // 负
 
 // Maximum number
 const maxNum = 999999999999999.9999

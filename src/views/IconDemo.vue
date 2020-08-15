@@ -6,6 +6,7 @@
   <div class="v-example">
     <p>Icon Font</p>
     <div
+      class="v-example-row"
       v-for="item in state.iconList"
       :key="item"
     >
@@ -15,10 +16,14 @@
       ></v-icon>
       <span>{{ item }}</span>
     </div>
-    <button
+    <v-button
       v-if="state.iconList.length < 4"
+      type="primary"
+      size="small"
+      inline
+      round
       @click="showMore"
-    >Show more</button>
+    >Show more</v-button>    
   </div>
   <div class="v-example">
     <p>Icon Size</p>
@@ -95,6 +100,7 @@
 <script>
 import { reactive } from 'vue'
 import VIcon from '../components/icon/index.vue'
+import VButton from '../components/button/index.vue'
 
 export default {
   name: 'icon-demo',
@@ -102,7 +108,8 @@ export default {
   inheritAttrs: false,
 
   components: {
-    VIcon
+    VIcon,
+    VButton
   },
 
   setup() {

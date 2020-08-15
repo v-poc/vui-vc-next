@@ -95,9 +95,9 @@ export default {
       if (!hasSeparator) {
         return value
       }
-      const arrNumber = value.split('.')
-      const integerValue = arrNumber[0] // The integer part
-      const decimalValue = arrNumber[1] || '' // The decimal part
+      const arrNumber = value.split('.') || []
+      const integerValue = arrNumber[0] || 0 // The integer part
+      const decimalValue = arrNumber[1] || 0 // The decimal part
       const formatResult = formatValueByGapStep({
         step: 3,
         value: integerValue,
