@@ -1,3 +1,7 @@
+# 0.0.10 (2020-08-15)
+
+Added Amount demo.
+
 # 0.0.9 (2020-08-13)
 
 Updated Button demo.
