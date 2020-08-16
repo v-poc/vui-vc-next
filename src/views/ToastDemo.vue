@@ -4,21 +4,51 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <p><button
+    <p>
+      <v-button
+        type="primary"
+        size="small"
+        inline
+        round
         @click="showInfo"
-      >Test pure text</button></p>
-    <p><button
+      >Test pure text</v-button>
+    </p>
+    <p>
+      <v-button
+        type="primary"
+        size="small"
+        inline
+        round      
         @click="showSucceed"
-      >Test action succeed</button></p>
-    <p><button
+      >Test action succeed</v-button>
+    </p>
+    <p>
+      <v-button
+        type="primary"
+        size="small"
+        inline
+        round      
         @click="showFailed"
-      >Test action failed</button></p>
-    <p><button
+      >Test action failed</v-button>
+    </p>
+    <p>
+      <v-button
+        type="primary"
+        size="small"
+        inline
+        round      
         @click="showLoading"
-      >Test loading</button></p>
-    <p><button
+      >Test loading</v-button>
+    </p>
+    <p>
+      <v-button
+        type="primary"
+        size="small"
+        inline
+        round      
         @click="showPosition"
-      >Test customized position</button></p>
+      >Test customized position</v-button>
+    </p>
   </div>
   <div class="v-example">
     <v-button

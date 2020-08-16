@@ -31,8 +31,8 @@ export default {
     })
 
     const getPath = (name) => {
-      const routeItem = getRoute(name)
-      return routeItem && routeItem.routePath
+      const routeItem = getRoute(name) || {}
+      return routeItem.routePath
     }
 
     return {

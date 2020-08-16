@@ -1,8 +1,4 @@
-import {
-  createRouter,
-  createWebHistory
-} from 'vue-router'
-
+import { createRouter, createWebHistory } from 'vue-router'
 import { VUI_COMPONENTS } from '../constants/index'
 import { getRoute } from '../utils/index'
 
@@ -17,7 +13,7 @@ const routes = [
 ]
 
 VUI_COMPONENTS.forEach((name) => {
-  const item = getRoute(name)
+  const item = getRoute(name) || {}
   routes.push({
     path: item.routePath,
     name: item.routeName,

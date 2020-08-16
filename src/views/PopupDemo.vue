@@ -4,7 +4,13 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <button @click="showPopup('center', true)">Test popup from center</button>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round    
+      @click="showPopup('center', true)"
+    >Test popup from center</v-button>
     <v-popup
       position="center"
       transition="v-punch"
@@ -21,7 +27,13 @@
     </v-popup>
   </div>
   <div class="v-example">
-    <button @click="showPopup('bottom', true)">Test popup from bottom</button>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round    
+      @click="showPopup('bottom', true)"
+    >Test popup from bottom</v-button>
     <v-popup
       position="bottom"
       :value="popupShow.bottom"
@@ -31,7 +43,13 @@
     </v-popup>
   </div>
   <div class="v-example">
-    <button @click="showPopup('top', true)">Test popup from top</button>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round    
+      @click="showPopup('top', true)"
+    >Test popup from top</v-button>
     <v-popup
       position="top"
       :value="popupShow.top"
@@ -40,12 +58,24 @@
     >
       <div class="v-example-popup v-example-popup-top">
         popup from top
-        <button @click="showPopup('top', false)">close</button>
+        <v-button
+          type="link"
+          size="small"
+          inline
+          round        
+          @click="showPopup('top', false)"
+        >close</v-button>
       </div>
     </v-popup>
   </div>
   <div class="v-example">
-    <button @click="showPopup('left', true)">Test popup from left</button>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round    
+      @click="showPopup('left', true)"
+    >Test popup from left</v-button>
     <v-popup
       position="left"
       :value="popupShow.left"
@@ -55,7 +85,13 @@
     </v-popup>
   </div>
   <div class="v-example">
-    <button @click="showPopup('right', true)">Test popup from right</button>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round    
+      @click="showPopup('right', true)"
+    >Test popup from right</v-button>
     <v-popup
       position="right"
       :value="popupShow.right"
@@ -69,6 +105,7 @@
 <script>
 import { ref } from 'vue'
 import VPopup from '../components/popup/index.vue'
+import VButton from '../components/button/index.vue'
 
 export default {
   name: 'popup-demo',
@@ -76,7 +113,8 @@ export default {
   inheritAttrs: false,
 
   components: {
-    VPopup
+    VPopup,
+    VButton
   },
 
   setup() {
