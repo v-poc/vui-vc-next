@@ -17,10 +17,11 @@ const routes = [
 ]
 
 VUI_COMPONENTS.forEach((name) => {
+  const item = getRoute(name)
   routes.push({
-    path: getRoute(name).routePath,
-    name: getRoute(name).routeName,
-    component: getRoute(name).routeComponent
+    path: item.routePath,
+    name: item.routeName,
+    component: item.routeComponent
   })
 })
 

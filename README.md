@@ -9,6 +9,7 @@
 - [x] [Vite](https://github.com/vitejs/vite) 1 (RC)
   - [x] [HMR](https://github.com/vitejs/vite#hot-module-replacement)
   - [x] [Dev Server](https://github.com/vitejs/vite#dev-server-proxy)
+  - [x] [CSS Pre-processors](https://github.com/vitejs/vite#css-pre-processors)
 - [x] [Vitepress](https://github.com/vuejs/vitepress) 0.5.0
 
 ### Status

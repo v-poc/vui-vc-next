@@ -7,7 +7,7 @@
         v-for="item in state.list"
         :key="item"
       >
-        <router-link :to="getRoute(item).routePath">
+        <router-link :to="getPath(item)">
           {{ item }}
         </router-link>
       </li>
@@ -30,9 +30,14 @@ export default {
       list: VUI_COMPONENTS
     })
 
+    const getPath = (name) => {
+      const routeItem = getRoute(name)
+      return routeItem && routeItem.routePath
+    }
+
     return {
       state,
-      getRoute
+      getPath
     }
   }
 }
