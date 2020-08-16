@@ -3,32 +3,13 @@
     <p><span class="title">vui</span><sup>v{{ state.version }}</sup></p>
     <p>[Examples]</p>
     <ul>
-      <li>
-        <router-link to="/skeleton-demo">Skeleton</router-link>
-      </li>
-      <li>
-        <router-link to="/tag-demo">Tag</router-link>
-      </li>
-      <li>
-        <router-link to="/popup-demo">Popup</router-link>
-      </li>
-      <li>
-        <router-link to="/icon-demo">Icon</router-link>
-      </li>
-      <li>
-        <router-link to="/button-demo">Button</router-link>
-      </li>
-      <li>
-        <router-link to="/transition-demo">Transition</router-link>
-      </li>
-      <li>
-        <router-link to="/landscape-demo">Landscape</router-link>
-      </li>
-      <li>
-        <router-link to="/toast-demo">Toast</router-link>
-      </li>
-      <li>
-        <router-link to="/amount-demo">Amount</router-link>
+      <li
+        v-for="item in state.list"
+        :key="item"
+      >
+        <router-link :to="getRoute(item).routePath">
+          {{ item }}
+        </router-link>
       </li>
     </ul>
   </div>
@@ -37,16 +18,21 @@
 <script>
 import { reactive } from 'vue'
 import packageData from '../../package.json'
+import { VUI_COMPONENTS } from '../constants/index'
+import { getRoute } from '../utils/index'
 
 export default {
   name: 'index-demo',
+
   setup() {
     const state = reactive({
-      version: packageData.version
+      version: packageData.version,
+      list: VUI_COMPONENTS
     })
 
     return {
-      state
+      state,
+      getRoute
     }
   }
 }
