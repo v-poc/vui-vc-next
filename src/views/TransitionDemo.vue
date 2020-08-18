@@ -22,10 +22,7 @@
     >
       <div class="v-example-popup v-example-popup-center">
         <p>{{ detailInfo(item) }}</p>
-        <img
-          src="../assets/images/mj.png"
-          style="width: 4.5rem"
-        />
+        <img src="../assets/images/mj.png" />
       </div>
     </v-popup>
   </div>

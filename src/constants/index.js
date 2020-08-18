@@ -7,7 +7,8 @@ export const VUI_COMPONENTS = [
   'Transition',
   'Landscape',
   'Toast',
-  'Amount'
+  'Amount',
+  'ActivityIndicator'
 ]
 
 export const SKELETON_WIDTH = {
