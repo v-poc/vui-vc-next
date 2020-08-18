@@ -19,10 +19,7 @@
     >
       <div class="v-example-popup v-example-popup-center">
         <p>popup from center</p>
-        <img
-          src="../assets/images/kongfu.png"
-          style="width: 4.5rem"
-        />
+        <img src="../assets/images/mj.png" />
       </div>
     </v-popup>
   </div>
