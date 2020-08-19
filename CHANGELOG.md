@@ -1,3 +1,7 @@
+# 0.0.11 (2020-08-18)
+
+Added ActivityIndicator demo.
+
 # 0.0.10 (2020-08-15)
 
 Added Amount demo.

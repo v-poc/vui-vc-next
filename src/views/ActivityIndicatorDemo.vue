@@ -5,18 +5,21 @@
   >&lt; Home</router-link>
   <div class="v-example">
     <p>Spinner</p>
-    <v-activity-indicator-spinner
+    <v-activity-indicator
+      type="spinner"
       :size="30"
-    ></v-activity-indicator-spinner>
-    <v-activity-indicator-spinner
+    >Loading Data...</v-activity-indicator>
+    <v-activity-indicator
+      type="spinner"
       :size="60"
+      :text-size="30"
       color="light"
-    ></v-activity-indicator-spinner>    
+    >Loading...</v-activity-indicator>
   </div>
 </template>
 
 <script>
-import VActivityIndicatorSpinner from '../components/activity-indicator/spinner.vue'
+import VActivityIndicator from '../components/activity-indicator/index.vue'
 
 export default {
   name: 'activity-indicator-demo',
@@ -24,7 +27,7 @@ export default {
   inheritAttrs: false,
 
   components: {
-    VActivityIndicatorSpinner
+    VActivityIndicator
   }
 }
 </script>
