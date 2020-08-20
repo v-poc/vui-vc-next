@@ -4,6 +4,7 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
+    <p>Toast by js-api</p>
     <p>
       <v-button
         type="primary"
@@ -51,6 +52,7 @@
     </p>
   </div>
   <div class="v-example">
+    <p>Toast by local component</p>
     <v-button
       type="primary"
       size="small"
