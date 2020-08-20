@@ -19,12 +19,12 @@
     "build-docs": "cd docs && npx vitepress build"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.0-rc.5",
+    "@vue/compiler-sfc": "^3.0.0-rc.6",
     "sass": "^1.26.10",
     "vite": "^1.0.0-rc.4",
     "vitepress": "^0.5.0",
-    "vue": "^3.0.0-rc.5",
-    "vue-router": "^4.0.0-beta.6"
+    "vue": "^3.0.0-rc.6",
+    "vue-router": "^4.0.0-beta.7"
   },
   "engines": {
     "node": ">=10.0.0"
