@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { VUI_COMPONENTS } from '../constants/index'
 import { getRoute } from '../utils/index'
 
@@ -22,7 +22,7 @@ VUI_COMPONENTS.forEach((name) => {
 })
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 
