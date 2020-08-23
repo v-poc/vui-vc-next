@@ -158,7 +158,14 @@ export default {
 
 .v-amount {
   &.numerical {
-    font-family: $font-family-number;
+    font-family: VC-Amount,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
   }
+}
+
+@font-face {
+  font-family: VC-Amount;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/DINPro-Medium.ttf") format("truetype");
 }
 </style>

@@ -34,7 +34,13 @@
       @input="val => showPopup('center', val)"
     >
       <div class="v-example-popup v-example-popup-center">
-        <p>Amount: 1234.1816</p>
+        <p>
+          <span class="amount-title">Amount:</span>
+          <v-amount
+            :value="1234.1816"
+            :precision="4"
+          ></v-amount>
+        </p>
         <v-amount
           :value="1234.1816"
           is-capital
