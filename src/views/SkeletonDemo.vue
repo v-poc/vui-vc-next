@@ -5,12 +5,14 @@
   >&lt; Home</router-link>
   <div class="v-example">
     <p>Skeleton Content loading</p>
-    <p>
-      <button
-        @click="startContentLoading"
-        :disabled="state.contentLoading"
-      >Test Content loading (delay 3s)</button>
-    </p>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="startContentLoading"
+      :inactive="state.contentLoading"
+    >Test Content loading (delay 3s)</v-button>
     <v-skeleton
       class="v-example-img"
       v-if="state.showContent"
@@ -39,6 +41,7 @@
 <script>
 import { reactive } from 'vue'
 import VSkeleton from '../components/skeleton/index.vue'
+import VButton from '../components/button/index.vue'
 
 export default {
   name: 'skeleton-demo',
@@ -46,7 +49,8 @@ export default {
   inheritAttrs: false,
 
   components: {
-    VSkeleton
+    VSkeleton,
+    VButton
   },
 
   setup() {
