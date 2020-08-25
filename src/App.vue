@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import './assets/styles/responsive'
+import './assets/styles/vui-responsive'
 
 export default {
-  name: 'vc-app'
+  name: 'vui-app'
 }
 </script>
 

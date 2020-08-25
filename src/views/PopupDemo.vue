@@ -8,7 +8,7 @@
       type="primary"
       size="small"
       inline
-      round    
+      round
       @click="showPopup('center', true)"
     >Test popup from center</v-button>
     <v-popup
@@ -28,7 +28,7 @@
       type="primary"
       size="small"
       inline
-      round    
+      round
       @click="showPopup('bottom', true)"
     >Test popup from bottom</v-button>
     <v-popup
@@ -44,7 +44,7 @@
       type="primary"
       size="small"
       inline
-      round    
+      round
       @click="showPopup('top', true)"
     >Test popup from top</v-button>
     <v-popup
@@ -57,9 +57,7 @@
         popup from top
         <v-button
           type="link"
-          size="small"
-          inline
-          round        
+          icon="clear"
           @click="showPopup('top', false)"
         >close</v-button>
       </div>
@@ -70,7 +68,7 @@
       type="primary"
       size="small"
       inline
-      round    
+      round
       @click="showPopup('left', true)"
     >Test popup from left</v-button>
     <v-popup
@@ -86,7 +84,7 @@
       type="primary"
       size="small"
       inline
-      round    
+      round
       @click="showPopup('right', true)"
     >Test popup from right</v-button>
     <v-popup
@@ -131,5 +129,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/styles/example.scss';
+@import '../assets/styles/vui-example.scss';
 </style>

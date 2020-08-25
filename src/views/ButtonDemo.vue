@@ -40,7 +40,7 @@
   <div class="v-example">
     <p>Cool Button</p>
     <v-button
-      type="primary"
+      type="warning"
       size="small"
       inline
       round
@@ -117,7 +117,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/styles/example.scss';
+@import '../assets/styles/vui-example.scss';
 
 .op {
   cursor: -webkit-grab;

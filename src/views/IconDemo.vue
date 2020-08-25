@@ -23,7 +23,7 @@
       inline
       round
       @click="showMore"
-    >Show more</v-button>    
+    >Show more</v-button>
   </div>
   <div class="v-example">
     <p>Icon Size</p>
@@ -186,5 +186,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/styles/example.scss';
+@import '../assets/styles/vui-example.scss';
 </style>

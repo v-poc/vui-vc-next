@@ -19,7 +19,7 @@
         type="primary"
         size="small"
         inline
-        round      
+        round
         @click="showSucceed"
       >Test action succeed</v-button>
     </p>
@@ -28,7 +28,7 @@
         type="primary"
         size="small"
         inline
-        round      
+        round
         @click="showFailed"
       >Test action failed</v-button>
     </p>
@@ -37,7 +37,7 @@
         type="primary"
         size="small"
         inline
-        round      
+        round
         @click="showLoading"
       >Test loading</v-button>
     </p>
@@ -46,7 +46,7 @@
         type="primary"
         size="small"
         inline
-        round      
+        round
         @click="showPosition"
       >Test customized position</v-button>
     </p>
@@ -130,5 +130,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/styles/example.scss';
+@import '../assets/styles/vui-example.scss';
 </style>

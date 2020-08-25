@@ -67,7 +67,7 @@ export default {
     const detailInfo = (name) => {
       const arr = name.split(' ')
       arr.length > 1 && arr.splice(1, 0, 'from')
-      return arr.length === 1 ? name : arr.join(' ') 
+      return arr.length === 1 ? name : arr.join(' ')
     }
 
     const convertName = (name) => {
@@ -88,5 +88,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/styles/example.scss';
+@import '../assets/styles/vui-example.scss';
 </style>
