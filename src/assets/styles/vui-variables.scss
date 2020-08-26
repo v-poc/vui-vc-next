@@ -1,5 +1,6 @@
 // global style variables
 $color-primary: #2F86F6;
+$color-text-highlight: $color-primary;
 
 $font-body-large: 0.28rem;
 $font-body-normal: 0.26rem;
@@ -13,6 +14,7 @@ $color-text-base: #111A34;
 $color-text-base-inverse: #FFF;
 $color-text-error: #FF5257;
 $color-text-minor: #666f83;
+$color-text-caption: #858B9C;
 $color-bg-base: #F9FAFB;
 $color-text-body: #41485D;
 $color-text-disabled: #C5CAD5;
@@ -24,7 +26,10 @@ $radius-normal: 4px;
 $radius-circle: 50%;
 
 $h-gap-xs: 0.08rem;
+$h-gap-sm: 0.12rem;
 $h-gap-md: 0.2rem;
+$h-gap-lg: 0.32rem;
+$h-gap-sl: 0.4rem;
 
 $opacity-disabled: 0.3;
 
@@ -63,8 +68,19 @@ $tag-large-font-size: $font-body-normal;
 $tag-small-font-size: $font-minor-normal;
 $tag-tiny-font-size: 0.12rem;
 
+$popup-title-bar-bg: $color-bg-inverse;
+$popup-title-bar-height: 1.2rem;
+$popup-title-bar-height-large: 1.8rem;
 $popup-title-bar-radius: 8px;
 $popup-title-bar-radius-large: 0.4rem;
+$popup-title-bar-font-size-button: $font-caption-large;
+$popup-title-bar-font-weight-button: $font-weight-medium;
+$popup-title-bar-font-size-title: 0.4rem;
+$popup-title-bar-font-size-describe: $font-body-large;
+$popup-title-bar-color-title: $color-text-base;
+$popup-title-bar-color-describe: $color-text-caption;
+$popup-title-bar-color-button-left: $color-text-minor;
+$popup-title-bar-color-button-right: $color-text-highlight;
 $popup-mask-bg: $color-mask;
 $popup-zindex: 1000;
 

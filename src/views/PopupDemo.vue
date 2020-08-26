@@ -36,6 +36,14 @@
       :value="popupShow.bottom"
       @input="val => showPopup('bottom', val)"
     >
+      <v-popup-title-bar
+        only-close
+        large-radius
+        title-align="left"
+        title="The left Title"
+        describe="Some sub description."
+        @cancel="hidePopupTitleBar"
+      ></v-popup-title-bar>
       <div class="v-example-popup v-example-popup-bottom">popup from bottom</div>
     </v-popup>
   </div>
@@ -101,6 +109,7 @@
 import { ref } from 'vue'
 import VPopup from '../components/popup/index.vue'
 import VButton from '../components/button/index.vue'
+import VPopupTitleBar from '../components/popup/title-bar.vue'
 
 export default {
   name: 'popup-demo',
@@ -109,7 +118,8 @@ export default {
 
   components: {
     VPopup,
-    VButton
+    VButton,
+    VPopupTitleBar
   },
 
   setup() {
@@ -120,9 +130,21 @@ export default {
       popupShow.value[pos] = isShow
     }
 
+    // show info in console log
+    const showInfo = (content) => {
+      console.info('[PopupDemo]', content)
+    }
+
+    const hidePopupTitleBar = () => {
+      showPopup('bottom', false)
+      showInfo('cancel popup-title-bar')
+    }
+
     return {
       popupShow: popupShow.value,
-      showPopup
+      showPopup,
+      showInfo,
+      hidePopupTitleBar
     }
   }
 }

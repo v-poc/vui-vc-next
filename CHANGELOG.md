@@ -1,3 +1,7 @@
+# 0.0.12 (2020-08-26)
+
+Added Popup-TitleBar demo.
+
 # 0.0.11 (2020-08-18)
 
 Added ActivityIndicator demo.
