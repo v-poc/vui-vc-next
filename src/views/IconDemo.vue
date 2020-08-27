@@ -22,7 +22,7 @@
       size="small"
       inline
       round
-      @click="showMore"
+      @click="showMoreIconList"
     >Show more</v-button>
   </div>
   <div class="v-example">
@@ -91,9 +91,18 @@
         :name="svgIcon"
         :class="{ 'v-example-invert': svgIcon === 'spinner' }"
         size="lg"
+        svg
       ></v-icon>
       <span>{{ svgIcon }}</span>
     </div>
+    <v-button
+      v-if="state.svgList.length > 1"
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="showMoreSvgList"
+    >View more</v-button>
   </div>
 </template>
 
@@ -101,6 +110,7 @@
 import { reactive } from 'vue'
 import VIcon from '../components/icon/index.vue'
 import VButton from '../components/button/index.vue'
+import useLoadSvgSprite from '../composables/useLoadSvgSprite'
 
 export default {
   name: 'icon-demo',
@@ -118,7 +128,7 @@ export default {
       svgList: ['spinner', 'warn-color', 'success-color']
     })
 
-    const showMore = () => {
+    const showMoreIconList = () => {
       state.iconList = [
         'rectangle',
         'right',
@@ -177,9 +187,19 @@ export default {
       ]
     }
 
+    const showMoreSvgList = () => {
+      const res = {
+        'recording':
+          '<svg width="55" height="80" viewBox="0 0 55 80" fill="#2f86f6"><g transform="matrix(1 0 0 -1 0 80)"><rect width="10" height="20" rx="3"><animate attributeName="height" begin="0s" dur="4.3s" values="20;45;57;80;64;32;66;45;64;23;66;13;64;56;34;34;2;23;76;79;20" calcMode="linear" repeatCount="indefinite" /></rect><rect x="15" width="10" height="80" rx="3"><animate attributeName="height" begin="0s" dur="2s" values="80;55;33;5;75;23;73;33;12;14;60;80" calcMode="linear" repeatCount="indefinite" /></rect><rect x="30" width="10" height="50" rx="3"><animate attributeName="height" begin="0s" dur="1.4s" values="50;34;78;23;56;23;34;76;80;54;21;50" calcMode="linear" repeatCount="indefinite" /></rect><rect x="45" width="10" height="30" rx="3"><animate attributeName="height" begin="0s" dur="2s" values="30;45;13;80;56;72;45;76;34;23;67;30" calcMode="linear" repeatCount="indefinite" /></rect></g></svg>'
+      }
+      useLoadSvgSprite(res)
+      state.svgList = Object.keys(res)
+    }    
+
     return {
       state,
-      showMore
+      showMoreIconList,
+      showMoreSvgList
     }
   }
 }
@@ -187,4 +207,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.v-icon.icon-svg.v-icon-recording.lg {
+  width: 1rem;
+  height: 1rem;
+}
 </style>
