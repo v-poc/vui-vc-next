@@ -1,6 +1,7 @@
 # 0.0.12 (2020-08-26)
 
-Added Popup-TitleBar demo.
+- Added Popup-TitleBar demo.
+- Updated Icon demo for SVG.
 
 # 0.0.11 (2020-08-18)
 
