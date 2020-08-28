@@ -8,7 +8,8 @@ export const VUI_COMPONENTS = [
   'Landscape',
   'Toast',
   'Amount',
-  'ActivityIndicator'
+  'ActivityIndicator',
+  'Chart'
 ]
 
 export const SKELETON_WIDTH = {

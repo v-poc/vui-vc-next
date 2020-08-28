@@ -1,3 +1,7 @@
+# 0.0.13 (2020-08-28)
+
+Added Chart demo.
+
 # 0.0.12 (2020-08-26)
 
 - Added Popup-TitleBar demo.

@@ -24,6 +24,7 @@ Select the components you need to build your web App.
 
 ## Project setup
 ```
+npm config set registry https://registry.npmjs.org
 npm install
 ```
 
