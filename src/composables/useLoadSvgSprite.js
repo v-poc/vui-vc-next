@@ -33,7 +33,7 @@ const loadSvgSprite = (svgList) => {
   const mountNode = document.body
 
   if (!svgNode) {
-    mountNode.insertAdjacentHTML('afterbegin', renderSvgSprite())
+    mountNode.insertAdjacentHTML('afterbegin', renderSvgSprite(svgList))
   } else if (svgNode && svgList) {
     svgNode && svgNode.parentNode.removeChild(svgNode)
     mountNode.insertAdjacentHTML('afterbegin', renderSvgSprite(svgList))

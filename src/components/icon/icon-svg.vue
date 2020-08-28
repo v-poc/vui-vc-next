@@ -10,6 +10,7 @@
 
 <script>
 import { computed, onMounted } from 'vue'
+import { SVG_SPRITE_NODE_ID } from '../../constants/index'
 import useLoadSvgSprite from '../../composables/useLoadSvgSprite'
 
 export default {
@@ -49,7 +50,8 @@ export default {
     }
 
     onMounted(() => {
-      useLoadSvgSprite()
+      const svgNode = document.getElementById(SVG_SPRITE_NODE_ID)
+      !svgNode && useLoadSvgSprite()
     })
 
     return {
