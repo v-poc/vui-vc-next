@@ -100,6 +100,7 @@
 
 <script>
 import { computed, reactive, onMounted, onUnmounted } from 'vue'
+import useEventListener from '../../composables/useEventListener'
 
 export default {
   name: 'v-chart',
@@ -327,13 +328,39 @@ export default {
       if (document.readyState !== 'loading') {
         $_resize()
       }
-      document.addEventListener('DOMContentLoaded', $_resize)
-      window.addEventListener('resize', $_resize)
+      // document.addEventListener('DOMContentLoaded', $_resize)
+      // window.addEventListener('resize', $_resize)
+      useEventListener({
+        isBind: true,
+        node: document,
+        name: 'DOMContentLoaded',
+        handler: $_resize
+      })()
+
+      useEventListener({
+        isBind: true,
+        node: window,
+        name: 'resize',
+        handler: $_resize
+      })()
     })
 
     onUnmounted(() => {
-      document.removeEventListener('DOMContentLoaded', $_resize)
-      window.removeEventListener('resize', $_resize)
+      // document.removeEventListener('DOMContentLoaded', $_resize)
+      // window.removeEventListener('resize', $_resize)
+      useEventListener({
+        isBind: false,
+        node: document,
+        name: 'DOMContentLoaded',
+        handler: $_resize
+      })()
+
+      useEventListener({
+        isBind: false,
+        node: window,
+        name: 'resize',
+        handler: $_resize
+      })()
     })
 
     return {
