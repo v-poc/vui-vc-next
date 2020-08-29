@@ -107,9 +107,10 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
+import { reactive, onUnmounted } from 'vue'
 import VIcon from '../components/icon/index.vue'
 import VButton from '../components/button/index.vue'
+import { SVG_SPRITE_NODE_ID } from '../constants/index'
 import useLoadSvgSprite from '../composables/useLoadSvgSprite'
 
 export default {
@@ -200,7 +201,12 @@ export default {
       }
       useLoadSvgSprite(res)
       state.svgList = Object.keys(res)
-    }    
+    }
+    
+    onUnmounted(() => {
+      const svgNode = document.getElementById(SVG_SPRITE_NODE_ID)
+      svgNode && svgNode.parentNode.removeChild(svgNode)
+    })
 
     return {
       state,

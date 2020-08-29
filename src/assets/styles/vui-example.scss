@@ -96,7 +96,7 @@
 
 .v-example-popup {
   position: relative;
-  font-size: 28px;
+  // font-size: 0.28rem;
   font-weight: 500;
   box-sizing: border-box;
   text-align: center;
@@ -112,7 +112,7 @@
 }
 
 .v-example-popup-center {
-  padding: 50px;
+  padding: 0.5rem;
   border-radius: radius-normal;
 
   span.amount-title {
@@ -122,13 +122,14 @@
 
 .v-example-popup-top {
   width: 100%;
-  height: 75px;
-  line-height: 75px;
+  height: 0.75rem;
+  line-height: 0.75rem;
   background: #4a4c5b;
   color: #fff;
+
   button {
     position: absolute;
-    right: 20px;
+    right: 0.2rem;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -136,16 +137,16 @@
 
 .v-example-popup-bottom {
   width: 100%;
-  padding: 100px 0;
+  padding: 1rem 0;
   p {
-    line-height: 50px;
+    line-height: 0.5rem;
   }
 }
 
 .v-example-popup-left,
 .v-example-popup-right {
   height: 100%;
-  padding: 0 15px;
+  padding: 0 0.15rem;
   display: flex;
   align-items: center;
 }
