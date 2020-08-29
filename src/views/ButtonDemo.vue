@@ -147,8 +147,8 @@ export default {
 .star {
   display: block;
   position: absolute;
-  top: 0;
-  left: 9px;
+  top: 3px;
+  left: 11px;
   z-index: 18;
   color: #c45c3c;
   transform: scale(0.35);
