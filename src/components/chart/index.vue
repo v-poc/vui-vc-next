@@ -106,38 +106,47 @@ export default {
   name: 'v-chart',
 
   props: {
+    // The labels of X-Axis
     labels: {
       type: Array,
       default: () => []
     },
+    // The chart data
     datasets: {
       type: Array,
       default: () => []
     },
+    // The size of chart
     size: {
       type: Array,
       default: () => [480, 320]
     },
+    // The maximum in Y-Axis
     max: {
       type: Number,
       default: 0
     },
+    // The minimum in Y-Axis
     min: {
       type: Number,
       default: 0
     },
+    // The number of lines in Y-Axis
     lines: {
       type: Number,
       default: 5
     },
+    // The decreasing step in Y-Axis
     step: {
       type: Number,
       default: 0
     },
+    // The shift in Y-Axis
     shift: {
       type: Number,
       default: 0.6
     },
+    // The labels formatting function in Y-Axis
     format: {
       type: Function,
       default: (val) => val
@@ -328,8 +337,7 @@ export default {
       if (document.readyState !== 'loading') {
         $_resize()
       }
-      // document.addEventListener('DOMContentLoaded', $_resize)
-      // window.addEventListener('resize', $_resize)
+
       useEventListener({
         isBind: true,
         node: document,
@@ -346,8 +354,6 @@ export default {
     })
 
     onUnmounted(() => {
-      // document.removeEventListener('DOMContentLoaded', $_resize)
-      // window.removeEventListener('resize', $_resize)
       useEventListener({
         isBind: false,
         node: document,

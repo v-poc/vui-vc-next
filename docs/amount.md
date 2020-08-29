@@ -4,7 +4,7 @@ title: Amount
 preview: 
 ---
 
-Financial figures screen, generally for amounts, quantities, etc
+Financial figures screen, generally for amounts and quantities, etc
 
 ## Import
 

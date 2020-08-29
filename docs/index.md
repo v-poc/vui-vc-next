@@ -15,3 +15,5 @@ sidebar: auto
 - [`Landscape`](./landscape.html)
 - [`Toast`](./toast.html)
 - [`Amount`](./amount.html)
+- [`ActivityIndicator`](./activity-indicator.html)
+- [`Chart`](./chart.html)
