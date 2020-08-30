@@ -8,6 +8,7 @@
     v-for="(item, index) in effects"
     :key="`effect${index}`"
   >
+    <p>Transition - {{ item }}</p>
     <v-button
       type="primary"
       size="small"

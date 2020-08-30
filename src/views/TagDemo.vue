@@ -7,7 +7,7 @@
     <p>Tag Shape - Circle</p>
     <v-tag
       type="fill"
-      size="tiny"
+      size="small"
       shape="circle"
       fill-color="#FC5353"
     >100</v-tag>

@@ -28,6 +28,12 @@
       <br/>
       <v-activity-indicator
         type="spinner"
+        :size="30"
+        vertical
+      >Vertical Loading...</v-activity-indicator>
+      <br/>
+      <v-activity-indicator
+        type="spinner"
         class="activity-indicator-container"
         :size="40"
         :text-size="20"

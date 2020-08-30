@@ -12,7 +12,7 @@
       round
       @click="startContentLoading"
       :inactive="state.contentLoading"
-    >Test Content loading (delay 3s)</v-button>
+    >Test Content loading (delay 2s)</v-button>
     <v-skeleton
       class="v-example-img"
       v-if="state.showContent"
@@ -67,7 +67,7 @@ export default {
 
       setTimeout(() => {
         state.contentLoading = false
-      }, 3000)
+      }, 2000)
     }
 
     return {

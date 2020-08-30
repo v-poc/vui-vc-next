@@ -4,6 +4,7 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
+    <p>Event handler</p>
     <v-button
       type="primary"
       size="small"
@@ -21,6 +22,7 @@
     </v-landscape>
   </div>
   <div class="v-example">
+    <p>Mask closable</p>
     <v-button
       type="primary"
       size="small"
@@ -39,6 +41,7 @@
     </v-landscape>
   </div>
   <div class="v-example">
+    <p>Fullscreen</p>
     <v-button
       type="primary"
       size="small"

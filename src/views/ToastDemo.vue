@@ -41,15 +41,16 @@
         @click="showLoading"
       >Test loading</v-button>
     </p>
-    <p>
-      <v-button
-        type="primary"
-        size="small"
-        inline
-        round
-        @click="showPosition"
-      >Test customized position</v-button>
-    </p>
+  </div>
+  <div class="v-example">
+    <p>customized position with transparent mask</p>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="showPosition"
+    >Test customized position</v-button>
   </div>
   <div class="v-example">
     <p>Toast by local component</p>

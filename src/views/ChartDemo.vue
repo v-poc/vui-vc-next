@@ -4,7 +4,7 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <p>Multiple lines with area fill charts</p>
+    <p>Line and Area-fill Chart</p>
     <v-chart
       :size="['8rem', '5rem']"
       :max="60"
@@ -42,7 +42,7 @@
       @input="val => showPopup('center', val)"
     >
       <div class="v-example-popup v-example-popup-center">
-        <p>Gradient line</p>
+        <p>Gradient-line Chart</p>
         <v-chart
           :size="['8rem', '5rem']"
           :max="60"

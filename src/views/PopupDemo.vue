@@ -4,6 +4,7 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
+    <p>Popup from center</p>
     <v-button
       type="primary"
       size="small"
@@ -24,6 +25,41 @@
     </v-popup>
   </div>
   <div class="v-example">
+    <p>Popup from left</p>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="showPopup('left', true)"
+    >Test popup from left</v-button>
+    <v-popup
+      position="left"
+      :value="popupShow.left"
+      @input="val => showPopup('left', val)"
+    >
+      <div class="v-example-popup v-example-popup-left">popup from left</div>
+    </v-popup>
+  </div>
+  <div class="v-example">
+    <p>Popup from right</p>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="showPopup('right', true)"
+    >Test popup from right</v-button>
+    <v-popup
+      position="right"
+      :value="popupShow.right"
+      @input="val => showPopup('right', val)"
+    >
+      <div class="v-example-popup v-example-popup-right">popup from right</div>
+    </v-popup>
+  </div>
+  <div class="v-example">
+    <p>Popup TitleBar (largeRadius)</p>
     <v-button
       type="primary"
       size="small"
@@ -48,6 +84,7 @@
     </v-popup>
   </div>
   <div class="v-example">
+    <p>Popup without mask</p>
     <v-button
       type="primary"
       size="small"
@@ -69,38 +106,6 @@
           @click="showPopup('top', false)"
         >close</v-button>
       </div>
-    </v-popup>
-  </div>
-  <div class="v-example">
-    <v-button
-      type="primary"
-      size="small"
-      inline
-      round
-      @click="showPopup('left', true)"
-    >Test popup from left</v-button>
-    <v-popup
-      position="left"
-      :value="popupShow.left"
-      @input="val => showPopup('left', val)"
-    >
-      <div class="v-example-popup v-example-popup-left">popup from left</div>
-    </v-popup>
-  </div>
-  <div class="v-example">
-    <v-button
-      type="primary"
-      size="small"
-      inline
-      round
-      @click="showPopup('right', true)"
-    >Test popup from right</v-button>
-    <v-popup
-      position="right"
-      :value="popupShow.right"
-      @input="val => showPopup('right', val)"
-    >
-      <div class="v-example-popup v-example-popup-right">popup from right</div>
     </v-popup>
   </div>
 </template>
