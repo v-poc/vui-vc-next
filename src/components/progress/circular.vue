@@ -19,7 +19,7 @@
 
 <script>
 import { reactive, onMounted, watch } from 'vue'
-import VActivityIndicatorRoller from '../activity-indicator/roller'
+import VActivityIndicatorRoller from '../activity-indicator/roller.vue'
 import useAnimate from '../../composables/useAnimate'
 import { noop, isInBrowser } from '../../utils/index'
 

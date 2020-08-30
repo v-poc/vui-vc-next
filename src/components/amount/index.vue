@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { reactive, onMounted, computed, watchEffect } from 'vue'
+import { reactive, onMounted, computed, watch } from 'vue'
 import useAnimate from '../../composables/useAnimate'
 import useNumberCapital from '../../composables/useNumberCapital'
 import { noop, isInBrowser, formatValueByGapStep } from '../../utils/index'
@@ -129,17 +129,20 @@ export default {
       animate.start(step, verify, noop, props.duration, null, null)
     }
 
-    watchEffect(() => {
-      if (!isInBrowser && !state.isMounted) {
-        state.formatValue = props.value
-        return
+    watch(
+      () => props.value,
+      (val, oldVal) => {
+        if (!isInBrowser && !state.isMounted) {
+          state.formatValue = val
+          return
+        }
+        if (props.isAnimated) {
+          $_doAnimate(oldVal, val)
+        } else {
+          state.formatValue = val
+        }
       }
-      if (props.isAnimated) {
-        $_doAnimate(0, props.value)
-      } else {
-        state.formatValue = props.value
-      }
-    })
+    )
 
     return {
       state,

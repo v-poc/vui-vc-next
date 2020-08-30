@@ -1,3 +1,7 @@
+# 0.0.14 (2020-08-30)
+
+Added Progress demo for Circular.
+
 # 0.0.13 (2020-08-28)
 
 - Added Chart demo.
