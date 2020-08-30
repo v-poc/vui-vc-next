@@ -2,7 +2,14 @@
   <div :class="$_containerCls">
     <div :class="$_innerCls">
       <div class="indicator-loading">
-        <template v-if="type === 'spinner'">
+        <template v-if="type === 'roller'">
+          <v-activity-indicator-roller
+            :size="size"
+            :color="$_color"
+            :width="width"
+          ></v-activity-indicator-roller>
+        </template>
+        <template v-else-if="type === 'spinner'">
           <v-activity-indicator-spinner
             :size="size"
             :color="$_color"
@@ -21,12 +28,14 @@
 
 <script>
 import { computed } from 'vue'
+import VActivityIndicatorRoller from './roller.vue'
 import VActivityIndicatorSpinner from './spinner.vue'
 
 export default {
   name: 'v-activity-indicator',
 
   components: {
+    VActivityIndicatorRoller,
     VActivityIndicatorSpinner
   },
 

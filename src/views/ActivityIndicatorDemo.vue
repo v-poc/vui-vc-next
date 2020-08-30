@@ -4,17 +4,36 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
+    <p>Roller</p>
+    <div class="v-example-center">
+      <v-activity-indicator
+        :size="40"
+        :text-size="20"
+      >Loading...</v-activity-indicator>
+      <br/>
+      <v-activity-indicator        
+        :size="20"
+        :text-size="16"
+        vertical
+      >Vertical Loading...</v-activity-indicator>
+    </div>
+  </div>
+  <div class="v-example">
     <p>Spinner</p>
-    <v-activity-indicator
-      type="spinner"
-      :size="30"
-    >Loading Data...</v-activity-indicator>
-    <v-activity-indicator
-      type="spinner"
-      :size="60"
-      :text-size="30"
-      color="light"
-    >Loading...</v-activity-indicator>
+    <div class="v-example-center">
+      <v-activity-indicator
+        type="spinner"
+        :size="30"
+      >Loading Data...</v-activity-indicator>
+      <br/>
+      <v-activity-indicator
+        type="spinner"
+        class="activity-indicator-container"
+        :size="40"
+        :text-size="20"
+        color="light"
+      >Light color...</v-activity-indicator>
+    </div>
   </div>
 </template>
 
@@ -34,4 +53,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.activity-indicator-container {
+  padding: 0.15rem 0.2rem;
+  background: rgba(0, 0, 0, .6);
+  border-radius: 4px;
+}
 </style>

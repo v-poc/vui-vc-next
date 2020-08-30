@@ -1,6 +1,7 @@
 # 0.0.13 (2020-08-28)
 
-Added Chart demo.
+- Added Chart demo.
+- Added ActivityIndicator demo for Roller.
 
 # 0.0.12 (2020-08-26)
 
@@ -9,7 +10,7 @@ Added Chart demo.
 
 # 0.0.11 (2020-08-18)
 
-Added ActivityIndicator demo.
+Added ActivityIndicator demo for Spinner.
 
 # 0.0.10 (2020-08-15)
 

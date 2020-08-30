@@ -1,4 +1,4 @@
-@import "./vui-reset.scss";
+// @import "./vui-reset.scss";
 
 .nav-wrapper {
   margin: 0 auto;
@@ -91,7 +91,7 @@
   
   &-invert {
     -webkit-filter: invert(1);
-  } 
+  }
 }
 
 .v-example-popup {
@@ -113,7 +113,7 @@
 
 .v-example-popup-center {
   padding: 0.5rem;
-  border-radius: radius-normal;
+  border-radius: 4px;
 
   span.amount-title {
     font-size: 60%;
@@ -171,4 +171,10 @@
 
 .v-example-row {
   margin-bottom: 0.2rem;
+}
+
+.v-example-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
