@@ -17,3 +17,4 @@ sidebar: auto
 - [`Amount`](./amount.html)
 - [`ActivityIndicator`](./activity-indicator.html)
 - [`Chart`](./chart.html)
+- [`Progress`](./progress.html)

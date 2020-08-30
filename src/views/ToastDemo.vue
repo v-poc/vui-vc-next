@@ -43,7 +43,7 @@
     </p>
   </div>
   <div class="v-example">
-    <p>customized position with transparent mask</p>
+    <p>Customized position with transparent mask</p>
     <v-button
       type="primary"
       size="small"

@@ -141,6 +141,9 @@ export default {
         } else {
           state.formatValue = val
         }
+      },
+      {
+        immediate: true
       }
     )
 
