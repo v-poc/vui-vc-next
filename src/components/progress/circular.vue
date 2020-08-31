@@ -11,8 +11,8 @@
     :rotate="rotate"
   >
     <slot></slot>
-    <template slot="defs">
-      <slot name="defs"></slot>
+    <template #rollerDefs>
+      <slot name="circularDefs"></slot>
     </template>
   </v-activity-indicator-roller>
 </template>

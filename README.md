@@ -1,6 +1,6 @@
 # vui-vc-next
 
-## Yet another lightweight Mobile web UI components based on Vue 3 and Vite
+> Yet another lightweight Mobile web UI components based on Vue 3 and Vite
 
 ### Contains
 
@@ -44,4 +44,4 @@ About vite and vitepress, please check Configuration Reference - [vite](https://
 
 ## License
 
-MIT
+[MIT](https://github.com/bluepower/vui-vc-next/blob/dev/LICENSE)

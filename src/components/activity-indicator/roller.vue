@@ -60,7 +60,7 @@
           v-else
           name="circle"
         ></slot>
-        <slot name="defs"></slot>
+        <slot name="rollerDefs"></slot>
       </svg>
       <div class="content">
         <slot></slot>

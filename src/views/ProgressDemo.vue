@@ -44,6 +44,27 @@
       </span>
     </v-progress-circular>
   </div>
+  <div class="v-example">
+    <p>Circular Progress - linearGradient</p>
+    <v-progress-circular
+      :value="0.85"
+      :width="10"
+      :size="100"
+      color="url(#linear)"
+      border-color="#EFEFEF"
+      linecap="butt"
+    >
+      <span class="progress-value">85%</span>
+      <template #circularDefs>
+        <defs>
+          <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#FF5257"/>
+            <stop offset="100%" stop-color="#FFC541"/>
+          </linearGradient>
+        </defs>
+      </template>      
+    </v-progress-circular>
+  </div>  
 </template>
 
 <script>
@@ -58,9 +79,7 @@ export default {
   components: {
     VProgressCircular,
     VAmount
-  },
-
-  setup() {}
+  }
 }
 </script>
 
@@ -69,7 +88,6 @@ export default {
 
 .v-example span.progress-value {
   margin-left: 0;
-  // font-size: 0.24rem;
   font-family: VC-Amount, 'Helvetica Neue', Helvetica, 'PingFang SC',
     'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
 
