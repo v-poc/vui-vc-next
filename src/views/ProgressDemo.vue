@@ -45,7 +45,7 @@
     </v-progress-circular>
   </div>
   <div class="v-example">
-    <p>Circular Progress - linearGradient</p>
+    <p>Circular Progress - LinearGradient</p>
     <v-progress-circular
       :value="0.85"
       :width="10"
