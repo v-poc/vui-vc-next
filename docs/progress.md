@@ -27,7 +27,7 @@ Vue.component(VProgressCircular.name, VProgressCircular)
 |fill|circle fill color|String|`transparent`|-|
 |linecap|shape of end|String|`round`|`round`, `butt`|
 |rotate|-|Number|`0`|-|
-|transition|use transition when value changes|Boolean|`false`|-|
+|is-animated|Whether show animation when value changes|Boolean|`false`|-|
 |duration|transition duration|Number|`1000`|unit `ms`|
 
 #### Progress Circular Slots

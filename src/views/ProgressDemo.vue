@@ -26,6 +26,7 @@
       <span class="progress-value">70%</span>
     </v-progress-circular>
   </div>
+  <!--
   <div class="v-example">
     <p>Circular Progress - Animated</p>
     <v-progress-circular
@@ -44,6 +45,7 @@
       </span>
     </v-progress-circular>
   </div>
+  -->
   <div class="v-example">
     <p>Circular Progress - LinearGradient</p>
     <v-progress-circular
@@ -57,19 +59,70 @@
       <span class="progress-value">85%</span>
       <template #circularDefs>
         <defs>
-          <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%"   stop-color="#FF5257"/>
-            <stop offset="100%" stop-color="#FFC541"/>
+          <linearGradient
+            id="linear"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+          >
+            <stop
+              offset="0%"
+              stop-color="#FF5257"
+            />
+            <stop
+              offset="100%"
+              stop-color="#FFC541"
+            />
           </linearGradient>
         </defs>
-      </template>      
+      </template>
     </v-progress-circular>
-  </div>  
+  </div>
+  <div class="v-example">
+    <p>Circular Progress - Animated</p>
+    <v-progress-circular
+      :size="100"
+      :value="state.val"
+      :width="10"
+      :rotate="-90"
+      :color="state.strokeColor"
+      :duration="600"
+      is-animated
+    >
+      <span class="progress-value">
+        <template v-if="state.val < 1">
+          <v-amount
+            :value="state.val * 100"
+            :precision="0"
+            is-animated
+          ></v-amount>%
+        </template>
+        <v-icon
+          v-else
+          color="#F00"
+          name="right"
+          size="lg"
+        ></v-icon>
+      </span>
+    </v-progress-circular>
+    <v-button
+      :type="state.btnType"
+      :inactive="state.val > 0 && state.val < 1"
+      size="small"
+      inline
+      round
+      @click="showProgress"
+    >Start test</v-button>
+  </div>
 </template>
 
 <script>
+import { reactive } from 'vue'
 import VProgressCircular from '../components/progress/circular.vue'
 import VAmount from '../components/amount/index.vue'
+import VButton from '../components/button/index.vue'
+import VIcon from '../components/icon/index.vue'
 
 export default {
   name: 'progress-demo',
@@ -78,7 +131,41 @@ export default {
 
   components: {
     VProgressCircular,
-    VAmount
+    VAmount,
+    VButton,
+    VIcon
+  },
+
+  setup() {
+    const state = reactive({
+      val: 0,
+      btnType: 'primary',
+      strokeColor: '#FC9153'
+    })
+
+    const $_defer = (time) =>
+      new Promise((resolve) => setTimeout(resolve, time))
+
+    const showProgress = async () => {
+      state.val = 0
+      state.btnType = 'primary'
+      state.strokeColor = '#FC9153'
+      await $_defer(1100)
+      state.val = 0.2
+      await $_defer(2000)
+      state.val = 0.5
+      await $_defer(2400)
+      state.val = 0.9
+      await $_defer(1800)
+      state.val = 1
+      state.btnType = 'warning'
+      state.strokeColor = '#F00'
+    }
+
+    return {
+      state,
+      showProgress
+    }
   }
 }
 </script>
