@@ -41,6 +41,13 @@
   text-decoration: none;
 }
 
+@font-face {
+  font-family: VC-Amount;
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/DINPro-Medium.ttf') format('truetype');
+}
+
 .v-example {
   margin: 0.2rem;
   padding-bottom: 0.4rem;
@@ -64,6 +71,17 @@
     margin-left: 0.2rem;
     font-size: 75%;
   }
+
+  span.progress-value {
+    margin-left: 0;
+    font-family: VC-Amount, 'Helvetica Neue', Helvetica, 'PingFang SC',
+      'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  
+    span.v-amount.numerical {
+      margin-left: 0;
+      font-size: 100%;
+    }
+  }  
   
   .v-tag {
     margin-right: 0.5rem;
@@ -177,4 +195,77 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.v-example-todo-list {
+  .main-hd {
+    input[type='text'] {
+      width: 100%;
+      height: 0.5rem;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+    }
+
+    p.tasks {
+      margin-top: 0.3rem;
+      padding: 0;      
+      width: 1.6rem;
+      font-size: 100%;
+      color: #4CAF50;
+    }    
+  }
+
+  .main-bd {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+    p {
+      margin-top: 0.2rem;
+      padding: 0;
+    }
+
+    p.remaining {
+      width: 2.5rem;
+      font-size: 80%;
+      color: #36C;
+    }
+
+    p.completed {
+      width: 2rem;
+      font-size: 80%;
+      color: #4AA05F;
+    }
+  }
+
+  .main-ft {    
+    .row {
+      margin-bottom: 0.2rem;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      .content {
+        margin-left: 0.5rem;
+        color: #000;
+        text-decoration: none;
+        font-size: 80%;
+      }
+
+      .label-done {
+        color: #999;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  .row-flex {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    .v-icon {
+      margin-right: 0.4rem;
+    }
+  }  
 }

@@ -4,14 +4,103 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <p>Circular Progress - Basic</p>
+    <p>Circular Progress - Animated</p>
     <v-progress-circular
-      :size="80"
-      :value="0.3"
-      :width="5"
+      :size="90"
+      :value="state.val"
+      :width="10"
+      :rotate="-90"
+      :color="state.strokeColor"
+      :duration="600"
+      is-animated
     >
-      <span class="progress-value">30%</span>
+      <span class="progress-value">
+        <template v-if="state.val < 1">
+          <v-amount
+            :value="state.val * 100"
+            :precision="0"
+            is-animated
+          ></v-amount>%
+        </template>
+        <v-icon
+          v-else
+          color="#F00"
+          name="right"
+          size="lg"
+        ></v-icon>
+      </span>
     </v-progress-circular>
+    <v-button
+      :type="state.btnType"
+      :inactive="state.val > 0 && state.val < 1"
+      size="small"
+      inline
+      round
+      @click="$_showProgress"
+    >Start test</v-button>
+  </div>
+  <div class="v-example">
+    <p>Todo List - Animated progress</p>
+    <div class="v-example-todo-list">
+      <div class="main-hd">
+        <input
+          type="text"
+          placeholder="What are you working on?"
+          v-model="state.taskItem"
+          @keydown.enter="createTask"
+        />
+        <p class="tasks">Tasks: {{ state.tasks.length }}</p>
+      </div>
+      <div class="main-bd">        
+        <p class="remaining">Remaining: {{ state.remainingCount }}</p>
+        <p class="completed">Completed: {{ state.completedCount }}</p>
+        <div class="row-flex">
+          <v-progress-circular
+            :size="70"
+            :value="state.taskProgress"
+            :width="8"
+            is-animated
+          >
+            <span class="progress-value">
+              <v-amount
+                :value="state.taskProgress * 100"
+                :precision="0"
+                is-animated
+              ></v-amount>%
+            </span>
+          </v-progress-circular>
+        </div>
+      </div>
+      <div
+        class="main-ft"
+        v-if="state.tasks.length"
+      >
+        <div
+          class="row"
+          v-for="(item, index) in state.tasks"
+          :key="index"
+        >
+          <input
+            type="checkbox"
+            v-model="item.done"
+            :id="`checkbox${index}`"
+          />
+          <label
+            :class="taskCls(item.done)"
+            :for="`checkbox${index}`"
+          >
+            {{ item.text }}
+          </label>
+          <div class="row-flex">
+            <v-icon
+              name="right"
+              color="#36C"
+              v-if="item.done"
+            ></v-icon>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="v-example">
     <p>Circular Progress - Customized color</p>
@@ -26,26 +115,16 @@
       <span class="progress-value">70%</span>
     </v-progress-circular>
   </div>
-  <!--
   <div class="v-example">
-    <p>Circular Progress - Animated</p>
+    <p>Circular Progress - Basic</p>
     <v-progress-circular
-      :size="100"
-      :value="0.9"
-      :width="10"
-      :rotate="-90"
-      is-animated
+      :size="80"
+      :value="0.3"
+      :width="5"
     >
-      <span class="progress-value">
-        <v-amount
-          :value="90"
-          :precision="0"
-          is-animated
-        ></v-amount>%
-      </span>
+      <span class="progress-value">30%</span>
     </v-progress-circular>
   </div>
-  -->
   <div class="v-example">
     <p>Circular Progress - LinearGradient</p>
     <v-progress-circular
@@ -79,46 +158,10 @@
       </template>
     </v-progress-circular>
   </div>
-  <div class="v-example">
-    <p>Circular Progress - Animated</p>
-    <v-progress-circular
-      :size="100"
-      :value="state.val"
-      :width="10"
-      :rotate="-90"
-      :color="state.strokeColor"
-      :duration="600"
-      is-animated
-    >
-      <span class="progress-value">
-        <template v-if="state.val < 1">
-          <v-amount
-            :value="state.val * 100"
-            :precision="0"
-            is-animated
-          ></v-amount>%
-        </template>
-        <v-icon
-          v-else
-          color="#F00"
-          name="right"
-          size="lg"
-        ></v-icon>
-      </span>
-    </v-progress-circular>
-    <v-button
-      :type="state.btnType"
-      :inactive="state.val > 0 && state.val < 1"
-      size="small"
-      inline
-      round
-      @click="showProgress"
-    >Start test</v-button>
-  </div>
 </template>
 
 <script>
-import { reactive } from 'vue'
+import { computed, reactive } from 'vue'
 import VProgressCircular from '../components/progress/circular.vue'
 import VAmount from '../components/amount/index.vue'
 import VButton from '../components/button/index.vue'
@@ -140,13 +183,39 @@ export default {
     const state = reactive({
       val: 0,
       btnType: 'primary',
-      strokeColor: '#FC9153'
+      strokeColor: '#FC9153',
+      taskItem: '',
+      completedCount: 0,
+      remainingCount: 0,
+      taskProgress: 0,
+      tasks: [
+        {
+          text: 'Foobar',
+          done: false
+        },
+        {
+          text: 'Fizzbuzz',
+          done: false
+        }
+      ]
     })
+
+    state.completedCount = computed(
+      () => state.tasks.filter((item) => item.done).length
+    )
+
+    state.remainingCount = computed(
+      () => state.tasks.length - state.completedCount
+    )
+
+    state.taskProgress = computed(
+      () => state.completedCount / state.tasks.length
+    )
 
     const $_defer = (time) =>
       new Promise((resolve) => setTimeout(resolve, time))
 
-    const showProgress = async () => {
+    const $_showProgress = async () => {
       state.val = 0
       state.btnType = 'primary'
       state.strokeColor = '#FC9153'
@@ -162,9 +231,33 @@ export default {
       state.strokeColor = '#F00'
     }
 
+    const createTask = () => {
+      if (!state.taskItem) {
+        return
+      }
+
+      state.tasks.push({
+        text: state.taskItem,
+        done: false
+      })
+
+      state.taskItem = ''
+    }
+
+    const taskCls = (isDone) => {
+      return [
+        'content',
+        {
+          'label-done': isDone
+        }
+      ]
+    }
+
     return {
       state,
-      showProgress
+      $_showProgress,
+      createTask,
+      taskCls
     }
   }
 }
@@ -172,22 +265,4 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
-
-.v-example span.progress-value {
-  margin-left: 0;
-  font-family: VC-Amount, 'Helvetica Neue', Helvetica, 'PingFang SC',
-    'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
-
-  span.v-amount.numerical {
-    margin-left: 0;
-    font-size: 100%;
-  }
-}
-
-@font-face {
-  font-family: VC-Amount;
-  font-style: normal;
-  font-weight: normal;
-  src: url('/assets/DINPro-Medium.ttf') format('truetype');
-}
 </style>
