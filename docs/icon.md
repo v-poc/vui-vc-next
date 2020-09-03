@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 title: Icon
-preview:
+preview: https://nikoni.top/vui-vc-next/#/icon-demo
 ---
 
 Icons (IconFont/SVG icon)

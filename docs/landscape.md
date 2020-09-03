@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 title: Landscape
-preview:
+preview: https://nikoni.top/vui-vc-next/#/landscape-demo
 ---
 
 The display screen in a floating layer

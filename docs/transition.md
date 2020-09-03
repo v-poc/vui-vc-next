@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 title: Transition
-preview:
+preview: https://nikoni.top/vui-vc-next/#/transition-demo
 ---
 
 Transition effects

@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 title: Toast
-preview:
+preview: https://nikoni.top/vui-vc-next/#/toast-demo
 ---
 
 Toast components for different toast styles

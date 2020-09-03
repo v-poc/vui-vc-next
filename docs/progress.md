@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 title: Progress
-preview: 
+preview: https://nikoni.top/vui-vc-next/#/progress-demo
 ---
 
 Progress circular, generally used to communicate data intuitively to users

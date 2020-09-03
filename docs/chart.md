@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 title: Chart
-preview: 
+preview: https://nikoni.top/vui-vc-next/#/chart-demo
 ---
 
 Chart made with SVG, supports polylines printing and display setting.

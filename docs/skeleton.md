@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 title: Skeleton
-preview: 
+preview: https://nikoni.top/vui-vc-next/#/skeleton-demo
 ---
 
 Skeleton screen, generally used to display the loading state of the general structure of the page before the data has been loaded

@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 title: ActivityIndicator
-preview: 
+preview: https://nikoni.top/vui-vc-next/#/activityindicator-demo
 ---
 
 Activity indicator, generally used for tasks in progress

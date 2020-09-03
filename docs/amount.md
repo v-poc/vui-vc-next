@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 title: Amount
-preview: 
+preview: https://nikoni.top/vui-vc-next/#/amount-demo
 ---
 
 Financial figures screen, generally for amounts and quantities, etc

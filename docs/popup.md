@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 title: Popup
-preview: 
+preview: https://nikoni.top/vui-vc-next/#/popup-demo
 ---
 
 A customized content area pops up on the screen.
