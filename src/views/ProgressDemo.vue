@@ -43,15 +43,26 @@
     <p>Todo List - Animated progress</p>
     <div class="v-example-todo-list">
       <div class="main-hd">
-        <input
-          type="text"
-          placeholder="What are you working on?"
-          v-model="state.taskItem"
-          @keydown.enter="createTask"
-        />
+        <div class="header">
+          <input
+            type="text"
+            placeholder="What are you working on?"
+            v-model="state.taskItem"
+            @keydown.enter="createTask"
+          />
+          <v-button
+            :inactive="!state.taskItem"
+            type="primary"
+            icon="edit"
+            size="small"
+            inline
+            round
+            @click="createTask"
+          ></v-button>
+        </div>
         <p class="tasks">Tasks: {{ state.tasks.length }}</p>
       </div>
-      <div class="main-bd">        
+      <div class="main-bd">
         <p class="remaining">Remaining: {{ state.remainingCount }}</p>
         <p class="completed">Completed: {{ state.completedCount }}</p>
         <div class="row-flex">
@@ -93,10 +104,15 @@
           </label>
           <div class="row-flex">
             <v-icon
-              name="right"
+              name="success"
               color="#36C"
               v-if="item.done"
             ></v-icon>
+            <v-icon
+              name="clear"
+              color="#CCC"
+              @icon-click="deleteTask(index)"
+            ></v-icon>            
           </div>
         </div>
       </div>
@@ -188,17 +204,19 @@ export default {
       completedCount: 0,
       remainingCount: 0,
       taskProgress: 0,
-      tasks: [
-        {
-          text: 'Foobar',
-          done: false
-        },
-        {
-          text: 'Fizzbuzz',
-          done: false
-        }
-      ]
+      tasks: []
     })
+
+    state.tasks = [
+      {
+        text: 'Foobar',
+        done: false
+      },
+      {
+        text: 'Fizzbuzz',
+        done: false
+      }
+    ]
 
     state.completedCount = computed(
       () => state.tasks.filter((item) => item.done).length
@@ -209,7 +227,7 @@ export default {
     )
 
     state.taskProgress = computed(
-      () => state.completedCount / state.tasks.length
+      () => state.tasks.length ? state.completedCount / state.tasks.length : 0
     )
 
     const $_defer = (time) =>
@@ -244,6 +262,8 @@ export default {
       state.taskItem = ''
     }
 
+    const deleteTask = (index) => state.tasks.splice(index, 1)
+
     const taskCls = (isDone) => {
       return [
         'content',
@@ -257,6 +277,7 @@ export default {
       state,
       $_showProgress,
       createTask,
+      deleteTask,
       taskCls
     }
   }
