@@ -10,7 +10,8 @@ export const VUI_COMPONENTS = [
   'Amount',
   'ActivityIndicator',
   'Chart',
-  'Progress'
+  'Progress',
+  'ResultPage'
 ]
 
 export const SKELETON_WIDTH = {

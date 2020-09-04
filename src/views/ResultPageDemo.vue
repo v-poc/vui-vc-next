@@ -1,0 +1,65 @@
+<template>
+  <router-link
+    to="/"
+    class="v-back"
+  >&lt; Home</router-link>
+  <div class="v-example">
+    <p>Result page - No result</p>
+    <v-result-page
+      type="lost"
+    ></v-result-page>
+  </div>
+  <div class="v-example">
+    <p>Result page - Customized image</p>
+    <v-result-page
+      img-url="https://nikoni.top/images/others/avatar-man.png"
+      text="The result title"
+      sub-text="refresh page to have a look"
+      :buttons="state.buttons"
+    ></v-result-page>
+  </div>  
+</template>
+
+<script>
+import { reactive } from 'vue'
+import VResultPage from '../components/result-page/index.vue'
+import Toast from '../components/toast/index'
+
+export default {
+  name: 'result-page-demo',
+
+  inheritAttrs: false,
+
+  components: {
+    VResultPage
+  },
+
+  setup() {
+    const state = reactive({
+      buttons: [
+        {
+          text: 'Normal button',
+          handler() {
+            Toast.succeed('Click normal button')
+          },
+        },
+        {
+          text: 'Highlight button',
+          type: 'primary',
+          handler() {
+            Toast.succeed('Click highlight button')
+          }
+        }
+      ]
+    })
+    
+    return {
+      state
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import '../assets/styles/vui-example.scss';
+</style>

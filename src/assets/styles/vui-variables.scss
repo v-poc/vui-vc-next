@@ -5,6 +5,7 @@ $color-text-highlight: $color-primary;
 $font-body-large: 0.28rem;
 $font-body-normal: 0.26rem;
 $font-caption-large: 0.36rem;
+$font-caption-normal: 0.32rem;
 $font-minor-normal: 0.2rem;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
@@ -24,6 +25,12 @@ $color-mask: rgba(37, 38, 45, 0.7);
 
 $radius-normal: 4px;
 $radius-circle: 50%;
+
+$result-page-image-size: 2.6rem;
+$result-page-title-font-size: $font-caption-normal;
+$result-page-describe-font-size: $font-body-large;
+$result-page-title-color: $color-text-base;
+$result-page-describe-color: $color-text-caption;
 
 $h-gap-xs: 0.08rem;
 $h-gap-sm: 0.12rem;

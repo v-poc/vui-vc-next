@@ -1,3 +1,8 @@
+# 0.0.15 (2020-09-04)
+
+- Added ResultPage demo.
+- Updated Button demo for loading button.
+
 # 0.0.14 (2020-08-30)
 
 Added Progress demo for Circular.
