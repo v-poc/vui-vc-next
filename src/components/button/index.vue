@@ -10,6 +10,10 @@
         :name="icon"
         :svg="iconSvg"
       ></v-icon>
+      <v-activity-indicator-roller
+        v-else-if="loading"
+        class="v-button-loading"
+      ></v-activity-indicator-roller>
       <div class="v-button-content">
         <slot></slot>
       </div>
@@ -20,12 +24,14 @@
 <script>
 import { computed } from 'vue'
 import VIcon from '../icon/index.vue'
+import VActivityIndicatorRoller from '../activity-indicator/roller.vue'
 
 export default {
   name: 'v-button',
 
   components: {
-    VIcon
+    VIcon,
+    VActivityIndicatorRoller
   },
 
   props: {
@@ -201,7 +207,8 @@ export default {
     }
   }
   &.plain {
-    background: transparent;&.default {
+    background: transparent;
+    &.default {
       color: $button-default-plain-color;
       @include hairline(all, $color-border-element, $button-radius, 3px);
       &.active:active {

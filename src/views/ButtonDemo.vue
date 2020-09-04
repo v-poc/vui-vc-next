@@ -38,6 +38,19 @@
     >Message text</v-button>
   </div>
   <div class="v-example">
+    <p>Button w loading state</p>
+    <v-button
+      type="default"
+      plain
+      loading     
+    >Plain Loading Button</v-button>    
+    <v-button
+      type="primary"
+      round
+      loading      
+    >Round Loading Button</v-button>
+  </div>
+  <div class="v-example">
     <p>Cool Button</p>
     <v-button
       type="warning"
