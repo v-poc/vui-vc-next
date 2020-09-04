@@ -96,7 +96,7 @@
       <span>{{ svgIcon }}</span>
     </div>
     <v-button
-      v-if="state.svgList.length < 4"
+      v-if="state.svgList.includes('spinner')"
       type="primary"
       size="small"
       inline
@@ -126,7 +126,7 @@ export default {
   setup() {
     const state = reactive({
       iconList: ['checked/success', 'check-disabled', 'clear/fail'],
-      svgList: ['spinner', 'warn-color', 'success-color']
+      svgList: ['spinner', 'warn-color', 'success-color', 'no-result']
     })
 
     const showMoreIconList = () => {
@@ -219,6 +219,11 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.v-icon.icon-svg.v-icon-no-result.lg {
+  width: 1.1rem;
+  height: 0.7rem;
+}
 
 .v-icon.icon-svg.v-icon-svg-recording.lg {
   width: 1rem;
