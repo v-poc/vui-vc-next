@@ -4,7 +4,7 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <p>Result page - No result</p>
+    <p>Result type - Lost</p>
     <v-result-page
       type="lost"
     ></v-result-page>
@@ -16,6 +16,12 @@
       text="The result title"
       sub-text="refresh page to have a look"
       :buttons="state.buttons"
+    ></v-result-page>
+  </div>
+  <div class="v-example">
+    <p>Result type - Empty</p>
+    <v-result-page
+      type="empty"
     ></v-result-page>
   </div>  
 </template>
