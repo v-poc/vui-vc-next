@@ -2,6 +2,7 @@
 
 - Added ResultPage demo.
 - Updated Button demo for loading button.
+- Updated Tag demo for colors.
 
 # 0.0.14 (2020-08-30)
 

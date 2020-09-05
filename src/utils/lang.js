@@ -1,19 +1,11 @@
+// The noop function
 export const noop = function () { }
 
-/**
- * Convert kebab-case to camelCase
- */
-export const transformCamelCase = function (str) {
-  const re = /-(\w)/g
-  return str.replace(re, function ($0, $1) {
-    return $1.toUpperCase()
-  })
-}
+// Convert kebab-case to camelCase
+export const transformCamelCase = (str = '') => str.replace(/-(\w)/g, ($0, $1) => $1.toUpperCase())
 
-/**
- * Format value by gap step
- */
-export function formatValueByGapStep({
+// Format value by gap step
+export const formatValueByGapStep = ({
   step,
   value,
   gap = ' ',
@@ -21,7 +13,7 @@ export function formatValueByGapStep({
   range,
   isAdd = 1,
   oldValue = ''
-}) {
+}) => {
   if (value.length === 0) {
     return {
       value,
@@ -63,3 +55,9 @@ export function formatValueByGapStep({
     range: _range
   }
 }
+
+// Convert camelCase to kebab-case
+export const kebab = (str = '') => str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+
+// Format color string to kebab-case
+export const formatColor = (str = '') => str.replace(/(.*)(\d)/, '$1-$2')
