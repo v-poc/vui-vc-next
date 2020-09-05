@@ -11,7 +11,7 @@
       type="fill"
       size="large"
       shape="circle"
-      :fill-color="cKey"
+      :fill-color="cMap.base || '#EFEFEF'"
       @click="showPopup('center', true, cKey, cMap)"
     >{{ cKey }}</v-tag>
     <v-popup
@@ -123,9 +123,10 @@ export default {
 
     // show/hide popup
     const showPopup = (pos, isShow, cKey, cMap) => {
-      popupShow.value[pos] = isShow
-      popupShow.value['cKey'] = cKey
-      popupShow.value['cMap'] = cMap
+      const popupShowVal = popupShow.value
+      popupShowVal[pos] = isShow
+      popupShowVal['cKey'] = cKey
+      popupShowVal['cMap'] = cMap
     }
 
     const computedColors = computed(() => {
