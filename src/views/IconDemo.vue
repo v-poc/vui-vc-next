@@ -239,4 +239,9 @@ export default {
   width: .45rem;
   height: .45rem;
 }
+
+.v-icon.icon-svg.v-icon-no-result.lg {
+  width: 1.3rem;
+  height: 0.8rem;
+}
 </style>

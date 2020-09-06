@@ -16,7 +16,7 @@
 
 You can scan the QR code to access the examples:
 
-<img src="https://nikoni.top/images/vui-vc-next-qrcode.png" alt="VUI Examples" width="222"/>
+<img src="https://nikoni.top/images/vui-qrcode.png" alt="VUI Examples" width="222" height="242"/>
 
 ### Status
 

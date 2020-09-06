@@ -68,4 +68,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.v-icon.icon-svg.v-icon-no-result.lg {
+  width: 1.3rem;
+  height: 0.8rem;
+}
 </style>
