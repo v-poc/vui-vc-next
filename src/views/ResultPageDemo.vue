@@ -50,10 +50,10 @@ export default {
           },
         },
         {
-          text: 'Highlight button',
+          text: 'Primary button',
           type: 'primary',
           handler() {
-            Toast.succeed('Click highlight button')
+            Toast.succeed('Click primary button')
           }
         }
       ]
@@ -71,6 +71,6 @@ export default {
 
 ::v-deep(.v-icon.icon-svg.v-icon-no-result.lg) {
   width: 1.3rem;
-  height: 0.8rem;
+  height: 0.9rem;
 }
 </style>
