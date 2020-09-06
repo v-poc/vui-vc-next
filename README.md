@@ -13,7 +13,10 @@
 - [x] [Vitepress](https://github.com/vuejs/vitepress) (v0.5.0)
 
 ### Preview
-![qrcode](https://nikoni.top/images/vui-qrcode.png)
+
+You can scan the QR code to access the examples:
+
+<img src="https://nikoni.top/images/vui-qrcode.png" alt="VUI Examples" width="200"/>
 
 ### Status
 

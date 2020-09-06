@@ -220,11 +220,6 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
 
-.v-icon.icon-svg.v-icon-no-result.lg {
-  width: 1.1rem;
-  height: 0.7rem;
-}
-
 .v-icon.icon-svg.v-icon-svg-recording.lg {
   width: 1rem;
   height: 1rem;
