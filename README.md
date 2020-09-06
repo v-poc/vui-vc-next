@@ -14,9 +14,9 @@
 
 ### Preview
 
-You can scan the QR code to access the examples:
+You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to access the examples:
 
-<img src="https://nikoni.top/images/vui-qrcode.png" alt="VUI Examples" width="222" height="242"/>
+<img src="https://nikoni.top/images/vui-vc-qrcode.png" alt="VUI Examples" width="222" height="242"/>
 
 ### Status
 
