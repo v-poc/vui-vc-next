@@ -12,6 +12,9 @@
   - [x] [CSS Pre-processors](https://github.com/vitejs/vite#css-pre-processors)
 - [x] [Vitepress](https://github.com/vuejs/vitepress) (v0.5.0)
 
+### Preview
+![qrcode](https://nikoni.top/images/vui-qrcode.png)
+
 ### Status
 
 - In early WIP stage with experimental status. Copy components manually for any usage.
