@@ -153,6 +153,11 @@ export default {
   img {
     width: 100%;
     margin-bottom: 0.4rem;
+  }
+  
+  .v-icon.icon-svg.v-icon-no-result.lg {
+    width: 1.2rem;
+    height: 0.7rem;
   }  
 }
 
