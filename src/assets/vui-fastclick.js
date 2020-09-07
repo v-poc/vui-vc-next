@@ -149,7 +149,6 @@
 					targetElement.fastClickScrollParent = parentElement;
 					break;
 				}
-
 				parentElement = parentElement.parentElement;
 			} while (parentElement);
 		}
@@ -250,7 +249,6 @@
 				if (deviceIsAndroid) {
 					return false;
 				}
-
 				targetElement = forElement;
 			}
 		} else if (this.needsFocus(targetElement)) {
@@ -361,7 +359,6 @@
 			blackberryVersion = navigator.userAgent.match(/Version\/([0-9]*)\.([0-9]*)/);
 			if (blackberryVersion[1] >= 10 && blackberryVersion[2] >= 3) {
 				metaViewport = document.querySelector('meta[name=viewport]');
-
 				if (metaViewport) {
 					if (metaViewport.content.indexOf('user-scalable=no') !== -1) {
 						return true;

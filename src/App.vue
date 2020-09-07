@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import './assets/styles/vui-responsive'
+import './assets/vui-responsive.js'
 
 export default {
   name: 'vui-app'
