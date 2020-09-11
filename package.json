@@ -1,6 +1,6 @@
 {
   "name": "vui-vc-next",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Mobile web UI components based on Vue 3 and Vite",
   "repository": {
     "type": "git",

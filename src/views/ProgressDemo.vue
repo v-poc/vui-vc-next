@@ -178,22 +178,22 @@
 
 <script>
 import { computed, reactive } from 'vue'
-import VProgressCircular from '../components/progress/circular.vue'
-import VAmount from '../components/amount/index.vue'
-import VButton from '../components/button/index.vue'
-import VIcon from '../components/icon/index.vue'
+// import VProgressCircular from '../components/progress/circular.vue'
+// import VAmount from '../components/amount/index.vue'
+// import VButton from '../components/button/index.vue'
+// import VIcon from '../components/icon/index.vue'
 
 export default {
   name: 'progress-demo',
 
-  inheritAttrs: false,
+  // inheritAttrs: false,
 
-  components: {
-    VProgressCircular,
-    VAmount,
-    VButton,
-    VIcon
-  },
+  // components: {
+  //   VProgressCircular,
+  //   VAmount,
+  //   VButton,
+  //   VIcon
+  // },
 
   setup() {
     const state = reactive({

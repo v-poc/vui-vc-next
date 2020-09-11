@@ -40,18 +40,18 @@
 
 <script>
 import { reactive } from 'vue'
-import VSkeleton from '../components/skeleton/index.vue'
-import VButton from '../components/button/index.vue'
+// import VSkeleton from '../components/skeleton/index.vue'
+// import VButton from '../components/button/index.vue'
 
 export default {
   name: 'skeleton-demo',
 
-  inheritAttrs: false,
+  // inheritAttrs: false,
 
-  components: {
-    VSkeleton,
-    VButton
-  },
+  // components: {
+  //   VSkeleton,
+  //   VButton
+  // },
 
   setup() {
     // reactive state

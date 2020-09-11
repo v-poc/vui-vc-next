@@ -108,20 +108,20 @@
 
 <script>
 import { reactive, onUnmounted } from 'vue'
-import VIcon from '../components/icon/index.vue'
-import VButton from '../components/button/index.vue'
+// import VIcon from '../components/icon/index.vue'
+// import VButton from '../components/button/index.vue'
 import { SVG_SPRITE_NODE_ID } from '../constants/index'
 import useLoadSvgSprite from '../composables/useLoadSvgSprite'
 
 export default {
   name: 'icon-demo',
 
-  inheritAttrs: false,
+  // inheritAttrs: false,
 
-  components: {
-    VIcon,
-    VButton
-  },
+  // components: {
+  //   VIcon,
+  //   VButton
+  // },
 
   setup() {
     const state = reactive({

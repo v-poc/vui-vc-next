@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import { VUI_COMPONENTS } from '../constants/index'
-import { getRoute } from '../utils/index'
+import { componentsVUI } from '../components/vui-components'
+import { getRoute } from './routerUtil'
 
 import Home from '../views/IndexDemo.vue'
 
@@ -12,7 +12,7 @@ const routes = [
   }
 ]
 
-VUI_COMPONENTS.forEach((name) => {
+componentsVUI.forEach((name) => {
   const item = getRoute(name) || {}
   routes.push({
     path: item.routePath,

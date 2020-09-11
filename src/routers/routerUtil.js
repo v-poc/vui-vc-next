@@ -1,8 +1,8 @@
-import { VUI_COMPONENTS } from '../constants/index'
+import { componentsVUI } from '../components/vui-components'
 
 const componentsMap = {}
 
-VUI_COMPONENTS.forEach((name) => {
+componentsVUI.forEach((name) => {
   const routeName = `${name.toLowerCase()}-demo`
   componentsMap[name] = {
     routeName,

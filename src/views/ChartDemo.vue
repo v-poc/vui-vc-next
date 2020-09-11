@@ -66,20 +66,20 @@
 
 <script>
 import { ref } from 'vue'
-import VChart from '../components/chart/index.vue'
-import VButton from '../components/button/index.vue'
-import VPopup from '../components/popup/index.vue'
+// import VChart from '../components/chart/index.vue'
+// import VButton from '../components/button/index.vue'
+// import VPopup from '../components/popup/index.vue'
 
 export default {
   name: 'chart-demo',
 
-  inheritAttrs: false,
+  // inheritAttrs: false,
 
-  components: {
-    VChart,
-    VButton,
-    VPopup
-  },
+  // components: {
+  //   VChart,
+  //   VButton,
+  //   VPopup
+  // },
 
   setup() {
     const popupShow = ref({})

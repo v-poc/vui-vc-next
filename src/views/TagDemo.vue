@@ -103,20 +103,20 @@
 
 <script>
 import { computed, ref } from 'vue'
-import VTag from '../components/tag/index.vue'
-import VPopup from '../components/popup/index.vue'
+// import VTag from '../components/tag/index.vue'
+// import VPopup from '../components/popup/index.vue'
 import colors from '../constants/colors'
 import { kebab, formatColor } from '../utils/index'
 
 export default {
   name: 'tag-demo',
 
-  inheritAttrs: false,
+  // inheritAttrs: false,
 
-  components: {
-    VTag,
-    VPopup
-  },
+  // components: {
+  //   VTag,
+  //   VPopup
+  // },
 
   setup() {
     const popupShow = ref({})

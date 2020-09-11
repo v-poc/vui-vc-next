@@ -61,18 +61,18 @@
 
 <script>
 import { ref } from 'vue'
-import VLandscape from '../components/landscape/index.vue'
-import VButton from '../components/button/index.vue'
+// import VLandscape from '../components/landscape/index.vue'
+// import VButton from '../components/button/index.vue'
 
 export default {
   name: 'landscape-demo',
 
-  inheritAttrs: false,
+  // inheritAttrs: false,
 
-  components: {
-    VLandscape,
-    VButton
-  },
+  // components: {
+  //   VLandscape,
+  //   VButton
+  // },
 
   setup() {
     const popupShow = ref({})

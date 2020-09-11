@@ -28,17 +28,17 @@
 
 <script>
 import { reactive } from 'vue'
-import VResultPage from '../components/result-page/index.vue'
+// import VResultPage from '../components/result-page/index.vue'
 import Toast from '../components/toast/index'
 
 export default {
   name: 'result-page-demo',
 
-  inheritAttrs: false,
+  // inheritAttrs: false,
 
-  components: {
-    VResultPage
-  },
+  // components: {
+  //   VResultPage
+  // },
 
   setup() {
     const state = reactive({

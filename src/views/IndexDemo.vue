@@ -18,8 +18,8 @@
 <script>
 import { reactive } from 'vue'
 import packageData from '../../package.json'
-import { VUI_COMPONENTS } from '../constants/index'
-import { getRoute } from '../utils/index'
+import { componentsVUI } from '../components/vui-components'
+import { getRoute } from '../routers/routerUtil'
 
 export default {
   name: 'index-demo',
@@ -27,7 +27,7 @@ export default {
   setup() {
     const state = reactive({
       version: packageData.version,
-      list: VUI_COMPONENTS
+      list: componentsVUI
     })
 
     const getPath = (name) => {

@@ -85,20 +85,20 @@
 
 <script>
 import { ref } from 'vue'
-import VButton from '../components/button/index.vue'
-import VIcon from '../components/icon/index.vue'
-import VPopup from '../components/popup/index.vue'
+// import VButton from '../components/button/index.vue'
+// import VIcon from '../components/icon/index.vue'
+// import VPopup from '../components/popup/index.vue'
 
 export default {
   name: 'button-demo',
 
-  inheritAttrs: false,
+  // inheritAttrs: false,
 
-  components: {
-    VButton,
-    VIcon,
-    VPopup
-  },
+  // components: {
+  //   VButton,
+  //   VIcon,
+  //   VPopup
+  // },
 
   setup() {
     const braRef = ref('braRef')

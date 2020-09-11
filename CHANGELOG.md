@@ -1,3 +1,7 @@
+# 0.0.16 (2020-09-11)
+
+Refactor: change VUI_COMPONENTS to componentsVUI.
+
 # 0.0.15 (2020-09-04)
 
 - Added ResultPage demo.

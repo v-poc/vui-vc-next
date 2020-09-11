@@ -1,19 +1,3 @@
-export const VUI_COMPONENTS = [
-  'Skeleton',
-  'Tag',
-  'Popup',
-  'Icon',
-  'Button',
-  'Transition',
-  'Landscape',
-  'Toast',
-  'Amount',
-  'ActivityIndicator',
-  'Chart',
-  'Progress',
-  'ResultPage'
-]
-
 export const SKELETON_WIDTH = {
   DEFAULT_TITLE: '40%',
   DEFAULT_ROW: '100%',

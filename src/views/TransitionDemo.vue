@@ -31,18 +31,18 @@
 
 <script>
 import { ref } from 'vue'
-import VPopup from '../components/popup/index.vue'
-import VButton from '../components/button/index.vue'
+// import VPopup from '../components/popup/index.vue'
+// import VButton from '../components/button/index.vue'
 
 export default {
   name: 'transition-demo',
 
-  inheritAttrs: false,
+  // inheritAttrs: false,
 
-  components: {
-    VPopup,
-    VButton
-  },
+  // components: {
+  //   VPopup,
+  //   VButton
+  // },
 
   setup() {
     const effects = ref([

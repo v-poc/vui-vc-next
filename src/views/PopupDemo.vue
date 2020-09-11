@@ -112,20 +112,20 @@
 
 <script>
 import { ref } from 'vue'
-import VPopup from '../components/popup/index.vue'
-import VButton from '../components/button/index.vue'
-import VPopupTitleBar from '../components/popup/title-bar.vue'
+// import VPopup from '../components/popup/index.vue'
+// import VButton from '../components/button/index.vue'
+// import VPopupTitleBar from '../components/popup/title-bar.vue'
 
 export default {
   name: 'popup-demo',
 
-  inheritAttrs: false,
+  // inheritAttrs: false,
 
-  components: {
-    VPopup,
-    VButton,
-    VPopupTitleBar
-  },
+  // components: {
+  //   VPopup,
+  //   VButton,
+  //   VPopupTitleBar
+  // },
 
   setup() {
     const popupShow = ref({})
