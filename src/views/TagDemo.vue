@@ -111,7 +111,7 @@ import { kebab, formatColor } from '../utils/index'
 export default {
   name: 'tag-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VTag,

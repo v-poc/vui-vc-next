@@ -73,7 +73,7 @@ import { ref } from 'vue'
 export default {
   name: 'chart-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VChart,

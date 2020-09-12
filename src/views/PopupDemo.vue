@@ -119,7 +119,7 @@ import { ref } from 'vue'
 export default {
   name: 'popup-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VPopup,

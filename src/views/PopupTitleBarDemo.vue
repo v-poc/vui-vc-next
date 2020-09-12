@@ -18,10 +18,11 @@
       @input="val => showPopup('bottom', val)"
     >
       <v-popup-title-bar
-        only-close
-        title-align="left"
-        title="The left Title"
+        title="The center Title"
         describe="Some sub description."
+        ok-text="ok"
+        cancel-text="cancel"
+        @confirm="hidePopupTitleBar"
         @cancel="hidePopupTitleBar"
       ></v-popup-title-bar>
       <div class="v-example-popup v-example-popup-bottom">popup from bottom</div>
@@ -38,7 +39,7 @@ import { ref } from 'vue'
 export default {
   name: 'popup-titlebar-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VPopup,
@@ -61,7 +62,7 @@ export default {
 
     const hidePopupTitleBar = () => {
       showPopup('bottom', false)
-      showInfo('cancel popup-title-bar')
+      showInfo('hide popup-title-bar')
     }
 
     return {

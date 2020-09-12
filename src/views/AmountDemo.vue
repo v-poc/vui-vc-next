@@ -59,7 +59,7 @@ import { reactive, ref, onMounted } from 'vue'
 export default {
   name: 'amount-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VAmount,

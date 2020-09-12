@@ -46,7 +46,7 @@ import { reactive } from 'vue'
 export default {
   name: 'skeleton-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VSkeleton,

@@ -79,7 +79,7 @@ import Toast from '../components/toast/index'
 export default {
   name: 'toast-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VToast,

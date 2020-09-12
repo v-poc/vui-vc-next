@@ -116,7 +116,7 @@ import useLoadSvgSprite from '../composables/useLoadSvgSprite'
 export default {
   name: 'icon-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VIcon,

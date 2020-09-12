@@ -37,7 +37,7 @@ import { ref } from 'vue'
 export default {
   name: 'transition-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VPopup,

@@ -67,7 +67,7 @@ import { ref } from 'vue'
 export default {
   name: 'landscape-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VLandscape,

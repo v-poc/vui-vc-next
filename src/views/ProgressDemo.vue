@@ -186,7 +186,7 @@ import { computed, reactive } from 'vue'
 export default {
   name: 'progress-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VProgressCircular,

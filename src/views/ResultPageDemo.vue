@@ -34,7 +34,7 @@ import Toast from '../components/toast/index'
 export default {
   name: 'result-page-demo',
 
-  // inheritAttrs: false,
+  inheritAttrs: false,
 
   // components: {
   //   VResultPage
