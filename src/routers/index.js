@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import { componentsVUI } from '../components/vui-components'
+import { componentsVUI } from '../components/index'
 import { getRoute } from './routerUtil'
 
 import Home from '../views/IndexDemo.vue'
