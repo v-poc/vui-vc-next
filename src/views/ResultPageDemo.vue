@@ -45,12 +45,14 @@ export default {
       buttons: [
         {
           text: 'Normal button',
+          icon: 'success',
           handler() {
             Toast.succeed('Click normal button')
-          },
+          }
         },
         {
           text: 'Primary button',
+          icon: 'security',
           type: 'primary',
           handler() {
             Toast.succeed('Click primary button')

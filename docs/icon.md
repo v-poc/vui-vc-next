@@ -11,7 +11,7 @@ Icons (IconFont/SVG icon)
 ```js
 import { VIcon } from 'vui-vc-next'
 
-Vue.component(VIcon.name, VIcon)
+app.component(VIcon.name, VIcon)
 ```
 
 ## API

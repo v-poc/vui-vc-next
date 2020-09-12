@@ -11,7 +11,7 @@ Progress circular, generally used to communicate data intuitively to users
 ```js
 import { VProgressCircular } from 'vui-vc-next'
 
-Vue.component(VProgressCircular.name, VProgressCircular)
+app.component(VProgressCircular.name, VProgressCircular)
 ```
 
 ## API

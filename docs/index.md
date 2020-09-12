@@ -18,3 +18,4 @@ sidebar: auto
 - [`ActivityIndicator`](./activity-indicator.html)
 - [`Chart`](./chart.html)
 - [`Progress`](./progress.html)
+- [`ResultPage`](./result-page.html)

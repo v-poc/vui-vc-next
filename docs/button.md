@@ -11,7 +11,7 @@ Button components for different button styles
 ```js
 import { VButton } from 'vui-vc-next'
 
-Vue.component(VButton.name, VButton)
+app.component(VButton.name, VButton)
 ```
 
 ## API

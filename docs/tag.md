@@ -11,7 +11,7 @@ Tag UI showing the area status
 ```js
 import { VTag } from 'vui-vc-next'
 
-Vue.component(VTag.name, VTag)
+app.component(VTag.name, VTag)
 ```
 
 ## API

@@ -11,7 +11,7 @@ Financial figures screen, generally for amounts and quantities, etc
 ```js
 import { VAmount } from 'vui-vc-next'
 
-Vue.component(VAmount.name, VAmount)
+app.component(VAmount.name, VAmount)
 ```
 
 ## API

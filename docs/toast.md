@@ -11,7 +11,7 @@ Toast components for different toast styles
 ```js
 import { VToast } from 'vui-vc-next'
 
-Vue.component(VToast.name, VToast)
+app.component(VToast.name, VToast)
 ```
 
 ## API

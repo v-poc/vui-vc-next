@@ -36,9 +36,10 @@ export const components = {
 
 // components desc array
 export const componentsDesc = Object.keys(components).map((item) => {
+  const component = components[item]
   return {
-    name: components[item].name, // kebab-case
-    component: components[item]
+    name: component.name || 'v-comp', // kebab-case
+    component
   }
 })
 
@@ -53,11 +54,9 @@ export const install = function (app) {
 
   componentsDesc.forEach((item) => {
     const kebabCaseName = item.name
-    if (kebabCaseName) {
-      const camelCaseName = transformCamelCase(`-${kebabCaseName}`)
-      const registerComponent = item.component
-      app.component(kebabCaseName, registerComponent) // kebab-case
-      app.component(camelCaseName, registerComponent) // camelCase
-    }
+    const camelCaseName = transformCamelCase(`-${kebabCaseName}`)
+    const registerComponent = item.component
+    app.component(kebabCaseName, registerComponent) // kebab-case
+    app.component(camelCaseName, registerComponent) // camelCase
   })
 }

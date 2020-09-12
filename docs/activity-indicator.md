@@ -11,7 +11,7 @@ Activity indicator, generally used for tasks in progress
 ```js
 import { VActivityIndicator } from 'vui-vc-next'
 
-Vue.component(VActivityIndicator.name, VActivityIndicator)
+app.component(VActivityIndicator.name, VActivityIndicator)
 ```
 
 ## API

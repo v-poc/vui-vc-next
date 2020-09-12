@@ -11,7 +11,7 @@ Skeleton screen, generally used to display the loading state of the general stru
 ```js
 import { VSkeleton } from 'vui-vc-next'
 
-Vue.component(VSkeleton.name, VSkeleton)
+app.component(VSkeleton.name, VSkeleton)
 ```
 
 ## API

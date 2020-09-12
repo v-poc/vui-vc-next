@@ -17,7 +17,7 @@
 
 <script>
 import { reactive } from 'vue'
-import packageData from '../../package.json'
+import { version } from '../components/index'
 import { componentsVUI } from '../components/vui-components'
 import { getRoute } from '../routers/routerUtil'
 
@@ -26,7 +26,7 @@ export default {
 
   setup() {
     const state = reactive({
-      version: packageData.version,
+      version,
       list: componentsVUI
     })
 

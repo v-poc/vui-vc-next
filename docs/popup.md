@@ -11,7 +11,7 @@ A customized content area pops up on the screen.
 ```js
 import { VPopup } from 'vui-vc-next'
 
-Vue.component(VPopup.name, VPopup)
+app.component(VPopup.name, VPopup)
 ```
 
 ## API

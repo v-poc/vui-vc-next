@@ -11,7 +11,7 @@ Chart made with SVG, supports polylines printing and display setting.
 ```js
 import { VChart } from 'vui-vc-next'
 
-Vue.component(VChart.name, VChart)
+app.component(VChart.name, VChart)
 ```
 
 ## API

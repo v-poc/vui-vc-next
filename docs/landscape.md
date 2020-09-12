@@ -11,7 +11,7 @@ The display screen in a floating layer
 ```js
 import { VLandscape } from 'vui-vc-next'
 
-Vue.component(VLandscape.name, VLandscape)
+app.component(VLandscape.name, VLandscape)
 ```
 
 ## API
