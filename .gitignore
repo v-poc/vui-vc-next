@@ -4,6 +4,8 @@ node_modules
 src/assets/mock
 dist
 /dist
+public/index.js
+public/style.css
 
 # local env files
 .env.local
