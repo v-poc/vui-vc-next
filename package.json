@@ -2,7 +2,8 @@
   "name": "vui-vc-next",
   "version": "0.0.16",
   "description": "Mobile web UI components based on Vue 3 and Vite",
-  "main": "src/components/index.js",
+  "main": "dist/index.js",
+  "style": "dist/style.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bluepower/vui-vc-next.git"
