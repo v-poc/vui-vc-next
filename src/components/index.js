@@ -83,5 +83,6 @@ export {
   VActivityIndicator,
   VChart,
   VProgress,
-  VResultPage
+  VResultPage,
+  VActionBar
 }
