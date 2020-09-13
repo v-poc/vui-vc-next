@@ -1,3 +1,7 @@
+# 0.0.19 (2020-09-13)
+
+Refactor: update fonts reference.
+
 # 0.0.16 (2020-09-11)
 
 Refactor: change VUI_COMPONENTS to componentsVUI.
