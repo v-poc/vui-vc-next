@@ -37,6 +37,11 @@ $h-gap-sm: 0.12rem;
 $h-gap-md: 0.2rem;
 $h-gap-lg: 0.32rem;
 $h-gap-sl: 0.4rem;
+$v-gap-xs: $h-gap-xs;
+$v-gap-sm: $h-gap-sm;
+$v-gap-md: $h-gap-md;
+$v-gap-lg: $h-gap-lg;
+$v-gap-sl: $h-gap-sl;
 
 $opacity-disabled: 0.3;
 
@@ -64,6 +69,14 @@ $button-font-weight: $font-weight-medium;
 $button-small-height: 0.64rem;
 $button-small-font-size: $font-body-large;
 $button-radius: $radius-normal;
+
+$action-bar-width: 100%;
+$action-bar-height: 1rem;
+$action-bar-padding-v: $v-gap-md;
+$action-bar-padding-h: $h-gap-sl;
+$action-bar-button-gap: 0.22rem;
+$action-bar-slot-height: $button-height;
+$action-bar-zindex: 100;
 
 $chart-line-color: #CCC;
 $chart-path-color: $color-primary;

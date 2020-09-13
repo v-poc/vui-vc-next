@@ -1,6 +1,7 @@
 # 0.0.19 (2020-09-13)
 
-Refactor: update fonts reference.
+- Refactor: update fonts reference.
+- Added ActionBar demo.
 
 # 0.0.16 (2020-09-11)
 
