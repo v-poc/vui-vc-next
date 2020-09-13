@@ -9,9 +9,9 @@ Progress circular, generally used to communicate data intuitively to users
 ## Import
 
 ```js
-import { VProgressCircular } from 'vui-vc-next'
+import { VProgress } from 'vui-vc-next'
 
-app.component(VProgressCircular.name, VProgressCircular)
+app.component(VProgress.name, VProgress)
 ```
 
 ## API
