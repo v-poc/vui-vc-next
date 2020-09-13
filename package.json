@@ -12,6 +12,13 @@
     "type": "git",
     "url": "git+https://github.com/bluepower/vui-vc-next.git"
   },
+  "keywords": [
+    "vue3",
+    "vite",
+    "vui",
+    "vue3-ui",
+    "vitepress"
+  ],
   "author": "Niko Ni",
   "license": "MIT",
   "bugs": {
