@@ -172,6 +172,6 @@ export default {
   font-family: VC-Amount;
   font-style: normal;
   font-weight: normal;
-  src: url("/assets/DINPro-Medium.ttf") format("truetype");
+  src: $amount-font-family;
 }
 </style>

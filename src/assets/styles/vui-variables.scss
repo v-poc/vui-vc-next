@@ -99,7 +99,8 @@ $popup-zindex: 1000;
 
 $font-family-normal: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
 $font-family-number: $font-family-normal;
-$icon-font-family: url("/assets/iconfont.woff") format("woff"), url("/assets/iconfont.ttf") format("truetype");
+$icon-font-family: url("../../assets/fonts/iconfont.woff") format("woff"), url("../../assets/fonts/iconfont.ttf") format("truetype");
+$amount-font-family: url("../../assets/fonts/DINPro-Medium.ttf") format("truetype");
 
 $toast-fill: rgba(65, 72, 93, .77);
 $toast-font-size: $font-body-large;
