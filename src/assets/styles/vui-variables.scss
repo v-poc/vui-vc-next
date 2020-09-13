@@ -1,5 +1,5 @@
 // global style variables
-$color-primary: #2F86F6;
+$color-primary: #2196F3;
 $color-text-highlight: $color-primary;
 
 $font-body-large: 0.28rem;
@@ -10,15 +10,15 @@ $font-minor-normal: 0.2rem;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 
-$color-border-element: #C5CAD5;
-$color-text-base: #111A34;
+$color-border-element: #E0E0E0;
+$color-text-base: #263238;
 $color-text-base-inverse: #FFF;
-$color-text-error: #FF5257;
+$color-text-error: #F44336;
 $color-text-minor: #666f83;
 $color-text-caption: #858B9C;
 $color-bg-base: #F9FAFB;
 $color-text-body: #41485D;
-$color-text-disabled: #C5CAD5;
+$color-text-disabled: #E0E0E0;
 $color-bg-inverse: #FFF;
 $color-bg-disabled: #E2E4EA;
 $color-mask: rgba(37, 38, 45, 0.7);
@@ -65,7 +65,7 @@ $button-small-height: 0.64rem;
 $button-small-font-size: $font-body-large;
 $button-radius: $radius-normal;
 
-$chart-line-color: #ccc;
+$chart-line-color: #CCC;
 $chart-path-color: $color-primary;
 $chart-text-color: $color-text-minor;
 $chart-label-size: 0.22rem;
@@ -73,7 +73,7 @@ $chart-value-size: 0.2rem;
 
 $landscape-width: 5.4rem;
 $landscape-fullscreen-bg: $color-bg-inverse;
-$landscape-zindex: 1600;
+$landscape-zindex: 960;
 
 $tag-color: $color-primary;
 $tag-fillet-radius: 0.02rem;
@@ -95,7 +95,7 @@ $popup-title-bar-color-describe: $color-text-caption;
 $popup-title-bar-color-button-left: $color-text-minor;
 $popup-title-bar-color-button-right: $color-text-highlight;
 $popup-mask-bg: $color-mask;
-$popup-zindex: 1000;
+$popup-zindex: 900;
 
 $font-family-normal: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
 $font-family-number: $font-family-normal;
@@ -107,4 +107,4 @@ $toast-font-size: $font-body-large;
 $toast-color: #FFF;
 $toast-radius: $radius-normal;
 $toast-padding: 0.2rem 0.3rem;
-$toast-zindex: 1700;
+$toast-zindex: 970;

@@ -1,5 +1,3 @@
-// @import "./vui-reset.scss";
-
 .nav-wrapper {
   margin: 0 auto;
   padding: 0;
@@ -31,7 +29,7 @@
   }
   
   a.router-link-exact-active {
-    color: #42b983;
+    color: #4CAF50;
   }
 }
 
@@ -136,8 +134,8 @@
   width: 100%;
   height: 0.75rem;
   line-height: 0.75rem;
-  background: #4a4c5b;
-  color: #fff;
+  background: #607D8B;
+  color: #FFF;
 
   button {
     position: absolute;
@@ -237,7 +235,7 @@
 
     p.completed {
       font-size: 80%;
-      color: #4AA05F;
+      color: #009688;
     }
   }
 

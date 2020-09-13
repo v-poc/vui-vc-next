@@ -11,5 +11,5 @@ if ('ontouchstart' in window) {
 
 const vui = createApp(App)
 install(vui)
-install.installed = true
+// install.installed = true
 vui.use(router).mount('#app')

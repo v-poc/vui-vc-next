@@ -81,7 +81,7 @@
     </div>
   </div>
   <div class="v-example">
-    <p>SVG Icon</p>
+    <p>Icon SVG</p>
     <div
       class="v-example-svg"
       v-for="svgIcon in state.svgList"
@@ -221,12 +221,12 @@ export default {
 @import '../assets/styles/vui-example.scss';
 
 .v-icon.icon-svg.v-icon-svg-recording.lg {
-  width: 1rem;
+  width: 1.2rem;
   height: 1rem;
 }
 
 .v-icon.icon-svg.v-icon-svg-message.lg {
-  width: .8rem;
+  width: 1rem;
   height: .8rem;
 }
 
