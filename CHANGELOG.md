@@ -1,4 +1,4 @@
-# 0.0.19 (2020-09-13)
+# 0.0.20 (2020-09-13)
 
 - Refactor: update fonts reference.
 - Added ActionBar demo.

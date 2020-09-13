@@ -19,3 +19,4 @@ sidebar: auto
 - [`Chart`](./chart.html)
 - [`Progress`](./progress.html)
 - [`ResultPage`](./result-page.html)
+- [`ActionBar`](./action-bar.html)
