@@ -61,6 +61,8 @@
 
 <script>
 import { ref } from 'vue'
+import { logInfo } from '../utils/index'
+import Toast from '../components/toast/index'
 // import VLandscape from '../components/landscape/index.vue'
 // import VButton from '../components/button/index.vue'
 
@@ -84,8 +86,12 @@ export default {
 
     // show info in console log
     const showInfo = (content) => {
-      console.info('[LandscapeDemo]', content)
-    }
+      logInfo(`[LandscapeDemo] ${content}`)
+      Toast({
+        content,
+        position: 'top'
+      })      
+    }    
 
     return {
       popupShow: popupShow.value,

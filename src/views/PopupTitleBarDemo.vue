@@ -22,8 +22,8 @@
         describe="Some sub description."
         ok-text="ok"
         cancel-text="cancel"
-        @confirm="hidePopupTitleBar"
-        @cancel="hidePopupTitleBar"
+        @confirm="hidePopupTitleBar('confirmButton')"
+        @cancel="hidePopupTitleBar('cancelButton')"
       ></v-popup-title-bar>
       <div class="v-example-popup v-example-popup-bottom">popup from bottom</div>
     </v-popup>
@@ -32,6 +32,8 @@
 
 <script>
 import { ref } from 'vue'
+import { logInfo } from '../utils/index'
+import Toast from '../components/toast/index'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
 // import VPopupTitleBar from '../components/popup/title-bar.vue'
@@ -57,12 +59,13 @@ export default {
 
     // show info in console log
     const showInfo = (content) => {
-      console.info('[PopupDemo]', content)
+      logInfo(`[PopupTitleBarDemo] ${content}`)
+      Toast.info(content)
     }
 
-    const hidePopupTitleBar = () => {
+    const hidePopupTitleBar = (info) => {
       showPopup('bottom', false)
-      showInfo('hide popup-title-bar')
+      showInfo(`${info} hide popup-title-bar`)
     }
 
     return {

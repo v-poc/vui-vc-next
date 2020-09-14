@@ -89,7 +89,7 @@ export default {
     const $_onClick2 = () => {
       Toast.info('Click secondary button')
     }
-    
+
     const $_onClick3 = (item) => {
       Toast.info('Click primary button')
       item.inactive = true
@@ -107,7 +107,7 @@ export default {
       btnData1: [
         {
           text: 'Primary button',
-          onClick: $_onClick1          
+          onClick: $_onClick1
         }
       ],
       btnData2: [
@@ -117,7 +117,7 @@ export default {
         },
         {
           text: 'Primary button',
-          onClick: $_onClick1         
+          onClick: $_onClick1
         }
       ],
       btnData3: [
@@ -127,20 +127,20 @@ export default {
         },
         {
           text: 'Primary button',
-          disabled: true         
+          disabled: true
         }
       ],
       btnData4: [
         {
           text: 'Primary button',
           round: true,
-          onClick: $_onClick3        
+          onClick: $_onClick3
         }
       ]
     })
 
     const $_onShowDemo = (index) => {
-      [1, 2, 3, 4].forEach((item) => state[`showDemo${item}`] = false)
+      [1, 2, 3, 4].forEach((item) => (state[`showDemo${item}`] = false))
       state[`showDemo${index}`] = true
     }
 

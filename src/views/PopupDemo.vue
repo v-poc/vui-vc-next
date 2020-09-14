@@ -78,7 +78,7 @@
         title-align="left"
         title="The left Title"
         describe="Some sub description."
-        @cancel="hidePopupTitleBar"
+        @cancel="hidePopupTitleBar('closeButton')"
       ></v-popup-title-bar>
       <div class="v-example-popup v-example-popup-bottom">popup from bottom</div>
     </v-popup>
@@ -112,6 +112,8 @@
 
 <script>
 import { ref } from 'vue'
+import { logInfo } from '../utils/index'
+import Toast from '../components/toast/index'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
 // import VPopupTitleBar from '../components/popup/title-bar.vue'
@@ -137,12 +139,13 @@ export default {
 
     // show info in console log
     const showInfo = (content) => {
-      console.info('[PopupDemo]', content)
+      logInfo(`[PopupTitleBarDemo] ${content}`)
+      Toast.info(content)
     }
 
-    const hidePopupTitleBar = () => {
+    const hidePopupTitleBar = (info) => {
       showPopup('bottom', false)
-      showInfo('cancel popup-title-bar')
+      showInfo(`${info} hide popup-title-bar`)
     }
 
     return {
