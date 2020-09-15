@@ -36,7 +36,7 @@
       size="small"
       inline
       round
-      @click="$_showProgress"
+      @click="showProgress"
     >Start test</v-button>
   </div>
   <div class="v-example">
@@ -104,7 +104,7 @@
           </label>
           <div class="row-flex">
             <v-icon
-              name="success"
+              name="right"
               color="#36C"
               v-if="item.done"
             ></v-icon>
@@ -230,20 +230,20 @@ export default {
       () => state.tasks.length ? state.completedCount / state.tasks.length : 0
     )
 
-    const $_defer = (time) =>
+    const defer = (time) =>
       new Promise((resolve) => setTimeout(resolve, time))
 
-    const $_showProgress = async () => {
+    const showProgress = async () => {
       state.val = 0
       state.btnType = 'primary'
       state.strokeColor = '#FC9153'
-      await $_defer(1100)
+      await defer(1100)
       state.val = 0.2
-      await $_defer(2000)
+      await defer(2000)
       state.val = 0.5
-      await $_defer(2400)
+      await defer(2400)
       state.val = 0.9
-      await $_defer(1800)
+      await defer(1800)
       state.val = 1
       state.btnType = 'warning'
       state.strokeColor = '#F00'
@@ -275,7 +275,7 @@ export default {
 
     return {
       state,
-      $_showProgress,
+      showProgress,
       createTask,
       deleteTask,
       taskCls

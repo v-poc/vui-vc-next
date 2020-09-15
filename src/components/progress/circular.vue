@@ -89,7 +89,7 @@ export default {
       state.isMounted = true
     })
 
-    const $_doAnimate = (fromValue = 0, toValue = 0) => {
+    const doAnimate = (fromValue = 0, toValue = 0) => {
       const step = (percent) => {
         state.formatValue = fromValue + (toValue - fromValue) * percent
       }
@@ -106,7 +106,7 @@ export default {
           state.formatValue = val
           return
         }
-        $_doAnimate(oldVal, val)
+        doAnimate(oldVal, val)
       },
       {
         immediate: true

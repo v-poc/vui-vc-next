@@ -1,13 +1,13 @@
 <template>
   <div
-    :class="$_cls"
+    :class="cls"
   >
     <v-popup
       :value="value || state.visible"
       :hasMask="hasMask"
       :maskClosable="false"
-      @show="$_onShow"
-      @hide="$_onHide"
+      @show="onShow"
+      @hide="onHide"
     >
       <div class="v-toast-content" v-if="content || icon">
         <v-icon
@@ -88,31 +88,31 @@ export default {
   },
 
   setup(props, { emit }) {
-    let $_timer
+    let timer
     const state = reactive({
       visible: false // Whether display
     })
 
-    const $_cls = computed(() => {
+    const cls = computed(() => {
       return [
         'v-toast',
         props.position
       ]
     })
 
-    const $_onShow = () => {
+    const onShow = () => {
       emit('show')
     }
 
-    const $_onHide = () => {
+    const onHide = () => {
       emit('hide')
     }
 
     const show = () => {
       state.visible = true
-      $_timer && clearTimeout($_timer)
+      timer && clearTimeout(timer)
       if (props.duration) {
-        $_timer = setTimeout(hide, props.duration)
+        timer = setTimeout(hide, props.duration)
       }
     }
 
@@ -121,14 +121,14 @@ export default {
     }
     
     onUnmounted(() => {
-      $_timer && clearTimeout($_timer)
+      timer && clearTimeout(timer)
     })
 
     return {
       state,
-      $_cls,
-      $_onShow,
-      $_onHide,
+      cls,
+      onShow,
+      onHide,
       show,
       hide
     }

@@ -18,7 +18,7 @@ const Toast = function(props) {
     parentNode = document.body
   } = props
 
-  let vm = Toast.$_instance
+  let vm = Toast.instance
   if (!vm) {
     vm = createApp(ToastOptions, {
       value: true,
@@ -32,12 +32,12 @@ const Toast = function(props) {
     const container = document.createElement('div')
     parentNode.appendChild(container)
     vm.mount(container)
-    Toast.$_instance = vm
+    Toast.instance = vm
 
     duration && setTimeout(() => {
       vm.unmount(container)
       parentNode.removeChild(container)
-      Toast.$_instance = null
+      Toast.instance = null
     }, duration)
   }
 
@@ -45,7 +45,7 @@ const Toast = function(props) {
 }
 
 // singleton
-Toast.$_instance = null
+Toast.instance = null
 
 Toast.component = ToastOptions
 

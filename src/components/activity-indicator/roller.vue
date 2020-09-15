@@ -4,35 +4,35 @@
       <svg
         class="v-activity-indicator-svg rolling"
         preserveAspectRatio="xMidYMid"
-        :viewBox="`0 0 ${$_viewBoxSize} ${$_viewBoxSize}`"
-        :style="$_style"
+        :viewBox="`0 0 ${viewBoxSize} ${viewBoxSize}`"
+        :style="style"
       >
         <circle
           fill="none"
           :stroke="borderColor"
-          :stroke-width="$_strokeWidth"
-          :cx="$_viewBoxSize/2"
-          :cy="$_viewBoxSize/2"
-          :r="$_radius"
+          :stroke-width="strokeWidth"
+          :cx="viewBoxSize/2"
+          :cy="viewBoxSize/2"
+          :r="radius"
         ></circle>
         <g
-          v-if="!$_circle"
+          v-if="!circle"
           class="circle"
         >
           <circle
-            v-if="$_isAutoAnimation || process > 0"
+            v-if="isAutoAnimation || process > 0"
             class="stroke"
-            :cx="$_viewBoxSize/2"
-            :cy="$_viewBoxSize/2"
+            :cx="viewBoxSize/2"
+            :cy="viewBoxSize/2"
             :fill="fill"
-            :r="$_radius"
+            :r="radius"
             :stroke="color"
-            :stroke-width="$_strokeWidth"
-            :stroke-dasharray="$_isAutoAnimation ? `${110 * $_circlePerimeter / 125}` : $_strokeDasharray"
+            :stroke-width="strokeWidth"
+            :stroke-dasharray="isAutoAnimation ? `${110 * circlePerimeter / 125}` : strokeDasharray"
             :stroke-linecap="linecap"
           >
             <animate
-              v-if="$_isAutoAnimation"
+              v-if="isAutoAnimation"
               attributeName="stroke-dashoffset"
               dur="2.2s"
               keyTimes="0;1"
@@ -41,10 +41,10 @@
               keySplines="0.41,0.314,0.8,0.54"
               repeatCount="indefinite"
               begin="0"
-              :values="`${360 * $_circlePerimeter / 125};${140 * $_circlePerimeter / 125}`"
+              :values="`${360 * circlePerimeter / 125};${140 * circlePerimeter / 125}`"
             ></animate>
             <animateTransform
-              v-if="$_isAutoAnimation"
+              v-if="isAutoAnimation"
               attributeName="transform"
               type="rotate"
               calcMode="linear"
@@ -52,7 +52,7 @@
               begin="0"
               repeatCount="indefinite"
               :dur="`${duration}s`"
-              :values="`0 ${$_viewBoxSize/2} ${$_viewBoxSize/2};360 ${$_viewBoxSize/2} ${$_viewBoxSize/2}`"
+              :values="`0 ${viewBoxSize/2} ${viewBoxSize/2};360 ${viewBoxSize/2} ${viewBoxSize/2}`"
             ></animateTransform>
           </circle>
         </g>
@@ -115,28 +115,28 @@ export default {
   },
 
   setup(props, { slots }) {
-    const $_id = computed(
+    const id = computed(
       () => `v-activity-indicator-roller-keyframes-${props.size}`
     )
 
-    const $_strokeWidth = computed(() => props.width || props.size / 12)
+    const strokeWidth = computed(() => props.width || props.size / 12)
 
-    const $_strokeDasharray = computed(
+    const strokeDasharray = computed(
       () =>
-        `${props.process * $_circlePerimeter.value} ${
-          (1 - props.process) * $_circlePerimeter.value
+        `${props.process * circlePerimeter.value} ${
+          (1 - props.process) * circlePerimeter.value
         }`
     )
 
-    const $_radius = computed(() => props.size / 2)
+    const radius = computed(() => props.size / 2)
 
-    const $_viewBoxSize = computed(() => props.size + 2 * $_strokeWidth.value)
+    const viewBoxSize = computed(() => props.size + 2 * strokeWidth.value)
 
-    const $_circlePerimeter = computed(() => props.size * 3.1415)
+    const circlePerimeter = computed(() => props.size * 3.1415)
 
-    const $_isAutoAnimation = computed(() => props.process === -1)
+    const isAutoAnimation = computed(() => props.process === -1)
 
-    const $_style = computed(() => {
+    const style = computed(() => {
       return {
         width: `${props.size}px`,
         height: `${props.size}px`,
@@ -144,18 +144,18 @@ export default {
       }
     })
 
-    const $_circle = computed(() => slots.circle)
+    const circle = computed(() => slots.circle)
 
     return {
-      $_id,
-      $_strokeWidth,
-      $_strokeDasharray,
-      $_radius,
-      $_viewBoxSize,
-      $_circlePerimeter,
-      $_isAutoAnimation,
-      $_style,
-      $_circle
+      id,
+      strokeWidth,
+      strokeDasharray,
+      radius,
+      viewBoxSize,
+      circlePerimeter,
+      isAutoAnimation,
+      style,
+      circle
     }
   }
 }

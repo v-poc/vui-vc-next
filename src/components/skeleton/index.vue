@@ -5,19 +5,19 @@
   >
     <div
       v-if="avatar"
-      :class="$_avatarCls"
+      :class="avatarCls"
     ></div>
     <div class="v-skeleton-content">
       <h4
         class="v-skeleton-title"
         v-if="title"
-        :style="$_titleWidthStyle"
+        :style="titleWidthStyle"
       ></h4>
       <div
         class="v-skeleton-row"
         v-for="index in row"
         :key="`row${index}`"
-        :style="$_rowWidthStyle(index)"
+        :style="rowWidthStyle(index)"
       ></div>
     </div>
   </div>
@@ -73,7 +73,7 @@ export default {
 
   setup(props) {
     // avatar css class
-    const $_avatarCls = computed(() => {
+    const avatarCls = computed(() => {
       return [
         'v-skeleton-avatar',
         {
@@ -84,14 +84,14 @@ export default {
     })
 
     // title width style
-    const $_titleWidthStyle = computed(() => {
+    const titleWidthStyle = computed(() => {
       return {
-        width: $_getTitleWidth()
+        width: getTitleWidth()
       }
     })
 
     // get title width
-    const $_getTitleWidth = () => {
+    const getTitleWidth = () => {
       if (props.titleWidth) {
         return typeof props.titleWidth === 'number'
           ? `${props.titleWidth}%`
@@ -101,7 +101,7 @@ export default {
     }
 
     // get row width
-    const $_getRowWidth = (index) => {
+    const getRowWidth = (index) => {
       if (props.rowWidth) {
         if (Array.isArray(props.rowWidth)) {
           return typeof props.rowWidth[index] === 'number'
@@ -117,21 +117,21 @@ export default {
     }
 
     // row width style
-    const $_rowWidthStyle = (index) => {
+    const rowWidthStyle = (index) => {
       return {
         width:
           index === props.row
             ? SKELETON_WIDTH.LAST_ROW
-            : $_getRowWidth(index - 1)
+            : getRowWidth(index - 1)
       }
     }
 
     return {
-      $_avatarCls,
-      $_titleWidthStyle,
-      $_getTitleWidth,
-      $_getRowWidth,
-      $_rowWidthStyle
+      avatarCls,
+      titleWidthStyle,
+      getTitleWidth,
+      getRowWidth,
+      rowWidthStyle
     }
   }
 }

@@ -1,24 +1,24 @@
 <template>
-  <div :class="$_containerCls">
-    <div :class="$_innerCls">
+  <div :class="containerCls">
+    <div :class="innerCls">
       <div class="indicator-loading">
         <template v-if="type === 'roller'">
           <v-activity-indicator-roller
             :size="size"
-            :color="$_color"
+            :color="color"
             :width="width"
           ></v-activity-indicator-roller>
         </template>
         <template v-else-if="type === 'spinner'">
           <v-activity-indicator-spinner
             :size="size"
-            :color="$_color"
+            :color="color"
           ></v-activity-indicator-spinner>
         </template>
       </div>
       <div
         class="v-activity-indicator-text indicator-text"
-        :style="$_style"
+        :style="style"
       >
         <slot></slot>
       </div>
@@ -71,11 +71,11 @@ export default {
   },
 
   setup(props) {
-    const $_containerCls = computed(() => {
+    const containerCls = computed(() => {
       return ['v-activity-indicator', props.type]
     })
 
-    const $_innerCls = computed(() => {
+    const innerCls = computed(() => {
       return [
         'indicator-container',
         {
@@ -84,7 +84,7 @@ export default {
       ]
     })
 
-    const $_color = computed(() => {
+    const color = computed(() => {
       return props.color
         ? props.color
         : props.type === 'spinner'
@@ -92,7 +92,7 @@ export default {
           : '#2F86F6'
     })
 
-    const $_style = computed(() => {
+    const style = computed(() => {
       return {
         fontSize: `${props.textSize}px`,
         color: props.textColor
@@ -100,10 +100,10 @@ export default {
     })
 
     return {
-      $_containerCls,
-      $_innerCls,
-      $_color,
-      $_style
+      containerCls,
+      innerCls,
+      color,
+      style
     }
   }
 }

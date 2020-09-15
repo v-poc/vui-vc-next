@@ -2,19 +2,19 @@
   <div
     ref="root"
     v-show="state.isPopupShow"
-    :class="$_cls"
+    :class="cls"
   >
     <div
       v-show="hasMask && state.isPopupBoxShow"
       class="v-popup-mask"
-      @click="$_onPopupMaskClick"
+      @click="onPopupMaskClick"
     ></div>
     <transition
       :name="state.transition"
-      @before-enter="$_onPopupTransitionStart"
-      @before-leave="$_onPopupTransitionStart"
-      @after-enter="$_onPopupTransitionEnd"
-      @after-leave="$_onPopupTransitionEnd"
+      @before-enter="onPopupTransitionStart"
+      @before-leave="onPopupTransitionStart"
+      @after-enter="onPopupTransitionEnd"
+      @after-leave="onPopupTransitionEnd"
     >
       <div
         v-show="state.isPopupBoxShow"
@@ -76,7 +76,7 @@ export default {
       transition: props.transition || useTransition(props.position)
     })
 
-    const $_cls = computed(() => {
+    const cls = computed(() => {
       return [
         'v-popup',
         { 'with-mask': props.hasMask },
@@ -85,22 +85,22 @@ export default {
       ]
     })
 
-    const $_showPopupBox = () => {
+    const showPopupBox = () => {
       state.isAnimation = true
       state.isPopupShow = true
       state.isPopupBoxShow = true
 
-      props.preventScroll && $_preventScroll(true)
+      props.preventScroll && preventScroll(true)
     }
 
-    const $_hidePopupBox = () => {
+    const hidePopupBox = () => {
       state.isAnimation = true
       state.isPopupBoxShow = false
-      props.preventScroll && $_preventScroll(false)
+      props.preventScroll && preventScroll(false)
       emit('input', false)
     }
 
-    const $_preventScroll = (isBind) => {
+    const preventScroll = (isBind) => {
       [
         root.value.querySelector('.v-popup-mask'),
         root.value.querySelector('.v-popup-box')
@@ -109,14 +109,14 @@ export default {
           isBind,
           node,
           name: 'touchmove',
-          handler: $_preventDefault
+          handler: preventDefault
         })()
       })
 
-      $_preventScrollExclude(isBind)
+      preventScrollExclude(isBind)
     }
 
-    const $_preventScrollExclude = (isBind, preventScrollExclude) => {
+    const preventScrollExclude = (isBind, preventScrollExclude) => {
       preventScrollExclude = preventScrollExclude || props.preventScrollExclude
       const excluder =
         preventScrollExclude && typeof preventScrollExclude === 'string'
@@ -127,30 +127,30 @@ export default {
         isBind,
         node: excluder,
         name: 'touchmove',
-        handler: $_stopImmediatePropagation
+        handler: stopImmediatePropagation
       })()
     }
 
-    const $_preventDefault = (event) => {
+    const preventDefault = (event) => {
       event.preventDefault()
     }
 
-    const $_stopImmediatePropagation = (event) => {
+    const stopImmediatePropagation = (event) => {
       event.stopImmediatePropagation()
     }
 
-    const $_onPopupMaskClick = () => {
+    const onPopupMaskClick = () => {
       if (props.maskClosable) {
-        $_hidePopupBox()
+        hidePopupBox()
         emit('mask-click')
       }
     }
 
-    const $_onPopupTransitionStart = () => {
+    const onPopupTransitionStart = () => {
       emit(state.isPopupBoxShow ? 'before-show' : 'before-hide')
     }
 
-    const $_onPopupTransitionEnd = () => {
+    const onPopupTransitionEnd = () => {
       if (!state.isAnimation) {
         return
       }
@@ -166,32 +166,32 @@ export default {
     }
 
     onMounted(() => {
-      props.value && $_showPopupBox()
+      props.value && showPopupBox()
 
       watchEffect(() => {
         if (props.value) {
           if (state.isAnimation) {
-            setTimeout($_showPopupBox, 50)
+            setTimeout(showPopupBox, 50)
           } else {
-            $_showPopupBox()
+            showPopupBox()
           }
         } else {
-          $_hidePopupBox()
+          hidePopupBox()
         }
 
         const val = props.preventScrollExclude
-        $_preventScrollExclude(false, val) // remove old listener first
-        $_preventScrollExclude(true, val) // add new listener later
+        preventScrollExclude(false, val) // remove old listener first
+        preventScrollExclude(true, val) // add new listener later
       })
     })
 
     return {
       root,
       state,
-      $_cls,
-      $_onPopupMaskClick,
-      $_onPopupTransitionStart,
-      $_onPopupTransitionEnd
+      cls,
+      onPopupMaskClick,
+      onPopupTransitionStart,
+      onPopupTransitionEnd
     }
   }
 }

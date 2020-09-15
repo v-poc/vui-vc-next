@@ -1,17 +1,17 @@
 <template>
   <v-icon-svg
-    v-if="svg || $_isDefaultSvg"
+    v-if="svg || isDefaultSvg"
     :name="name"
     :size="size"
     :color="color"
-    @icon-click="$_onIconClick"
+    @icon-click="onIconClick"
   ></v-icon-svg>
   <v-icon-font
     v-else
     :name="name"
     :size="size"
     :color="color"
-    @icon-click="$_onIconClick"
+    @icon-click="onIconClick"
   ></v-icon-font>
 </template>
 
@@ -53,18 +53,18 @@ export default {
   },
 
   setup(props, { emit }) {
-    const $_isDefaultSvg = computed(() => {
+    const isDefaultSvg = computed(() => {
       const defaultSvgList = useDefaultSvgList()
       return defaultSvgList[props.name]
     })
 
-    const $_onIconClick = (evt) => {
+    const onIconClick = (evt) => {
       emit('click', evt)
     }
 
     return {
-      $_isDefaultSvg,
-      $_onIconClick
+      isDefaultSvg,
+      onIconClick
     }
   }
 }

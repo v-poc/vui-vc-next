@@ -1,8 +1,8 @@
 <template>
   <svg
-    :class="$_cls"
-    :style="$_style"
-    @click="$_onIconClick"
+    :class="cls"
+    :style="style"
+    @click="onIconClick"
   >
     <use :xlink:href="`#${name}`" />
   </svg>
@@ -35,17 +35,17 @@ export default {
   },
 
   setup(props, { emit }) {
-    const $_cls = computed(() => {
+    const cls = computed(() => {
       return ['v-icon icon-svg', `v-icon-${props.name}`, props.size]
     })
 
-    const $_style = computed(() => {
+    const style = computed(() => {
       return {
         fill: props.color
       }
     })
 
-    const $_onIconClick = (evt) => {
+    const onIconClick = (evt) => {
       emit('icon-click', evt)
     }
 
@@ -55,9 +55,9 @@ export default {
     })
 
     return {
-      $_cls,
-      $_style,
-      $_onIconClick
+      cls,
+      style,
+      onIconClick
     }
   }
 }

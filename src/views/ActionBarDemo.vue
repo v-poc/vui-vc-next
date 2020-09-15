@@ -10,7 +10,7 @@
       size="small"
       inline
       round
-      @click="$_onShowDemo(1)"
+      @click="onShowDemo(1)"
     >Test Basic usage</v-button>
     <v-action-bar
       v-if="state.showDemo1"
@@ -24,7 +24,7 @@
       size="small"
       inline
       round
-      @click="$_onShowDemo(2)"
+      @click="onShowDemo(2)"
     >Test Multiple Buttons</v-button>
     <v-action-bar
       v-if="state.showDemo2"
@@ -38,7 +38,7 @@
       size="small"
       inline
       round
-      @click="$_onShowDemo(3)"
+      @click="onShowDemo(3)"
     >Test Disabled Buttons</v-button>
     <v-action-bar
       v-if="state.showDemo3"
@@ -52,7 +52,7 @@
       size="small"
       inline
       round
-      @click="$_onShowDemo(4)"
+      @click="onShowDemo(4)"
     >Test Slot usage</v-button>
     <v-action-bar
       v-if="state.showDemo4"
@@ -82,15 +82,15 @@ export default {
   // },
 
   setup() {
-    const $_onClick1 = () => {
+    const onClick1 = () => {
       Toast.info('Click primary button')
     }
 
-    const $_onClick2 = () => {
+    const onClick2 = () => {
       Toast.info('Click secondary button')
     }
 
-    const $_onClick3 = (item) => {
+    const onClick3 = (item) => {
       Toast.info('Click primary button')
       item.inactive = true
       setTimeout(() => {
@@ -107,17 +107,17 @@ export default {
       btnData1: [
         {
           text: 'Primary button',
-          onClick: $_onClick1
+          onClick: onClick1
         }
       ],
       btnData2: [
         {
           text: 'Secondary button',
-          onClick: $_onClick2
+          onClick: onClick2
         },
         {
           text: 'Primary button',
-          onClick: $_onClick1
+          onClick: onClick1
         }
       ],
       btnData3: [
@@ -134,22 +134,22 @@ export default {
         {
           text: 'Primary button',
           round: true,
-          onClick: $_onClick3
+          onClick: onClick3
         }
       ]
     })
 
-    const $_onShowDemo = (index) => {
+    const onShowDemo = (index) => {
       [1, 2, 3, 4].forEach((item) => (state[`showDemo${item}`] = false))
       state[`showDemo${index}`] = true
     }
 
     return {
       state,
-      $_onShowDemo,
-      $_onClick1,
-      $_onClick2,
-      $_onClick3
+      onShowDemo,
+      onClick1,
+      onClick2,
+      onClick3
     }
   }
 }

@@ -2,9 +2,9 @@
   <div class="v-result">
     <div class="v-result-image">
       <img
-        v-if="$_actualImgUrl"
-        :src="$_actualImgUrl"
-        :class="$_cls"
+        v-if="actualImgUrl"
+        :src="actualImgUrl"
+        :class="cls"
       />
       <v-icon
         v-else
@@ -15,13 +15,13 @@
     </div>
     <div
       class="v-result-text"
-      v-if="$_actualText"
-      v-text="$_actualText"
+      v-if="actualText"
+      v-text="actualText"
     ></div>
     <div
       class="v-result-subtext"
-      v-if="$_actualSubText"
-      v-text="$_actualSubText"
+      v-if="actualSubText"
+      v-text="actualSubText"
     ></div>
     <div
       class="v-result-buttons"
@@ -89,20 +89,20 @@ export default {
   },
 
   setup(props) {
-    const $_cls = computed(() => {
+    const cls = computed(() => {
       return {
         [props.type]: !props.imgUrl
       }
     })
 
-    const $_actualImgUrl = computed(() => {
+    const actualImgUrl = computed(() => {
       if (props.imgUrl) {
         return props.imgUrl
       }
       return ''
     })
 
-    const $_actualText = computed(() => {
+    const actualText = computed(() => {
       if (props.text) {
         return props.text
       }
@@ -114,7 +114,7 @@ export default {
       return txtMap[props.type] || ''
     })
 
-    const $_actualSubText = computed(() => {
+    const actualSubText = computed(() => {
       if (props.subText) {
         return props.subText
       }
@@ -125,10 +125,10 @@ export default {
     })
 
     return {
-      $_cls,
-      $_actualImgUrl,
-      $_actualText,
-      $_actualSubText
+      cls,
+      actualImgUrl,
+      actualText,
+      actualSubText
     }
   }
 }

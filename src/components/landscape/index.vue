@@ -1,25 +1,25 @@
 <template>
-  <div :class="$_cls">
+  <div :class="cls">
     <v-popup
       :value="popupShow.landscape"
       :has-mask="!fullscreen && hasMask"
       :mask-closable="maskClosable"
-      :transition="$_effect"
+      :transition="effect"
       prevent-scroll
       prevent-scroll-exclude=".v-landscape-content"
-      @input="val => $_onInput(val)"
-      @show="$_onShow"
-      @hide="$_onHide"
-      @mask-click="$_onMaskClick"
+      @input="val => onInput(val)"
+      @show="onShow"
+      @hide="onHide"
+      @mask-click="onMaskClick"
     >
-      <div :class="$_bodyCls">
+      <div :class="bodyCls">
         <div class="v-landscape-content">
           <slot></slot>
         </div>
         <v-icon
-          :class="$_btnCls"
-          :name="$_iconName"
-          @click="$_close"
+          :class="btnCls"
+          :name="iconName"
+          @click="close"
         ></v-icon>
       </div>
     </v-popup>
@@ -63,7 +63,7 @@ export default {
   setup(props, { emit }) {
     const popupShow = ref({})
 
-    const $_effect = computed(() => {
+    const effect = computed(() => {
       let effect = 'v-bounce'
       if (props.transition) {
         effect = props.transition
@@ -73,11 +73,11 @@ export default {
       return effect
     })
 
-    const $_iconName = computed(() => {
+    const iconName = computed(() => {
       return props.fullscreen ? 'clear' : 'close'
     })
 
-    const $_cls = computed(() => {
+    const cls = computed(() => {
       return [
         'v-landscape',
         {
@@ -86,7 +86,7 @@ export default {
       ]
     })
 
-    const $_bodyCls = computed(() => {
+    const bodyCls = computed(() => {
       return [
         'v-landscape-body',
         {
@@ -95,7 +95,7 @@ export default {
       ]
     })
 
-    const $_btnCls = computed(() => {
+    const btnCls = computed(() => {
       return [
         'v-landscape-close',
         {
@@ -105,53 +105,53 @@ export default {
     })
 
     // show/hide popup
-    const $_showPopup = (type, isShow) => {
+    const showPopup = (type, isShow) => {
       popupShow.value[type] = isShow
     }    
 
     // input event
-    const $_onInput = (val) => {
-      $_showPopup('landscape', val)
+    const onInput = (val) => {
+      showPopup('landscape', val)
       emit('input', false)
     }
 
     // show popup event
-    const $_onShow = () => {
+    const onShow = () => {
       emit('show')
     }
 
     // hide popup event
-    const $_onHide = () => {
+    const onHide = () => {
       emit('hide')
     }
 
     // click upon mask
-    const $_onMaskClick = () => {
+    const onMaskClick = () => {
       emit('mask-click')
     }
 
     // close popup
-    const $_close = () => {
-      $_showPopup('landscape', false)
+    const close = () => {
+      showPopup('landscape', false)
     }
 
     watchEffect(() => {
-      $_showPopup('landscape', props.value)
+      showPopup('landscape', props.value)
     })
 
     return {
       popupShow: popupShow.value,            
-      $_effect,
-      $_iconName,
-      $_cls,
-      $_bodyCls,
-      $_btnCls,
-      $_showPopup,
-      $_onInput,
-      $_onShow,
-      $_onHide,
-      $_onMaskClick,
-      $_close
+      effect,
+      iconName,
+      cls,
+      bodyCls,
+      btnCls,
+      showPopup,
+      onInput,
+      onShow,
+      onHide,
+      onMaskClick,
+      close
     }
   }
 }

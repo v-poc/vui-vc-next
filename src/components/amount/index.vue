@@ -1,7 +1,7 @@
 <template>
-  <span :class="$_cls">
+  <span :class="cls">
     <template v-if="!isCapital">
-      {{ doFormat(doPrecision(state.formatValue, $_legalPrecision, isRoundUp), hasSeparator, separator) }}
+      {{ doFormat(doPrecision(state.formatValue, legalPrecision, isRoundUp), hasSeparator, separator) }}
     </template>
     <template v-else>
       {{ doCapital(doPrecision(state.formatValue, 4, isRoundUp)) }}
@@ -76,12 +76,12 @@ export default {
       state.isMounted = true
     })
 
-    const $_cls = computed(() => {
+    const cls = computed(() => {
       return ['v-amount', { 'numerical': !props.isCapital }]
     })
 
     // Calculate legal precision
-    const $_legalPrecision = computed(() => {
+    const legalPrecision = computed(() => {
       return props.precision > 0 ? props.precision : 0
     })
 
@@ -116,7 +116,7 @@ export default {
       return useNumberCapital(value)
     }
 
-    const $_doAnimate = (fromValue = 0, toValue = 0) => {
+    const doAnimate = (fromValue = 0, toValue = 0) => {
       const step = (percent) => {
         if (percent === 1) {
           state.formatValue = toValue
@@ -137,7 +137,7 @@ export default {
           return
         }
         if (props.isAnimated) {
-          $_doAnimate(oldVal, val)
+          doAnimate(oldVal, val)
         } else {
           state.formatValue = val
         }
@@ -149,8 +149,8 @@ export default {
 
     return {
       state,
-      $_cls,
-      $_legalPrecision,
+      cls,
+      legalPrecision,
       doPrecision,
       doFormat,
       doCapital

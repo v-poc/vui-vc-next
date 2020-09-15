@@ -1,7 +1,7 @@
 <template>
   <button
     :type="nativeType"
-    :class="$_cls"
+    :class="cls"
     :disabled="inactive || type === 'disabled'"
   >
     <div class="v-button-inner">
@@ -88,7 +88,7 @@ export default {
   },
 
   setup(props) {
-    const $_cls = computed(() => {
+    const cls = computed(() => {
       return [
         'v-button',
         props.type,
@@ -103,7 +103,7 @@ export default {
     })
 
     return {
-      $_cls
+      cls
     }
   }
 }

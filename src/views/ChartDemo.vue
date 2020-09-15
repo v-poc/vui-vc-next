@@ -10,7 +10,7 @@
       :max="60"
       :min="0"
       :step="10"
-      :format="$_format"
+      :format="format"
       :labels="['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']"
       :datasets="[
         {
@@ -48,7 +48,7 @@
           :max="60"
           :min="0"
           :step="10"
-          :format="$_format"
+          :format="format"
           :labels="['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']"
           :datasets="[
             {
@@ -89,12 +89,12 @@ export default {
       popupShow.value[pos] = isShow
     }
 
-    const $_format = (val) => `${val}%`
+    const format = (val) => `${val}%`
 
     return {
       popupShow: popupShow.value,
       showPopup,
-      $_format
+      format
     }
   }
 }

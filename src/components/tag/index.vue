@@ -4,38 +4,38 @@
     class="v-tag"
   >
     <template v-if="shape === 'quarter'">
-      <div :class="$_containerCls">
+      <div :class="containerCls">
         <div class="quarter-content">
           <slot></slot>
         </div>
         <div
           class="quarter-bg"
-          :style="$_colorStyle"
+          :style="colorStyle"
         ></div>
       </div>
     </template>
     <template v-if="shape === 'coupon'">
-      <div :class="$_containerCls">
+      <div :class="containerCls">
         <div
           class="coupon-container"
-          :style="$_colorStyle"
+          :style="colorStyle"
         >
           <div
             class="left-coupon"
-            :style="$_bgStyle(fillColor, 'left')"
+            :style="bgStyle(fillColor, 'left')"
           ></div>
           <slot></slot>
           <div
             class="right-coupon"
-            :style="$_bgStyle(fillColor, 'right')"
+            :style="bgStyle(fillColor, 'right')"
           ></div>
         </div>
       </div>
     </template>
     <template v-else>
       <div
-        :class="$_containerCls"
-        :style="$_containerStyle"
+        :class="containerCls"
+        :style="containerStyle"
       >
         <slot></slot>
       </div>
@@ -100,7 +100,7 @@ export default {
     const sizeStyle = ref({})
 
     // container css class
-    const $_containerCls = computed(() => {
+    const containerCls = computed(() => {
       return [
         'default',
         `size-${props.size}`,
@@ -111,7 +111,7 @@ export default {
     })
 
     // color style
-    const $_colorStyle = computed(() => {
+    const colorStyle = computed(() => {
       const result = {}
       // if (props.type === 'fill' && props.fillColor) {
       //   result.background = props.fillColor
@@ -135,12 +135,12 @@ export default {
     })
 
     // container style
-    const $_containerStyle = computed(() => {
-      return [$_colorStyle.value, sizeStyle.value]
+    const containerStyle = computed(() => {
+      return [colorStyle.value, sizeStyle.value]
     })
 
     // set background style
-    const $_bgStyle = (fillColor, flag = 'left') => {
+    const bgStyle = (fillColor, flag = 'left') => {
       let val = ''
       if (fillColor) {
         val = `radial-gradient(circle at ${flag}, transparent 33%, ${fillColor} 33%)`
@@ -172,10 +172,10 @@ export default {
 
     return {
       root,
-      $_containerCls,
-      $_colorStyle,
-      $_containerStyle,
-      $_bgStyle
+      containerCls,
+      colorStyle,
+      containerStyle,
+      bgStyle
     }
   }
 }

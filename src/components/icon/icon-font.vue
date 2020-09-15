@@ -1,8 +1,8 @@
 <template>
   <i
-    :class="$_cls"
-    :style="$_style"
-    @click="$_onIconClick"
+    :class="cls"
+    :style="style"
+    @click="onIconClick"
   ></i>
 </template>
 
@@ -31,7 +31,7 @@ export default {
   },
 
   setup(props, { emit }) {
-    const $_cls = computed(() => {
+    const cls = computed(() => {
       return [
         'v-icon icon-font',
         `v-icon-${props.name}`,
@@ -40,20 +40,20 @@ export default {
       ]
     })
 
-    const $_style = computed(() => {
+    const style = computed(() => {
       return {
         color: props.color
       }
     })
 
-    const $_onIconClick = (evt) => {
+    const onIconClick = (evt) => {
       emit('icon-click', evt)
     }
 
     return {
-      $_cls,
-      $_style,
-      $_onIconClick
+      cls,
+      style,
+      onIconClick
     }
   }
 }

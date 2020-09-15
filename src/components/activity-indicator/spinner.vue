@@ -1,9 +1,9 @@
 <template>
-  <div :class="$_cls">
+  <div :class="cls">
     <v-icon
       name="spinner"
       class="v-activity-indicator-svg"
-      :style="$_style"
+      :style="style"
     ></v-icon>
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
   },
 
   setup(props) {
-    const $_cls = computed(() => {
+    const cls = computed(() => {
       return [
         'v-activity-indicator-spinning',
         {
@@ -43,7 +43,7 @@ export default {
       ]
     })
 
-    const $_style = computed(() => {
+    const style = computed(() => {
       const size = props.size || 0
       return {
         width: `${size}px`,
@@ -52,8 +52,8 @@ export default {
     })
 
     return {
-      $_cls,
-      $_style
+      cls,
+      style
     }
   }
 }

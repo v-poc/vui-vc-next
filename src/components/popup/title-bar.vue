@@ -1,13 +1,13 @@
 <template>
   <div
-    :class="$_cls"
-    @touchmove="$_preventScroll"
+    :class="cls"
+    @touchmove="preventScroll"
   >
     <!-- Cancel section -->
     <template v-if="!onlyClose">
       <div
         class="title-bar-left v-popup-cancel"
-        @click="$_emit('cancel')"
+        @click="onEmit('cancel')"
       >
         <template v-if="cancelText">
           {{ cancelText }}
@@ -39,7 +39,7 @@
     <template v-if="onlyClose">
       <div
         class="title-bar-right v-popup-close"
-        @click="$_emit('cancel')"
+        @click="onEmit('cancel')"
       >
         <v-icon
           name="close"
@@ -50,7 +50,7 @@
     <template v-else>
       <div
         class="title-bar-right v-popup-confirm"
-        @click="$_emit('confirm')"
+        @click="onEmit('confirm')"
       >
         <template v-if="okText">
           {{ okText }}
@@ -82,7 +82,7 @@ export default {
   },
 
   setup(props, { emit }) {
-    const $_cls = computed(() => {
+    const cls = computed(() => {
       return [
         'v-popup-title-bar',
         `title-align-${props.titleAlign}`,
@@ -93,18 +93,18 @@ export default {
       ]
     })
 
-    const $_emit = (name) => {
+    const onEmit = (name) => {
       emit(name)
     }
 
-    const $_preventScroll = (e) => {
+    const preventScroll = (e) => {
       e.preventDefault()
     }
 
     return {
-      $_cls,
-      $_emit,
-      $_preventScroll
+      cls,
+      onEmit,
+      preventScroll
     }
   }
 }

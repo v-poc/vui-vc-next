@@ -1,10 +1,10 @@
 <template>
   <transition
     :name="name"
-    @before-enter="$_onPopupTransitionStart"
-    @before-leave="$_onPopupTransitionStart"
-    @after-enter="$_onPopupTransitionEnd"
-    @after-leave="$_onPopupTransitionEnd"
+    @before-enter="onPopupTransitionStart"
+    @before-leave="onPopupTransitionStart"
+    @after-enter="onPopupTransitionEnd"
+    @after-leave="onPopupTransitionEnd"
   >
     <slot></slot>
   </transition>
@@ -34,17 +34,17 @@ export default {
   },
 
   setup(props) {
-    const $_onPopupTransitionStart = () => {
+    const onPopupTransitionStart = () => {
       props.transitionStart()
     }
 
-    const $_onPopupTransitionEnd = () => {
+    const onPopupTransitionEnd = () => {
       props.transitionEnd()
     }
 
     return {
-      $_onPopupTransitionStart,
-      $_onPopupTransitionEnd
+      onPopupTransitionStart,
+      onPopupTransitionEnd
     }
   }
 }

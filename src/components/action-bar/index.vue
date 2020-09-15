@@ -1,24 +1,24 @@
 <template>
   <div class="v-action-bar">
     <div class="v-action-bar-container">
-      <div class="v-action-bar-text" v-if="$_default">
+      <div class="v-action-bar-text" v-if="defaultSlot">
         <slot></slot>
       </div>
       <div class="v-action-bar-group">
         <template
-          v-for="(item, index) in $_sliceActions"
+          v-for="(item, index) in sliceActions"
           :key="`button${index}`"
         >
           <v-button
             class="v-action-bar-button"
             :type="item.type || (item.disabled ? 'disabled' : 'primary')"
-            :plain="item.plain || (index !== $_sliceActions.length - 1)"
+            :plain="item.plain || (index !== sliceActions.length - 1)"
             :round="item.round"
             :inactive="item.inactive"
             :loading="item.loading"
             :icon="item.icon"
             :icon-svg="item.iconSvg"
-            @click="$_onClick(item)"
+            @click="onClick(item)"
           >
             {{ item.text }}
           </v-button>
@@ -47,19 +47,19 @@ export default {
   },
 
   setup(props, { emit, slots }) {
-    const $_sliceActions = computed(() => props.actions.slice(0, 2))
+    const sliceActions = computed(() => props.actions.slice(0, 2))
 
-    const $_default = computed(() => (slots && Object.keys(slots).length > 0))
+    const defaultSlot = computed(() => (slots && Object.keys(slots).length > 0))
 
-    const $_onClick = (item) => {
+    const onClick = (item) => {
       item && item.onClick && item.onClick(item)
       emit('click', item)
     }
 
     return {
-      $_sliceActions,
-      $_default,
-      $_onClick
+      sliceActions,
+      defaultSlot,
+      onClick
     }
   }
 }

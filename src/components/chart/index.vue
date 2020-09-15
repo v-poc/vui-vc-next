@@ -1,11 +1,11 @@
 <template>
   <svg
     class="v-chart"
-    :viewBox="`0 0 ${$_width} ${$_height}`"
+    :viewBox="`0 0 ${width} ${height}`"
   >
     <defs>
       <linearGradient
-        v-for="color in $_colors"
+        v-for="color in colors"
         :key="color"
         :id="`path-fill-gradient-${color}`"
         x1="0"
@@ -16,33 +16,33 @@
         <stop
           offset="0%"
           stop-opacity="0.4"
-          :style="$_stopStyle(color)"
+          :style="stopStyle(color)"
         ></stop>
         <stop
           offset="50%"
           stop-opacity="0.3"
-          :style="$_stopStyle(color)"
+          :style="stopStyle(color)"
         ></stop>
         <stop
           offset="100%"
           stop-opacity="0.1"
-          :style="$_stopStyle(color)"
+          :style="stopStyle(color)"
         ></stop>
       </linearGradient>
     </defs>
     <g
       class="v-chart-graph"
-      :transform="`translate(${$_offset.left}, ${$_offset.top})`"
+      :transform="`translate(${offset.left}, ${offset.top})`"
     >
       <g class="v-chart-axis-y">
         <g
-          v-for="(item, index) in $_yAxis"
+          v-for="(item, index) in yAxis"
           :key="`y-axis-${index}`"
           :transform="`translate(0, ${item.offset})`"
         >
           <line
             x1="0"
-            :x2="$_innerWidth"
+            :x2="innerWidth"
             y1="0"
             y2="0"
           ></line>
@@ -56,10 +56,10 @@
       </g>
       <g
         class="v-chart-axis-x"
-        :transform="`translate(0, ${$_innerHeight})`"
+        :transform="`translate(0, ${innerHeight})`"
       >
         <g
-          v-for="(item, index) in $_xAxis"
+          v-for="(item, index) in xAxis"
           :key="`x-axis-${index}`"
           :transform="`translate(${item.offset}, 0)`"
         >
@@ -78,7 +78,7 @@
       </g>
       <g class="v-chart-paths">
         <template
-          v-for="(path, index) in $_paths"
+          v-for="(path, index) in paths"
           :key="`${path.area ? 'area' : 'line'}-${index}`"
         >
           <path
@@ -191,9 +191,9 @@ export default {
       step: props.step || useStep()
     })
 
-    const $_stopStyle = (color) => `stop-color: ${color}`
+    const stopStyle = (color) => `stop-color: ${color}`
 
-    const $_offset = computed(() => {
+    const offset = computed(() => {
       return {
         top: 0.2 * state.unit,
         bottom: 0.5 * state.unit,
@@ -202,7 +202,7 @@ export default {
       }
     })
 
-    const $_width = computed(() => {
+    const width = computed(() => {
       if (
         typeof props.size[0] === 'string' &&
         props.size[0].indexOf('rem') !== -1
@@ -213,7 +213,7 @@ export default {
       }
     })
 
-    const $_height = computed(() => {
+    const height = computed(() => {
       if (
         typeof props.size[1] === 'string' &&
         props.size[1].indexOf('rem') !== -1
@@ -224,16 +224,16 @@ export default {
       }
     })
 
-    const $_innerWidth = computed(
-      () => $_width.value - $_offset.value.left - $_offset.value.right
+    const innerWidth = computed(
+      () => width.value - offset.value.left - offset.value.right
     )
 
-    const $_innerHeight = computed(
-      () => $_height.value - $_offset.value.top - $_offset.value.bottom
+    const innerHeight = computed(
+      () => height.value - offset.value.top - offset.value.bottom
     )
 
-    const $_xAxis = computed(() => {
-      const deltaX = $_innerWidth.value / (props.labels.length - 1)
+    const xAxis = computed(() => {
+      const deltaX = innerWidth.value / (props.labels.length - 1)
       const items = props.labels.map((label, index) => {
         return {
           offset: index * deltaX,
@@ -243,9 +243,9 @@ export default {
       return items
     })
 
-    const $_yAxis = computed(() => {
+    const yAxis = computed(() => {
       const items = []
-      const deltaY = $_innerHeight.value / props.lines
+      const deltaY = innerHeight.value / props.lines
 
       for (let i = 0; i < props.lines; i++) {
         items.push({
@@ -255,32 +255,32 @@ export default {
       }
 
       items.push({
-        offset: $_innerHeight.value,
+        offset: innerHeight.value,
         label: props.format(state.min)
       })
       return items
     })
 
-    const $_lower = computed(() => state.max - (props.lines - 1) * state.step)
+    const lower = computed(() => state.max - (props.lines - 1) * state.step)
 
-    const $_paths = computed(() => {
+    const paths = computed(() => {
       return props.datasets.map((data) => {
-        const deltaX = $_innerWidth.value / (data.values.length - 1)
-        const deltaY = $_innerHeight.value / props.lines
+        const deltaX = innerWidth.value / (data.values.length - 1)
+        const deltaY = innerHeight.value / props.lines
         const points = data.values.map((value, index) => {
-          if (value < $_lower.value) {
+          if (value < lower.value) {
             return {
               x: index * deltaX,
               y:
-                $_innerHeight.value -
-                (1 - ($_lower.value - value) / ($_lower.value - state.min)) * deltaY
+                innerHeight.value -
+                (1 - (lower.value - value) / (lower.value - state.min)) * deltaY
             }
           } else {
             return {
               x: index * deltaX,
               y:
-                (1 - (value - $_lower.value) / (state.max - $_lower.value)) *
-                ($_innerHeight.value - deltaY)
+                (1 - (value - lower.value) / (state.max - lower.value)) *
+                (innerHeight.value - deltaY)
             }
           }
         })
@@ -298,9 +298,9 @@ export default {
         } else if (data.theme === 'region') {
           ret.area = {
             value:
-              `M0,${$_innerHeight.value} ` +
+              `M0,${innerHeight.value} ` +
               points.map((point) => `L${point.x},${point.y}`).join(' ') +
-              ` L${points[points.length - 1].x},${$_innerHeight.value}`,
+              ` L${points[points.length - 1].x},${innerHeight.value}`,
             style: {
               fill: `url(#path-fill-gradient-${data.color})`,
               stroke: 'none'
@@ -315,7 +315,7 @@ export default {
       })
     })
 
-    const $_colors = computed(() => {
+    const colors = computed(() => {
       const uniqueColors = []
       props.datasets.map((data) => {
         if (data.color && uniqueColors.indexOf(data.color) === -1) {
@@ -325,7 +325,7 @@ export default {
       return uniqueColors
     })
 
-    const $_resize = () => {
+    const resize = () => {
       state.unit = parseFloat(
         window
           .getComputedStyle(document.getElementsByTagName('html')[0])
@@ -335,21 +335,21 @@ export default {
 
     onMounted(() => {
       if (document.readyState !== 'loading') {
-        $_resize()
+        resize()
       }
 
       useEventListener({
         isBind: true,
         node: document,
         name: 'DOMContentLoaded',
-        handler: $_resize
+        handler: resize
       })()
 
       useEventListener({
         isBind: true,
         node: window,
         name: 'resize',
-        handler: $_resize
+        handler: resize
       })()
     })
 
@@ -358,29 +358,29 @@ export default {
         isBind: false,
         node: document,
         name: 'DOMContentLoaded',
-        handler: $_resize
+        handler: resize
       })()
 
       useEventListener({
         isBind: false,
         node: window,
         name: 'resize',
-        handler: $_resize
+        handler: resize
       })()
     })
 
     return {
       state,
-      $_stopStyle,
-      $_offset,
-      $_width,
-      $_height,
-      $_innerWidth,
-      $_innerHeight,
-      $_xAxis,
-      $_yAxis,
-      $_paths,
-      $_colors
+      stopStyle,
+      offset,
+      width,
+      height,
+      innerWidth,
+      innerHeight,
+      xAxis,
+      yAxis,
+      paths,
+      colors
     }
   }
 }

@@ -12,7 +12,7 @@
   <div class="v-example">
     <p>Result page - Customized image</p>
     <v-result-page
-      img-url="https://nikoni.top/images/others/avatar-man.png"
+      img-url="https://nikoni.top/images/vui-vc-qrcode.png"
       text="The result title"
       sub-text="refresh page to have a look"
       :buttons="state.buttons"
