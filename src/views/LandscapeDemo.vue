@@ -89,6 +89,7 @@ export default {
       logInfo(`[LandscapeDemo] ${content}`)
       Toast({
         content,
+        duration: 650,
         position: 'top'
       })      
     }    

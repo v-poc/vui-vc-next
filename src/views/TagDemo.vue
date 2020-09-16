@@ -125,8 +125,17 @@ export default {
     const showPopup = (pos, isShow, cKey, cMap) => {
       const popupShowVal = popupShow.value
       popupShowVal[pos] = isShow
-      popupShowVal['cKey'] = cKey
-      popupShowVal['cMap'] = cMap
+
+      const setVal = () => {
+        popupShowVal['cKey'] = cKey
+        popupShowVal['cMap'] = cMap
+      }
+
+      if (isShow) {
+        setVal()
+      } else {
+        setTimeout(setVal, 200)
+      }
     }
 
     const computedColors = computed(() => {

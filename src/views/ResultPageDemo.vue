@@ -55,7 +55,10 @@ export default {
           icon: 'security',
           type: 'primary',
           handler() {
-            Toast.succeed('Click primary button')
+            Toast({
+              icon: 'security',
+              content: 'Click primary button'
+            })
           }
         }
       ]

@@ -83,15 +83,15 @@ export default {
 
   setup() {
     const onClick1 = () => {
-      Toast.info('Click primary button')
+      Toast.succeed('Click primary button')
     }
 
     const onClick2 = () => {
-      Toast.info('Click secondary button')
+      Toast.succeed('Click secondary button')
     }
 
     const onClick3 = (item) => {
-      Toast.info('Click primary button')
+      Toast.succeed('Click primary button')
       item.inactive = true
       setTimeout(() => {
         item.inactive = false
