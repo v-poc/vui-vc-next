@@ -4,11 +4,13 @@
     v-show="state.isPopupShow"
     :class="cls"
   >
-    <div
-      v-show="hasMask && state.isPopupBoxShow"
-      class="v-popup-mask"
-      @click="onPopupMaskClick"
-    ></div>
+    <transition name="v-mask-fade">
+      <div
+        v-show="hasMask && state.isPopupBoxShow"
+        class="v-popup-mask"
+        @click="onPopupMaskClick"
+      ></div>
+    </transition>
     <transition
       :name="state.transition"
       @before-enter="onPopupTransitionStart"
@@ -18,7 +20,7 @@
     >
       <div
         v-show="state.isPopupBoxShow"
-        class="v-popup-box"
+        :class="popupBoxCls"
       >
         <slot></slot>
       </div>
@@ -31,7 +33,7 @@ import {
   computed,
   reactive,
   ref,
-  watchEffect,
+  watch,
   onMounted
 } from 'vue'
 import usePopupBase from '../../composables/usePopupBase'
@@ -82,6 +84,13 @@ export default {
         { 'with-mask': props.hasMask },
         { 'large-radius': props.largeRadius },
         props.position
+      ]
+    })
+
+    const popupBoxCls = computed(() => {
+      return [
+        'v-popup-box',
+        state.transition
       ]
     })
 
@@ -167,9 +176,12 @@ export default {
 
     onMounted(() => {
       props.value && showPopupBox()
+    })
 
-      watchEffect(() => {
-        if (props.value) {
+    watch(
+      () => props.value,
+      (val) => {
+        if (val) {
           if (state.isAnimation) {
             setTimeout(showPopupBox, 50)
           } else {
@@ -178,17 +190,22 @@ export default {
         } else {
           hidePopupBox()
         }
+      }
+    )
 
-        const val = props.preventScrollExclude
-        preventScrollExclude(false, val) // remove old listener first
+    watch(
+      () => props.preventScrollExclude,
+      (val, oldVal) => {
+        preventScrollExclude(false, oldVal) // remove old listener first
         preventScrollExclude(true, val) // add new listener later
-      })
-    })
+      }
+    )
 
     return {
       root,
       state,
       cls,
+      popupBoxCls,
       onPopupMaskClick,
       onPopupTransitionStart,
       onPopupTransitionEnd
