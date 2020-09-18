@@ -37,7 +37,7 @@
       :mask-closable="true"
       transition="v-bounce"
     >
-      <img src="../assets/images/cg.png" />
+      <img src="../assets/images/op.png" />
     </v-landscape>
   </div>
   <div class="v-example">

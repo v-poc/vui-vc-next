@@ -4,42 +4,6 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <p>Circular Progress - Animated</p>
-    <v-progress-circular
-      :size="90"
-      :value="state.val"
-      :width="10"
-      :rotate="-90"
-      :color="state.strokeColor"
-      :duration="600"
-      is-animated
-    >
-      <span class="progress-value">
-        <template v-if="state.val < 1">
-          <v-amount
-            :value="state.val * 100"
-            :precision="0"
-            is-animated
-          ></v-amount>%
-        </template>
-        <v-icon
-          v-else
-          color="#F00"
-          name="right"
-          size="lg"
-        ></v-icon>
-      </span>
-    </v-progress-circular>
-    <v-button
-      :type="state.btnType"
-      :inactive="state.val > 0 && state.val < 1"
-      size="small"
-      inline
-      round
-      @click="showProgress"
-    >Start test</v-button>
-  </div>
-  <div class="v-example">
     <p>Todo List - Animated progress</p>
     <div class="v-example-todo-list">
       <div class="main-hd">
@@ -118,6 +82,47 @@
       </div>
     </div>
   </div>
+  <div class="v-example v-example-poc">
+    <p>VUI POC</p>
+    <img alt="Vue logo" src="https://vuejs.org/images/logo.png" />
+    <hello-world msg="Hello VUI" />
+  </div>
+  <div class="v-example">
+    <p>Circular Progress - Animated</p>
+    <v-progress-circular
+      :size="90"
+      :value="state.val"
+      :width="10"
+      :rotate="-90"
+      :color="state.strokeColor"
+      :duration="600"
+      is-animated
+    >
+      <span class="progress-value">
+        <template v-if="state.val < 1">
+          <v-amount
+            :value="state.val * 100"
+            :precision="0"
+            is-animated
+          ></v-amount>%
+        </template>
+        <v-icon
+          v-else
+          color="#F00"
+          name="right"
+          size="lg"
+        ></v-icon>
+      </span>
+    </v-progress-circular>
+    <v-button
+      :type="state.btnType"
+      :inactive="state.val > 0 && state.val < 1"
+      size="small"
+      inline
+      round
+      @click="showProgress"
+    >Start test</v-button>
+  </div>
   <div class="v-example">
     <p>Circular Progress - Customized color</p>
     <v-progress-circular
@@ -141,7 +146,7 @@
       <span class="progress-value">30%</span>
     </v-progress-circular>
   </div>
-  <div class="v-example">
+  <div class="v-example v-example-poc-bottom">
     <p>Circular Progress - LinearGradient</p>
     <v-progress-circular
       :value="0.85"
@@ -178,6 +183,7 @@
 
 <script>
 import { computed, reactive } from 'vue'
+import HelloWorld from '../components/hello-world/index.vue'
 // import VProgressCircular from '../components/progress/circular.vue'
 // import VAmount from '../components/amount/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -188,12 +194,13 @@ export default {
 
   inheritAttrs: false,
 
-  // components: {
-  //   VProgressCircular,
-  //   VAmount,
-  //   VButton,
-  //   VIcon
-  // },
+  components: {
+    HelloWorld
+    // VProgressCircular,
+    // VAmount,
+    // VButton,
+    // VIcon
+  },
 
   setup() {
     const state = reactive({
@@ -286,4 +293,18 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.v-example-poc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 50%;
+  }
+}
+
+.v-example-poc-bottom {
+  margin-bottom: 1rem;
+}
 </style>
