@@ -34,7 +34,7 @@
       :value="popupShow.maskClosableMode"
       @input="val => showPopup('maskClosableMode', val)"
       @mask-click="showInfo('click mask to close landscape popup')"
-      :mask-closable="true"
+      mask-closable
       transition="v-bounce"
     >
       <img src="../assets/images/op.png" />

@@ -1,4 +1,10 @@
 <template>
+  <img
+    style="width: 50%"
+    alt="Vue logo"
+    src="https://vuejs.org/images/logo.png"
+    @click="state.showPopup=true"
+  />
   <section>
     <v-tag
       type="fill"
@@ -6,15 +12,7 @@
       fill-color="#36C"
       font-color="#FFF"
       @click="state.showPopup=true"
-    >{{ msg }}</v-tag>
-    <v-landscape
-      :value="state.showPopup"
-      @input="val => state.showPopup=val"
-      mask-closable
-      transition="v-bounce"
-    >
-      <img src="../../assets/images/op.png" />
-    </v-landscape>    
+    >{{ msg }}</v-tag>    
   </section>
   <v-progress-circular
     :size="80"
@@ -31,6 +29,14 @@
       is-animated
     ></v-amount>%
   </v-progress-circular>
+  <v-landscape
+    :value="state.showPopup"
+    @input="val => state.showPopup=val"
+    mask-closable
+    transition="v-bounce"
+  >
+    <img src="../../assets/images/op.png" />
+  </v-landscape>
   <v-action-bar :actions="state.actionData"></v-action-bar>
 </template>
 

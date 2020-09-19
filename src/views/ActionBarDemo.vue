@@ -82,13 +82,9 @@ export default {
   // },
 
   setup() {
-    const onClick1 = () => {
-      Toast.succeed('Click primary button')
-    }
+    const onClick1 = () => Toast.succeed('Click primary button')
 
-    const onClick2 = () => {
-      Toast.succeed('Click secondary button')
-    }
+    const onClick2 = () => Toast.succeed('Click secondary button')
 
     const onClick3 = (item) => {
       Toast.succeed('Click primary button')

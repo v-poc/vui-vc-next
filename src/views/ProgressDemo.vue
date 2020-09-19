@@ -76,7 +76,7 @@
               name="clear"
               color="#CCC"
               @icon-click="deleteTask(index)"
-            ></v-icon>            
+            ></v-icon>
           </div>
         </div>
       </div>
@@ -84,7 +84,6 @@
   </div>
   <div class="v-example v-example-poc">
     <p>VUI POC</p>
-    <img alt="Vue logo" src="https://vuejs.org/images/logo.png" />
     <hello-world msg="Hello VUI" />
   </div>
   <div class="v-example">
@@ -233,19 +232,18 @@ export default {
       () => state.tasks.length - state.completedCount
     )
 
-    state.taskProgress = computed(
-      () => state.tasks.length ? state.completedCount / state.tasks.length : 0
+    state.taskProgress = computed(() =>
+      state.tasks.length ? state.completedCount / state.tasks.length : 0
     )
 
-    const defer = (time) =>
-      new Promise((resolve) => setTimeout(resolve, time))
+    const defer = (time) => new Promise((resolve) => setTimeout(resolve, time))
 
     const showProgress = async () => {
       state.val = 0
       state.btnType = 'primary'
       state.strokeColor = '#FC9153'
-      await defer(1100)
-      state.val = 0.2
+      await defer(600)
+      state.val = 0.1
       await defer(2000)
       state.val = 0.5
       await defer(2400)
@@ -298,10 +296,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  img {
-    width: 50%;
-  }
 }
 
 .v-example-poc-bottom {
