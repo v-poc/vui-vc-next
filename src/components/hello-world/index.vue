@@ -43,17 +43,22 @@
 <script>
 import { computed, reactive } from 'vue'
 // import { VActionBar, VAmount, VProgress, VTag, VLandscape } from 'vui-vc-next'
+import VActionBar from '../action-bar/index.vue'
+import VAmount from '../amount/index.vue'
+import VProgressCircular from '../progress/circular.vue'
+import VTag from '../tag/index.vue'
+import VLandscape from '../landscape/index.vue'
 
 export default {
   name: 'hello-world',
 
-  // components: {
-  //   [VActionBar.name]: VActionBar,
-  //   [VAmount.name]: VAmount,
-  //   [VProgress.name]: VProgress,
-  //   [VTag.name]: VTag,
-  //   [VLandscape.name]: VLandscape
-  // },
+  components: {
+    VActionBar,
+    VAmount,
+    VProgressCircular,
+    VTag,
+    VLandscape
+  },
 
   props: {
     msg: String

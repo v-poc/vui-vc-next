@@ -26,6 +26,14 @@ $color-mask: rgba(37, 38, 45, 0.7);
 $radius-normal: 4px;
 $radius-circle: 50%;
 
+$checkbox-color: $color-text-base;
+$checkbox-font-size: $font-caption-normal;
+$checkbox-disabled-color: $color-text-disabled;
+$checkbox-active-color: $color-primary;
+$checkbox-active-border-color: $color-primary;
+$checkbox-border-color: $color-border-element;
+$checkbox-border-radius: $radius-normal;
+
 $result-page-image-size: 3.2rem;
 $result-page-title-font-size: $font-caption-normal;
 $result-page-describe-font-size: $font-body-large;
