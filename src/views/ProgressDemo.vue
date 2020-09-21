@@ -84,7 +84,15 @@
   </div>
   <div class="v-example v-example-poc">
     <p>VUI POC</p>
-    <hello-world msg="Hello VUI" />
+    <img
+      alt="Vue logo"
+      src="https://vuejs.org/images/logo.png"
+      @click="showPopup(true)"
+    />
+    <hello-world
+      ref="compRef"
+      msg="Hello VUI"
+    />
   </div>
   <div class="v-example">
     <p>Circular Progress - Animated</p>
@@ -135,6 +143,7 @@
       <span class="progress-value">70%</span>
     </v-progress-circular>
   </div>
+  <!--
   <div class="v-example">
     <p>Circular Progress - Basic</p>
     <v-progress-circular
@@ -145,6 +154,7 @@
       <span class="progress-value">30%</span>
     </v-progress-circular>
   </div>
+  -->
   <div class="v-example v-example-poc-bottom">
     <p>Circular Progress - LinearGradient</p>
     <v-progress-circular
@@ -181,7 +191,7 @@
 </template>
 
 <script>
-import { computed, reactive } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import HelloWorld from '../components/hello-world/index.vue'
 // import VProgressCircular from '../components/progress/circular.vue'
 // import VAmount from '../components/amount/index.vue'
@@ -278,12 +288,21 @@ export default {
       ]
     }
 
+    const compRef = ref('compRef')
+
+    const showPopup = (val) => {
+      const comp = compRef && compRef.value
+      comp && comp.showPopup(val)
+    }
+
     return {
       state,
       showProgress,
       createTask,
       deleteTask,
-      taskCls
+      taskCls,
+      compRef,
+      showPopup
     }
   }
 }
@@ -296,6 +315,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  img {
+    width: 50%;
+  }
 }
 
 .v-example-poc-bottom {

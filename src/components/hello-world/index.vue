@@ -1,17 +1,11 @@
 <template>
-  <img
-    style="width: 50%"
-    alt="Vue logo"
-    src="https://vuejs.org/images/logo.png"
-    @click="state.showPopup=true"
-  />
   <section>
     <v-tag
       type="fill"
       shape="circle"
       fill-color="#36C"
       font-color="#FFF"
-      @click="state.showPopup=true"
+      @click="showPopup(true)"
     >{{ msg }}</v-tag>    
   </section>
   <v-progress-circular
@@ -21,7 +15,7 @@
     :width="5"
     :duration="500"
     is-animated
-    @click="state.showPopup=true"
+    @click="showPopup(true)"
   >
     <v-amount
       :value="state.count * 10"
@@ -30,8 +24,8 @@
     ></v-amount>%
   </v-progress-circular>
   <v-landscape
-    :value="state.showPopup"
-    @input="val => state.showPopup=val"
+    :value="state.isShowPopup"
+    @input="val => showPopup(val)"
     mask-closable
     transition="v-bounce"
   >
@@ -66,7 +60,7 @@ export default {
 
   setup() {
     const state = reactive({
-      showPopup: false,
+      isShowPopup: false,
       count: 0,
       strokeColor: computed(() => (state.count < 10 ? '#36C' : '#FC9153')),
       actionData: [
@@ -87,9 +81,14 @@ export default {
         }
       ]
     })
+    
+    const showPopup = (val) => {
+      state.isShowPopup = val
+    }    
 
     return {
-      state
+      state,
+      showPopup
     }
   }
 }
