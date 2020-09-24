@@ -83,7 +83,7 @@
     </div>
   </div>
   <div class="v-example v-example-poc">
-    <p>VUI POC</p>
+    <p @click="showPopup(true)">VUI POC</p>
     <img
       alt="Vue logo"
       src="https://vuejs.org/images/logo.png"

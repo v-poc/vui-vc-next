@@ -21,7 +21,8 @@
       :value="state.count * 10"
       :precision="0"
       is-animated
-    ></v-amount>%
+    ></v-amount>
+    <span class="unit">%</span>
   </v-progress-circular>
   <v-landscape
     :value="state.isShowPopup"
@@ -95,15 +96,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
-  ::v-deep(.v-tag) {
-    .size-large {
-      font-size: 0.5rem;
-    }
+::v-deep(.v-tag) {
+  .size-large {
+    font-size: 0.5rem;
   }
 }
 
 .v-progress {
   margin-top: 0.2rem;
+
+  span.unit {
+    font-size: 0.25rem;
+  }  
 }
 </style>
