@@ -1,0 +1,300 @@
+<template>
+  <div class="op">
+    <div class="bones">
+      <div class="bone"></div>
+      <div class="bone"></div>
+      <div class="bone"></div>
+      <div class="bone"></div>
+    </div>
+    <div class="head">
+      <div class="hat">
+        <div class="line-lt"></div>
+        <div class="line-rt"></div>
+      </div>
+      <div class="eye eye-lt"></div>
+      <div class="eye eye-rt"></div>
+    </div>
+    <div class="mouth">
+      <div class="teeth"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'v-op'
+}
+</script>
+
+<style lang="scss" scoped>
+.op {
+  position: relative;
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.25);
+  }
+
+  .hat {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #010202;
+    background: #20526f;
+    border-radius: 50%;
+    clip-path: inset(0 0 50% 0);
+    position: absolute;
+    overflow: hidden;
+    top: -3px;
+
+    &::after {
+      content: '';
+      height: 12px;
+      width: 110%;
+      border: 3px solid #010202;
+      background: #00cf74;
+      position: absolute;
+      top: 36%;
+      transform: translatey(-50%);
+      left: -10px;
+    }
+
+    .line-lt {
+      position: absolute;
+      border-left: 3px solid #010202;
+      height: 13px;
+      left: 28px;
+      top: 13px;
+      border-radius: 50%;
+      width: 5px;
+      transform: rotate(34deg);
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-left: 3px solid #010202;
+        height: 17px;
+        left: -10px;
+        top: 1px;
+        border-radius: 50%;
+        width: 5px;
+        transform: rotate(0deg);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        border-left: 3px solid #010202;
+        height: 9px;
+        left: 5px;
+        top: -3px;
+        border-radius: 50%;
+        width: 3px;
+        transform: rotate(-9deg);
+      }
+    }
+
+    .line-rt {
+      position: absolute;
+      border-right: 3px solid #010202;
+      height: 15px;
+      right: 22px;
+      top: 11px;
+      border-radius: 50%;
+      width: 5px;
+      transform: rotate(-30deg);
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-right: 3px solid #010202;
+        height: 9px;
+        right: 7px;
+        top: 0px;
+        border-radius: 50%;
+        width: 4px;
+        transform: rotate(11deg);
+      }
+    }
+  }
+
+  .head {
+    width: 100px;
+    height: calc(100px - 0.9rem);
+    border: 3px solid #010202;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0.9rem;
+    position: relative;
+    background: #fff;
+    z-index: 3;
+
+    &::before {
+      content: '';
+      height: 5px;
+      width: 150px;
+      border: 3px solid #010202;
+      background: #20526f;
+      position: absolute;
+      top: 50%;
+      transform: translatey(-8px);
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      width: 11px;
+      height: 8px;
+      border-radius: 50%;
+      background: #010202;
+      position: absolute;
+      bottom: 8px;
+    }
+  }
+
+  .eye {
+    width: 28px;
+    height: 28px;
+    background: #010202;
+    border-radius: 50%;
+    // margin: 0 0.35rem;
+    position: absolute;
+    bottom: 15px;
+  }
+
+  .eye-lt {
+    left: 15px;
+  }
+
+  .eye-rt {
+    right: 15px;
+  }
+
+  .bone {
+    height: 13px;
+    width: 50px;
+    border: 3px solid #010202;
+    border-left: none;
+    z-index: 1;
+    position: absolute;
+
+    &::after {
+      content: '';
+      height: 15px;
+      width: 15px;
+      border: 3px solid #010202;
+      border-radius: 50%;
+      left: -1px;
+      top: 1px;
+      position: absolute;
+      background: #fff;
+      transform: translatex(-18px) translatey(2px) rotate(-90deg);
+      clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 100% 25%, 50% 50%);
+    }
+
+    &::before {
+      content: '';
+      height: 15px;
+      width: 15px;
+      border: 3px solid #010202;
+      border-radius: 50%;
+      left: -1px;
+      top: 1px;
+      position: absolute;
+      background: #fff;
+      transform: translatex(-18px) translatey(-13px);
+      clip-path: polygon(25% 100%, 0 100%, 0 0, 100% 0, 100% 50%, 50% 50%);
+    }
+
+    &:nth-child(1) {
+      transform: rotate(42deg);
+      top: 23px;
+      left: -26px;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(137deg);
+      top: 23px;
+      right: -26px;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(313deg);
+      bottom: -13px;
+      left: 0px;
+    }
+
+    &:nth-child(4) {
+      transform: rotate(227deg);
+      bottom: -13px;
+      right: 0px;
+    }
+  }
+
+  .mouth {
+    position: absolute;
+    height: 120px;
+    width: 55px;
+    border: 3px solid #010202;
+    margin: 0 auto;
+    border-radius: 50%;
+    transform: rotatex(60deg) translatex(-50%);
+    left: 50%;
+    top: 55px;
+    z-index: 2;
+    border-width: 4px;
+    overflow: hidden;
+    background: #fff;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 70px;
+      height: 100px;
+      border: 3px solid #010202;
+      position: absolute;
+      border-radius: 50%;
+      transform: rotatex(0deg) translatex(-50%);
+      left: 50%;
+      border-width: 5px;
+    }
+
+    &::before {
+      top: -52px;
+    }
+
+    &::after {
+      top: -30px;
+    }
+
+    .teeth {
+      position: absolute;
+      left: 50%;
+      width: 3px;
+      height: 46px;
+      background: #010202;
+      top: 30px;
+      transform: translatex(-50%);
+
+      &::after,
+      &::before {
+        background: #010202;
+        position: absolute;
+        height: 46px;
+        width: 3px;
+        content: '';
+      }
+
+      &::after {
+        transform: translatex(-14px) rotate(3deg);
+      }
+
+      &::before {
+        transform: translatex(14px) rotate(-3deg);
+      }
+    }
+  }
+}
+</style>

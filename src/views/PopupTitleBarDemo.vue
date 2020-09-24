@@ -25,7 +25,9 @@
         @confirm="hidePopupTitleBar('confirmButton')"
         @cancel="hidePopupTitleBar('cancelButton')"
       ></v-popup-title-bar>
-      <div class="v-example-popup v-example-popup-bottom">popup from bottom</div>
+      <div class="v-example-popup">
+        <v-one-piece/>
+      </div>
     </v-popup>
   </div>
 </template>
@@ -33,6 +35,7 @@
 <script>
 import { ref } from 'vue'
 import { logInfo } from '../utils/index'
+import VOnePiece from '../components/hello-world/op.vue'
 import Toast from '../components/toast/index'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -43,11 +46,12 @@ export default {
 
   inheritAttrs: false,
 
-  // components: {
+  components: {
+    VOnePiece
   //   VPopup,
   //   VButton,
   //   VPopupTitleBar
-  // },
+  },
 
   setup() {
     const popupShow = ref({})
@@ -80,4 +84,11 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.v-example-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 3rem;
+}
 </style>
