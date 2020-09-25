@@ -89,7 +89,7 @@
       src="https://vuejs.org/images/logo.png"
       @click="showPopup(true)"
     />
-    <hello-world
+    <v-hello-world
       ref="compRef"
       msg="Hello VUI"
     />
@@ -192,7 +192,7 @@
 
 <script>
 import { computed, reactive, ref } from 'vue'
-import HelloWorld from '../components/hello-world/index.vue'
+import VHelloWorld from '../components/misc/hello-world.vue'
 // import VProgressCircular from '../components/progress/circular.vue'
 // import VAmount from '../components/amount/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -204,7 +204,7 @@ export default {
   inheritAttrs: false,
 
   components: {
-    HelloWorld
+    VHelloWorld
     // VProgressCircular,
     // VAmount,
     // VButton,

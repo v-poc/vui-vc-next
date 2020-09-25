@@ -18,8 +18,8 @@
       @input="val => showPopup('bottom', val)"
     >
       <v-popup-title-bar
-        title="The center Title"
-        describe="Some sub description."
+        title="Hello Vue 3.0"
+        describe="One Piece."
         ok-text="ok"
         cancel-text="cancel"
         @confirm="hidePopupTitleBar('confirmButton')"
@@ -35,7 +35,7 @@
 <script>
 import { ref } from 'vue'
 import { logInfo } from '../utils/index'
-import VOnePiece from '../components/hello-world/op.vue'
+import VOnePiece from '../components/misc/op.vue'
 import Toast from '../components/toast/index'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -89,6 +89,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 3rem;
+  height: 4rem;
 }
 </style>

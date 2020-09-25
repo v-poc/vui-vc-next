@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'v-op'
+  name: 'v-one-piece'
 }
 </script>
 

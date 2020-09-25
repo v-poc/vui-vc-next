@@ -45,7 +45,7 @@ import VTag from '../tag/index.vue'
 import VLandscape from '../landscape/index.vue'
 
 export default {
-  name: 'hello-world',
+  name: 'v-hello-world',
 
   components: {
     VActionBar,
