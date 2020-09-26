@@ -17,6 +17,7 @@
           <slot></slot>
         </div>
         <v-icon
+          v-if="showClose"
           :class="btnCls"
           :name="iconName"
           @click="close"
@@ -52,6 +53,11 @@ export default {
     fullscreen: {
       type: Boolean,
       default: false
+    },
+    // Whether show close button
+    showClose: {
+      type: Boolean,
+      default: true
     },
     // Whether click upon mask to close popup
     maskClosable: {

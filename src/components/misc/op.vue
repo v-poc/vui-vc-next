@@ -1,32 +1,61 @@
 <template>
-  <div class="op">
-    <div class="bones">
+  <div class="op-wrapper">
+    <div class="op" :style="opStyle">
       <div class="bone"></div>
       <div class="bone"></div>
       <div class="bone"></div>
       <div class="bone"></div>
-    </div>
-    <div class="head">
-      <div class="hat">
-        <div class="line-lt"></div>
-        <div class="line-rt"></div>
+      <div class="head">
+        <div class="hat">
+          <div class="line-lt"></div>
+          <div class="line-rt"></div>
+        </div>
+        <div class="eye eye-lt"></div>
+        <div class="eye eye-rt"></div>
       </div>
-      <div class="eye eye-lt"></div>
-      <div class="eye eye-rt"></div>
-    </div>
-    <div class="mouth">
-      <div class="teeth"></div>
+      <div class="mouth">
+        <div class="teeth"></div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { computed } from 'vue'
+
 export default {
-  name: 'v-one-piece'
+  name: 'v-one-piece',
+
+  props: {
+    scale: {
+      type: Number,
+      default: 1
+    }
+  },
+
+  setup(props) {
+    const opStyle = computed(() => {
+      const arr = {}
+      if (props.scale !== 1) {
+        arr['transform'] = `scale(${props.scale})`
+      }
+      return arr
+    })
+
+    return {
+      opStyle
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.op-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .op {
   position: relative;
   transition: 0.2s;
@@ -127,7 +156,7 @@ export default {
     align-items: flex-end;
     padding-bottom: 0.9rem;
     position: relative;
-    background: #fff;
+    background: #FFF;
     z-index: 3;
 
     &::before {
@@ -179,6 +208,7 @@ export default {
     border-left: none;
     z-index: 1;
     position: absolute;
+    background: #FFF;
 
     &::after {
       content: '';
@@ -186,12 +216,12 @@ export default {
       width: 15px;
       border: 3px solid #010202;
       border-radius: 50%;
-      left: -1px;
-      top: 1px;
+      left: 11px;
+      top: 0;
       position: absolute;
-      background: #fff;
+      background: #FFF;
       transform: translatex(-18px) translatey(2px) rotate(-90deg);
-      clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 100% 25%, 50% 50%);
+      clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 100% 10%, 50% 50%);
     }
 
     &::before {
@@ -200,36 +230,36 @@ export default {
       width: 15px;
       border: 3px solid #010202;
       border-radius: 50%;
-      left: -1px;
-      top: 1px;
+      left: 12px;
+      top: 3px;
       position: absolute;
-      background: #fff;
-      transform: translatex(-18px) translatey(-13px);
+      background: #FFF;
+      transform: translatex(-19px) translatey(-13px);
       clip-path: polygon(25% 100%, 0 100%, 0 0, 100% 0, 100% 50%, 50% 50%);
     }
 
     &:nth-child(1) {
       transform: rotate(42deg);
-      top: 23px;
-      left: -26px;
+      top: 13px;
+      left: -36px;
     }
 
     &:nth-child(2) {
       transform: rotate(137deg);
-      top: 23px;
-      right: -26px;
+      top: 13px;
+      right: -36px;
     }
 
     &:nth-child(3) {
       transform: rotate(313deg);
-      bottom: -13px;
-      left: 0px;
+      bottom: -23px;
+      left: -10px;
     }
 
     &:nth-child(4) {
       transform: rotate(227deg);
-      bottom: -13px;
-      right: 0px;
+      bottom: -23px;
+      right: -10px;
     }
   }
 
@@ -246,7 +276,7 @@ export default {
     z-index: 2;
     border-width: 4px;
     overflow: hidden;
-    background: #fff;
+    background: #FFF;
 
     &::before,
     &::after {

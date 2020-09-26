@@ -30,7 +30,9 @@
     mask-closable
     transition="v-bounce"
   >
-    <img src="../../assets/images/op.png" />
+    <div class="v-example-op">
+      <v-one-piece :scale="2"/>
+    </div>    
   </v-landscape>
   <v-action-bar :actions="state.actionData"></v-action-bar>
 </template>
@@ -43,6 +45,7 @@ import VAmount from '../amount/index.vue'
 import VProgressCircular from '../progress/circular.vue'
 import VTag from '../tag/index.vue'
 import VLandscape from '../landscape/index.vue'
+import VOnePiece from './op.vue'
 
 export default {
   name: 'v-hello-world',
@@ -52,7 +55,8 @@ export default {
     VAmount,
     VProgressCircular,
     VTag,
-    VLandscape
+    VLandscape,
+    VOnePiece
   },
 
   props: {
@@ -102,11 +106,20 @@ export default {
   }
 }
 
+::v-deep(.v-landscape-content) {
+  width: 100vw;
+}
+
 .v-progress {
   margin-top: 0.2rem;
 
   span.unit {
     font-size: 0.25rem;
   }  
+}
+
+.v-example-op {
+  padding-top: 1.5rem;
+  height: 5rem;
 }
 </style>

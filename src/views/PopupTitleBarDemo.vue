@@ -25,7 +25,7 @@
         @confirm="hidePopupTitleBar('confirmButton')"
         @cancel="hidePopupTitleBar('cancelButton')"
       ></v-popup-title-bar>
-      <div class="v-example-popup">
+      <div class="v-example-op">
         <v-one-piece/>
       </div>
     </v-popup>
@@ -85,10 +85,8 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
 
-.v-example-popup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 4rem;
+.v-example-op {
+  height: 3.5rem;
+  background: #FFF;
 }
 </style>

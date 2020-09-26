@@ -35,9 +35,12 @@
       @input="val => showPopup('maskClosableMode', val)"
       @mask-click="showInfo('click mask to close landscape popup')"
       mask-closable
+      :show-close="false"
       transition="v-bounce"
     >
-      <img src="../assets/images/op.png" />
+      <div class="v-example-op">
+        <v-one-piece :scale="2"/>
+      </div>
     </v-landscape>
   </div>
   <div class="v-example">
@@ -62,6 +65,7 @@
 <script>
 import { ref } from 'vue'
 import { logInfo } from '../utils/index'
+import VOnePiece from '../components/misc/op.vue'
 import Toast from '../components/toast/index'
 // import VLandscape from '../components/landscape/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -71,10 +75,11 @@ export default {
 
   inheritAttrs: false,
 
-  // components: {
+  components: {
+    VOnePiece
   //   VLandscape,
   //   VButton
-  // },
+  },
 
   setup() {
     const popupShow = ref({})
@@ -105,4 +110,18 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+::v-deep(.v-landscape-content) {
+  width: 100vw;
+  text-align: center;
+
+  img {
+    width: auto;
+  }
+}
+
+.v-example-op {
+  padding-top: 1.5rem;
+  height: 5rem;
+}
 </style>
