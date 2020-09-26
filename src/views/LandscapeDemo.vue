@@ -39,7 +39,7 @@
       transition="v-bounce"
     >
       <div class="v-example-op">
-        <v-one-piece :scale="2"/>
+        <v-one-piece :scale="1.8"/>
       </div>
     </v-landscape>
   </div>
@@ -112,7 +112,7 @@ export default {
 @import '../assets/styles/vui-example.scss';
 
 ::v-deep(.v-landscape-content) {
-  width: 95vw;
+  width: 100vw;
   text-align: center;
 
   img {

@@ -31,7 +31,7 @@
     transition="v-bounce"
   >
     <div class="v-example-op">
-      <v-one-piece :scale="2"/>
+      <v-one-piece :scale="1.8"/>
     </div>    
   </v-landscape>
   <v-action-bar :actions="state.actionData"></v-action-bar>
@@ -108,7 +108,7 @@ export default {
 }
 
 .v-landscape-content {
-  width: 95vw;
+  width: 100vw;
 }
 
 .v-progress {
