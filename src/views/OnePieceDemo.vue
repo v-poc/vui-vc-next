@@ -61,8 +61,4 @@ export default {
     width: 50%;
   }
 }
-
-// .v-example-poc-bottom {
-//   margin-bottom: 1rem;
-// }
 </style>

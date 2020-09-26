@@ -108,7 +108,7 @@ export default {
 }
 
 .v-landscape-content {
-  width: 100vw;
+  width: 95vw;
 }
 
 .v-progress {
@@ -121,6 +121,6 @@ export default {
 
 .v-example-op {
   padding-top: 1.5rem;
-  height: 5rem;
+  height: 5.5rem;
 }
 </style>

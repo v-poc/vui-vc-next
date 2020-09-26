@@ -112,7 +112,7 @@ export default {
 @import '../assets/styles/vui-example.scss';
 
 ::v-deep(.v-landscape-content) {
-  width: 100vw;
+  width: 95vw;
   text-align: center;
 
   img {
@@ -122,6 +122,6 @@ export default {
 
 .v-example-op {
   padding-top: 1.5rem;
-  height: 5rem;
+  height: 5.5rem;
 }
 </style>
