@@ -71,6 +71,7 @@ export default {
       actionData: [
         {
           text: 'Reset',
+          type: computed(() => (state.count > 0 ? 'default' : 'disabled')),
           icon: 'clear',
           onClick: () => {
             state.count = 0
@@ -99,14 +100,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-::v-deep(.v-tag) {
+<style lang="scss">
+.v-tag {
   .size-large {
     font-size: 0.5rem;
   }
 }
 
-::v-deep(.v-landscape-content) {
+.v-landscape-content {
   width: 100vw;
 }
 

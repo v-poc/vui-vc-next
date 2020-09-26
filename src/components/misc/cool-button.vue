@@ -1,13 +1,13 @@
 <template>
   <div
     ref="btnRef"
-    class="op"
+    class="v-btn-op"
   >
     <div
-      class="chi"
+      class="v-btn-chi"
       @click="onClickButton"
     >
-      <div class="star">★</div>
+      <div class="v-btn-star">★</div>
     </div>
   </div>
 </template>
@@ -24,9 +24,9 @@ export default {
     const onClickButton = () => {
       const p = btnRef.value
       if (p) {
-        p.className = 'op pururun'
+        p.className = 'v-btn-op pururun'
         setTimeout(() => {
-          p.className = 'op'
+          p.className = 'v-btn-op'
           emit('on-click')
         }, 2000)
       }
@@ -40,8 +40,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.star {
+<style lang="scss">
+.v-btn-star {
   display: block;
   position: absolute;
   top: 3px;
@@ -52,7 +52,7 @@ export default {
   opacity: 0.5;
 }
 
-.chi {
+.v-btn-chi {
   cursor: -webkit-grabbing;
   position: absolute;
   top: 50px;
@@ -98,7 +98,7 @@ export default {
   }
 }
 
-.op {
+.v-btn-op {
   cursor: -webkit-grab;
   position: relative;
   margin: 0 auto;
@@ -129,7 +129,7 @@ export default {
     -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
     -webkit-animation-delay: 0.08s;
 
-    .chi {
+    .v-btn-chi {
       -webkit-animation-name: pururin;
       -webkit-animation-duration: 1s;
       -webkit-animation-iteration-count: 2;

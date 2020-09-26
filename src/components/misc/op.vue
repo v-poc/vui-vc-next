@@ -1,6 +1,6 @@
 <template>
-  <div class="op-wrapper">
-    <div class="op" :style="opStyle">
+  <div class="v-op-wrapper">
+    <div class="v-op" :style="opStyle">
       <div class="bone"></div>
       <div class="bone"></div>
       <div class="bone"></div>
@@ -49,14 +49,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.op-wrapper {
+<style lang="scss">
+.v-op-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.op {
+.v-op {
   position: relative;
   transition: 0.2s;
 
