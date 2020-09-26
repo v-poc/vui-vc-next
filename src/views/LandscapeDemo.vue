@@ -65,8 +65,8 @@
 <script>
 import { ref } from 'vue'
 import { logInfo } from '../utils/index'
-import VOnePiece from '../components/misc/op.vue'
 import Toast from '../components/toast/index'
+// import VOnePiece from '../components/misc/op.vue'
 // import VLandscape from '../components/landscape/index.vue'
 // import VButton from '../components/button/index.vue'
 
@@ -75,11 +75,11 @@ export default {
 
   inheritAttrs: false,
 
-  components: {
-    VOnePiece
+  // components: {
+  //   VOnePiece
   //   VLandscape,
   //   VButton
-  },
+  // },
 
   setup() {
     const popupShow = ref({})

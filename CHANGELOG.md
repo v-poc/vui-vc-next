@@ -1,3 +1,7 @@
+# 0.0.25 (2020-09-26)
+
+Added OnePiece demo.
+
 # 0.0.20 (2020-09-13)
 
 - Refactor: update fonts reference.

@@ -82,18 +82,6 @@
       </div>
     </div>
   </div>
-  <div class="v-example v-example-poc">
-    <p @click="showPopup(true)">VUI POC</p>
-    <img
-      alt="Vue logo"
-      src="https://vuejs.org/images/logo.png"
-      @click="showPopup(true)"
-    />
-    <v-hello-world
-      ref="compRef"
-      msg="Hello VUI"
-    />
-  </div>
   <div class="v-example">
     <p>Circular Progress - Animated</p>
     <v-progress-circular
@@ -143,7 +131,6 @@
       <span class="progress-value">70%</span>
     </v-progress-circular>
   </div>
-  <!--
   <div class="v-example">
     <p>Circular Progress - Basic</p>
     <v-progress-circular
@@ -154,7 +141,6 @@
       <span class="progress-value">30%</span>
     </v-progress-circular>
   </div>
-  -->
   <div class="v-example v-example-poc-bottom">
     <p>Circular Progress - LinearGradient</p>
     <v-progress-circular
@@ -192,7 +178,6 @@
 
 <script>
 import { computed, reactive, ref } from 'vue'
-import VHelloWorld from '../components/misc/hello-world.vue'
 // import VProgressCircular from '../components/progress/circular.vue'
 // import VAmount from '../components/amount/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -203,13 +188,12 @@ export default {
 
   inheritAttrs: false,
 
-  components: {
-    VHelloWorld
-    // VProgressCircular,
-    // VAmount,
-    // VButton,
-    // VIcon
-  },
+  // components: {
+  //   VProgressCircular,
+  //   VAmount,
+  //   VButton,
+  //   VIcon
+  // },
 
   setup() {
     const state = reactive({
@@ -288,21 +272,12 @@ export default {
       ]
     }
 
-    const compRef = ref('compRef')
-
-    const showPopup = (val) => {
-      const comp = compRef && compRef.value
-      comp && comp.showPopup(val)
-    }
-
     return {
       state,
       showProgress,
       createTask,
       deleteTask,
-      taskCls,
-      compRef,
-      showPopup
+      taskCls
     }
   }
 }
@@ -310,18 +285,4 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
-
-.v-example-poc {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  img {
-    width: 50%;
-  }
-}
-
-.v-example-poc-bottom {
-  margin-bottom: 1rem;
-}
 </style>

@@ -17,6 +17,7 @@ import VChart from './chart/index.vue'
 import VProgress from './progress/circular.vue'
 import VResultPage from './result-page/index.vue'
 import VActionBar from './action-bar/index.vue'
+import VOnePiece from './misc/op.vue'
 
 // components collection
 const components = {
@@ -34,7 +35,8 @@ const components = {
   VChart,
   VProgress,
   VResultPage,
-  VActionBar
+  VActionBar,
+  VOnePiece
 }
 
 // components desc array
@@ -84,5 +86,6 @@ export {
   VChart,
   VProgress,
   VResultPage,
-  VActionBar
+  VActionBar,
+  VOnePiece
 }

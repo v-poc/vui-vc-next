@@ -39,25 +39,25 @@
 
 <script>
 import { computed, reactive } from 'vue'
-// import { VActionBar, VAmount, VProgress, VTag, VLandscape } from 'vui-vc-next'
-import VActionBar from '../action-bar/index.vue'
-import VAmount from '../amount/index.vue'
-import VProgressCircular from '../progress/circular.vue'
-import VTag from '../tag/index.vue'
-import VLandscape from '../landscape/index.vue'
-import VOnePiece from './op.vue'
+// import { VActionBar, VAmount, VProgress, VTag, VLandscape, VOnePiece } from 'vui-vc-next'
+// import VActionBar from '../action-bar/index.vue'
+// import VAmount from '../amount/index.vue'
+// import VProgressCircular from '../progress/circular.vue'
+// import VTag from '../tag/index.vue'
+// import VLandscape from '../landscape/index.vue'
+// import VOnePiece from './op.vue'
 
 export default {
   name: 'v-hello-world',
 
-  components: {
-    VActionBar,
-    VAmount,
-    VProgressCircular,
-    VTag,
-    VLandscape,
-    VOnePiece
-  },
+  // components: {
+  //   VActionBar,
+  //   VAmount,
+  //   VProgressCircular,
+  //   VTag,
+  //   VLandscape,
+  //   VOnePiece
+  // },
 
   props: {
     msg: String
