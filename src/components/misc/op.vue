@@ -67,8 +67,8 @@ export default {
   .hat {
     width: 100px;
     height: 100px;
-    border: 3px solid #010202;
-    background: #20526f;
+    border: 3px solid #010101;
+    background: #20526F;
     border-radius: 50%;
     clip-path: inset(0 0 50% 0);
     position: absolute;
@@ -79,8 +79,8 @@ export default {
       content: '';
       height: 12px;
       width: 110%;
-      border: 3px solid #010202;
-      background: #00cf74;
+      border: 3px solid #010101;
+      background: #00CF74;
       position: absolute;
       top: 36%;
       transform: translatey(-50%);
@@ -89,7 +89,7 @@ export default {
 
     .line-lt {
       position: absolute;
-      border-left: 3px solid #010202;
+      border-left: 3px solid #010101;
       height: 13px;
       left: 28px;
       top: 13px;
@@ -100,7 +100,7 @@ export default {
       &::before {
         content: '';
         position: absolute;
-        border-left: 3px solid #010202;
+        border-left: 3px solid #010101;
         height: 17px;
         left: -10px;
         top: 1px;
@@ -112,7 +112,7 @@ export default {
       &::after {
         content: '';
         position: absolute;
-        border-left: 3px solid #010202;
+        border-left: 3px solid #010101;
         height: 9px;
         left: 5px;
         top: -3px;
@@ -124,7 +124,7 @@ export default {
 
     .line-rt {
       position: absolute;
-      border-right: 3px solid #010202;
+      border-right: 3px solid #010101;
       height: 15px;
       right: 22px;
       top: 11px;
@@ -135,7 +135,7 @@ export default {
       &::before {
         content: '';
         position: absolute;
-        border-right: 3px solid #010202;
+        border-right: 3px solid #010101;
         height: 9px;
         right: 7px;
         top: 0px;
@@ -149,7 +149,7 @@ export default {
   .head {
     width: 100px;
     height: calc(100px - 0.9rem);
-    border: 3px solid #010202;
+    border: 3px solid #010101;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -163,8 +163,8 @@ export default {
       content: '';
       height: 5px;
       width: 150px;
-      border: 3px solid #010202;
-      background: #20526f;
+      border: 3px solid #010101;
+      background: #20526F;
       position: absolute;
       top: 50%;
       transform: translatey(-8px);
@@ -177,7 +177,7 @@ export default {
       width: 11px;
       height: 8px;
       border-radius: 50%;
-      background: #010202;
+      background: #010101;
       position: absolute;
       bottom: 8px;
     }
@@ -186,9 +186,8 @@ export default {
   .eye {
     width: 28px;
     height: 28px;
-    background: #010202;
+    background: #010101;
     border-radius: 50%;
-    // margin: 0 0.35rem;
     position: absolute;
     bottom: 15px;
   }
@@ -204,7 +203,7 @@ export default {
   .bone {
     height: 13px;
     width: 50px;
-    border: 3px solid #010202;
+    border: 3px solid #010101;
     border-left: none;
     z-index: 1;
     position: absolute;
@@ -214,28 +213,28 @@ export default {
       content: '';
       height: 15px;
       width: 15px;
-      border: 3px solid #010202;
+      border: 3px solid #010101;
       border-radius: 50%;
       left: 11px;
       top: 0;
       position: absolute;
       background: #FFF;
       transform: translatex(-18px) translatey(2px) rotate(-90deg);
-      clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 100% 10%, 50% 50%);
+      clip-path: polygon(48% 100%, 0 100%, 0 0, 100% 0, 100% 10%, 50% 50%);
     }
 
     &::before {
       content: '';
       height: 15px;
       width: 15px;
-      border: 3px solid #010202;
+      border: 3px solid #010101;
       border-radius: 50%;
       left: 12px;
       top: 3px;
       position: absolute;
       background: #FFF;
       transform: translatex(-19px) translatey(-13px);
-      clip-path: polygon(25% 100%, 0 100%, 0 0, 100% 0, 100% 50%, 50% 50%);
+      clip-path: polygon(25% 100%, 0 100%, 0 0, 100% 0, 100% 48%, 50% 50%);
     }
 
     &:nth-child(1) {
@@ -267,7 +266,7 @@ export default {
     position: absolute;
     height: 120px;
     width: 55px;
-    border: 3px solid #010202;
+    border: 3px solid #010101;
     margin: 0 auto;
     border-radius: 50%;
     transform: rotatex(60deg) translatex(-50%);
@@ -283,7 +282,7 @@ export default {
       content: '';
       width: 70px;
       height: 100px;
-      border: 3px solid #010202;
+      border: 3px solid #010101;
       position: absolute;
       border-radius: 50%;
       transform: rotatex(0deg) translatex(-50%);
@@ -304,15 +303,15 @@ export default {
       left: 50%;
       width: 3px;
       height: 46px;
-      background: #010202;
+      background: #010101;
       top: 30px;
       transform: translatex(-50%);
 
       &::after,
       &::before {
-        background: #010202;
+        background: #010101;
         position: absolute;
-        height: 46px;
+        height: 45px;
         width: 3px;
         content: '';
       }

@@ -2,6 +2,7 @@
   <div
     ref="btnRef"
     class="v-btn-op"
+    :style="btnStyle"
   >
     <div
       class="v-btn-chi"
@@ -13,13 +14,28 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 export default {
   name: 'v-cool-button',
 
+  props: {
+    scale: {
+      type: Number,
+      default: 1
+    }
+  },  
+
   setup(props, { emit }) {
     const btnRef = ref('btnRef')
+
+    const btnStyle = computed(() => {
+      const arr = {}
+      if (props.scale !== 1) {
+        arr['transform'] = `scale(${props.scale})`
+      }
+      return arr
+    })    
 
     const onClickButton = () => {
       const p = btnRef.value
@@ -34,6 +50,7 @@ export default {
 
     return {
       btnRef,
+      btnStyle,
       onClickButton
     }
   }  

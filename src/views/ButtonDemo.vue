@@ -42,12 +42,12 @@
     <v-button
       type="default"
       plain
-      loading     
-    >Plain Loading Button</v-button>    
+      loading
+    >Plain Loading Button</v-button>
     <v-button
       type="primary"
       round
-      loading      
+      loading
     >Round Loading Button</v-button>
   </div>
   <div class="v-example">
@@ -67,7 +67,10 @@
     >
       <div class="v-example-popup v-example-popup-center">
         <p>Touch center point</p>
-        <v-cool-button @on-click="onClickCoolButton"/>
+        <v-cool-button
+          :scale="1.2"
+          @on-click="onClickCoolButton"
+        />
       </div>
     </v-popup>
   </div>
@@ -88,9 +91,9 @@ export default {
 
   components: {
     VCoolButton
-  //   VButton,
-  //   VIcon,
-  //   VPopup
+    //   VButton,
+    //   VIcon,
+    //   VPopup
   },
 
   setup() {
