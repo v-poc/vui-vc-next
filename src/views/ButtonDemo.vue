@@ -68,7 +68,7 @@
       <div class="v-example-popup v-example-popup-center">
         <p>Touch center point</p>
         <v-cool-button
-          :scale="1.2"
+          :scale="1.1"
           @on-click="onClickCoolButton"
         />
       </div>

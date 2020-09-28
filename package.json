@@ -19,6 +19,7 @@
     "vui",
     "vue3-ui",
     "vue3-vite",
+    "vue3-vite-ui",
     "vue-composition-api",
     "vitepress"
   ],
