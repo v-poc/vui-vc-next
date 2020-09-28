@@ -52,6 +52,29 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
 
+::v-deep(.v-tag) {
+  .size-large {
+    font-size: 0.5rem;
+  }
+}
+
+::v-deep(.v-landscape-content) {
+  width: 100vw;
+}
+
+::v-deep(.v-progress) {
+  margin-top: 0.2rem;
+
+  span.unit {
+    font-size: 0.25rem;
+  }  
+}
+
+::v-deep(.v-example-op) {
+  padding-top: 1.5rem;
+  height: 5.5rem;
+}
+
 .v-example-poc {
   display: flex;
   flex-direction: column;

@@ -101,26 +101,4 @@ export default {
 </script>
 
 <style lang="scss">
-.v-tag {
-  .size-large {
-    font-size: 0.5rem;
-  }
-}
-
-.v-landscape-content {
-  width: 100vw;
-}
-
-.v-progress {
-  margin-top: 0.2rem;
-
-  span.unit {
-    font-size: 0.25rem;
-  }  
-}
-
-.v-example-op {
-  padding-top: 1.5rem;
-  height: 5.5rem;
-}
 </style>
