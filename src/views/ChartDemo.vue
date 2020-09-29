@@ -38,8 +38,7 @@
     <v-popup
       position="center"
       transition="v-bounce"
-      :value="popupShow.center"
-      @input="val => showPopup('center', val)"
+      v-model:value="popupShow.center"
     >
       <div class="v-example-popup v-example-popup-center">
         <p>Gradient-line Chart</p>

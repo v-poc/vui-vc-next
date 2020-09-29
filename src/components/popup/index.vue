@@ -29,13 +29,7 @@
 </template>
 
 <script>
-import {
-  computed,
-  reactive,
-  ref,
-  watch,
-  onMounted
-} from 'vue'
+import { computed, reactive, ref, watch, onMounted } from 'vue'
 import usePopupBase from '../../composables/usePopupBase'
 import useTransition from '../../composables/useTransition'
 import useEventListener from '../../composables/useEventListener'
@@ -88,10 +82,7 @@ export default {
     })
 
     const popupBoxCls = computed(() => {
-      return [
-        'v-popup-box',
-        state.transition
-      ]
+      return ['v-popup-box', state.transition]
     })
 
     const showPopupBox = () => {
@@ -106,11 +97,12 @@ export default {
       state.isAnimation = true
       state.isPopupBoxShow = false
       props.preventScroll && preventScroll(false)
-      emit('input', false)
+      // emit('input', false)
+      emit('update:value', false)
     }
 
     const preventScroll = (isBind) => {
-      [
+      ;[
         root.value.querySelector('.v-popup-mask'),
         root.value.querySelector('.v-popup-box')
       ].forEach((node) => {

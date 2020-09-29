@@ -17,8 +17,7 @@
       @click="showPopup(index, true)"
     >{{ detailInfo(item) }}</v-button>
     <v-popup
-      :value="popupShow[index]"
-      @input="val => showPopup(index, val)"
+      v-model:value="popupShow[index]"
       :transition="convertName(item)"
     >
       <div class="v-example-popup v-example-popup-center">

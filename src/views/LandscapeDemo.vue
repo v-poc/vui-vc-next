@@ -13,8 +13,7 @@
       @click="showPopup('eventListenerMode', true)"
     >Test event handler</v-button>
     <v-landscape
-      :value="popupShow.eventListenerMode"
-      @input="val => showPopup('eventListenerMode', val)"
+      v-model:value="popupShow.eventListenerMode"
       @show="showInfo('show landscape popup')"
       @hide="showInfo('hide landscape popup')"
     >
@@ -31,8 +30,7 @@
       @click="showPopup('maskClosableMode', true)"
     >Test mask closable</v-button>
     <v-landscape
-      :value="popupShow.maskClosableMode"
-      @input="val => showPopup('maskClosableMode', val)"
+      v-model:value="popupShow.maskClosableMode"
       @mask-click="showInfo('click mask to close landscape popup')"
       mask-closable
       :show-close="false"
@@ -53,8 +51,7 @@
       @click="showPopup('fullscreenMode', true)"
     >Test fullscreen mode</v-button>
     <v-landscape
-      :value="popupShow.fullscreenMode"
-      @input="val => showPopup('fullscreenMode', val)"
+      v-model:value="popupShow.fullscreenMode"
       fullscreen
     >
       <img src="../assets/images/kongfu.png" />

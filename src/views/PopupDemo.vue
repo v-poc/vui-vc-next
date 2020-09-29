@@ -15,15 +15,14 @@
     <v-popup
       position="center"
       transition="v-punch"
-      :value="popupShow.center"
-      @input="val => showPopup('center', val)"
+      v-model:value="popupShow.center"
     >
       <div class="v-example-popup v-example-popup-center">
         <p>popup from center</p>
         <img src="../assets/images/mj.png" />
       </div>
     </v-popup>
-  </div>
+  </div>  
   <div class="v-example">
     <p>Popup from left</p>
     <v-button
@@ -35,8 +34,7 @@
     >Test popup from left</v-button>
     <v-popup
       position="left"
-      :value="popupShow.left"
-      @input="val => showPopup('left', val)"
+      v-model:value="popupShow.left"
     >
       <div class="v-example-popup v-example-popup-left">popup from left</div>
     </v-popup>
@@ -52,8 +50,7 @@
     >Test popup from right</v-button>
     <v-popup
       position="right"
-      :value="popupShow.right"
-      @input="val => showPopup('right', val)"
+      v-model:value="popupShow.right"
     >
       <div class="v-example-popup v-example-popup-right">popup from right</div>
     </v-popup>
@@ -69,8 +66,7 @@
     >Test popup from bottom</v-button>
     <v-popup
       position="bottom"
-      :value="popupShow.bottom"
-      @input="val => showPopup('bottom', val)"
+      v-model:value="popupShow.bottom"
     >
       <v-popup-title-bar
         only-close
@@ -94,8 +90,7 @@
     >Test popup from top</v-button>
     <v-popup
       position="top"
-      :value="popupShow.top"
-      @input="val => showPopup('top', val)"
+      v-model:value="popupShow.top"
       :hasMask="false"
     >
       <div class="v-example-popup v-example-popup-top">

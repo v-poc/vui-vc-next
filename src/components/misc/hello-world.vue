@@ -25,8 +25,7 @@
     <span class="unit">%</span>
   </v-progress-circular>
   <v-landscape
-    :value="state.isShowPopup"
-    @input="val => showPopup(val)"
+    v-model:value="state.isShowPopup"
     mask-closable
     transition="v-bounce"
   >

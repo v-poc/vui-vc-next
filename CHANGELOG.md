@@ -1,3 +1,7 @@
+# 0.0.28 (2020-09-29)
+
+Refactor: update v-model:value for customized components.
+
 # 0.0.26 (2020-09-26)
 
 Added OnePiece demo.

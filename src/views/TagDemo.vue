@@ -17,8 +17,7 @@
     <v-popup
       position="center"
       transition="v-bounce"
-      :value="popupShow.center"
-      @input="val => showPopup('center', val, null, null)"
+      v-model:value="popupShow.center"
     >
       <div class="v-example-popup v-example-popup-center">
         <h3>{{ popupShow.cKey }}</h3>
@@ -125,17 +124,8 @@ export default {
     const showPopup = (pos, isShow, cKey, cMap) => {
       const popupShowVal = popupShow.value
       popupShowVal[pos] = isShow
-
-      const setVal = () => {
-        popupShowVal['cKey'] = cKey
-        popupShowVal['cMap'] = cMap
-      }
-
-      if (isShow) {
-        setVal()
-      } else {
-        setTimeout(setVal, 200)
-      }
+      popupShowVal['cKey'] = cKey
+      popupShowVal['cMap'] = cMap
     }
 
     const computedColors = computed(() => {

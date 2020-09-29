@@ -1,13 +1,13 @@
 <template>
   <div :class="cls">
     <v-popup
-      :value="popupShow.landscape"
+      v-model:value="popupShow.landscape"
       :has-mask="!fullscreen && hasMask"
       :mask-closable="maskClosable"
       :transition="effect"
       prevent-scroll
       prevent-scroll-exclude=".v-landscape-content"
-      @input="val => onInput(val)"
+      @update:value="onUpdate"
       @show="onShow"
       @hide="onHide"
       @mask-click="onMaskClick"
@@ -63,7 +63,7 @@ export default {
     maskClosable: {
       type: Boolean,
       default: false
-    }    
+    }
   },
 
   setup(props, { emit }) {
@@ -113,12 +113,13 @@ export default {
     // show/hide popup
     const showPopup = (type, isShow) => {
       popupShow.value[type] = isShow
-    }    
+    }
 
-    // input event
-    const onInput = (val) => {
-      showPopup('landscape', val)
-      emit('input', false)
+    // update:value
+    const onUpdate = () => {
+      // showPopup('landscape', val)
+      // emit('input', false)
+      emit('update:value', false)
     }
 
     // show popup event
@@ -146,14 +147,14 @@ export default {
     })
 
     return {
-      popupShow: popupShow.value,            
+      popupShow: popupShow.value,
       effect,
       iconName,
       cls,
       bodyCls,
       btnCls,
       showPopup,
-      onInput,
+      onUpdate,
       onShow,
       onHide,
       onMaskClick,

@@ -3,7 +3,7 @@
     :class="cls"
   >
     <v-popup
-      :value="value || state.visible"
+      v-model:value="state.visible"
       :hasMask="hasMask"
       :maskClosable="false"
       @show="onShow"
@@ -90,7 +90,7 @@ export default {
   setup(props, { emit }) {
     let timer
     const state = reactive({
-      visible: false // Whether display
+      visible: props.value || false // Whether display
     })
 
     const cls = computed(() => {
