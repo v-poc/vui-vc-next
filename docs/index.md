@@ -2,21 +2,22 @@
 sidebar: auto
 ---
 
-# vui-vc-next
+# VUI docs
 
 ## Reference list
 
-- [`Skeleton`](./skeleton.html)
-- [`Tag`](./tag.html)
-- [`Popup`](./popup.html)
-- [`Icon`](./icon.html)
-- [`Button`](./button.html)
-- [`Transition`](./transition.html)
-- [`Landscape`](./landscape.html)
-- [`Toast`](./toast.html)
-- [`Amount`](./amount.html)
-- [`ActivityIndicator`](./activity-indicator.html)
-- [`Chart`](./chart.html)
-- [`Progress`](./progress.html)
-- [`ResultPage`](./result-page.html)
-- [`ActionBar`](./action-bar.html)
+- [`VSkeleton`](./skeleton.html)
+- [`VTag`](./tag.html)
+- [`VPopup`](./popup.html)
+- [`VIcon`](./icon.html)
+- [`VButton`](./button.html)
+- [`VTransition`](./transition.html)
+- [`VLandscape`](./landscape.html)
+- [`VToast`](./toast.html)
+- [`VAmount`](./amount.html)
+- [`VActivityIndicator`](./activity-indicator.html)
+- [`VChart`](./chart.html)
+- [`VProgress`](./progress.html)
+- [`VResultPage`](./result-page.html)
+- [`VActionBar`](./action-bar.html)
+- [`VSwitch`](./switch.html)

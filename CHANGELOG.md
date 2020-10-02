@@ -1,3 +1,7 @@
+# 0.0.29 (2020-10-02)
+
+Added Switch demo.
+
 # 0.0.28 (2020-09-29)
 
 Refactor: update v-model:value for customized components.

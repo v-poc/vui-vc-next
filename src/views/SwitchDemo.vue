@@ -4,11 +4,22 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <p>Switch - {{state.isActive ? 'Active' : 'Inactive' }}</p>
+    <p>Switch - {{state.isActive ? 'Active' : 'Inactive' }} {{state.isDisabled ? '- Disabled' : '' }}</p>
     <v-switch
       v-model:value="state.isActive"
+      :disabled="state.isDisabled"
       @change="showInfo"
     />
+  </div>
+  <div class="v-example">
+    <p>Switch - Toggle Disabled state</p>
+    <v-button
+      :type="state.isDisabled ? 'default' : 'primary'"
+      size="small"
+      inline
+      round
+      @click="onToggle"
+    >Toggle Disabled switch</v-button>
   </div>
 </template>
 
@@ -23,23 +34,30 @@ export default {
   inheritAttrs: false,
 
   // components: {
-  //   VSwitch,
+  //   VSwitch
   // },
 
   setup() {
     const state = reactive({
-      isActive: true
+      isActive: true,
+      isDisabled: false
     })
 
     // show info in console log
-    const showInfo = () => {
-      logInfo(`[SwitchDemo] switch status: ${state.isActive ? 'Active' : 'Inactive' }`)
-      // Toast.info(content)
+    const showInfo = (e) => {
+      logInfo(
+        `[SwitchDemo] switch status: ${state.isActive ? 'Active' : 'Inactive'}`
+      )
+    }
+
+    const onToggle = () => {
+      state.isDisabled = !state.isDisabled
     }
 
     return {
       state,
-      showInfo
+      showInfo,
+      onToggle
     }
   }
 }
