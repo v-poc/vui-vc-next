@@ -123,6 +123,11 @@ $font-family-number: $font-family-normal;
 $icon-font-family: url("../../assets/fonts/iconfont.woff") format("woff"), url("../../assets/fonts/iconfont.ttf") format("truetype");
 $amount-font-family: url("../../assets/fonts/DINPro-Medium.ttf") format("truetype");
 
+$switch-fill: $color-primary;
+$switch-fill-inverse: $color-bg-disabled;
+$switch-handle-color: #FFF;
+$switch-item-color-disabled: $opacity-disabled;
+
 $toast-fill: rgba(65, 72, 93, .77);
 $toast-font-size: $font-body-large;
 $toast-color: #FFF;

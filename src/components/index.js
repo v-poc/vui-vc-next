@@ -18,6 +18,7 @@ import VProgress from './progress/circular.vue'
 import VResultPage from './result-page/index.vue'
 import VActionBar from './action-bar/index.vue'
 import VOnePiece from './misc/op.vue'
+import VSwitch from './switch/index.vue'
 
 // components collection
 const components = {
@@ -36,7 +37,8 @@ const components = {
   VProgress,
   VResultPage,
   VActionBar,
-  VOnePiece
+  VOnePiece,
+  VSwitch
 }
 
 // components desc array
@@ -87,5 +89,6 @@ export {
   VProgress,
   VResultPage,
   VActionBar,
-  VOnePiece
+  VOnePiece,
+  VSwitch
 }
