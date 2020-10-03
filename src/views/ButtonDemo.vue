@@ -73,12 +73,33 @@
       </div>
     </v-popup>
   </div>
+  <div class="v-example">
+    <p>Like Button</p>
+    <v-button
+      type="default"
+      size="small"
+      inline
+      round
+      @click="showPopup('like', true)"
+    >Test Like button</v-button>
+    <v-popup
+      position="center"
+      transition="v-bounce"
+      v-model:value="popupShow.like"
+    >
+      <div class="v-example-popup v-example-popup-center">
+        <p>Touch heart point</p>
+        <v-like-button/>
+      </div>
+    </v-popup>
+  </div>
 </template>
 
 <script>
 import { ref } from 'vue'
 import Toast from '../components/toast/index'
 import VCoolButton from '../components/misc/cool-button.vue'
+import VLikeButton from '../components/misc/like-button.vue'
 // import VButton from '../components/button/index.vue'
 // import VIcon from '../components/icon/index.vue'
 // import VPopup from '../components/popup/index.vue'
@@ -89,7 +110,8 @@ export default {
   inheritAttrs: false,
 
   components: {
-    VCoolButton
+    VCoolButton,
+    VLikeButton
     //   VButton,
     //   VIcon,
     //   VPopup
