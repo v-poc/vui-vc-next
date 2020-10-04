@@ -1,7 +1,9 @@
 <template>
   <div class="nav-wrapper">
-    <p><span class="title">vui</span><sup>v{{ state.version }}</sup></p>
-    <p>[Examples] - <a href="https://nikoni.top/vui-poc/" target="_blank">POC</a></p>
+    <p>
+      <span class="title">vui</span>
+      <sup>v{{ state.version }}</sup>
+    </p>
     <ul>
       <li
         v-for="item in state.list"
