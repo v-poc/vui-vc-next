@@ -20,17 +20,16 @@ You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to acces
 
 ### Status
 
-- In early WIP stage with experimental status. Copy components manually for any usage.
-- Currently JavaScript version only, will provide TypeScript version later.
+- More UI components WIP.
+- Currently JavaScript version only, will provide TypeScript codebase in next major version.
 - About project test, will provide unit and e2e test later.
 
 ### Usage
 
-Select the components you need to build your web App.
+Select the components you need to build your web App. Please check [VUI-POC](https://github.com/bluepower/vui-poc) for some reference.
 
 ## Project setup
 ```
-npm config set registry https://registry.npmjs.org
 npm install
 ```
 
