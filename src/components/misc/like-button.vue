@@ -201,7 +201,8 @@ $duration: 500ms;
   }
 
   .like-btn.focus-btn & {
-    animation: particle-out calc(#{$duration} * 1.2) $easing forwards;
+    // animation: particle-out calc(#{$duration} * 1.2) $easing forwards;
+    animation: particle-out 600ms $easing forwards;
   }
 }
 
