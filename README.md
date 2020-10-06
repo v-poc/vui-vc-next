@@ -29,6 +29,8 @@ You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to acces
 Select the components you need to build your web App. Please check [VUI-POC](https://github.com/bluepower/vui-poc) for some reference.
 
 ## Project setup
+
+### How to setup your project
 ```
 npm install
 ```

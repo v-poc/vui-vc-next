@@ -30,12 +30,12 @@ export default {
     const btnRef = ref('btnRef')
 
     const btnStyle = computed(() => {
-      const arr = {}
+      const res = {}
       if (props.scale !== 1) {
-        arr['transform'] = `scale(${props.scale})`
+        res['transform'] = `scale(${props.scale})`
       }
-      return arr
-    })    
+      return res
+    })
 
     const onClickButton = () => {
       const p = btnRef.value

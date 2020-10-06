@@ -82,8 +82,8 @@ export default {
   }
 
   &::after {
-    top: 4px;
-    left: 4px;
+    top: 0.04rem;
+    left: 0.04rem;
     width: 0.4rem;
     height: 0.4rem;
     background-color: $switch-handle-color;

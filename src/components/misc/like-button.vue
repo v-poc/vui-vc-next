@@ -3,6 +3,7 @@
     <button
       ref="btnRef"
       class="like-btn"
+      :style="btnStyle"
       @click="onClickButton"
     >
       <div class="like-wrapper">
@@ -32,13 +33,28 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 export default {
   name: 'v-like-button',
 
-  setup() {
+  props: {
+    scale: {
+      type: Number,
+      default: 1
+    }
+  },  
+
+  setup(props, { emit }) {
     const btnRef = ref('btnRef')
+
+    const btnStyle = computed(() => {
+      const res = {}
+      if (props.scale !== 1) {
+        res['transform'] = `scale(${props.scale})`
+      }
+      return res
+    })    
 
     const onClickButton = () => {
       const p = btnRef.value
@@ -46,12 +62,14 @@ export default {
         p.className = 'like-btn focus-btn'
         setTimeout(() => {
           p.className = 'like-btn'
+          emit('on-click')
         }, 600)
       }
     }
 
     return {
       btnRef,
+      btnStyle,
       onClickButton
     }
   }
@@ -112,7 +130,8 @@ $duration: 500ms;
     }
   }
 
-  &:focus::after {
+  &:focus::after,
+  &.focus-btn::after {
     animation: depress $duration $easing both;
   }
 }
@@ -146,6 +165,7 @@ $duration: 500ms;
     transform: scale(0);
   }
 
+  .like-btn:focus &,
   .like-btn.focus-btn & {
     &::before {
       animation: ripple-out $duration $easing;
@@ -164,11 +184,14 @@ $duration: 500ms;
     stroke: $heart-color;
     stroke-width: 2;
     fill: transparent;
-    .like-btn:focus & {
+
+    .like-btn:focus &,
+    .like-btn.focus-btn & {
       fill: $heart-color;
     }
   }
 
+  .like-btn:focus &,
   .like-btn.focus-btn & {
     animation: heart-bounce $duration $easing;
   }
@@ -200,13 +223,15 @@ $duration: 500ms;
     }
   }
 
+  .like-btn:focus &,
   .like-btn.focus-btn & {
     // animation: particle-out calc(#{$duration} * 1.2) $easing forwards;
     animation: particle-out 600ms $easing forwards;
   }
 }
 
-.like-btn:focus {
+.like-btn:focus,
+.like-btn.focus-btn {
   cursor: normal;
   pointer-events: none;
 }
