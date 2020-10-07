@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { reactive, watch, onBeforeMount } from 'vue'
+import { reactive, watch } from 'vue'
 import VPopup from '../popup/index.vue'
 
 export default {
@@ -88,11 +88,7 @@ export default {
   setup(props, { emit }) {
     const state = reactive({
       isShow: props.value || false,
-      clickIndex: -1
-    })
-
-    onBeforeMount(() => {
-      state.clickIndex = props.defaultIndex
+      clickIndex: props.defaultIndex || -1
     })
 
     watch(

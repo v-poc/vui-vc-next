@@ -21,3 +21,4 @@ sidebar: auto
 - [`VResultPage`](./result-page.html)
 - [`VActionBar`](./action-bar.html)
 - [`VSwitch`](./switch.html)
+- [`VActionSheet`](./action-sheet.html)

@@ -4,6 +4,10 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
+    <p>Switch largeRadius</p>
+    <v-switch v-model:value="state.isLargeRadius"/>
+  </div>  
+  <div class="v-example">
     <p>ActionSheet - Basic</p>
     <v-button
       type="primary"
@@ -14,6 +18,7 @@
     >Test Basic usage</v-button>
     <v-action-sheet
       v-model:value="state.isShowDemo"
+      :large-radius="state.isLargeRadius"
       :title="state.title"
       :default-index="state.defaultIndex"
       :invalid-index="state.invalidIndex"
@@ -43,6 +48,7 @@ export default {
   setup() {
     const state = reactive({
       isShowDemo: false,
+      isLargeRadius: true,
       title: 'VUI - ActionSheet',
       options: [
         {
