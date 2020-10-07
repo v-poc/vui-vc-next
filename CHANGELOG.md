@@ -1,3 +1,7 @@
+# 0.0.30 (2020-10-07)
+
+Added ActionSheet demo.
+
 # 0.0.29 (2020-10-02)
 
 Added Switch demo.

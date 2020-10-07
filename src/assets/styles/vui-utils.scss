@@ -62,7 +62,7 @@
   }
 }
 
-@mixin hairline($direction: all, $color: color-border-base, $radius: 0, $size: border-width-base) {
+@mixin hairline($direction: all, $color: $color-border-base, $radius: 0, $size: $border-width-base) {
   @if $direction == top {
     &::after {     
       @include hairline-common($direction);

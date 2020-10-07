@@ -19,6 +19,7 @@ import VResultPage from './result-page/index.vue'
 import VActionBar from './action-bar/index.vue'
 import VOnePiece from './misc/op.vue'
 import VSwitch from './switch/index.vue'
+import VActionSheet from './action-sheet/action-sheet.vue'
 
 // components collection
 const components = {
@@ -38,7 +39,8 @@ const components = {
   VResultPage,
   VActionBar,
   VOnePiece,
-  VSwitch
+  VSwitch,
+  VActionSheet
 }
 
 // components desc array
@@ -90,5 +92,6 @@ export {
   VResultPage,
   VActionBar,
   VOnePiece,
-  VSwitch
+  VSwitch,
+  VActionSheet
 }

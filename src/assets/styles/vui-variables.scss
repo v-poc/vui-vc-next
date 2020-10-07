@@ -1,6 +1,7 @@
 // global style variables
 $color-primary: #2196F3;
 $color-text-highlight: $color-primary;
+$border-width-base: 0.02rem;
 
 $font-body-large: 0.28rem;
 $font-body-normal: 0.26rem;
@@ -10,6 +11,7 @@ $font-minor-normal: 0.2rem;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 
+$color-border-base: #E2E4EA;
 $color-border-element: #E0E0E0;
 $color-text-base: #263238;
 $color-text-base-inverse: #FFF;
@@ -21,6 +23,7 @@ $color-text-body: #41485D;
 $color-text-disabled: #E0E0E0;
 $color-bg-inverse: #FFF;
 $color-bg-disabled: #E2E4EA;
+$color-bg-tap: #F9FAFB;
 $color-mask: rgba(37, 38, 45, 0.7);
 
 $radius-normal: 4px;
@@ -52,6 +55,17 @@ $v-gap-lg: $h-gap-lg;
 $v-gap-sl: $h-gap-sl;
 
 $opacity-disabled: 0.3;
+
+$action-sheet-height: 1rem;
+$action-sheet-padding-h: $h-gap-sl;
+$action-sheet-color: $color-text-body;
+$action-sheet-color-highlight: $color-primary;
+$action-sheet-color-cancel: $color-text-minor;
+$action-sheet-font-size: $font-caption-normal;
+$action-sheet-bg: $color-bg-inverse;
+$action-sheet-disabled-opacity: $opacity-disabled;
+$action-sheet-cancel-gap-bg: $color-bg-base;
+$action-sheet-zindex: 911;
 
 $button-primary-fill: $color-primary;
 $button-default-fill: $color-bg-inverse;

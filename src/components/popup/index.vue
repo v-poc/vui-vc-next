@@ -75,8 +75,10 @@ export default {
     const cls = computed(() => {
       return [
         'v-popup',
-        { 'with-mask': props.hasMask },
-        { 'large-radius': props.largeRadius },
+        {
+          'with-mask': props.hasMask,
+          'large-radius': props.largeRadius
+        },
         props.position
       ]
     })
