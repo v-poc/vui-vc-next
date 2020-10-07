@@ -5,8 +5,11 @@
   >&lt; Home</router-link>
   <div class="v-example">
     <p>Switch largeRadius</p>
-    <v-switch v-model:value="state.isLargeRadius"/>
-  </div>  
+    <v-switch
+      v-model:value="state.isLargeRadius"
+      @change="onShowDemo"
+    />
+  </div>
   <div class="v-example">
     <p>ActionSheet - Basic</p>
     <v-button
@@ -14,7 +17,7 @@
       size="small"
       inline
       round
-      @click="onShowDemo()"
+      @click="onShowDemo"
     >Test Basic usage</v-button>
     <v-action-sheet
       v-model:value="state.isShowDemo"
@@ -34,6 +37,7 @@ import { reactive } from 'vue'
 import Toast from '../components/toast/index'
 // import VActionSheet from '../components/action-sheet/action-sheet.vue'
 // import VButton from '../components/button/index.vue'
+// import VSwitch from '../components/switch/index.vue'
 
 export default {
   name: 'action-sheet-demo',
@@ -42,7 +46,8 @@ export default {
 
   // components: {
   //   VActionSheet,
-  //   VButton
+  //   VButton,
+  //   VSwitch
   // },
 
   setup() {
@@ -73,11 +78,11 @@ export default {
     }
 
     const onSelected = (item) => {
-      Toast.info(`Selected item label: ${item.label || ''}`)
+      Toast.succeed(`Selected item label: ${item.label || ''}`)
     }
 
     const onCancel = () => {
-      Toast.info('Cancel ActionSheet')
+      Toast.failed('Cancel ActionSheet')
     }
 
     return {
