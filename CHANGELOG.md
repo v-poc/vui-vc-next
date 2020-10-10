@@ -4,7 +4,8 @@ Added ActionSheet demo.
 
 # 0.0.29 (2020-10-02)
 
-Added Switch demo.
+- Added Switch demo.
+- Updated Button demo for like button.
 
 # 0.0.28 (2020-09-29)
 

@@ -22,7 +22,7 @@ You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to acces
 
 - More UI components WIP.
 - Currently JavaScript version only, will provide TypeScript codebase in next major version.
-- About project test, will provide unit and e2e test later.
+- About project test, will provide unit and e2e test in next major version.
 
 ### Usage
 
