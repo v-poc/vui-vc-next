@@ -68,7 +68,7 @@
         <p>Touch center point</p>
         <v-cool-button
           :scale="1.1"
-          @on-click="onClickCoolButton"
+          @on-click="onClickButton"
         />
       </div>
     </v-popup>
@@ -89,7 +89,7 @@
     >
       <div class="v-example-popup v-example-popup-center">
         <p>Touch heart point</p>
-        <v-like-button/>
+        <v-like-button @on-click="onClickButton"/>
       </div>
     </v-popup>
   </div>
@@ -125,7 +125,7 @@ export default {
       popupShow.value[pos] = isShow
     }
 
-    const onClickCoolButton = () => {
+    const onClickButton = () => {
       Toast({
         icon: 'warn',
         content: 'So cool, nice feeling!',
@@ -136,7 +136,7 @@ export default {
     return {
       popupShow: popupShow.value,
       showPopup,
-      onClickCoolButton
+      onClickButton
     }
   }
 }

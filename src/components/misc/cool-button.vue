@@ -1,7 +1,6 @@
 <template>
   <div
-    ref="btnRef"
-    class="v-btn-op"
+    :class="cls"
     :style="btnStyle"
   >
     <div
@@ -14,7 +13,7 @@
 </template>
 
 <script>
-import { computed, ref } from 'vue'
+import { computed, reactive } from 'vue'
 
 export default {
   name: 'v-cool-button',
@@ -27,7 +26,9 @@ export default {
   },  
 
   setup(props, { emit }) {
-    const btnRef = ref('btnRef')
+    const state = reactive({
+      isAddCls: false
+    })
 
     const btnStyle = computed(() => {
       const res = {}
@@ -37,20 +38,27 @@ export default {
       return res
     })
 
+    const cls = computed(() => {
+      return [
+        'v-btn-op',
+        {
+          'pururun': state.isAddCls
+        }
+      ]
+    })    
+
     const onClickButton = () => {
-      const p = btnRef.value
-      if (p) {
-        p.className = 'v-btn-op pururun'
-        setTimeout(() => {
-          p.className = 'v-btn-op'
-          emit('on-click')
-        }, 2000)
-      }
+      state.isAddCls = true
+      setTimeout(() => {
+        state.isAddCls = false
+        emit('on-click')
+      }, 2000)
     }
 
     return {
-      btnRef,
+      state,
       btnStyle,
+      cls,
       onClickButton
     }
   }  

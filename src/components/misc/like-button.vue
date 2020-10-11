@@ -1,8 +1,7 @@
 <template>
   <div class="like-container">
     <button
-      ref="btnRef"
-      class="like-btn"
+      :class="cls"
       :style="btnStyle"
       @click="onClickButton"
     >
@@ -33,7 +32,7 @@
 </template>
 
 <script>
-import { computed, ref } from 'vue'
+import { computed, reactive } from 'vue'
 
 export default {
   name: 'v-like-button',
@@ -46,7 +45,9 @@ export default {
   },  
 
   setup(props, { emit }) {
-    const btnRef = ref('btnRef')
+    const state = reactive({
+      isAddCls: false
+    })
 
     const btnStyle = computed(() => {
       const res = {}
@@ -54,29 +55,36 @@ export default {
         res['transform'] = `scale(${props.scale})`
       }
       return res
+    })
+
+    const cls = computed(() => {
+      return [
+        'like-btn',
+        {
+          'focus-btn': state.isAddCls
+        }
+      ]
     })    
 
     const onClickButton = () => {
-      const p = btnRef.value
-      if (p) {
-        p.className = 'like-btn focus-btn'
-        setTimeout(() => {
-          p.className = 'like-btn'
-          emit('on-click')
-        }, 600)
-      }
+      state.isAddCls = true
+      setTimeout(() => {
+        state.isAddCls = false
+        emit('on-click')
+      }, 600)
     }
 
     return {
-      btnRef,
+      state,
       btnStyle,
+      cls,
       onClickButton
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $heart-color: #f66;
 $easing: cubic-bezier(0.7, 0, 0.3, 1);
 $duration: 500ms;
