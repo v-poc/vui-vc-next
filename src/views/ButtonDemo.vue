@@ -68,10 +68,24 @@
         <p>Touch center point</p>
         <v-cool-button
           :scale="1.1"
-          @on-click="onClickButton"
+          @on-click="showPopup('fullscreenMode', true)"
         />
       </div>
     </v-popup>
+    <v-landscape
+      v-model:value="popupShow.fullscreenMode"
+      fullscreen
+    >
+      <img src="https://nikoni.top/images/others/cg.jpg" />
+      <v-cool-button
+        :scale="0.5"
+        class="btn-lt"
+      />
+      <v-cool-button
+        :scale="0.5"
+        class="btn-rt"
+      />
+    </v-landscape>
   </div>
   <div class="v-example">
     <p>Like Button</p>
@@ -89,7 +103,7 @@
     >
       <div class="v-example-popup v-example-popup-center">
         <p>Touch heart point</p>
-        <v-like-button @on-click="onClickButton"/>
+        <v-like-button @on-click="onClickButton" />
       </div>
     </v-popup>
   </div>
@@ -103,6 +117,7 @@ import VLikeButton from '../components/misc/like-button.vue'
 // import VButton from '../components/button/index.vue'
 // import VIcon from '../components/icon/index.vue'
 // import VPopup from '../components/popup/index.vue'
+// import VLandscape from '../components/landscape/index.vue'
 
 export default {
   name: 'button-demo',
@@ -114,7 +129,8 @@ export default {
     VLikeButton
     //   VButton,
     //   VIcon,
-    //   VPopup
+    //   VPopup,
+    //   VLandscape
   },
 
   setup() {
@@ -144,4 +160,20 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.btn-lt {
+  position: absolute;
+  top: 1.8rem;
+  left: 1.4rem;
+}
+
+.btn-rt {
+  position: absolute;
+  top: 1.8rem;
+  left: 2.9rem;
+}
+
+::v-deep(.v-landscape .v-icon.v-landscape-close.dark) {
+  opacity: 1;
+}
 </style>
