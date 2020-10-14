@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" vars="{ scale }">
 .v-btn-star {
   display: block;
   position: absolute;
@@ -99,11 +99,7 @@ export default {
     width: 16px;
     height: 16px;
     background: #ffb7a4;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
     border-radius: 8px;
-    -webkit-box-shadow: 0 2px 5px #ec8d73;
-    -moz-box-shadow: 0 2px 5px #ec8d73;
     box-shadow: 0 2px 5px #ec8d73;
   }
 
@@ -114,11 +110,7 @@ export default {
     content: '';
     width: 10px;
     height: 10px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
-    -webkit-box-shadow: 0 0 5px #fff;
-    -moz-box-shadow: 0 0 5px #fff;
     box-shadow: 0 0 5px #fff;
   }
 }
@@ -165,37 +157,37 @@ export default {
 
 @-webkit-keyframes pururun {
   0% {
-    -webkit-transform: scale(0.95);
+    -webkit-transform: scale(calc(var(--scale) * 0.95));
   }
   10% {
-    -webkit-transform: scale(1.1);
+    -webkit-transform: scale(calc(var(--scale) * 1.1));
   }
   20% {
-    -webkit-transform: scale(0.927);
+    -webkit-transform: scale(calc(var(--scale) * 0.927));
   }
   30% {
-    -webkit-transform: scale(1.051);
+    -webkit-transform: scale(calc(var(--scale) * 1.051));
   }
   40% {
-    -webkit-transform: scale(0.965);
+    -webkit-transform: scale(calc(var(--scale) * 0.965));
   }
   50% {
-    -webkit-transform: scale(1.021);
+    -webkit-transform: scale(calc(var(--scale) * 1.021));
   }
   60% {
-    -webkit-transform: scale(0.987);
+    -webkit-transform: scale(calc(var(--scale) * 0.987));
   }
   70% {
-    -webkit-transform: scale(1.0027);
+    -webkit-transform: scale(calc(var(--scale) * 1.0027));
   }
   80% {
-    -webkit-transform: scale(0.9992);
+    -webkit-transform: scale(calc(var(--scale) * 0.9992));
   }
   90% {
-    -webkit-transform: scale(1.0006);
+    -webkit-transform: scale(calc(var(--scale) * 1.0006));
   }
   100% {
-    -webkit-transform: scale(0.95);
+    -webkit-transform: scale(calc(var(--scale) * 0.95));
   }
 }
 
