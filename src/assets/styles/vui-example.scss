@@ -9,11 +9,17 @@
     font-size: 0.3rem;
   }
   
-  .title {
-    margin-right: 0.2rem;
+  .title {    
     text-transform: uppercase;
     font-size: 0.5rem;
     font-weight: bold;
+  }
+
+  sub {
+    margin-right: 0.3rem;
+    bottom: 0.1rem;
+    position: relative;
+    opacity: 0.5;
   }
   
   ul {

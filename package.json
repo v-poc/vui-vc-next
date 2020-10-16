@@ -1,6 +1,6 @@
 {
   "name": "vui-vc-next",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Mobile web UI components based on Vue 3 and Vite",
   "main": "src/components/index.js",
   "files": [
@@ -21,7 +21,8 @@
     "vue3-vite",
     "vue3-vite-ui",
     "vue-composition-api",
-    "vitepress"
+    "vitepress",
+    "vue3-vite-vitepress"
   ],
   "author": "Niko Ni",
   "license": "MIT",
@@ -36,11 +37,11 @@
     "build-docs": "cd docs && npx vitepress build"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/compiler-sfc": "^3.0.1",
     "sass": "^1.27.0",
     "vite": "^1.0.0-rc.4",
     "vitepress": "^0.6.0",
-    "vue": "^3.0.0",
+    "vue": "^3.0.1",
     "vue-router": "^4.0.0-beta.13"
   },
   "engines": {

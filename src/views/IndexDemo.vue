@@ -2,7 +2,8 @@
   <div class="nav-wrapper">
     <p>
       <span class="title">vui</span>
-      <sup>v{{ state.version }}</sup>
+      <sub>.next</sub>
+      <sub>v{{ state.version }}</sub>
     </p>
     <ul>
       <li

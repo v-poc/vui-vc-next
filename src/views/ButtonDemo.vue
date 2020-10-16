@@ -80,10 +80,12 @@
       <v-cool-button
         :scale="0.5"
         class="btn-lt"
+        @on-click="onClickButton"
       />
       <v-cool-button
         :scale="0.5"
         class="btn-rt"
+        @on-click="onClickButton"
       />
     </v-landscape>
   </div>
@@ -145,7 +147,7 @@ export default {
       Toast({
         icon: 'warn',
         content: 'So cool, nice feeling!',
-        position: 'top'
+        position: 'bottom'
       })
     }
 
