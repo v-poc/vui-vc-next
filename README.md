@@ -51,6 +51,4 @@ About vite and vitepress, please check Configuration Reference - [vite](https://
 
 ## License
 
-[MIT](https://github.com/bluepower/vui-vc-next/blob/dev/LICENSE)
-
 <img src="https://nikoni.top/images/niko-mit.png" alt="MIT License" width="396" height="250"/>
