@@ -1,8 +1,12 @@
+# 0.2.0 (2020-10-17)
+
+Added WaterMark demo.
+
 # 0.1.0 (2020-10-11)
 
-VUI (based on vue3) is able to run in cross-platform solutions by [Taro](https://github.com/NervJS/taro).
-- miniprogram (weapp/swan/alipay/tt/qq/jd)
-- quickapp
+VUI (based on vue3) is able to run in cross-platform solutions by [Taro3](https://github.com/NervJS/taro).
+- miniprogram (weapp/swan/alipay/tt/qq/jd) - `zh-CN` project
+- quickapp - `zh-CN` project
 - h5
 - react native
 

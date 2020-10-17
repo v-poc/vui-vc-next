@@ -20,6 +20,7 @@ import VActionBar from './action-bar/index.vue'
 import VOnePiece from './misc/op.vue'
 import VSwitch from './switch/index.vue'
 import VActionSheet from './action-sheet/action-sheet.vue'
+import VWatermark from './watermark/index.vue'
 
 // components collection
 const components = {
@@ -40,7 +41,8 @@ const components = {
   VActionBar,
   VOnePiece,
   VSwitch,
-  VActionSheet
+  VActionSheet,
+  VWatermark
 }
 
 // components desc array
@@ -93,5 +95,6 @@ export {
   VActionBar,
   VOnePiece,
   VSwitch,
-  VActionSheet
+  VActionSheet,
+  VWatermark
 }

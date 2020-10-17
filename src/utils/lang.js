@@ -66,3 +66,27 @@ export const formatColor = (str = '') => str.replace(/(.*)(\d)/, '$1-$2')
 export const logInfo = (content) => {
   console.info('%c%s', 'background: #36C;color: #FFF', `[VUI-log] ${content}`)
 }
+
+// Get Dpr
+export const getDpr = () => {
+  const getParam = (name, str) => {
+    const reg = new RegExp(`(^|,)${name}=([^,]*)(,|$)`, 'i')
+    const r = str.match(reg)
+    if (r) {
+      return r[2]
+    }
+    return null
+  }
+
+  const viewPort = typeof window !== 'undefined' ? document.querySelector('meta[name=viewport]') : null
+  if (!viewPort) {
+    return 1
+  }
+
+  const viewPortContent = viewPort.getAttribute('content')
+  const initialScale = +(getParam('initial-scale', viewPortContent) || 1)
+  const maximumScale = +(getParam('maximum-scale', viewPortContent) || 1)
+  const minimumScale = +(getParam('minimum-scale', viewPortContent) || 1)
+
+  return 1 / Math.min(initialScale, maximumScale, minimumScale)
+}

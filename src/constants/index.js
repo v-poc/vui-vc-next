@@ -15,3 +15,9 @@ export const CN_AMOUNT = {
   INT_LAST: '\u5143',
   NEGATIVE: '\u8d1f'
 }
+
+export const WATERMARK = {
+  FONT_SIZE: 14,
+  FONT: '"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif',
+  COLOR: '#858B9C'
+}
