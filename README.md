@@ -28,6 +28,12 @@ You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to acces
 
 Select the components you need to build your web App. Please check [VUI-POC](https://github.com/bluepower/vui-poc) for some reference.
 
+VUI (based on vue3) is able to run in cross-platform solutions by [Taro3](https://github.com/NervJS/taro).
+- miniprogram (weapp/swan/alipay/tt/qq/jd) - `zh-CN` project
+- quickapp - `zh-CN` project
+- h5
+- react native
+
 ## Project setup
 
 ### How to setup your project
