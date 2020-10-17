@@ -76,7 +76,7 @@
       v-model:value="popupShow.fullscreenMode"
       fullscreen
     >
-      <img src="https://nikoni.top/images/others/cg.jpg" />
+      <img src="https://nikoni.top/images/others/cg.jpg"/>
       <v-cool-button
         :scale="0.5"
         class="btn-lt"
@@ -177,5 +177,11 @@ export default {
 
 ::v-deep(.v-landscape .v-icon.v-landscape-close.dark) {
   opacity: 1;
+}
+
+@media (min-width: 640px) {
+  .v-landscape img {
+    width: 6.2rem;
+  }
 }
 </style>

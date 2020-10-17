@@ -22,3 +22,8 @@ sidebar: auto
 - [`VActionBar`](./action-bar.html)
 - [`VSwitch`](./switch.html)
 - [`VActionSheet`](./action-sheet.html)
+- [`VWatermark`](./watermark.html)
+
+## License
+
+<img src="https://nikoni.top/images/niko-mit.png" alt="MIT License" width="396" height="250"/>
