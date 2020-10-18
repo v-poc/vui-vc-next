@@ -14,7 +14,7 @@
       :inactive="state.contentLoading"
     >Test Content loading (delay 2s)</v-button>
     <v-skeleton
-      class="v-example-img"
+      :class="{'v-example-img': state.contentLoading}"
       v-if="state.showContent"
       title
       title-width="80%"
