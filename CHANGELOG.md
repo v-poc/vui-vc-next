@@ -1,6 +1,10 @@
-# 0.2.0 (2020-10-17)
+# 0.2.3 (2020-10-19)
 
-Added WaterMark demo.
+Updated version for vitepress.
+
+# 0.2.1 (2020-10-17)
+
+Added Watermark demo.
 
 # 0.1.0 (2020-10-11)
 
