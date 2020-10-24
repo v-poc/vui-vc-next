@@ -25,7 +25,7 @@
         @cancel="hidePopupTitleBar('cancelButton')"
       ></v-popup-title-bar>
       <div class="v-example-op-default">
-        <v-one-piece @click="showPopup('maskClosableMode', true)"/>
+        <v-one-piece @click="showPopup('maskClosableMode', true)" />
       </div>
     </v-popup>
     <v-landscape
@@ -36,9 +36,9 @@
       transition="v-bounce"
     >
       <div class="v-example-op">
-        <v-one-piece :scale="1.8"/>
+        <v-one-piece :scale="1.8" />
       </div>
-    </v-landscape>    
+    </v-landscape>
   </div>
 </template>
 
@@ -108,6 +108,6 @@ export default {
 
 .v-example-op-default {
   height: 3.5rem;
-  background: #FFF;
+  background: #fff;
 }
 </style>

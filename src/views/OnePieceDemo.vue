@@ -67,7 +67,7 @@ export default {
 
   span.unit {
     font-size: 0.25rem;
-  }  
+  }
 }
 
 ::v-deep(.v-example-op) {
@@ -82,6 +82,12 @@ export default {
 
   img {
     width: 50%;
+  }
+}
+
+@media (min-width: 640px) {
+  .v-example-poc img {
+    width: 4rem;
   }
 }
 </style>

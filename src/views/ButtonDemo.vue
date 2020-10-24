@@ -76,7 +76,7 @@
       v-model:value="popupShow.fullscreenMode"
       fullscreen
     >
-      <img src="https://nikoni.top/images/others/cg.jpg"/>
+      <img src="https://nikoni.top/images/others/cg.jpg" />
       <v-cool-button
         :scale="0.5"
         class="btn-lt"

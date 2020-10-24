@@ -202,7 +202,7 @@ export default {
       useLoadSvgSprite(res)
       state.svgList = Object.keys(res)
     }
-    
+
     onUnmounted(() => {
       const svgNode = document.getElementById(SVG_SPRITE_NODE_ID)
       svgNode && svgNode.parentNode.removeChild(svgNode)
@@ -227,17 +227,17 @@ export default {
 
 .v-icon.icon-svg.v-icon-svg-message.lg {
   width: 1rem;
-  height: .8rem;
+  height: 0.8rem;
 }
 
 .v-icon.icon-svg.v-icon-svg-github.lg {
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
 .v-icon.icon-svg.v-icon-svg-trolley.lg {
-  width: .45rem;
-  height: .45rem;
+  width: 0.45rem;
+  height: 0.45rem;
 }
 
 .v-icon.icon-svg.v-icon-no-result.lg {

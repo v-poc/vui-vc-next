@@ -37,7 +37,7 @@
       transition="v-bounce"
     >
       <div class="v-example-op">
-        <v-one-piece :scale="1.8"/>
+        <v-one-piece :scale="1.8" />
       </div>
     </v-landscape>
   </div>
@@ -93,8 +93,8 @@ export default {
         content,
         duration: 650,
         position: 'top'
-      })      
-    }    
+      })
+    }
 
     return {
       popupShow: popupShow.value,

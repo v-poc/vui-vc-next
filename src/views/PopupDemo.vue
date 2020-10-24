@@ -22,7 +22,7 @@
         <img src="../assets/images/mj.png" />
       </div>
     </v-popup>
-  </div>  
+  </div>
   <div class="v-example">
     <p>Popup from left</p>
     <v-button

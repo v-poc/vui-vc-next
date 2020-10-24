@@ -5,9 +5,7 @@
   >&lt; Home</router-link>
   <div class="v-example">
     <p>Result type - Lost</p>
-    <v-result-page
-      type="lost"
-    ></v-result-page>
+    <v-result-page type="lost"></v-result-page>
   </div>
   <div class="v-example">
     <p>Result page - Customized image</p>
@@ -20,10 +18,8 @@
   </div>
   <div class="v-example">
     <p>Result type - Empty</p>
-    <v-result-page
-      type="empty"
-    ></v-result-page>
-  </div>  
+    <v-result-page type="empty"></v-result-page>
+  </div>
 </template>
 
 <script>
@@ -63,7 +59,7 @@ export default {
         }
       ]
     })
-    
+
     return {
       state
     }

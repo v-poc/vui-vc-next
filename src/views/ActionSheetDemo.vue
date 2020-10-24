@@ -4,13 +4,6 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <p>Switch largeRadius</p>
-    <v-switch
-      v-model:value="state.isLargeRadius"
-      @change="onShowDemo"
-    />
-  </div>
-  <div class="v-example">
     <p>ActionSheet - Basic</p>
     <v-button
       type="primary"
@@ -29,6 +22,13 @@
       @selected="onSelected"
       @cancel="onCancel"
     ></v-action-sheet>
+  </div>
+  <div class="v-example">
+    <p>Switch largeRadius</p>
+    <v-switch
+      v-model:value="state.isLargeRadius"
+      @change="onShowDemo"
+    />
   </div>
 </template>
 

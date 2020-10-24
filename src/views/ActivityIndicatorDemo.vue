@@ -10,8 +10,8 @@
         :size="40"
         :text-size="20"
       >Loading...</v-activity-indicator>
-      <br/>
-      <v-activity-indicator        
+      <br />
+      <v-activity-indicator
         :size="20"
         :text-size="16"
         vertical
@@ -25,13 +25,13 @@
         type="spinner"
         :size="30"
       >Loading Data...</v-activity-indicator>
-      <br/>
+      <br />
       <v-activity-indicator
         type="spinner"
         :size="30"
         vertical
       >Vertical Loading...</v-activity-indicator>
-      <br/>
+      <br />
       <v-activity-indicator
         type="spinner"
         class="activity-indicator-container"
@@ -62,7 +62,7 @@ export default {
 
 .activity-indicator-container {
   padding: 0.15rem 0.2rem;
-  background: rgba(0, 0, 0, .6);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
 }
 </style>

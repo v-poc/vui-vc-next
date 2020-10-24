@@ -192,11 +192,11 @@ export default {
   }
 
   .white-text {
-    color: #FFF;
+    color: #fff;
   }
 
   .black-text {
     color: #000;
-  }  
+  }
 }
 </style>
