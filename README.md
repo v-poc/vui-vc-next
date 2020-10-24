@@ -1,4 +1,4 @@
-# vui-vc-next
+# vui-vc-next (aka vui.next)
 
 > Yet another lightweight Mobile web UI components based on Vue 3 and Vite
 
