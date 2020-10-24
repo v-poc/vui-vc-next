@@ -1,3 +1,7 @@
+# 0.2.6 (2020-10-24)
+
+Updated version for vite.
+
 # 0.2.3 (2020-10-19)
 
 Updated version for vitepress.
@@ -30,6 +34,8 @@ Refactor: update v-model:value for customized components.
 # 0.0.26 (2020-09-26)
 
 Added OnePiece demo.
+
+> [Vue 3.0.0 is released](https://github.com/vuejs/vue-next/releases/tag/v3.0.0) on 18 Sep.
 
 # 0.0.20 (2020-09-13)
 
