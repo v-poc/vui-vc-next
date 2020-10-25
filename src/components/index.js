@@ -21,6 +21,7 @@ import VOnePiece from './misc/op.vue'
 import VSwitch from './switch/index.vue'
 import VActionSheet from './action-sheet/action-sheet.vue'
 import VWatermark from './watermark/index.vue'
+import VScrollView from './scroll-view/index.vue'
 
 // components collection
 const components = {
@@ -42,7 +43,8 @@ const components = {
   VOnePiece,
   VSwitch,
   VActionSheet,
-  VWatermark
+  VWatermark,
+  VScrollView
 }
 
 // components desc array
@@ -96,5 +98,6 @@ export {
   VOnePiece,
   VSwitch,
   VActionSheet,
-  VWatermark
+  VWatermark,
+  VScrollView
 }

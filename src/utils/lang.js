@@ -90,3 +90,27 @@ export const getDpr = () => {
 
   return 1 / Math.min(initialScale, maximumScale, minimumScale)
 }
+
+// The debounce function
+export const debounce = function (func = noop, wait = 300, immediate = false) {
+  let timer = null
+  let result
+  return function() {
+      const context = this
+      const args = arguments
+
+      if (timer) clearTimeout(timer)
+      if (immediate) {
+          const callNow = !timer
+          timer = setTimeout(() => {
+              timer = null
+          }, wait)
+          if (callNow) result = func.apply(context, args)
+      } else {
+          timer = setTimeout(() => {
+              func.apply(context, args)
+          }, wait)
+      }
+      return result
+  }
+}

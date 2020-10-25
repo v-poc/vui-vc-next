@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import VActivityIndicatorRoller from '../activity-indicator/roller.vue'
 
 export default {
@@ -25,6 +25,26 @@ export default {
       type: Number,
       default: 0
     },
+    isRefreshing: {
+      type: Boolean,
+      default: false
+    },
+    isRefreshActive: {
+      type: Boolean,
+      default: false
+    },
+    refreshText: {
+      type: String,
+      default: 'Pull-to-refresh'
+    },
+    refreshActiveText: {
+      type: String,
+      default: 'Release-to-refresh'
+    },
+    refreshingText: {
+      type: String,
+      default: 'Refreshing...'
+    },
     rollerColor: {
       type: String,
       default: '#2F86F6'
@@ -32,15 +52,35 @@ export default {
   },
 
   setup(props) {
+    const root = ref(null)
+
     const rollerProcess = computed(() => {
-      // WIP
+      if (props.isRefreshing) {
+        return
+      }
+
+      if (!root || !props.scrollTop) {
+        return +props.scrollTop
+      }
+
+      const refreshH = root.value.clientHeight
+      if (Math.abs(props.scrollTop) < refreshH / 2) {
+        return 0
+      }
+
+      return (Math.abs(props.scrollTop) - refreshH / 2) / (refreshH / 2)
     }),
 
     const refreshTip = computed(() => {
-      // WIP
+      return props.isRefreshing
+        ? props.refreshingText
+        : props.isRefreshActive
+            ? props.refreshActiveText
+            : props.refreshText
     })
 
     return {
+      root,
       rollerProcess,
       refreshTip
     }
@@ -49,5 +89,25 @@ export default {
 </script>
 
 <style lang="scss">
-// WIP
+.v-scroll-view-refresh {
+  display: flex;
+  padding: 0.5rem 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .v-activity-indicator-rolling {
+    .v-activity-indicator-svg {
+      width: 0.32rem !important;
+      height: 0.32rem !important;
+      transform: rotateZ(-45deg);
+    }
+  }
+
+  .refresh-tip {
+    margin-left: 0.15rem;
+    font-size: 0.24rem;
+    color: #999;
+  }
+}
 </style>
