@@ -11,11 +11,17 @@
     @mouseup="onScrollerMouseUp"
     @mouseleave="onScrollerMouseUp"
   >
-    <div class="scroll-view-header" v-if="headerSlot">
+    <div
+      class="scroll-view-header"
+      v-if="headerSlot"
+    >
       <slot name="header"></slot>
     </div>
     <div :class="containerCls">
-      <div v-if="hasRefresher" :class="refresherCls">
+      <div
+        v-if="hasRefresher"
+        :class="refresherCls"
+      >
         <slot
           name="refresh"
           :scroll-top="state.scrollY"
@@ -24,21 +30,35 @@
         ></slot>
       </div>
       <slot></slot>
-      <div v-if="hasMore" :class="moreCls">
+      <div
+        v-if="hasMore"
+        :class="moreCls"
+      >
         <slot
           name="more"
           :is-end-reaching="state.isEndReachingStart || state.isEndReaching"
         ></slot>
       </div>
     </div>
-    <div class="scroll-view-footer" v-if="footerSlot">
+    <div
+      class="scroll-view-footer"
+      v-if="footerSlot"
+    >
       <slot name="footer"></slot>
     </div>
   </div>
 </template>
 
 <script>
-import { computed, reactive, ref, nextTick, watch, onMounted, onUnmounted } from 'vue'
+import {
+  computed,
+  reactive,
+  ref,
+  nextTick,
+  watch,
+  onMounted,
+  onUnmounted
+} from 'vue'
 import { debounce, render } from '../../utils/index'
 import Scroller from '../../utils/scroller'
 
@@ -88,8 +108,7 @@ export default {
     const root = ref(null)
 
     const state = reactive({
-      content: null,
-      isInited: false,
+      content: null,      
       isRefreshing: false,
       isRefreshActive: false,
       isEndReachingStart: false,
@@ -102,6 +121,7 @@ export default {
       contentH: 0
     })
 
+    let isInited = false
     let scroller = null
     let isMouseDown = false
     let startX = 0
@@ -124,7 +144,7 @@ export default {
       return [
         'scroll-view-container',
         {
-          'horizontal': props.scrollingX && !props.scrollingY
+          horizontal: props.scrollingX && !props.scrollingY
         }
       ]
     })
@@ -133,7 +153,7 @@ export default {
       return [
         'scroll-view-refresh',
         {
-          'refreshing': state.isRefreshing,
+          refreshing: state.isRefreshing,
           'refresh-active': state.isRefreshActive
         }
       ]
@@ -143,18 +163,17 @@ export default {
       return [
         'scroll-view-more',
         {
-          'active': state.isEndReachingStart || state.isEndReaching
+          active: state.isEndReachingStart || state.isEndReaching
         }
       ]
     })
 
     // methods
     const initScroller = () => {
-      if (state.isInited) {
+      if (isInited) {
         return
       }
       const container = root.value
-      console.log('container', container)
       const refresher = container.querySelector('.scroll-view-refresh')
       const more = container.querySelector('.scroll-view-more')
       state.content = container.querySelector('.scroll-view-container')
@@ -167,7 +186,7 @@ export default {
         (left, top) => {
           render(content, left, top)
 
-          if (state.isInited) {
+          if (isInited) {
             onScroll(left, top)
           }
         },
@@ -178,10 +197,13 @@ export default {
           zooming: false,
           animationDuration: 200,
           speedMultiplier: 1.2,
-          inRequestAnimationFrame: true,
-        },
+          inRequestAnimationFrame: true
+        }
       )
-      scroller.setPosition(rect.left + container.clientLeft, rect.top + container.clientTop)
+      scroller.setPosition(
+        rect.left + container.clientLeft,
+        rect.top + container.clientTop
+      )
       if (hasRefresher) {
         scroller.activatePullToRefresh(
           refreshOffsetY,
@@ -199,7 +221,7 @@ export default {
             state.isRefreshActive = false
             state.isRefreshing = true
             emit('refreshing')
-          },
+          }
         )
       }
       reflowScroller(true)
@@ -211,7 +233,7 @@ export default {
       }, 50)
 
       setTimeout(() => {
-        state.isInited = true
+        isInited = true
       }, 50)
 
       if (props.immediateCheckEndReaching) {
@@ -235,11 +257,17 @@ export default {
         return
       }
       const containerHeight = scroller._clientHeight
-      const content = scroller._contentHeight
+      const contentHeight = scroller._contentHeight
       const top = scroller._scrollTop
       const moreThreshold = props.endReachedThreshold
-      const endOffset = content - containerHeight - (top + moreOffsetY + moreThreshold)
-      if (top >= 0 && !state.isEndReaching && endOffset <= 0 && endReachedHandler) {
+      const endOffset =
+        contentHeight - containerHeight - (top + moreOffsetY + moreThreshold)
+      if (
+        top >= 0 &&
+        !state.isEndReaching &&
+        endOffset <= 0 &&
+        endReachedHandler
+      ) {
         // First prepare for "load more" state
         state.isEndReachingStart = true
         // Second enter "load more" state
@@ -251,7 +279,8 @@ export default {
     const getScrollerAngle = () => {
       const diffX = currentX - startX
       const diffY = currentY - startY
-      const angle = Math.atan2(Math.abs(diffY), Math.abs(diffX)) * 180 / Math.PI
+      const angle =
+        (Math.atan2(Math.abs(diffY), Math.abs(diffX)) * 180) / Math.PI
       return props.scrollingX ? 90 - angle : angle
     }
 
@@ -294,8 +323,14 @@ export default {
       scroller.doTouchMove(event.touches, event.timeStamp, event.scale)
 
       const boundaryDistance = 15
-      const scrollLeft = document.documentElement.scrollLeft || window.pageXOffset || document.body.scrollLeft
-      const scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
+      const scrollLeft =
+        document.documentElement.scrollLeft ||
+        window.pageXOffset ||
+        document.body.scrollLeft
+      const scrollTop =
+        document.documentElement.scrollTop ||
+        window.pageYOffset ||
+        document.body.scrollTop
 
       const pX = currentX - scrollLeft
       const pY = currentY - scrollTop
@@ -326,10 +361,10 @@ export default {
         [
           {
             pageX: event.pageX,
-            pageY: event.pageY,
-          },
+            pageY: event.pageY
+          }
         ],
-        event.timeStamp,
+        event.timeStamp
       )
       isMouseDown = true
     }
@@ -351,10 +386,10 @@ export default {
         [
           {
             pageX: event.pageX,
-            pageY: event.pageY,
-          },
+            pageY: event.pageY
+          }
         ],
-        event.timeStamp,
+        event.timeStamp
       )
       isMouseDown = true
     }
@@ -379,7 +414,7 @@ export default {
       state.scrollY = top
       checkScrollerEnd()
 
-      emit('scroll', {scrollLeft: left, scrollTop: top})
+      emit('scroll', { scrollLeft: left, scrollTop: top })
     }
 
     const reflowScroller = (force = false) => {
@@ -405,7 +440,7 @@ export default {
             container.clientWidth,
             container.clientHeight,
             content.offsetWidth,
-            content.offsetHeight,
+            content.offsetHeight
           )
           state.containerW = containerW
           state.containerH = containerH
@@ -413,6 +448,30 @@ export default {
           state.contentH = contentH
         }
       })
+    }
+
+    const triggerRefresh = () => {
+      if (!scroller) {
+        return
+      }
+      scroller.triggerPullToRefresh()
+    }
+
+    const finishRefresh = () => {
+      if (!scroller) {
+        return
+      }
+      scroller.finishPullToRefresh()
+      reflowScroller()
+    }
+
+    const finishLoadMore = () => {
+      if (!scroller) {
+        return
+      }
+      state.isEndReachingStart = false
+      state.isEndReaching = false
+      reflowScroller()
     }
 
     onMounted(() => {
@@ -441,14 +500,17 @@ export default {
       hasMore,
       containerCls,
       refresherCls,
-      moreCls,
-      reflowScroller,
+      moreCls,      
       onScrollerTouchStart,
       onScrollerTouchMove,
       onScrollerTouchEnd,
       onScrollerMouseDown,
       onScrollerMouseMove,
-      onScrollerMouseUp
+      onScrollerMouseUp,
+      reflowScroller,
+      triggerRefresh,
+      finishRefresh,
+      finishLoadMore
     }
   }
 }
@@ -484,7 +546,7 @@ export default {
     @include clearfix();
     position: relative;
     z-index: 1;
-    
+
     .scroll-view-refresh {
       @include clearfix();
       position: absolute;
