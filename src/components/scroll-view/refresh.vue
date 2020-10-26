@@ -1,5 +1,8 @@
 <template>
-  <div class="v-scroll-view-refresh">
+  <div
+    ref="root"
+    class="v-scroll-view-refresh"
+  >
     <v-activity-indicator-roller
       :process="rollerProcess"
       :width="10"
@@ -59,7 +62,7 @@ export default {
         return
       }
 
-      if (!root || !props.scrollTop) {
+      if (!root.value || !props.scrollTop) {
         return +props.scrollTop
       }
 
@@ -67,7 +70,7 @@ export default {
       if (Math.abs(props.scrollTop) < refreshH / 2) {
         return 0
       }
-
+      // first 1/3 is not included in process
       return (Math.abs(props.scrollTop) - refreshH / 2) / (refreshH / 2)
     }),
 

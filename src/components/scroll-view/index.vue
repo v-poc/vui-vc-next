@@ -108,7 +108,7 @@ export default {
     const root = ref(null)
 
     const state = reactive({
-      content: null,      
+      content: null,
       isRefreshing: false,
       isRefreshActive: false,
       isEndReachingStart: false,
@@ -132,13 +132,16 @@ export default {
     let endReachedHandler = null
     let moreOffsetY = 0
 
+    /**
+     * computed properties
+     */    
     const headerSlot = computed(() => slots.header)
 
     const footerSlot = computed(() => slots.footer)
 
-    const hasRefresher = computed(() => slots.refresh)
+    const hasRefresher = computed(() => slots.refresh) // todo - scopedSlots.refresh
 
-    const hasMore = computed(() => slots.more)
+    const hasMore = computed(() => slots.more) // todo - scopedSlots.more
 
     const containerCls = computed(() => {
       return [
@@ -168,7 +171,9 @@ export default {
       ]
     })
 
-    // methods
+    /**
+     * methods
+     */
     const initScroller = () => {
       if (isInited) {
         return
@@ -286,7 +291,7 @@ export default {
 
     // events handler
     const onScrollerTouchStart = (event) => {
-      if (!scroller) {
+      if (!scroller || !event || !event.targetTouches[0]) {
         return
       }
       startX = event.targetTouches[0].pageX
@@ -295,14 +300,13 @@ export default {
     }
 
     const onScrollerTouchMove = (event) => {
-      if (!scroller) {
+      if (!scroller || !event || !event.targetTouches[0]) {
         return
       }
       let hadPrevent = false
 
       if (props.isPrevent) {
         event.preventDefault()
-
         hadPrevent = true
       }
 
@@ -414,7 +418,30 @@ export default {
       state.scrollY = top
       checkScrollerEnd()
 
-      emit('scroll', { scrollLeft: left, scrollTop: top })
+      emit('scroll', {
+        scrollLeft: left,
+        scrollTop: top
+      })
+    }
+
+    const init = () => {
+      nextTick(initScroller)
+    }
+
+    const scrollTo = (left, top, isAnimate = false) => {
+      if (!scroller) {
+        return
+      }
+      scroller.scrollTo(left, top, isAnimate)
+    }
+
+    const getOffsets = () => {
+      let res
+      if (!scroller) {
+        res = { left: 0, top: 0 }
+      }
+      res = scroller.getValues()
+      return res
     }
 
     const reflowScroller = (force = false) => {
@@ -474,6 +501,9 @@ export default {
       reflowScroller()
     }
 
+    /**
+     * lifecycle hook
+     */
     onMounted(() => {
       if (!props.manualInit) {
         initScroller()
@@ -484,6 +514,9 @@ export default {
       destroyAutoReflow()
     })
 
+    /**
+     * watch property
+     */
     watch(
       () => props.autoReflow,
       (val) => {
@@ -500,7 +533,7 @@ export default {
       hasMore,
       containerCls,
       refresherCls,
-      moreCls,      
+      moreCls,
       onScrollerTouchStart,
       onScrollerTouchMove,
       onScrollerTouchEnd,
@@ -510,7 +543,10 @@ export default {
       reflowScroller,
       triggerRefresh,
       finishRefresh,
-      finishLoadMore
+      finishLoadMore,
+      init,
+      scrollTo,
+      getOffsets
     }
   }
 }

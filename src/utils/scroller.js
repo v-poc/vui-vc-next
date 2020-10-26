@@ -1,6 +1,5 @@
 /*
- * Based on the work of: Scroller
- * http://github.com/zynga/scroller
+ * Inspired by Scroller | MIT License (http://github.com/zynga/scroller)
  */
 import useAnimate from '../composables/useAnimate'
 import { noop, extend, logInfo, easeOutCubic, easeInOutCubic } from './index'

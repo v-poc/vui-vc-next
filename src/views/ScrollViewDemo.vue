@@ -4,14 +4,15 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <p>ScrollView (total count: 20)</p>
+    <p>ScrollView (Total count: {{ state.total }})</p>
     <div class="v-example-scroll-view">
       <v-scroll-view
         ref="scrollViewRef"
         :scrolling-x="false"
+        :bouncing="true"
         @scroll="onScroll"
         @end-reached="onEndReached"
-      >      
+      >
         <div
           class="scroll-view-list"
           v-for="item in state.list"
@@ -53,15 +54,16 @@ export default {
 
   components: {
     VScrollViewMore
-  //   VScrollView,
-  //   VButton
+    //   VScrollView,
+    //   VButton
   },
 
   setup() {
     const scrollViewRef = ref('scrollViewRef')
 
     const state = reactive({
-      list: 5,
+      list: 10,
+      total: 20,
       isFinished: false
     })
 
@@ -80,10 +82,10 @@ export default {
       }
       state.list += 5
       scrollViewRef.value.reflowScroller()
-      if (state.list >= 20) {
+      if (state.list >= state.total) {
         state.isFinished = true
         scrollViewRef.value.finishLoadMore()
-      }      
+      }
     }
 
     const onEndReached = () => {
@@ -93,11 +95,11 @@ export default {
       }
       setTimeout(() => {
         state.list += 5
-        if (state.list >= 20) {
+        if (state.list >= state.total) {
           state.isFinished = true
           scrollViewRef.value.finishLoadMore()
         }
-      }, 1000)
+      }, 500)
     }
 
     return {
@@ -116,18 +118,24 @@ export default {
 @import '../assets/styles/vui-example.scss';
 
 .v-example-scroll-view {
-  height: 4rem;
+  height: 5rem;
   background: #fff;
   border-bottom: 0 none;
 
   .scroll-view-item {
-    padding: 0.2rem 0;
+    padding: 0.1rem 0;
     text-align: center;
     border-bottom: 1px solid #fff;
   }
 
   .v-scroll-view {
     background-color: #efefef;
+
+    .scroll-view-container:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
   }
 }
 
