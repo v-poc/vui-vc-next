@@ -9,12 +9,10 @@
       <v-scroll-view
         ref="scrollViewRef"
         :scrolling-x="false"
-        :bouncing="true"
         @scroll="onScroll"
         @end-reached="onEndReached"
       >
         <div
-          class="scroll-view-list"
           v-for="item in state.list"
           :key="item"
           @click="onItemClick(item)"
@@ -40,7 +38,7 @@
 </template>
 
 <script>
-import { reactive, ref } from 'vue'
+import { nextTick, reactive, ref } from 'vue'
 // import { debounce } from '../utils/index'
 import Toast from '../components/toast/index'
 import VScrollViewMore from '../components/scroll-view/more.vue'
@@ -62,7 +60,7 @@ export default {
     const scrollViewRef = ref('scrollViewRef')
 
     const state = reactive({
-      list: 10,
+      list: 15,
       total: 20,
       isFinished: false
     })
@@ -95,6 +93,7 @@ export default {
       }
       setTimeout(() => {
         state.list += 5
+        scrollViewRef.value.reflowScroller()
         if (state.list >= state.total) {
           state.isFinished = true
           scrollViewRef.value.finishLoadMore()
