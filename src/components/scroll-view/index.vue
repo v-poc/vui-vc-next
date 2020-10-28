@@ -36,7 +36,7 @@
       >
         <slot
           name="more"
-          :is-end-reaching="state.isEndReachingStart || state.isEndReaching"
+          :is-finished="state.isEndReachingStart || state.isEndReaching"
         ></slot>
       </div>
     </div>

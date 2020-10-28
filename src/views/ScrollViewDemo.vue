@@ -60,8 +60,8 @@ export default {
     const scrollViewRef = ref('scrollViewRef')
 
     const state = reactive({
-      list: 15,
-      total: 20,
+      list: 10,
+      total: 30,
       isFinished: false
     })
 
@@ -79,11 +79,10 @@ export default {
         return
       }
       state.list += 5
-      scrollViewRef.value.reflowScroller()
       if (state.list >= state.total) {
-        state.isFinished = true
-        scrollViewRef.value.finishLoadMore()
+        state.isFinished = true        
       }
+      scrollViewRef.value.finishLoadMore()
     }
 
     const onEndReached = () => {
@@ -93,11 +92,10 @@ export default {
       }
       setTimeout(() => {
         state.list += 5
-        scrollViewRef.value.reflowScroller()
         if (state.list >= state.total) {
-          state.isFinished = true
-          scrollViewRef.value.finishLoadMore()
+          state.isFinished = true          
         }
+        scrollViewRef.value.finishLoadMore()
       }, 500)
     }
 
