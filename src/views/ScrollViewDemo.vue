@@ -4,8 +4,8 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <p>ScrollView (Total count: {{ state.total }})</p>
-    <div class="v-example-scroll-view">
+    <p>ScrollViewMore (Total count: {{ state.total }})</p>
+    <div class="v-example-scroll-view-more">
       <v-scroll-view
         ref="scrollViewRef"
         :scrolling-x="false"
@@ -14,7 +14,7 @@
       >
         <div
           v-for="item in state.list"
-          :key="item"
+          :key="`scrollViewMore${item}`"
           @click="onItemClick(item)"
         >
           <p class="scroll-view-item">{{ item }}</p>
@@ -25,8 +25,6 @@
         ></v-scroll-view-more>
       </v-scroll-view>
     </div>
-  </div>
-  <div class="v-example">
     <v-button
       type="primary"
       size="small"
@@ -34,6 +32,24 @@
       round
       @click="onAddItems"
     >Test Add items</v-button>
+  </div>
+  <div class="v-example">
+    <p>ScrollView - Horizontal</p>
+    <div class="v-example-scroll-view-x">
+      <v-scroll-view
+        :scrolling-y="false"
+        :touch-angle="80"
+        :is-prevent="false"
+      >
+        <div class="scroll-view-list">
+          <p
+            class="scroll-view-item"
+            v-for="item in state.listX"
+            :key="`scrollViewX${item}`"
+          >{{ item }}</p>
+        </div>
+      </v-scroll-view>
+    </div>
   </div>
 </template>
 
@@ -62,7 +78,8 @@ export default {
     const state = reactive({
       list: 10,
       total: 30,
-      isFinished: false
+      isFinished: false,
+      listX: 12
     })
 
     const onItemClick = (item) => {
@@ -96,7 +113,7 @@ export default {
           state.isFinished = true          
         }
         scrollViewRef.value.finishLoadMore()
-      }, 500)
+      }, 300)
     }
 
     return {
@@ -114,7 +131,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
 
-.v-example-scroll-view {
+.v-example-scroll-view-more {
   height: 5rem;
   background: #fff;
   border-bottom: 0 none;
@@ -136,9 +153,32 @@ export default {
   }
 }
 
+.v-example-scroll-view-x {
+  height: 1rem;
+  background: #FFF;
+
+  .v-scroll-view {
+    display: flex;
+    align-items: center;
+    background-color: #efefef;
+
+    .scroll-view-list {
+      display: flex;
+      width: 10rem;
+
+      .scroll-view-item {
+        flex: 1;
+        text-align: center;
+        font-size: 0.28rem;
+        border-right: 1px solid #fff;
+      }
+    }
+  }
+}
+
 .v-example {
   .v-button {
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
   }
 }
 </style>

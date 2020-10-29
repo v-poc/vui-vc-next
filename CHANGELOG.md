@@ -1,3 +1,8 @@
+# 0.3.3 (2020-10-29)
+
+- Updated ScrollView demo.
+- Updated version for vite.
+
 # 0.3.0 (2020-10-25)
 
 Added ScrollView demo.
