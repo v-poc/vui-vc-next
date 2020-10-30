@@ -24,6 +24,22 @@
     ></v-amount>
     <span class="unit">%</span>
   </v-progress-circular>
+  <v-popup
+    position="bottom"
+    v-model:value="state.isShowPopupTitleBar"
+  >
+    <v-popup-title-bar
+      title="Hello Vue 3.0"
+      describe="One Piece."
+      ok-text="ok"
+      cancel-text="cancel"
+      @confirm="state.isShowPopupTitleBar=false"
+      @cancel="state.isShowPopupTitleBar=false"
+    ></v-popup-title-bar>
+    <div class="v-example-op-default">
+      <v-one-piece @click="showPopup(true)" />
+    </div>
+  </v-popup>  
   <v-landscape
     v-model:value="state.isShowPopup"
     mask-closable
@@ -38,13 +54,15 @@
 
 <script>
 import { computed, reactive } from 'vue'
-// import { VActionBar, VAmount, VProgress, VTag, VLandscape, VOnePiece } from 'vui-vc-next'
+// import { VActionBar, VAmount, VProgress, VTag, VLandscape, VOnePiece, VPopup, VPopupTitleBar } from 'vui-vc-next'
 // import VActionBar from '../action-bar/index.vue'
 // import VAmount from '../amount/index.vue'
 // import VProgressCircular from '../progress/circular.vue'
 // import VTag from '../tag/index.vue'
 // import VLandscape from '../landscape/index.vue'
 // import VOnePiece from './op.vue'
+// import VPopup from '../popup/index.vue'
+// import VPopupTitleBar from '../popup/title-bar.vue'
 
 export default {
   name: 'v-hello-world',
@@ -55,7 +73,9 @@ export default {
   //   VProgressCircular,
   //   VTag,
   //   VLandscape,
-  //   VOnePiece
+  //   VOnePiece,
+  //   VPopup,
+  //   VPopupTitleBar
   // },
 
   props: {
@@ -64,6 +84,7 @@ export default {
 
   setup() {
     const state = reactive({
+      isShowPopupTitleBar: false,
       isShowPopup: false,
       count: 0,
       strokeColor: computed(() => (state.count < 10 ? '#36C' : '#FC9153')),
@@ -82,6 +103,7 @@ export default {
           icon: 'edit',
           onClick: () => {
             state.count++
+            state.count === 10 && setTimeout(() => (state.isShowPopupTitleBar = true), 1000)
           }
         }
       ]

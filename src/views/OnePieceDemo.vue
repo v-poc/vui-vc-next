@@ -85,6 +85,11 @@ export default {
   }
 }
 
+::v-deep(.v-example-op-default) {
+  height: 3.5rem;
+  background: #fff;
+}
+
 @media (min-width: 640px) {
   .v-example-poc img {
     width: 4rem;
