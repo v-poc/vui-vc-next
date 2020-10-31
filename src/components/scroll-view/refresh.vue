@@ -20,7 +20,7 @@ export default {
   name: 'v-scroll-view-refresh',
 
   components: {
-    [VActivityIndicatorRoller.name]: VActivityIndicatorRoller
+    VActivityIndicatorRoller
   },
 
   props: {
@@ -72,14 +72,14 @@ export default {
       }
       // first 1/3 is not included in process
       return (Math.abs(props.scrollTop) - refreshH / 2) / (refreshH / 2)
-    }),
+    })
 
     const refreshTip = computed(() => {
       return props.isRefreshing
         ? props.refreshingText
         : props.isRefreshActive
-            ? props.refreshActiveText
-            : props.refreshText
+          ? props.refreshActiveText
+          : props.refreshText
     })
 
     return {

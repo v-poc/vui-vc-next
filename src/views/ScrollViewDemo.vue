@@ -7,13 +7,13 @@
     <p>ScrollViewMore (Total count: {{ state.total }})</p>
     <div class="v-example-scroll-view-more">
       <v-scroll-view
-        ref="scrollViewRef"
+        ref="scrollViewMoreRef"
         :scrolling-x="false"
         @scroll="onScroll"
         @end-reached="onEndReached"
       >
         <div
-          v-for="item in state.list"
+          v-for="item in state.listMore"
           :key="`scrollViewMore${item}`"
           @click="onItemClick(item)"
         >
@@ -51,6 +51,27 @@
       </v-scroll-view>
     </div>
   </div>
+  <div class="v-example">
+    <p>ScrollViewRefresh</p>
+    <div class="v-example-scroll-view-refresh">
+      <v-scroll-view
+        ref="scrollViewRefreshRef"
+        :scrolling-x="false"
+        @refreshing="onRefresh"
+      >
+        <v-scroll-view-refresh
+          slot="refresh"
+        ></v-scroll-view-refresh>
+        <div
+          v-for="item in state.listRefresh"
+          :key="`scrollViewRefresh${item}`"
+          @click="onItemClick(item)"
+        >
+          <p class="scroll-view-item">{{ item }}</p>
+        </div>
+      </v-scroll-view>
+    </div>    
+  </div>
 </template>
 
 <script>
@@ -58,6 +79,7 @@ import { nextTick, reactive, ref } from 'vue'
 import { logInfo, debounce } from '../utils/index'
 import Toast from '../components/toast/index'
 import VScrollViewMore from '../components/scroll-view/more.vue'
+import VScrollViewRefresh from '../components/scroll-view/refresh.vue'
 // import VScrollView from '../components/scroll-view/index.vue'
 // import VButton from '../components/button/index.vue'
 
@@ -67,19 +89,22 @@ export default {
   inheritAttrs: false,
 
   components: {
-    VScrollViewMore
+    VScrollViewMore,
+    VScrollViewRefresh
     //   VScrollView,
     //   VButton
   },
 
   setup() {
-    const scrollViewRef = ref('scrollViewRef')
+    const scrollViewMoreRef = ref('scrollViewMoreRef')
+    const scrollViewRefreshRef = ref('scrollViewRefreshRef')
 
     const state = reactive({
-      list: 10,
+      listMore: 10,
       total: 30,
       isFinished: false,
-      listX: 12
+      listX: 12,
+      listRefresh: 5
     })
 
     const onItemClick = (item) => {
@@ -97,11 +122,11 @@ export default {
         Toast.info('Already loaded!')
         return
       }
-      state.list += 5
-      if (state.list >= state.total) {
+      state.listMore += 5
+      if (state.listMore >= state.total) {
         state.isFinished = true        
       }
-      scrollViewRef.value.finishLoadMore()
+      scrollViewMoreRef.value.finishLoadMore()
     }
 
     const onEndReached = () => {
@@ -110,21 +135,38 @@ export default {
         return
       }
       setTimeout(() => {
-        state.list += 5
-        if (state.list >= state.total) {
+        state.listMore += 5
+        if (state.listMore >= state.total) {
           state.isFinished = true          
         }
-        scrollViewRef.value.finishLoadMore()
+        scrollViewMoreRef.value.finishLoadMore()
+      }, 300)
+    }
+
+    let isAllRefreshed = false
+    const onRefresh = () => {
+      if (isAllRefreshed) {
+        Toast.info('Already loaded!')
+        return
+      }
+      setTimeout(() => {
+        state.listRefresh += 5
+        if (state.listRefresh >= state.total) {
+          isAllRefreshed = true          
+        }
+        scrollViewRefreshRef.value.finishRefresh()
       }, 300)
     }
 
     return {
-      scrollViewRef,
+      scrollViewMoreRef,
+      scrollViewRefreshRef,
       state,
       onItemClick,
       onScroll,
       onAddItems,
-      onEndReached
+      onEndReached,
+      onRefresh
     }
   }
 }
@@ -175,6 +217,22 @@ export default {
         border-right: 1px solid #fff;
       }
     }
+  }
+}
+
+.v-example-scroll-view-refresh {
+  height: 8rem;
+  background-color: #FFF;
+
+  .scroll-view-item {
+    padding: 0.3rem 0;
+    text-align: center;
+    font-size: 0.28rem;
+    border-bottom: 1px solid #fff;
+  }
+
+  .v-scroll-view {
+    background-color: #efefef;
   }
 }
 
