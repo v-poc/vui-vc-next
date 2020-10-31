@@ -62,11 +62,6 @@ export const kebab = (str = '') => str.replace(/([a-z])([A-Z])/g, '$1-$2').toLow
 // Format color string to kebab-case
 export const formatColor = (str = '') => str.replace(/(.*)(\d)/, '$1-$2')
 
-// Log info
-export const logInfo = (content) => {
-  console.info('%c%s', 'background: #36C;color: #FFF', `[VUI-log] ${content}`)
-}
-
 // Get Dpr
 export const getDpr = () => {
   const getParam = (name, str) => {

@@ -1,11 +1,30 @@
 import { root, isInBrowser } from './env'
 
+// Log info
+export const logInfo = (content) => {
+  console.info('%c%s', 'background: #36C;color: #FFF', `[VUI-log] ${content}`)
+}
+
 // Mix properties into target object
 export function extend(toTarget, fromSource) {
   for (const key in fromSource) {
     toTarget[key] = fromSource[key]
   }
   return toTarget
+}
+
+// effects - easeOut Cubic
+export const easeOutCubic = (pos) => {
+  return Math.pow(pos - 1, 3) + 1
+}
+
+// effects - easeInOut Cubic
+export const easeInOutCubic = (pos) => {
+  if ((pos /= 0.5) < 1) {
+    return 0.5 * Math.pow(pos, 3)
+  }
+
+  return 0.5 * (Math.pow(pos - 2, 3) + 2)
 }
 
 // The render function

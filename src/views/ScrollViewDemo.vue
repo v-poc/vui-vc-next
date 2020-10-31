@@ -55,7 +55,7 @@
 
 <script>
 import { nextTick, reactive, ref } from 'vue'
-// import { debounce } from '../utils/index'
+import { logInfo, debounce } from '../utils/index'
 import Toast from '../components/toast/index'
 import VScrollViewMore from '../components/scroll-view/more.vue'
 // import VScrollView from '../components/scroll-view/index.vue'
@@ -86,9 +86,11 @@ export default {
       Toast.info(`Click item: ${item}`)
     }
 
-    const onScroll = ({ scrollLeft, scrollTop }) => {
-      console.log(`onScroll - scrollLeft:${scrollLeft}, scrollTop:${scrollTop}`)
-    }
+    const onScroll = debounce(({ scrollLeft, scrollTop }) => {
+      logInfo(
+        `[ScrollViewDemo] onScroll - scrollLeft:${scrollLeft}, scrollTop:${scrollTop}`
+      )      
+    }, 50)
 
     const onAddItems = () => {
       if (state.isFinished) {

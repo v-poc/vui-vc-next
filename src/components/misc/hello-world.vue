@@ -20,6 +20,7 @@
     <v-amount
       :value="state.count * 10"
       :precision="0"
+      :duration="state.animDuration"
       is-animated
     ></v-amount>
     <span class="unit">%</span>
@@ -87,6 +88,7 @@ export default {
       isShowPopupTitleBar: false,
       isShowPopup: false,
       count: 0,
+      animDuration: 1000,
       strokeColor: computed(() => (state.count < 10 ? '#36C' : '#FC9153')),
       actionData: [
         {
@@ -103,7 +105,7 @@ export default {
           icon: 'edit',
           onClick: () => {
             state.count++
-            state.count === 10 && setTimeout(() => (state.isShowPopupTitleBar = true), 1000)
+            state.count === 10 && setTimeout(() => (state.isShowPopupTitleBar = true), state.animDuration)
           }
         }
       ]

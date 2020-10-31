@@ -1,8 +1,8 @@
 /*
  * Inspired by Scroller | MIT License (http://github.com/zynga/scroller)
  */
-import useAnimate from '../composables/useAnimate'
-import { noop, extend, logInfo, easeOutCubic, easeInOutCubic } from './index'
+import useAnimate from './useAnimate'
+import { noop, extend, logInfo, easeOutCubic, easeInOutCubic } from '../utils/index'
 
 const Animate = useAnimate()
 
@@ -46,7 +46,7 @@ const members = {
   _decelerationVelocityY: null,
 }
 
-export default class Scroller {
+class Scroller {
   constructor(callback = noop, options) {
     this.options = {
       scrollingX: true,
@@ -912,3 +912,9 @@ export default class Scroller {
 }
 
 extend(Scroller.prototype, members)
+
+const useScroller = function(callback = noop, options) {
+  return new Scroller(callback, options)
+}
+
+export default useScroller
