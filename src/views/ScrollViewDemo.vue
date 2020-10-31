@@ -4,7 +4,8 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
-    <p>ScrollViewMore (Total count: {{ state.total }})</p>
+    <p>ScrollView - Pull-up-load-more</p>
+    <sub>(Total count: {{ state.total }})</sub>
     <div class="v-example-scroll-view-more">
       <v-scroll-view
         ref="scrollViewMoreRef"
@@ -19,10 +20,11 @@
         >
           <p class="scroll-view-item">{{ item }}</p>
         </div>
-        <v-scroll-view-more
-          slot="more"
-          :is-finished="state.isFinished"
-        ></v-scroll-view-more>
+        <template #more>
+          <v-scroll-view-more
+            :is-finished="state.isFinished"
+          ></v-scroll-view-more>
+        </template>
       </v-scroll-view>
     </div>
     <v-button
@@ -52,16 +54,21 @@
     </div>
   </div>
   <div class="v-example">
-    <p>ScrollViewRefresh</p>
+    <p>ScrollView - Pull-down-refresh</p>
+    <sub>(Total count: {{ state.total }})</sub>
     <div class="v-example-scroll-view-refresh">
       <v-scroll-view
         ref="scrollViewRefreshRef"
         :scrolling-x="false"
-        @refreshing="onRefresh"
+        @refreshing="onRefreshing"
+        @refresh-active="onRefreshActive"
       >
-        <v-scroll-view-refresh
-          slot="refresh"
-        ></v-scroll-view-refresh>
+        <template #refresh>
+          <v-scroll-view-refresh
+            :is-refreshing="state.isRefreshing"
+            :is-refresh-active="state.isRefreshActive"
+          ></v-scroll-view-refresh>
+        </template>
         <div
           v-for="item in state.listRefresh"
           :key="`scrollViewRefresh${item}`"
@@ -103,6 +110,8 @@ export default {
       listMore: 10,
       total: 30,
       isFinished: false,
+      isRefreshing: false,
+      isRefreshActive: false,
       listX: 12,
       listRefresh: 5
     })
@@ -144,9 +153,12 @@ export default {
     }
 
     let isAllRefreshed = false
-    const onRefresh = () => {
+    const onRefreshing = () => {
+      state.isRefreshActive = false
+      state.isRefreshing = true      
       if (isAllRefreshed) {
         Toast.info('Already loaded!')
+        scrollViewRefreshRef.value.finishRefresh()
         return
       }
       setTimeout(() => {
@@ -155,7 +167,12 @@ export default {
           isAllRefreshed = true          
         }
         scrollViewRefreshRef.value.finishRefresh()
-      }, 300)
+      }, 600)
+    }
+
+    const onRefreshActive = () => {
+      state.isRefreshActive = true
+      state.isRefreshing = false      
     }
 
     return {
@@ -166,7 +183,8 @@ export default {
       onScroll,
       onAddItems,
       onEndReached,
-      onRefresh
+      onRefreshing,
+      onRefreshActive
     }
   }
 }
@@ -181,8 +199,9 @@ export default {
   border-bottom: 0 none;
 
   .scroll-view-item {
-    padding: 0.1rem 0;
+    padding: 0.3rem 0;
     text-align: center;
+    font-size: 0.28rem;
     border-bottom: 1px solid #fff;
   }
 

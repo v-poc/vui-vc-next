@@ -1,7 +1,8 @@
-# 0.3.7 (2020-10-31)
+# 0.3.8 (2020-10-31)
 
 - Refactor: useScroller for ScrollView.
 - Updated OnePiece demo once Circular progress is completed.
+- Updated ScrollView demo.
 
 # 0.3.3 (2020-10-29)
 
