@@ -44,6 +44,7 @@
   <v-landscape
     v-model:value="state.isShowPopup"
     mask-closable
+    :show-close="false"
     transition="v-bounce"
   >
     <div class="v-example-op">

@@ -23,7 +23,7 @@ sidebar: auto
 - [`VSwitch`](./switch.html)
 - [`VActionSheet`](./action-sheet.html)
 - [`VWatermark`](./watermark.html)
-- [`ScrollView`](./scroll-view.html)
+- [`VScrollView`](./scroll-view.html)
 
 ## License
 
