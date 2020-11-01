@@ -36,7 +36,10 @@
       position="left"
       v-model:value="popupShow.left"
     >
-      <div class="v-example-popup v-example-popup-left">popup from left</div>
+      <div class="v-example-popup v-example-popup-left">
+        <p>popup from left</p>
+        <img src="../assets/images/mj.png" />
+      </div>
     </v-popup>
   </div>
   <div class="v-example">
@@ -52,7 +55,10 @@
       position="right"
       v-model:value="popupShow.right"
     >
-      <div class="v-example-popup v-example-popup-right">popup from right</div>
+      <div class="v-example-popup v-example-popup-right">
+        <p>popup from right</p>
+        <img src="../assets/images/mj.png" />
+      </div>
     </v-popup>
   </div>
   <div class="v-example">
