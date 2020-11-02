@@ -117,7 +117,7 @@ export default {
 
     const onClick4 = () => {
       state.scale = (state.scale * 10 + 1) / 10
-      if (state.scale > 0.6) {
+      if (state.scale > 0.5) {
         const btnNode = document.querySelector('.v-btn-op')
         btnNode && (btnNode.style.bottom = '0px')
       }
@@ -177,8 +177,9 @@ export default {
     })
 
     const onShowDemo = (index) => {
-      [1, 2, 3, 4].forEach((item) => (state[`showDemo${item}`] = false))
+      new Array(5).fill('').forEach((item, i) => (state[`showDemo${i + 1}`] = false))
       state[`showDemo${index}`] = true
+      index === 5 && (state.scale = 0.3)
     }
 
     return {
