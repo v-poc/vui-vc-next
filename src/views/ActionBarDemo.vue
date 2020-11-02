@@ -123,7 +123,7 @@ export default {
       }
     }
 
-    const onClick5 = () => Toast.succeed('So big, so cool')
+    const onClick5 = () => Toast.succeed('So cool, nice feeling!')
 
     const state = reactive({
       scale: 0.3,
@@ -177,9 +177,11 @@ export default {
     })
 
     const onShowDemo = (index) => {
-      new Array(5).fill('').forEach((item, i) => (state[`showDemo${i + 1}`] = false))
+      const nodes = document.querySelectorAll('.v-example')
+      const len = nodes ? nodes.length : 0
+      new Array(len).fill('').forEach((item, i) => (state[`showDemo${i + 1}`] = false))
       state[`showDemo${index}`] = true
-      index === 5 && (state.scale = 0.3)
+      index === 5 && (state.scale = 0.3) // reset scale for Slot playground
     }
 
     return {

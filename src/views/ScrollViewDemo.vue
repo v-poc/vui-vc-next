@@ -5,7 +5,7 @@
   >&lt; Home</router-link>
   <div class="v-example">
     <p>ScrollView - Pull-up-load-more</p>
-    <sub>(Total count: {{ state.total }})</sub>
+    <sup>(Total count: {{ state.total }})</sup>
     <div class="v-example-scroll-view-more">
       <v-scroll-view
         ref="scrollViewMoreRef"
@@ -55,7 +55,7 @@
   </div>
   <div class="v-example">
     <p>ScrollView - Pull-down-refresh</p>
-    <sub>(Total count: {{ state.total }})</sub>
+    <sup>(Total count: {{ state.total }})</sup>
     <div class="v-example-scroll-view-refresh">
       <v-scroll-view
         ref="scrollViewRefreshRef"
