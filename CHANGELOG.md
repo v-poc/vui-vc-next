@@ -1,3 +1,8 @@
+# 0.3.10 (2020-11-02)
+
+- Updated version for vitepress.
+- Updated version for vite.
+
 # 0.3.8 (2020-10-31)
 
 - Refactor: useScroller for ScrollView.
