@@ -51,14 +51,14 @@
     >Round Loading Button</v-button>
   </div>
   <div class="v-example">
-    <p>Cool Button</p>
+    <p>Cool Button playground</p>
     <v-button
       type="warning"
       size="small"
       inline
       round
       @click="showPopup('center', true)"
-    >Test Cool button</v-button>
+    >Test Cool Button</v-button>
     <v-popup
       position="center"
       transition="v-bounce"
@@ -90,14 +90,14 @@
     </v-landscape>
   </div>
   <div class="v-example">
-    <p>Like Button</p>
+    <p>Like Button playground</p>
     <v-button
       type="default"
       size="small"
       inline
       round
       @click="showPopup('like', true)"
-    >Test Like button</v-button>
+    >Test Like Button</v-button>
     <v-popup
       position="center"
       transition="v-bounce"
@@ -105,7 +105,7 @@
     >
       <div class="v-example-popup v-example-popup-center">
         <p>Touch heart point</p>
-        <v-like-button @on-click="onClickButton" />
+        <v-like-button @on-click="showPopup('like', false);showPopup('center', true)" />
       </div>
     </v-popup>
   </div>
