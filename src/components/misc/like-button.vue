@@ -1,6 +1,6 @@
 <template>
   <div class="like-container">
-    <button
+    <div
       :class="cls"
       :style="btnStyle"
       @click="onClickButton"
@@ -27,7 +27,7 @@
           ></div>
         </div>
       </div>
-    </button>
+    </div>
   </div>
 </template>
 
@@ -95,6 +95,7 @@ $duration: 500ms;
 
 .like-btn {
   position: relative;
+  margin: 0 auto;
   z-index: 1;
   border: none;
   border-radius: 100%;
