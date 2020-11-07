@@ -4,6 +4,32 @@
     class="v-back"
   >&lt; Home</router-link>
   <div class="v-example">
+    <p>ScrollView - lazyLoadImage</p>
+    <div class="v-example-scroll-view-lazy">
+      <v-scroll-view @scroll="onScroll">
+        <ul class="lazy-list">
+          <li
+            v-for="item in state.listMusicData"
+            class="item"
+            :key="item.id"
+          >
+            <div class="icon">
+              <img
+                width="60"
+                height="60"
+                v-lazy="item.imgUrl"
+              />
+            </div>
+            <div class="text">
+              <h2 class="name">{{ item.name }}</h2>
+              <p class="desc">{{ item.desc }}</p>
+            </div>
+          </li>
+        </ul>
+      </v-scroll-view>
+    </div>
+  </div>  
+  <div class="v-example">
     <p>ScrollView - Pull-up-load-more</p>
     <sup>(Total count: {{ state.total }})</sup>
     <div class="v-example-scroll-view-more">
@@ -21,9 +47,7 @@
           <p class="scroll-view-item">{{ item }}</p>
         </div>
         <template #more>
-          <v-scroll-view-more
-            :is-finished="state.isFinished"
-          ></v-scroll-view-more>
+          <v-scroll-view-more :is-finished="state.isFinished"></v-scroll-view-more>
         </template>
       </v-scroll-view>
     </div>
@@ -77,16 +101,19 @@
           <p class="scroll-view-item">{{ item }}</p>
         </div>
       </v-scroll-view>
-    </div>    
+    </div>
   </div>
 </template>
 
 <script>
 import { nextTick, reactive, ref } from 'vue'
 import { logInfo, debounce } from '../utils/index'
+import { MUSIC_DATA } from '../assets/mock/index'
 import Toast from '../components/toast/index'
 import VScrollViewMore from '../components/scroll-view/more.vue'
 import VScrollViewRefresh from '../components/scroll-view/refresh.vue'
+import useLazyLoadImage from '../composables/useLazyLoadImage'
+import loading from '../assets/images/mj.png'
 // import VScrollView from '../components/scroll-view/index.vue'
 // import VButton from '../components/button/index.vue'
 
@@ -103,6 +130,10 @@ export default {
   },
 
   setup() {
+    useLazyLoadImage(window.vuiInstance, {
+      loading
+    })
+
     const scrollViewMoreRef = ref('scrollViewMoreRef')
     const scrollViewRefreshRef = ref('scrollViewRefreshRef')
 
@@ -113,7 +144,8 @@ export default {
       isRefreshing: false,
       isRefreshActive: false,
       listX: 12,
-      listRefresh: 5
+      listRefresh: 5,
+      listMusicData: MUSIC_DATA
     })
 
     const onItemClick = (item) => {
@@ -122,8 +154,8 @@ export default {
 
     const onScroll = debounce(({ scrollLeft, scrollTop }) => {
       logInfo(
-        `[ScrollViewDemo] onScroll - scrollLeft:${scrollLeft}, scrollTop:${scrollTop}`
-      )      
+        `[ScrollViewDemo] onScroll - scrollLeft: ${scrollLeft}, scrollTop: ${scrollTop}`
+      )
     }, 50)
 
     const onAddItems = () => {
@@ -133,7 +165,7 @@ export default {
       }
       state.listMore += 5
       if (state.listMore >= state.total) {
-        state.isFinished = true        
+        state.isFinished = true
       }
       scrollViewMoreRef.value.finishLoadMore()
     }
@@ -146,7 +178,7 @@ export default {
       setTimeout(() => {
         state.listMore += 5
         if (state.listMore >= state.total) {
-          state.isFinished = true          
+          state.isFinished = true
         }
         scrollViewMoreRef.value.finishLoadMore()
       }, 300)
@@ -155,7 +187,7 @@ export default {
     let isAllRefreshed = false
     const onRefreshing = () => {
       state.isRefreshActive = false
-      state.isRefreshing = true      
+      state.isRefreshing = true
       if (isAllRefreshed) {
         Toast.info('Already loaded!')
         scrollViewRefreshRef.value.finishRefresh()
@@ -164,7 +196,7 @@ export default {
       setTimeout(() => {
         state.listRefresh += 5
         if (state.listRefresh >= state.total) {
-          isAllRefreshed = true          
+          isAllRefreshed = true
         }
         scrollViewRefreshRef.value.finishRefresh()
       }, 600)
@@ -172,7 +204,7 @@ export default {
 
     const onRefreshActive = () => {
       state.isRefreshActive = true
-      state.isRefreshing = false      
+      state.isRefreshing = false
     }
 
     return {
@@ -192,6 +224,47 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.v-example-scroll-view-lazy {
+  height: 6rem;
+  background-color: #333;
+  border-radius: 4px;
+
+  .lazy-list {    
+    padding-top: 0.1rem;
+
+    .item {
+      display: flex;
+      box-sizing: border-box;
+      align-items: center;
+      padding: 0 0.2rem 0.2rem 0.2rem;
+
+      .icon {
+        flex: 0 0 1rem;
+        width: 1rem;
+        padding-right: 0.2rem;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        overflow: hidden;
+        font-size: 0.14rem;
+
+        .name {
+          margin-bottom: 0.1rem;
+          color: #fff;
+        }
+
+        .desc {
+          color: rgba(255, 255, 255, 0.3);
+        }      
+      }
+    }    
+  }
+}
 
 .v-example-scroll-view-more {
   height: 5rem;
@@ -218,7 +291,7 @@ export default {
 
 .v-example-scroll-view-x {
   height: 1rem;
-  background: #FFF;
+  background: #fff;
 
   .v-scroll-view {
     display: flex;
@@ -241,7 +314,7 @@ export default {
 
 .v-example-scroll-view-refresh {
   height: 8rem;
-  background-color: #FFF;
+  background-color: #fff;
 
   .scroll-view-item {
     padding: 0.3rem 0;

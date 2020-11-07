@@ -86,6 +86,22 @@ export const getDpr = () => {
   return 1 / Math.min(initialScale, maximumScale, minimumScale)
 }
 
+// The throttle function
+export const throttle = function (fn, interval) {  
+  let last = 0 
+
+  return function () {
+    const context = this
+    const args = arguments
+    const now = +new Date()
+
+    if (now - last >= interval) {
+      last = now
+      fn.apply(context, args)
+    }
+  }
+}
+
 // The debounce function
 export const debounce = function (func = noop, wait = 300, immediate = false) {
   let timer = null

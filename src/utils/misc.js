@@ -81,3 +81,78 @@ export const render = (function(global) {
     }
   }
 })(root)
+
+// Load image
+export const loadImage = (src) => {
+  return new Promise((resolve, reject) => {
+    const image = new Image()
+
+    image.onload = () => {
+      resolve()
+      dispose()
+    }
+
+    image.onerror = (e) => {
+      reject(e)
+      dispose()
+    }
+
+    image.src = src
+
+    const dispose = () => {
+      image.onload = image.onerror = null
+    }
+  })
+}
+
+function checkIntersectionObserver () {
+  if (isInBrowser &&
+    'IntersectionObserver' in window &&
+    'IntersectionObserverEntry' in window &&
+    'intersectionRatio' in IntersectionObserverEntry.prototype) {
+    // Minimal polyfill for Edge 15's lack of `isIntersecting`
+    // See: https://github.com/w3c/IntersectionObserver/issues/211
+    if (!('isIntersecting' in IntersectionObserverEntry.prototype)) {
+      Object.defineProperty(IntersectionObserverEntry.prototype,
+        'isIntersecting', {
+          get: function (instance) {
+            return instance.intersectionRatio > 0
+          }
+        })
+    }
+    return true
+  }
+  return false
+}
+
+export const hasIntersectionObserver = checkIntersectionObserver()
+
+const checkStyle = (el, prop) => {
+  return getComputedStyle(el).getPropertyValue(prop)
+}
+
+const checkOverflow = (el) => {
+  return checkStyle(el, 'overflow') + checkStyle(el, 'overflow-y') + checkStyle(el, 'overflow-x')
+}
+
+export const scrollParent = (el) => {
+  let parent = el
+
+  while (parent) {
+    if (parent === document.body || parent === document.documentElement) {
+      break
+    }
+
+    if (!parent.parentNode) {
+      break
+    }
+
+    if (/(scroll|auto)/.test(checkOverflow(parent))) {
+      return parent
+    }
+
+    parent = parent.parentNode
+  }
+
+  return window
+}

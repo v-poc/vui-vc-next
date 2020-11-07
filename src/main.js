@@ -14,3 +14,4 @@ if ('ontouchstart' in window) {
 const vui = createApp(App)
 install(vui)
 vui.use(router).mount('#app')
+window.vuiInstance = vui

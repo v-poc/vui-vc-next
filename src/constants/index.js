@@ -1,5 +1,9 @@
 export const SVG_SPRITE_NODE_ID = '__VC_SVG_SPRITE_NODE__'
 
+export const DEFAULT_IMG_URL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+
+export const THROTTLE_DELAY = 300
+
 export const SKELETON_WIDTH = {
   DEFAULT_TITLE: '40%',
   DEFAULT_ROW: '100%',

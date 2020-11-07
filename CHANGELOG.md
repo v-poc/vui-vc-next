@@ -1,3 +1,7 @@
+# 0.4.0 (2020-11-07)
+
+Added useLazyLoadImage.
+
 # 0.3.10 (2020-11-02)
 
 - Updated version for vitepress.
