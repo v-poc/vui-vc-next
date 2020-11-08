@@ -1,5 +1,7 @@
 import packageData from '../../package.json'
 import { transformCamelCase } from '../utils/index'
+import { DEFAULT_IMG_PLACEHOLDER } from '../constants/index'
+import useLazyLoadImage from '../composables/useLazyLoadImage'
 
 import '../assets/styles/vui-reset.scss'
 import VSkeleton from './skeleton/index.vue'
@@ -72,6 +74,11 @@ const install = function (app) {
     app.component(kebabCaseName, registerComponent) // kebab-case
     app.component(camelCaseName, registerComponent) // camelCase
   })
+
+  useLazyLoadImage({
+    loading: DEFAULT_IMG_PLACEHOLDER,
+    error: DEFAULT_IMG_PLACEHOLDER
+  }, app)
 }
 
 const version = packageData.version

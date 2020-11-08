@@ -1,3 +1,4 @@
+import { getCurrentInstance } from 'vue'
 import { DEFAULT_IMG_URL, THROTTLE_DELAY } from '../constants/index'
 import { hasIntersectionObserver, scrollParent, loadImage, throttle, logInfo } from '../utils/index'
 
@@ -230,14 +231,23 @@ class LazyLoadImage {
   }
 }
 
-const useLazyLoadImage = (app, options) => {
-  const lazy = new LazyLoadImage(options)
+const useLazyLoadImage = (options, app) => {
+  if (!app) {
+    const currInstance = getCurrentInstance()
+    if (!currInstance || !currInstance.appContext || !currInstance.appContext.app) {
+      return
+    }
+    app = currInstance.appContext.app
+  }
 
-  app.directive('lazy', {
-    mounted: lazy.add.bind(lazy),
-    updated: lazy.update.bind(lazy),
-    unmounted: lazy.update.bind(lazy)
-  })
+  if (!app.directive('lazy')) {
+    const lazy = new LazyLoadImage(options)
+    app.directive('lazy', {
+      mounted: lazy.add.bind(lazy),
+      updated: lazy.update.bind(lazy),
+      unmounted: lazy.update.bind(lazy)
+    })
+  }
 }
 
 export default useLazyLoadImage

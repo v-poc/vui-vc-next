@@ -10,7 +10,7 @@
     <p @click="showPopup(true)">VUI POC</p>
     <img
       alt="Vue logo"
-      src="https://vuejs.org/images/logo.png"
+      v-lazy="'https://vuejs.org/images/logo.png'"
       @click="showPopup(true)"
     />
     <v-hello-world

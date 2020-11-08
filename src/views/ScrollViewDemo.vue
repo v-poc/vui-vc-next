@@ -14,11 +14,7 @@
             :key="item.id"
           >
             <div class="icon">
-              <img
-                width="60"
-                height="60"
-                v-lazy="item.imgUrl"
-              />
+              <img v-lazy="item.imgUrl" />
             </div>
             <div class="text">
               <h2 class="name">{{ item.name }}</h2>
@@ -28,7 +24,7 @@
         </ul>
       </v-scroll-view>
     </div>
-  </div>  
+  </div>
   <div class="v-example">
     <p>ScrollView - Pull-up-load-more</p>
     <sup>(Total count: {{ state.total }})</sup>
@@ -112,8 +108,6 @@ import { MUSIC_DATA } from '../assets/mock/index'
 import Toast from '../components/toast/index'
 import VScrollViewMore from '../components/scroll-view/more.vue'
 import VScrollViewRefresh from '../components/scroll-view/refresh.vue'
-import useLazyLoadImage from '../composables/useLazyLoadImage'
-import loading from '../assets/images/mj.png'
 // import VScrollView from '../components/scroll-view/index.vue'
 // import VButton from '../components/button/index.vue'
 
@@ -130,10 +124,6 @@ export default {
   },
 
   setup() {
-    useLazyLoadImage(window.vuiInstance, {
-      loading
-    })
-
     const scrollViewMoreRef = ref('scrollViewMoreRef')
     const scrollViewRefreshRef = ref('scrollViewRefreshRef')
 
@@ -230,7 +220,7 @@ export default {
   background-color: #333;
   border-radius: 4px;
 
-  .lazy-list {    
+  .lazy-list {
     padding-top: 0.1rem;
 
     .item {
@@ -260,9 +250,9 @@ export default {
 
         .desc {
           color: rgba(255, 255, 255, 0.3);
-        }      
+        }
       }
-    }    
+    }
   }
 }
 
