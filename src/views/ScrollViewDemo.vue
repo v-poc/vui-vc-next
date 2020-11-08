@@ -104,7 +104,7 @@
 <script>
 import { nextTick, reactive, ref } from 'vue'
 import { logInfo, debounce } from '/@utils/index'
-import { MUSIC_DATA } from '/@assets/mock/index'
+import { PHOTOS_DATA } from '/@assets/mock/index'
 import Toast from '/@components/toast/index'
 import VScrollViewMore from '/@components/scroll-view/more.vue'
 import VScrollViewRefresh from '/@components/scroll-view/refresh.vue'
@@ -135,7 +135,7 @@ export default {
       isRefreshActive: false,
       listX: 12,
       listRefresh: 5,
-      listMusicData: MUSIC_DATA
+      listMusicData: PHOTOS_DATA
     })
 
     const onItemClick = (item) => {

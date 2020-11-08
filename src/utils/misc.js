@@ -2,7 +2,7 @@ import { root, isInBrowser } from './env'
 
 // Log info
 export const logInfo = (content) => {
-  console.info('%c%s', 'background: #36C;color: #FFF', `[VUI-log] ${content}`)
+  console.info('[VUI-log] %c%s', 'background: #36C;color: #FFF', content)
 }
 
 // Mix properties into target object
@@ -125,6 +125,7 @@ function checkIntersectionObserver () {
   return false
 }
 
+// Check IntersectionObserver
 export const hasIntersectionObserver = checkIntersectionObserver()
 
 const checkStyle = (el, prop) => {
@@ -135,6 +136,7 @@ const checkOverflow = (el) => {
   return checkStyle(el, 'overflow') + checkStyle(el, 'overflow-y') + checkStyle(el, 'overflow-x')
 }
 
+// Scroll parent
 export const scrollParent = (el) => {
   let parent = el
 
