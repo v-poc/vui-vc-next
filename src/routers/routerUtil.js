@@ -1,4 +1,4 @@
-import { componentsVUI } from '../components/index'
+import { componentsVUI } from '/@components/index'
 
 const componentsMap = {}
 
@@ -7,7 +7,7 @@ componentsVUI.forEach((name) => {
   componentsMap[name] = {
     routeName,
     routePath: `/${routeName}`,
-    routeComponent: () => import(`../views/${name}Demo.vue`)
+    routeComponent: () => import(`/@views/${name}Demo.vue`)
   }
 })
 

@@ -21,7 +21,7 @@
       :row="7"
       :loading="state.contentLoading"
     >
-      <img src="../assets/images/kongfu.png" />
+      <img src="/@assets/images/kongfu.png" />
     </v-skeleton>
   </div>
   <div class="v-example">
@@ -40,8 +40,8 @@
 
 <script>
 import { reactive } from 'vue'
-// import VSkeleton from '../components/skeleton/index.vue'
-// import VButton from '../components/button/index.vue'
+// import VSkeleton from '/@components/skeleton/index.vue'
+// import VButton from '/@components/button/index.vue'
 
 export default {
   name: 'skeleton-demo',

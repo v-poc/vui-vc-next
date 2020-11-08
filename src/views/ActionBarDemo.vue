@@ -86,10 +86,10 @@
 
 <script>
 import { computed, reactive } from 'vue'
-import Toast from '../components/toast/index'
-import VCoolButton from '../components/misc/cool-button.vue'
-// import VActionBar from '../components/action-bar/index.vue'
-// import VButton from '../components/button/index.vue'
+import Toast from '/@components/toast/index'
+import VCoolButton from '/@components/misc/cool-button.vue'
+// import VActionBar from '/@components/action-bar/index.vue'
+// import VButton from '/@components/button/index.vue'
 
 export default {
   name: 'action-bar-demo',

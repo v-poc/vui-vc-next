@@ -1,4 +1,4 @@
-import { SVG_SPRITE_NODE_ID } from '../constants/index'
+import { SVG_SPRITE_NODE_ID } from '/@constants/index'
 import useDefaultSvgList from './useDefaultSvgList'
 
 const svgSprite = (contents) => `

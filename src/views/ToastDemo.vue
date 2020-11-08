@@ -72,9 +72,9 @@
 
 <script>
 import { ref } from 'vue'
-import Toast from '../components/toast/index'
-// import VToast from '../components/toast/toast.vue'
-// import VButton from '../components/button/index.vue'
+import Toast from '/@components/toast/index'
+// import VToast from '/@components/toast/toast.vue'
+// import VButton from '/@components/button/index.vue'
 
 export default {
   name: 'toast-demo',

@@ -1,8 +1,8 @@
-import { install } from './components/index'
+import { install } from '/@components/index'
 import { createApp } from 'vue'
-import App from './App.vue'
-import router from './routers/index'
-import './assets/vui-fastclick.js' // import fastclick
+import App from '/@/App.vue'
+import router from '/@routers/index'
+import '/@assets/vui-fastclick' // import fastclick
 
 // handle fastclick
 if ('ontouchstart' in window) {

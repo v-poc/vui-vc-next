@@ -1,8 +1,17 @@
 import { getCurrentInstance } from 'vue'
-import { DEFAULT_IMG_URL, THROTTLE_DELAY } from '../constants/index'
-import { hasIntersectionObserver, scrollParent, loadImage, throttle, logInfo } from '../utils/index'
+import { DEFAULT_IMG_URL, THROTTLE_DELAY } from '/@constants/index'
+import { hasIntersectionObserver, scrollParent, loadImage, throttle, logInfo } from '/@utils/index'
 
-const LAZY_EVENTS = ['scroll', 'wheel', 'mousewheel', 'resize', 'animationend', 'transitionend', 'touchmove', 'transitioncancel']
+const LAZY_EVENTS = [
+  'scroll',
+  'wheel',
+  'mousewheel',
+  'resize',
+  'animationend',
+  'transitionend',
+  'touchmove',
+  'transitioncancel'
+]
 
 const LoadImageState = {
   loading: 0,

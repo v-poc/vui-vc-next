@@ -113,13 +113,13 @@
 
 <script>
 import { ref } from 'vue'
-import Toast from '../components/toast/index'
-import VCoolButton from '../components/misc/cool-button.vue'
-import VLikeButton from '../components/misc/like-button.vue'
-// import VButton from '../components/button/index.vue'
-// import VIcon from '../components/icon/index.vue'
-// import VPopup from '../components/popup/index.vue'
-// import VLandscape from '../components/landscape/index.vue'
+import Toast from '/@components/toast/index'
+import VCoolButton from '/@components/misc/cool-button.vue'
+import VLikeButton from '/@components/misc/like-button.vue'
+// import VButton from '/@components/button/index.vue'
+// import VIcon from '/@components/icon/index.vue'
+// import VPopup from '/@components/popup/index.vue'
+// import VLandscape from '/@components/landscape/index.vue'
 
 export default {
   name: 'button-demo',

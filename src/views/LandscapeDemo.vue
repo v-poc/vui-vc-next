@@ -17,7 +17,7 @@
       @show="showInfo('show landscape popup')"
       @hide="showInfo('hide landscape popup')"
     >
-      <img src="../assets/images/mj.png" />
+      <img src="/@assets/images/mj.png" />
     </v-landscape>
   </div>
   <div class="v-example">
@@ -54,18 +54,18 @@
       v-model:value="popupShow.fullscreenMode"
       fullscreen
     >
-      <img src="../assets/images/kongfu.png" />
+      <img src="/@assets/images/kongfu.png" />
     </v-landscape>
   </div>
 </template>
 
 <script>
 import { ref } from 'vue'
-import { logInfo } from '../utils/index'
-import Toast from '../components/toast/index'
-// import VOnePiece from '../components/misc/op.vue'
-// import VLandscape from '../components/landscape/index.vue'
-// import VButton from '../components/button/index.vue'
+import { logInfo } from '/@utils/index'
+import Toast from '/@components/toast/index'
+// import VOnePiece from '/@components/misc/op.vue'
+// import VLandscape from '/@components/landscape/index.vue'
+// import VButton from '/@components/button/index.vue'
 
 export default {
   name: 'landscape-demo',

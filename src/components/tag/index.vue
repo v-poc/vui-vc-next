@@ -45,7 +45,7 @@
 
 <script>
 import { computed, ref, onMounted } from 'vue'
-import { transformCamelCase } from '../../utils/index'
+import { transformCamelCase } from '/@utils/index'
 
 export default {
   name: 'v-tag',

@@ -10,8 +10,8 @@
 
 <script>
 import { computed, onMounted } from 'vue'
-import { SVG_SPRITE_NODE_ID } from '../../constants/index'
-import useLoadSvgSprite from '../../composables/useLoadSvgSprite'
+import { SVG_SPRITE_NODE_ID } from '/@constants/index'
+import useLoadSvgSprite from '/@composables/useLoadSvgSprite'
 
 export default {
   name: 'v-icon-svg',

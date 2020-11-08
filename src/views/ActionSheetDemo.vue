@@ -34,10 +34,10 @@
 
 <script>
 import { reactive } from 'vue'
-import Toast from '../components/toast/index'
-// import VActionSheet from '../components/action-sheet/action-sheet.vue'
-// import VButton from '../components/button/index.vue'
-// import VSwitch from '../components/switch/index.vue'
+import Toast from '/@components/toast/index'
+// import VActionSheet from '/@components/action-sheet/action-sheet.vue'
+// import VButton from '/@components/button/index.vue'
+// import VSwitch from '/@components/switch/index.vue'
 
 export default {
   name: 'action-sheet-demo',

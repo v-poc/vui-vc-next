@@ -44,7 +44,7 @@
 </template>
 
 <script>
-// import VActivityIndicator from '../components/activity-indicator/index.vue'
+// import VActivityIndicator from '/@components/activity-indicator/index.vue'
 
 export default {
   name: 'activity-indicator-demo',

@@ -19,7 +19,7 @@
 import { computed } from 'vue'
 import VIconFont from './icon-font.vue'
 import VIconSvg from './icon-svg.vue'
-import useDefaultSvgList from '../../composables/useDefaultSvgList'
+import useDefaultSvgList from '/@composables/useDefaultSvgList'
 
 export default {
   name: 'v-icon',

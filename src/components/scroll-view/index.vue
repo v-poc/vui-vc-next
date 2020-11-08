@@ -59,8 +59,8 @@ import {
   onMounted,
   onUnmounted
 } from 'vue'
-import { debounce, render } from '../../utils/index'
-import useScroller from '../../composables/useScroller'
+import { debounce, render } from '/@utils/index'
+import useScroller from '/@composables/useScroller'
 
 export default {
   name: 'v-scroll-view',

@@ -1,4 +1,4 @@
-import { root } from '../utils/index'
+import { root } from '/@utils/index'
 
 const useAnimate = () => {
   const global = root

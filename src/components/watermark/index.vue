@@ -45,8 +45,8 @@
 
 <script>
 import { computed, reactive, ref, onMounted } from 'vue'
-import { getDpr } from '../../utils/index'
-import { WATERMARK } from '../../constants/index'
+import { getDpr } from '/@utils/index'
+import { WATERMARK } from '/@constants/index'
 
 export default {
   name: 'v-watermark',

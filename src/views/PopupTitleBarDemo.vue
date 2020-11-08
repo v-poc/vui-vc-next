@@ -44,13 +44,13 @@
 
 <script>
 import { ref } from 'vue'
-import { logInfo } from '../utils/index'
-import Toast from '../components/toast/index'
-// import VOnePiece from '../components/misc/op.vue'
-// import VPopup from '../components/popup/index.vue'
-// import VButton from '../components/button/index.vue'
-// import VPopupTitleBar from '../components/popup/title-bar.vue'
-// import VLandscape from '../components/landscape/index.vue'
+import { logInfo } from '/@utils/index'
+import Toast from '/@components/toast/index'
+// import VOnePiece from '/@components/misc/op.vue'
+// import VPopup from '/@components/popup/index.vue'
+// import VButton from '/@components/button/index.vue'
+// import VPopupTitleBar from '/@components/popup/title-bar.vue'
+// import VLandscape from '/@components/landscape/index.vue'
 
 export default {
   name: 'popup-titlebar-demo',

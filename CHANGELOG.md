@@ -1,6 +1,10 @@
+# 0.4.3 (2020-11-08)
+
+Refactor: v-lazy directive.
+
 # 0.4.1 (2020-11-07)
 
-Added useLazyLoadImage.
+Added useLazyLoadImage for v-lazy directive.
 
 # 0.3.10 (2020-11-02)
 
@@ -11,11 +15,11 @@ Added useLazyLoadImage.
 
 - Refactor: useScroller for ScrollView.
 - Updated OnePiece demo once Circular progress is completed.
-- Updated ScrollView demo.
+- Updated ScrollView demo for pull-down-refresh.
 
 # 0.3.3 (2020-10-29)
 
-- Updated ScrollView demo.
+- Updated ScrollView demo for pull-up-load-more.
 - Updated version for vite.
 
 # 0.3.0 (2020-10-25)

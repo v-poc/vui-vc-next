@@ -100,7 +100,7 @@
 
 <script>
 import { computed, reactive, onMounted, onUnmounted } from 'vue'
-import useEventListener from '../../composables/useEventListener'
+import useEventListener from '/@composables/useEventListener'
 
 export default {
   name: 'v-chart',

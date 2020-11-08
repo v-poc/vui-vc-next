@@ -11,9 +11,9 @@
 
 <script>
 import { reactive, onMounted, computed, watch } from 'vue'
-import useAnimate from '../../composables/useAnimate'
-import useNumberCapital from '../../composables/useNumberCapital'
-import { noop, isInBrowser, formatValueByGapStep } from '../../utils/index'
+import useAnimate from '/@composables/useAnimate'
+import useNumberCapital from '/@composables/useNumberCapital'
+import { noop, isInBrowser, formatValueByGapStep } from '/@utils/index'
 
 export default {
   name: 'v-amount',

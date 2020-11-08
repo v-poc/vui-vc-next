@@ -67,7 +67,7 @@
 <script>
 import { computed } from 'vue'
 import VIcon from '../icon/index.vue'
-import usePopupTitleBarBase from '../../composables/usePopupTitleBarBase'
+import usePopupTitleBarBase from '/@composables/usePopupTitleBarBase'
 
 export default {
   name: 'v-popup-title-bar',

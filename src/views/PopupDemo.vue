@@ -19,7 +19,7 @@
     >
       <div class="v-example-popup v-example-popup-center">
         <p>popup from center</p>
-        <img src="../assets/images/mj.png" />
+        <img src="/@assets/images/mj.png" />
       </div>
     </v-popup>
   </div>
@@ -38,7 +38,7 @@
     >
       <div class="v-example-popup v-example-popup-left">
         <p>popup from left</p>
-        <img src="../assets/images/mj.png" />
+        <img src="/@assets/images/mj.png" />
       </div>
     </v-popup>
   </div>
@@ -57,7 +57,7 @@
     >
       <div class="v-example-popup v-example-popup-right">
         <p>popup from right</p>
-        <img src="../assets/images/mj.png" />
+        <img src="/@assets/images/mj.png" />
       </div>
     </v-popup>
   </div>
@@ -115,12 +115,12 @@
 
 <script>
 import { ref } from 'vue'
-import { logInfo } from '../utils/index'
-import Toast from '../components/toast/index'
-import VLikeButton from '../components/misc/like-button.vue'
-// import VPopup from '../components/popup/index.vue'
-// import VButton from '../components/button/index.vue'
-// import VPopupTitleBar from '../components/popup/title-bar.vue'
+import { logInfo } from '/@utils/index'
+import Toast from '/@components/toast/index'
+import VLikeButton from '/@components/misc/like-button.vue'
+// import VPopup from '/@components/popup/index.vue'
+// import VButton from '/@components/button/index.vue'
+// import VPopupTitleBar from '/@components/popup/title-bar.vue'
 
 export default {
   name: 'popup-demo',

@@ -22,7 +22,7 @@
 
 <script>
 import { ref } from 'vue'
-import VHelloWorld from '../components/misc/hello-world.vue'
+import VHelloWorld from '/@components/misc/hello-world.vue'
 
 export default {
   name: 'one-piece-demo',

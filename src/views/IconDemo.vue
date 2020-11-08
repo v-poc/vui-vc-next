@@ -108,10 +108,10 @@
 
 <script>
 import { reactive, onUnmounted } from 'vue'
-// import VIcon from '../components/icon/index.vue'
-// import VButton from '../components/button/index.vue'
-import { SVG_SPRITE_NODE_ID } from '../constants/index'
-import useLoadSvgSprite from '../composables/useLoadSvgSprite'
+// import VIcon from '/@components/icon/index.vue'
+// import VButton from '/@components/button/index.vue'
+import { SVG_SPRITE_NODE_ID } from '/@constants/index'
+import useLoadSvgSprite from '/@composables/useLoadSvgSprite'
 
 export default {
   name: 'icon-demo',
