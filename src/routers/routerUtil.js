@@ -7,7 +7,7 @@ componentsVUI.forEach((name) => {
   componentsMap[name] = {
     routeName,
     routePath: `/${routeName}`,
-    routeComponent: () => import(`/@views/${name}Demo.vue`)
+    routeComponent: () => import(`../views/${name}Demo.vue`)
   }
 })
 
