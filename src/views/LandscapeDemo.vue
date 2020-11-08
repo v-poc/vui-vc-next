@@ -17,7 +17,7 @@
       @show="showInfo('show landscape popup')"
       @hide="showInfo('hide landscape popup')"
     >
-      <img src="/@assets/images/mj.png" />
+      <img v-lazy="'https://nikoni.top/images/others/mj.png'" />
     </v-landscape>
   </div>
   <div class="v-example">
@@ -54,7 +54,7 @@
       v-model:value="popupShow.fullscreenMode"
       fullscreen
     >
-      <img src="/@assets/images/kongfu.png" />
+      <img v-lazy="'https://nikoni.top/images/others/kongfu.png'" />
     </v-landscape>
   </div>
 </template>

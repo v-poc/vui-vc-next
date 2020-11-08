@@ -21,7 +21,7 @@
       :row="7"
       :loading="state.contentLoading"
     >
-      <img src="/@assets/images/kongfu.png" />
+      <img v-lazy="'https://nikoni.top/images/others/kongfu.png'" />
     </v-skeleton>
   </div>
   <div class="v-example">

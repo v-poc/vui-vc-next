@@ -19,7 +19,7 @@
     >
       <div class="v-example-popup v-example-popup-center">
         <p>popup from center</p>
-        <img src="/@assets/images/mj.png" />
+        <img v-lazy="'https://nikoni.top/images/others/mj.png'" />
       </div>
     </v-popup>
   </div>
@@ -38,7 +38,7 @@
     >
       <div class="v-example-popup v-example-popup-left">
         <p>popup from left</p>
-        <img src="/@assets/images/mj.png" />
+        <img v-lazy="'https://nikoni.top/images/others/mj.png'" />
       </div>
     </v-popup>
   </div>
@@ -57,7 +57,7 @@
     >
       <div class="v-example-popup v-example-popup-right">
         <p>popup from right</p>
-        <img src="/@assets/images/mj.png" />
+        <img v-lazy="'https://nikoni.top/images/others/mj.png'" />
       </div>
     </v-popup>
   </div>

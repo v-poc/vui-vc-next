@@ -22,7 +22,7 @@
     >
       <div class="v-example-popup v-example-popup-center">
         <p>{{ detailInfo(item) }}</p>
-        <img src="/@assets/images/mj.png" />
+        <img v-lazy="'https://nikoni.top/images/others/mj.png'" />
       </div>
     </v-popup>
   </div>

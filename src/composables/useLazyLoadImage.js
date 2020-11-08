@@ -58,18 +58,19 @@ class ImageManager {
     }
   }
 
-  renderSrc (next) {
-    loadImage(this.src).then(() => {
+  async renderSrc (next) {
+    try {
+      await loadImage(this.src)
       this.state = LoadImageState.loaded
       this.render(this.src)
       this.cache.add(this.src)
       next && next()
-    }).catch((e) => {
+    } catch (e) {
       this.state = LoadImageState.error
       this.render(this.error)
       logInfo(`load failed with src image(${this.src}), error msg: ${e.message}`)
       next && next()
-    })
+    }
   }
 
   render (src) {
