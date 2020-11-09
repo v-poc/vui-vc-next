@@ -40,11 +40,58 @@
       </div>
     </v-landscape>
   </div>
+  <div class="v-example v-example-popup-scroll-view">
+    <p>Popup TitleBar - ScrollView</p>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="showPopup('bottomView', true)"
+    >Test popup ScrollView</v-button>
+    <v-popup
+      position="bottom"
+      v-model:value="popupShow.bottomView"
+    >
+      <v-popup-title-bar
+        only-close
+        large-radius
+        title-align="left"
+        title="The Popup ScrollView"
+        describe="powered by vui.next"
+        @cancel="hidePopupTitleBar('closeButton')"
+      ></v-popup-title-bar>
+      <div class="v-example-scroll-view-lazy">
+        <v-scroll-view
+          :scrolling-x="false"
+          :auto-reflow="true"
+          @scroll="onScroll"
+        >
+          <ul class="lazy-list">
+            <li
+              v-for="item in state.listPhotoData"
+              class="item"
+              :key="item.id"
+            >
+              <div class="icon">
+                <img v-lazy="item.imgUrl" />
+              </div>
+              <div class="text">
+                <h2 class="name">{{ item.name }}</h2>
+                <p class="desc">{{ item.desc }}</p>
+              </div>
+            </li>
+          </ul>
+        </v-scroll-view>
+      </div>
+    </v-popup>
+  </div>
 </template>
 
 <script>
-import { ref } from 'vue'
-import { logInfo } from '/@utils/index'
+import { reactive, ref } from 'vue'
+import { logInfo, debounce } from '/@utils/index'
+import { PHOTOS_DATA } from '/@assets/mock/index'
 import Toast from '/@components/toast/index'
 // import VOnePiece from '/@components/misc/op.vue'
 // import VPopup from '/@components/popup/index.vue'
@@ -66,6 +113,10 @@ export default {
   // },
 
   setup() {
+    const state = reactive({
+      listPhotoData: PHOTOS_DATA
+    })
+
     const popupShow = ref({})
 
     // show/hide popup
@@ -81,14 +132,23 @@ export default {
 
     const hidePopupTitleBar = (info) => {
       showPopup('bottom', false)
+      showPopup('bottomView', false)
       showInfo(`${info} hide popup-title-bar`)
     }
 
+    const onScroll = debounce(({ scrollLeft, scrollTop }) => {
+      logInfo(
+        `[PopupTitleBarDemo] onScroll - scrollLeft: ${scrollLeft}, scrollTop: ${scrollTop}`
+      )
+    }, 50)
+
     return {
+      state,
       popupShow: popupShow.value,
       showPopup,
       showInfo,
-      hidePopupTitleBar
+      hidePopupTitleBar,
+      onScroll
     }
   }
 }
@@ -109,5 +169,15 @@ export default {
 .v-example-op-default {
   height: 3.5rem;
   background: #fff;
+}
+
+.v-example-popup-scroll-view {
+  .v-popup-title-bar {
+    background-color: rgb(51, 51, 51);
+
+    ::v-deep(.title-bar-title p.title) {
+      color: rgb(133, 139, 156);
+    }
+  }
 }
 </style>

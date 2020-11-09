@@ -6,10 +6,14 @@
   <div class="v-example">
     <p>ScrollView - lazyLoadImage</p>
     <div class="v-example-scroll-view-lazy">
-      <v-scroll-view @scroll="onScroll">
+      <v-scroll-view
+        :scrolling-x="false"
+        :auto-reflow="true"
+        @scroll="onScroll"
+      >
         <ul class="lazy-list">
           <li
-            v-for="item in state.listMusicData"
+            v-for="item in state.listPhotoData"
             class="item"
             :key="item.id"
           >
@@ -102,7 +106,7 @@
 </template>
 
 <script>
-import { nextTick, reactive, ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { logInfo, debounce } from '/@utils/index'
 import { PHOTOS_DATA } from '/@assets/mock/index'
 import Toast from '/@components/toast/index'
@@ -135,7 +139,7 @@ export default {
       isRefreshActive: false,
       listX: 12,
       listRefresh: 5,
-      listMusicData: PHOTOS_DATA
+      listPhotoData: PHOTOS_DATA
     })
 
     const onItemClick = (item) => {
@@ -214,47 +218,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
-
-.v-example-scroll-view-lazy {
-  height: 6rem;
-  background-color: #333;
-  border-radius: 4px;
-
-  .lazy-list {
-    padding-top: 0.1rem;
-
-    .item {
-      display: flex;
-      box-sizing: border-box;
-      align-items: center;
-      padding: 0 0.2rem 0.2rem 0.2rem;
-
-      .icon {
-        flex: 0 0 1rem;
-        width: 1rem;
-        padding-right: 0.2rem;
-      }
-
-      .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex: 1;
-        overflow: hidden;
-        font-size: 0.14rem;
-
-        .name {
-          margin-bottom: 0.1rem;
-          color: #fff;
-        }
-
-        .desc {
-          color: rgba(255, 255, 255, 0.3);
-        }
-      }
-    }
-  }
-}
 
 .v-example-scroll-view-more {
   height: 5rem;
