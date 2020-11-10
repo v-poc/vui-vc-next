@@ -176,8 +176,12 @@ export default {
     background-color: rgb(51, 51, 51);
 
     ::v-deep(.title-bar-title p.title) {
-      color: rgb(133, 139, 156);
+      color: rgb(133, 139, 256);
     }
+  }
+
+  .v-example-scroll-view-lazy {
+    border-radius: 0;
   }
 }
 </style>
