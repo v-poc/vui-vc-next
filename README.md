@@ -34,6 +34,8 @@ Select the components you need to build your web App. Please check [VUI-POC](htt
 - h5
 - react native
 
+> The mobile-first responsive-UI is also fit for desktop web.
+
 ## Project setup
 
 ### How to setup your project
