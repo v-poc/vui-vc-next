@@ -1,6 +1,6 @@
 {
   "name": "vui-vc-next",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "description": "Mobile web UI components based on Vue 3 and Vite",
   "main": "src/components/index.js",
   "files": [
@@ -42,7 +42,7 @@
     "vite": "^1.0.0-rc.9",
     "vitepress": "^0.7.4",
     "vue": "^3.0.2",
-    "vue-router": "^4.0.0-rc.2"
+    "vue-router": "^4.0.0-rc.3"
   },
   "engines": {
     "node": ">=10.0.0"
