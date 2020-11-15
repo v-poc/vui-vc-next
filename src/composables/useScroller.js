@@ -214,7 +214,7 @@ class Scroller {
     // Correct coordinates based on new zoom level
     if (zoom != null && zoom !== this._zoomLevel) {
       if (!this.options.zooming) {
-        logInfo('Zooming is not enabled!')
+        logInfo('Zooming is not enabled!', 'warn')
       }
       zoom = zoom ? zoom : 1
       left *= zoom
@@ -274,7 +274,7 @@ class Scroller {
    */
   zoomTo(level, isAnimate, originLeft, originTop, callback) {
     if (!this.options.zooming) {
-      logInfo('Zooming is not enabled!')
+      logInfo('Zooming is not enabled!', 'warn')
     }
 
     // Add callback if exists
@@ -330,13 +330,13 @@ class Scroller {
   doTouchStart(touches, timeStamp) {
     // Array-like check is enough here
     if (touches.length == null) {
-      logInfo(`Invalid touch list: ${touches}`)
+      logInfo(`Invalid touch list: ${touches}`, 'warn')
     }
     if (timeStamp instanceof Date) {
       timeStamp = timeStamp.valueOf()
     }
     if (typeof timeStamp !== 'number') {
-      logInfo(`Invalid timestamp value: ${timeStamp}`)
+      logInfo(`Invalid timestamp value: ${timeStamp}`, 'warn')
     }
 
     // Reset interruptedAnimation flag
@@ -408,7 +408,7 @@ class Scroller {
   doTouchMove(touches, timeStamp, scale) {
     // Array-like check is enough here
     if (touches.length == null) {
-      logInfo(`Invalid touch list: ${touches}`)
+      logInfo(`Invalid touch list: ${touches}`, 'warn')
     }
 
     if (timeStamp instanceof Date) {
@@ -416,7 +416,7 @@ class Scroller {
     }
 
     if (typeof timeStamp !== 'number') {
-      logInfo(`Invalid timestamp value: ${timeStamp}`)
+      logInfo(`Invalid timestamp value: ${timeStamp}`, 'warn')
     }
 
     // Ignore event when tracking is not enabled (event might be outside of element)
@@ -563,7 +563,7 @@ class Scroller {
     }
 
     if (typeof timeStamp !== 'number') {
-      logInfo(`Invalid timestamp value: ${timeStamp}`)
+      logInfo(`Invalid timestamp value: ${timeStamp}`, 'warn')
     }
     // Ignore event when tracking is not enabled (no touchstart event on element)
     // This is required as this listener ('touchmove') sits on the document and not on the element itthis.

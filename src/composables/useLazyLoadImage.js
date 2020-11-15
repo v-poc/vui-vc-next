@@ -68,7 +68,7 @@ class ImageManager {
     } catch (e) {
       this.state = LoadImageState.error
       this.render(this.error)
-      logInfo(`load failed with src image(${this.src}), error msg: ${e.message}`)
+      logInfo(`load failed with src image(${this.src}), error msg: ${e.message}`, 'error')
       next && next()
     }
   }

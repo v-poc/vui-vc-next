@@ -1,8 +1,8 @@
 import { root, isInBrowser } from './env'
 
 // Log info
-export const logInfo = (content) => {
-  import.meta.env.DEV && console.info('[VUI-log] %c%s', 'background: #36C;color: #FFF', content)
+export const logInfo = (content, type = 'info') => {
+  import.meta.env.DEV && console[type] && console[type]('[VUI-log] %c%s', 'background: #69C;color: #FFF', content)
 }
 
 // Mix properties into target object
