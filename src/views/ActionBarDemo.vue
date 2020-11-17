@@ -86,6 +86,7 @@
 
 <script>
 import { computed, reactive } from 'vue'
+import { logInfo } from '/@utils/index'
 import Toast from '/@components/toast/index'
 import VCoolButton from '/@components/misc/cool-button.vue'
 // import VActionBar from '/@components/action-bar/index.vue'
@@ -109,15 +110,19 @@ export default {
 
     const onClick3 = (item) => {
       Toast.succeed('Click primary button')
+      logInfo('button is inactive')
       item.inactive = true
       setTimeout(() => {
+        logInfo('button is active')
         item.inactive = false
       }, 2000)
     }
 
     const onClick4 = () => {
       state.scale = (state.scale * 10 + 1) / 10
+      logInfo(`scale: ${state.scale}`)
       if (state.scale > 0.5) {
+        logInfo('reset style bottom')
         const btnNode = document.querySelector('.v-btn-op')
         btnNode && (btnNode.style.bottom = '0px')
       }
@@ -179,6 +184,7 @@ export default {
     const onShowDemo = (index) => {
       const nodes = document.querySelectorAll('.v-example')
       const len = nodes ? nodes.length : 0
+      logInfo(`nodes length: ${len}`)
       new Array(len).fill('').forEach((item, i) => (state[`showDemo${i + 1}`] = false))
       state[`showDemo${index}`] = true
       index === 5 && (state.scale = 0.3) // reset scale for Slot playground
