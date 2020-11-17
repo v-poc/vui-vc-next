@@ -120,9 +120,9 @@ export default {
 
     const onClick4 = () => {
       state.scale = (state.scale * 10 + 1) / 10
-      logInfo(`scale: ${state.scale}`)
+      logInfo(`scale: ${state.scale}`)      
       if (state.scale > 0.5) {
-        logInfo('reset style bottom')
+        logInfo('reset style bottom: 0px')
         const btnNode = document.querySelector('.v-btn-op')
         btnNode && (btnNode.style.bottom = '0px')
       }
@@ -187,7 +187,13 @@ export default {
       logInfo(`nodes length: ${len}`)
       new Array(len).fill('').forEach((item, i) => (state[`showDemo${i + 1}`] = false))
       state[`showDemo${index}`] = true
-      index === 5 && (state.scale = 0.3) // reset scale for Slot playground
+      // reset scale for Slot playground
+      if (index === 5) {
+        state.scale = 0.3
+        logInfo('reset style bottom: auto')
+        const btnNode = document.querySelector('.v-btn-op')
+        btnNode && (btnNode.style.bottom = 'auto')        
+      }
     }
 
     return {
