@@ -34,6 +34,7 @@
 
 <script>
 import { reactive } from 'vue'
+import { logInfo } from '/@utils/index'
 import Toast from '/@components/toast/index'
 // import VActionSheet from '/@components/action-sheet/action-sheet.vue'
 // import VButton from '/@components/button/index.vue'
@@ -74,15 +75,19 @@ export default {
     })
 
     const onShowDemo = () => {
+      logInfo('Show ActionSheet')
       state.isShowDemo = true
     }
 
     const onSelected = (item) => {
+      logInfo(`Selected item: ${JSON.stringify(item)}`)
       Toast.succeed(`Selected item label: ${item.label || ''}`)
     }
 
     const onCancel = () => {
-      Toast.failed('Cancel ActionSheet')
+      const res = 'Cancel ActionSheet'
+      logInfo(res)
+      Toast.failed(res)
     }
 
     return {
