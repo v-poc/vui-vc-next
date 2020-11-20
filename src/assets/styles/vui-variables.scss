@@ -27,8 +27,13 @@ $color-bg-disabled: #E2E4EA;
 $color-bg-tap: #F9FAFB;
 $color-mask: rgba(37, 38, 45, 0.7);
 
+$opacity-disabled: 0.3;
+
 $radius-normal: 4px;
 $radius-circle: 50%;
+
+$agree-fill: $color-primary;
+$agree-disabled-opacity: $opacity-disabled;
 
 $checkbox-color: $color-text-base;
 $checkbox-font-size: $font-caption-normal;
@@ -55,7 +60,7 @@ $v-gap-md: $h-gap-md;
 $v-gap-lg: $h-gap-lg;
 $v-gap-sl: $h-gap-sl;
 
-$opacity-disabled: 0.3;
+$ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
 
 $action-sheet-height: 1rem;
 $action-sheet-padding-h: $h-gap-sl;

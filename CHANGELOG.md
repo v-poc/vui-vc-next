@@ -1,3 +1,7 @@
+# 0.5.0 (2020-11-20)
+
+Added Agree demo.
+
 # 0.4.3 (2020-11-08)
 
 Refactor: v-lazy directive.
