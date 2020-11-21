@@ -1,3 +1,7 @@
+# 0.5.6 (2020-11-21)
+
+Refactor: addDirective utility.
+
 # 0.5.2 (2020-11-20)
 
 Added Agree demo.
