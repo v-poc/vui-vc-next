@@ -77,6 +77,12 @@ const install = function (app) {
     app.component(camelCaseName, registerComponent) // camelCase
   })
 
+  // Register global custom directive
+  addDirective(app)
+}
+
+// add custom directive function
+const addDirective = function (app) {
   // register v-lazy directive
   useLazyLoadImage({
     loading: DEFAULT_IMG_PLACEHOLDER,
@@ -89,6 +95,7 @@ const version = packageData.version
 export {
   componentsVUI,
   install,
+  addDirective,
   version,
   VSkeleton,
   VTag,
