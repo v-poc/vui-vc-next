@@ -15,7 +15,7 @@
 
 ### Preview
 
-You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to access the examples:
+You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to access the examples in mobile/tablet device:
 
 <img src="https://nikoni.top/images/vui-vc-qrcode.png" alt="VUI Examples" width="222" height="242"/>
 
@@ -52,6 +52,18 @@ npm run dev
 ### Compiles and minifies for production
 ```
 npm run build
+```
+
+## Project docs - [VUI-docs](https://nikoni.top/vui-vc-next/docs)
+
+### Compiles docs for development
+```
+npm run dev-docs
+```
+
+### Compiles and minifies docs for production
+```
+npm run build-docs
 ```
 
 ### Customize configuration
