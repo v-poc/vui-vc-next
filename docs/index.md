@@ -1,7 +1,3 @@
----
-sidebar: auto
----
-
 # VUI docs
 
 ## Reference list
