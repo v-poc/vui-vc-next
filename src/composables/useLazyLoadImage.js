@@ -241,7 +241,7 @@ class LazyLoadImage {
   }
 }
 
-const useLazyLoadImage = (options, app) => {
+const useLazyLoadImage = (options = {}, app) => {
   if (!app) {
     const currInstance = getCurrentInstance()
     if (!currInstance || !currInstance.appContext || !currInstance.appContext.app) {
@@ -250,7 +250,7 @@ const useLazyLoadImage = (options, app) => {
     app = currInstance.appContext.app
   }
 
-  if (!app.directive('lazy')) {
+  if (!app.directive('lazy') || options.reset) {
     const lazy = new LazyLoadImage(options)
     app.directive('lazy', {
       mounted: lazy.add.bind(lazy),

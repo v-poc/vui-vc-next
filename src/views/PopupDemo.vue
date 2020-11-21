@@ -83,7 +83,7 @@
         @cancel="hidePopupTitleBar('closeButton')"
       ></v-popup-title-bar>
       <div class="v-example-popup v-example-popup-bottom">
-        <v-like-button />
+        <v-like-button @on-click="onClickButton" />
       </div>      
     </v-popup>
   </div>
@@ -153,11 +153,19 @@ export default {
       showInfo(`${info} hide popup-title-bar`)
     }
 
+    const onClickButton = () => {
+      Toast({
+        icon: 'warn',
+        content: 'So cool, nice feeling!'
+      })
+    }    
+
     return {
       popupShow: popupShow.value,
       showPopup,
       showInfo,
-      hidePopupTitleBar
+      hidePopupTitleBar,
+      onClickButton
     }
   }
 }

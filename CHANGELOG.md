@@ -1,4 +1,4 @@
-# 0.5.6 (2020-11-21)
+# 0.5.7 (2020-11-21)
 
 Refactor: addDirective utility.
 
