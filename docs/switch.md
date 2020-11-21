@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Switch
 preview: https://nikoni.top/vui-vc-next/#/switch-demo
 ---

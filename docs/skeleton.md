@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Skeleton
 preview: https://nikoni.top/vui-vc-next/#/skeleton-demo
 ---

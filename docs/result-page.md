@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: ResultPage
 preview: https://nikoni.top/vui-vc-next/#/resultpage-demo
 ---

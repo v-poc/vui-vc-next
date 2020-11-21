@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Transition
 preview: https://nikoni.top/vui-vc-next/#/transition-demo
 ---

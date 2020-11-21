@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: ActionBar
 preview: https://nikoni.top/vui-vc-next/#/actionbar-demo
 ---

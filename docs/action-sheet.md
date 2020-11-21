@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: ActionSheet
 preview: https://nikoni.top/vui-vc-next/#/actionsheet-demo
 ---

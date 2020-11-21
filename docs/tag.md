@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Tag
 preview: https://nikoni.top/vui-vc-next/#/tag-demo
 ---

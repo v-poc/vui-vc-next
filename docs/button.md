@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Button
 preview: https://nikoni.top/vui-vc-next/#/button-demo
 ---

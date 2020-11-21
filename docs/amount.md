@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Amount
 preview: https://nikoni.top/vui-vc-next/#/amount-demo
 ---

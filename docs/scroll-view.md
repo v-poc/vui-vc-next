@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: ScrollView
 preview: https://nikoni.top/vui-vc-next/#/scrollview-demo
 ---

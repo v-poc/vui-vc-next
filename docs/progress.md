@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Progress
 preview: https://nikoni.top/vui-vc-next/#/progress-demo
 ---

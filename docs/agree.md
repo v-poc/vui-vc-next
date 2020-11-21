@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Agree
 preview: https://nikoni.top/vui-vc-next/#/agree-demo
 ---

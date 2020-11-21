@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Popup
 preview: https://nikoni.top/vui-vc-next/#/popup-demo
 ---

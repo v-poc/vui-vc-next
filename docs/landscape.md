@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Landscape
 preview: https://nikoni.top/vui-vc-next/#/landscape-demo
 ---

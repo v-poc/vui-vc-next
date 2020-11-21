@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Chart
 preview: https://nikoni.top/vui-vc-next/#/chart-demo
 ---

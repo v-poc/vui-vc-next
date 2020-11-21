@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Icon
 preview: https://nikoni.top/vui-vc-next/#/icon-demo
 ---

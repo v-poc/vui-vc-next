@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: ActivityIndicator
 preview: https://nikoni.top/vui-vc-next/#/activityindicator-demo
 ---

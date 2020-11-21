@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Watermark
 preview: https://nikoni.top/vui-vc-next/#/watermark-demo
 ---

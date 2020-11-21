@@ -1,5 +1,4 @@
 ---
-sidebar: auto
 title: Toast
 preview: https://nikoni.top/vui-vc-next/#/toast-demo
 ---
