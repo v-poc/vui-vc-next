@@ -24,6 +24,7 @@ sidebar: auto
 - [`VActionSheet`](./action-sheet.html)
 - [`VWatermark`](./watermark.html)
 - [`VScrollView`](./scroll-view.html)
+- [`VAgree`](./agree.html)
 
 ## License
 
