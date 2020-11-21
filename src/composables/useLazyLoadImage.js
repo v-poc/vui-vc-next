@@ -1,6 +1,6 @@
 import { getCurrentInstance } from 'vue'
-import { DEFAULT_IMG_URL, THROTTLE_DELAY } from '/@constants/index'
-import { hasIntersectionObserver, scrollParent, loadImage, throttle, logInfo } from '/@utils/index'
+import { DEFAULT_IMG_URL, THROTTLE_DELAY } from '../constants/index'
+import { hasIntersectionObserver, scrollParent, loadImage, throttle, logInfo } from '../utils/index'
 
 const LAZY_EVENTS = [
   'scroll',

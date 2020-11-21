@@ -2,7 +2,7 @@
  * Inspired by Scroller | MIT License (http://github.com/zynga/scroller)
  */
 import useAnimate from './useAnimate'
-import { noop, extend, logInfo, easeOutCubic, easeInOutCubic } from '/@utils/index'
+import { noop, extend, logInfo, easeOutCubic, easeInOutCubic } from '../utils/index'
 
 const Animate = useAnimate()
 

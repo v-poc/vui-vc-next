@@ -25,8 +25,8 @@
 
 <script>
 import { reactive } from 'vue'
-import { logInfo } from '/@utils/index'
-// import VSwitch from '/@components/switch/index.vue'
+import { logInfo } from '../utils/index'
+// import VSwitch from '../components/switch/index.vue'
 
 export default {
   name: 'switch-demo',

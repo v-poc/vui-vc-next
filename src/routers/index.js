@@ -1,8 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import { componentsVUI } from '/@components/index'
-import { getRoute } from '/@routers/routerUtil'
+import { componentsVUI } from '../components/index'
+import { getRoute } from './routerUtil'
 
-import Home from '/@views/IndexDemo.vue'
+import Home from '../views/IndexDemo.vue'
 
 const routes = [
   {

@@ -25,8 +25,8 @@
 
 <script>
 import { reactive } from 'vue'
-import { logInfo } from '/@utils/index'
-// import VAgree from '/@components/agree/index.vue'
+import { logInfo } from '../utils/index'
+// import VAgree from '../components/agree/index.vue'
 
 export default {
   name: 'agree-demo',

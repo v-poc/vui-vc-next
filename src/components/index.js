@@ -1,9 +1,9 @@
 import packageData from '../../package.json'
-import { transformCamelCase } from '/@utils/index'
-import { DEFAULT_IMG_PLACEHOLDER } from '/@constants/index'
-import useLazyLoadImage from '/@composables/useLazyLoadImage'
+import { transformCamelCase } from '../utils/index'
+import { DEFAULT_IMG_PLACEHOLDER } from '../constants/index'
+import useLazyLoadImage from '../composables/useLazyLoadImage'
 
-import '/@assets/styles/vui-reset.scss'
+import '../assets/styles/vui-reset.scss'
 import VSkeleton from './skeleton/index.vue'
 import VTag from './tag/index.vue'
 import VPopup from './popup/index.vue'

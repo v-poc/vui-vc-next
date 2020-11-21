@@ -30,8 +30,8 @@
 
 <script>
 import { ref } from 'vue'
-// import VPopup from '/@components/popup/index.vue'
-// import VButton from '/@components/button/index.vue'
+// import VPopup from '../components/popup/index.vue'
+// import VButton from '../components/button/index.vue'
 
 export default {
   name: 'transition-demo',

@@ -27,8 +27,8 @@
 
 <script>
 import { reactive } from 'vue'
-import { componentsVUI, version } from '/@components/index'
-import { getRoute } from '/@routers/routerUtil'
+import { componentsVUI, version } from '../components/index'
+import { getRoute } from '../routers/routerUtil'
 
 export default {
   name: 'index-demo',

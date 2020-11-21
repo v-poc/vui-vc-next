@@ -1,4 +1,4 @@
-import { CN_AMOUNT } from '/@constants/index'
+import { CN_AMOUNT } from '../constants/index'
 const cnNums = CN_AMOUNT.NUMS
 const cnIntRadice = CN_AMOUNT.INT_RADICE // 拾 \u62fe 佰 \u4f70 仟 \u4edf
 const cnIntUnits = CN_AMOUNT.INT_UNITS // 万 \u4e07 亿 \u4ebf 兆 \u5146

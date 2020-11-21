@@ -40,8 +40,8 @@
 
 <script>
 import { reactive } from 'vue'
-// import VSkeleton from '/@components/skeleton/index.vue'
-// import VButton from '/@components/button/index.vue'
+// import VSkeleton from '../components/skeleton/index.vue'
+// import VButton from '../components/button/index.vue'
 
 export default {
   name: 'skeleton-demo',

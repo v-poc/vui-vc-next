@@ -28,7 +28,7 @@
 
 <script>
 import { computed } from 'vue'
-import { SKELETON_WIDTH } from '/@constants/index'
+import { SKELETON_WIDTH } from '../../constants/index'
 
 export default {
   name: 'v-skeleton',

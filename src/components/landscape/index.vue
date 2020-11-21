@@ -31,7 +31,7 @@
 import { computed, ref, watchEffect } from 'vue'
 import VPopup from '../popup/index.vue'
 import VIcon from '../icon/index.vue'
-import usePopupBase from '/@composables/usePopupBase'
+import usePopupBase from '../../composables/usePopupBase'
 
 export default {
   name: 'v-landscape',

@@ -24,8 +24,8 @@
 
 <script>
 import { reactive } from 'vue'
-// import VResultPage from '/@components/result-page/index.vue'
-import Toast from '/@components/toast/index'
+// import VResultPage from '../components/result-page/index.vue'
+import Toast from '../components/toast/index'
 
 export default {
   name: 'result-page-demo',

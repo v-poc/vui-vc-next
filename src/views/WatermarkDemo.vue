@@ -28,7 +28,7 @@
 </template>
 
 <script>
-// import VWatermark from '/@components/watermark/index.vue'
+// import VWatermark from '../components/watermark/index.vue'
 
 export default {
   name: 'watermark-demo',

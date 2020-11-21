@@ -178,10 +178,10 @@
 
 <script>
 import { computed, reactive, ref } from 'vue'
-// import VProgressCircular from '/@components/progress/circular.vue'
-// import VAmount from '/@components/amount/index.vue'
-// import VButton from '/@components/button/index.vue'
-// import VIcon from '/@components/icon/index.vue'
+// import VProgressCircular from '../components/progress/circular.vue'
+// import VAmount from '../components/amount/index.vue'
+// import VButton from '../components/button/index.vue'
+// import VIcon from '../components/icon/index.vue'
 
 export default {
   name: 'progress-demo',

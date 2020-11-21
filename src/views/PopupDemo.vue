@@ -115,12 +115,12 @@
 
 <script>
 import { ref } from 'vue'
-import { logInfo } from '/@utils/index'
-import Toast from '/@components/toast/index'
-import VLikeButton from '/@components/misc/like-button.vue'
-// import VPopup from '/@components/popup/index.vue'
-// import VButton from '/@components/button/index.vue'
-// import VPopupTitleBar from '/@components/popup/title-bar.vue'
+import { logInfo } from '../utils/index'
+import Toast from '../components/toast/index'
+import VLikeButton from '../components/misc/like-button.vue'
+// import VPopup from '../components/popup/index.vue'
+// import VButton from '../components/button/index.vue'
+// import VPopupTitleBar from '../components/popup/title-bar.vue'
 
 export default {
   name: 'popup-demo',

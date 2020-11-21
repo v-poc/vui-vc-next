@@ -1,4 +1,4 @@
-import { componentsVUI } from '/@components/index'
+import { componentsVUI } from '../components/index'
 
 const componentsMap = {}
 

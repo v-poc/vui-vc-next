@@ -30,9 +30,9 @@
 
 <script>
 import { computed, reactive, ref, watch, onMounted } from 'vue'
-import usePopupBase from '/@composables/usePopupBase'
-import useTransition from '/@composables/useTransition'
-import useEventListener from '/@composables/useEventListener'
+import usePopupBase from '../../composables/usePopupBase'
+import useTransition from '../../composables/useTransition'
+import useEventListener from '../../composables/useEventListener'
 
 export default {
   name: 'v-popup',

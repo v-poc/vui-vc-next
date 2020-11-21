@@ -51,9 +51,9 @@
 
 <script>
 import { reactive, ref, onMounted } from 'vue'
-// import VAmount from '/@components/amount/index.vue'
-// import VButton from '/@components/button/index.vue'
-// import VPopup from '/@components/popup/index.vue'
+// import VAmount from '../components/amount/index.vue'
+// import VButton from '../components/button/index.vue'
+// import VPopup from '../components/popup/index.vue'
 
 export default {
   name: 'amount-demo',
