@@ -78,16 +78,19 @@ const install = function (app) {
   })
 
   // Register global custom directive
-  addDirective(app)
+  addDirective({
+    app,
+    defaultImage: DEFAULT_IMG_PLACEHOLDER
+  })
 }
 
 // add custom directive function
-const addDirective = function (app) {
+const addDirective = function (config = {}) {
   // register v-lazy directive
   useLazyLoadImage({
-    loading: DEFAULT_IMG_PLACEHOLDER,
-    error: DEFAULT_IMG_PLACEHOLDER
-  }, app)
+    loading: config.defaultImage,
+    error: config.defaultImage
+  }, config.app)
 }
 
 const version = packageData.version
