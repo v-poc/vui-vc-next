@@ -3,6 +3,8 @@ title: Landscape
 preview: https://nikoni.top/vui-vc-next/#/landscape-demo
 ---
 
+# VLandscape
+
 The display screen in a floating layer
 
 ## Import

@@ -3,6 +3,8 @@ title: ActionBar
 preview: https://nikoni.top/vui-vc-next/#/actionbar-demo
 ---
 
+# VActionBar
+
 Bottom sidebar with text or action buttons that can present form information or submit form data.
 
 ActionBar is fixed at the bottom of the page by `position: fixed`. In order to avoid the page content being overlap, we need to reserve a blank space (not less than `100px`) at the bottom (the iPhone also needs to add `constant(safe-area-inset-bottom)`).

@@ -3,6 +3,8 @@ title: ActivityIndicator
 preview: https://nikoni.top/vui-vc-next/#/activityindicator-demo
 ---
 
+# VActivityIndicator
+
 Activity indicator, generally used for tasks in progress
 
 ## Import

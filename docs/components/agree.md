@@ -3,6 +3,8 @@ title: Agree
 preview: https://nikoni.top/vui-vc-next/#/agree-demo
 ---
 
+# VAgree
+
 The agree control that supports toggling state.
 
 ## Import

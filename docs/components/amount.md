@@ -3,6 +3,8 @@ title: Amount
 preview: https://nikoni.top/vui-vc-next/#/amount-demo
 ---
 
+# VAmount
+
 Financial figures screen, generally for amounts and quantities, etc
 
 ## Import

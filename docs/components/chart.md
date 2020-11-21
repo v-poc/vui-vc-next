@@ -3,6 +3,8 @@ title: Chart
 preview: https://nikoni.top/vui-vc-next/#/chart-demo
 ---
 
+# VChart
+
 Chart made with SVG, supports polylines printing and display setting.
 
 ## Import

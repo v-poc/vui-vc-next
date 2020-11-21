@@ -3,6 +3,8 @@ title: ResultPage
 preview: https://nikoni.top/vui-vc-next/#/resultpage-demo
 ---
 
+# VResultPage
+
 Result page components for different ending page.
 
 It is recommended to set the parent element filled with windows for centering. The corresponding default value of picture on the page will be set according to the `type`.

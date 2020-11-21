@@ -3,6 +3,8 @@ title: Switch
 preview: https://nikoni.top/vui-vc-next/#/switch-demo
 ---
 
+# VSwitch
+
 Switch components that are able to toggle two states
 
 ## Import

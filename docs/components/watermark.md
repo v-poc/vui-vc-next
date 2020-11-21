@@ -3,6 +3,8 @@ title: Watermark
 preview: https://nikoni.top/vui-vc-next/#/watermark-demo
 ---
 
+# VWatermark
+
 Container with watermark background
 
 ## Import

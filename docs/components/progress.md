@@ -3,6 +3,8 @@ title: Progress
 preview: https://nikoni.top/vui-vc-next/#/progress-demo
 ---
 
+# VProgress
+
 Progress circular, generally used to communicate data intuitively to users
 
 ## Import

@@ -1,26 +1,30 @@
-# VUI docs
+---
+title: Index
+---
+
+# VUI.next docs
 
 ## Reference list
 
-- [`VSkeleton`](./skeleton.html)
-- [`VTag`](./tag.html)
-- [`VPopup`](./popup.html)
-- [`VIcon`](./icon.html)
-- [`VButton`](./button.html)
-- [`VTransition`](./transition.html)
-- [`VLandscape`](./landscape.html)
-- [`VToast`](./toast.html)
-- [`VAmount`](./amount.html)
-- [`VActivityIndicator`](./activity-indicator.html)
-- [`VChart`](./chart.html)
-- [`VProgress`](./progress.html)
-- [`VResultPage`](./result-page.html)
-- [`VActionBar`](./action-bar.html)
-- [`VSwitch`](./switch.html)
-- [`VActionSheet`](./action-sheet.html)
-- [`VWatermark`](./watermark.html)
-- [`VScrollView`](./scroll-view.html)
-- [`VAgree`](./agree.html)
+- [`VSkeleton`](./components/skeleton.html)
+- [`VTag`](./components/tag.html)
+- [`VPopup`](./components/popup.html)
+- [`VIcon`](./components/icon.html)
+- [`VButton`](./components/button.html)
+- [`VTransition`](./components/transition.html)
+- [`VLandscape`](./components/landscape.html)
+- [`VToast`](./components/toast.html)
+- [`VAmount`](./components/amount.html)
+- [`VActivityIndicator`](./components/activity-indicator.html)
+- [`VChart`](./components/chart.html)
+- [`VProgress`](./components/progress.html)
+- [`VResultPage`](./components/result-page.html)
+- [`VActionBar`](./components/action-bar.html)
+- [`VSwitch`](./components/switch.html)
+- [`VActionSheet`](./components/action-sheet.html)
+- [`VWatermark`](./components/watermark.html)
+- [`VScrollView`](./components/scroll-view.html)
+- [`VAgree`](./components/agree.html)
 
 ## License
 

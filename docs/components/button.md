@@ -3,6 +3,8 @@ title: Button
 preview: https://nikoni.top/vui-vc-next/#/button-demo
 ---
 
+# VButton
+
 Button components for different button styles
 
 ## Import

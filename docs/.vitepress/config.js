@@ -11,7 +11,18 @@ module.exports = {
     editLinkText: 'Edit this page on GitHub',
 
     nav: [
-      { text: 'API Reference', link: '/' },
+      {
+        text: 'VUI Components',
+        link: '/'
+      },
+      {
+        text: 'VUI Poc',
+        link: 'https://github.com/bluepower/vui-poc'
+      },
+      {
+        text: 'VUI Taro',
+        link: 'https://github.com/bluepower/vui-taro'
+      },
       {
         text: 'Changelog',
         link: 'https://github.com/bluepower/vui-vc-next/blob/dev/CHANGELOG.md'
@@ -19,34 +30,96 @@ module.exports = {
     ],
 
     sidebar: {
-      '/': getConfigSidebar()
+      '/': getConfigSidebar(),
+      '/components/': getConfigSidebar()
     }
-  }  
+  }
 }
 
 function getConfigSidebar() {
   return [{
-    text: 'API reference',
+    text: 'VUI Components',
     children: [
-      { text: 'VSkeleton', link: '/skeleton.html' },
-      { text: 'VTag', link: '/tag.html' },
-      { text: 'VPopup', link: '/popup.html' },
-      { text: 'VIcon', link: '/icon.html' },
-      { text: 'VButton', link: '/button.html' },
-      { text: 'VTransition', link: '/transition.html' },
-      { text: 'VLandscape', link: '/landscape.html' },
-      { text: 'VToast', link: '/toast.html' },
-      { text: 'VAmount', link: '/amount.html' },
-      { text: 'VActivityIndicator', link: '/activity-indicator.html' },
-      { text: 'VChart', link: '/chart.html' },
-      { text: 'VProgress', link: '/progress.html' },
-      { text: 'VResultPage', link: '/result-page.html' },
-      { text: 'VActionBar', link: '/action-bar.html' },
-      { text: 'VSwitch', link: '/switch.html' },
-      { text: 'VActionSheet', link: '/action-sheet.html' },
-      { text: 'VWatermark', link: '/watermark.html' },
-      { text: 'VScrollView', link: '/scroll-view.html' },
-      { text: 'VAgree', link: '/agree.html' }
+      {
+        text: 'Index page',
+        link: '/'
+      },
+      {
+        text: 'VSkeleton',
+        link: '/components/skeleton'
+      },
+      {
+        text: 'VTag',
+        link: '/components/tag'
+      },
+      {
+        text: 'VPopup',
+        link: '/components/popup'
+      },
+      {
+        text: 'VIcon',
+        link: '/components/icon'
+      },
+      {
+        text: 'VButton',
+        link: '/components/button'
+      },
+      {
+        text: 'VTransition',
+        link: '/components/transition'
+      },
+      {
+        text: 'VLandscape',
+        link: '/components/landscape'
+      },
+      {
+        text: 'VToast',
+        link: '/components/toast'
+      },
+      {
+        text: 'VAmount',
+        link: '/components/amount'
+      },
+      {
+        text: 'VActivityIndicator',
+        link: '/components/activity-indicator'
+      },
+      {
+        text: 'VChart',
+        link: '/components/chart'
+      },
+      {
+        text: 'VProgress',
+        link: '/components/progress'
+      },
+      {
+        text: 'VResultPage',
+        link: '/components/result-page'
+      },
+      {
+        text: 'VActionBar',
+        link: '/components/action-bar'
+      },
+      {
+        text: 'VSwitch',
+        link: '/components/switch'
+      },
+      {
+        text: 'VActionSheet',
+        link: '/components/action-sheet'
+      },
+      {
+        text: 'VWatermark',
+        link: '/components/watermark'
+      },
+      {
+        text: 'VScrollView',
+        link: '/components/scroll-view'
+      },
+      {
+        text: 'VAgree',
+        link: '/components/agree'
+      }
     ]
   }]
 }
