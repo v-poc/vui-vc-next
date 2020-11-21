@@ -3,8 +3,15 @@
     <p>
       <span class="title">vui</span>
       <sub>.next</sub>
-      <sub>v{{ state.version }}</sub>
+      <sub>v{{ state.version }}</sub>      
     </p>
+    <dl>
+      <dd>
+        <sub>
+          <a href="https://nikoni.top/vui-vc-next/docs">[ docs ]</a>
+        </sub>
+      </dd>
+    </dl>
     <ul>
       <li
         v-for="item in state.list"
