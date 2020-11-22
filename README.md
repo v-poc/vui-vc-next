@@ -15,7 +15,7 @@
 
 ### Preview
 
-You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to access the examples in mobile/tablet device:
+You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to access the examples on mobile/tablet device:
 
 <img src="https://nikoni.top/images/vui-vc-qrcode.png" alt="VUI Examples" width="222" height="242"/>
 
@@ -68,7 +68,7 @@ npm run build-docs
 
 ### Customize configuration
 
-About vite and vitepress, please check Configuration Reference - [vite](https://github.com/vitejs/vite), [vitepress](https://github.com/vuejs/vitepress).
+About vite and vitepress, please check Configuration Reference - [vite](https://github.com/vitejs/vite), [vitepress](https://vitepress.vuejs.org).
 
 ## License
 
