@@ -6,6 +6,7 @@ module.exports = {
 
   themeConfig: {
     repo: 'bluepower/vui-vc-next',
+    repoLabel: 'VUI.next',
     docsDir: 'docs',
 
     editLinks: true,
@@ -17,16 +18,16 @@ module.exports = {
         link: '/'
       },
       {
+        text: 'Changelog',
+        link: 'https://github.com/bluepower/vui-vc-next/blob/dev/CHANGELOG.md'
+      },      
+      {
         text: 'VUI Poc',
         link: 'https://github.com/bluepower/vui-poc'
       },
       {
         text: 'VUI Taro',
         link: 'https://github.com/bluepower/vui-taro'
-      },
-      {
-        text: 'Changelog',
-        link: 'https://github.com/bluepower/vui-vc-next/blob/dev/CHANGELOG.md'
       }
     ],
 
