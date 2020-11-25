@@ -1,3 +1,7 @@
+# 0.5.11 (2020-11-25)
+
+Refactor: support new versions of experimental features in `@vue/compiler-sfc`
+
 # 0.5.7 (2020-11-21)
 
 Refactor: addDirective utility.

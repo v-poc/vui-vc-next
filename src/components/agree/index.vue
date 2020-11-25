@@ -148,6 +148,7 @@ export default {
 
 .v-agree-content {
   flex: 1 1 0%;
+  font-size: 0.24rem;
   // line-height: 1.5;
 }
 </style>

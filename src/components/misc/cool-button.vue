@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import { computed, reactive } from 'vue'
+import { computed, reactive, defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
   name: 'v-cool-button',
 
   props: {
@@ -62,10 +62,10 @@ export default {
       onClickButton
     }
   }  
-}
+})
 </script>
 
-<style lang="scss" vars="{ scale }">
+<style lang="scss">
 .v-btn-star {
   display: block;
   position: absolute;
@@ -157,37 +157,37 @@ export default {
 
 @-webkit-keyframes pururun {
   0% {
-    -webkit-transform: scale(calc(var(--scale) * 0.95));
+    -webkit-transform: scale(calc(v-bind(scale) * 0.95));
   }
   10% {
-    -webkit-transform: scale(calc(var(--scale) * 1.1));
+    -webkit-transform: scale(calc(v-bind(scale) * 1.1));
   }
   20% {
-    -webkit-transform: scale(calc(var(--scale) * 0.927));
+    -webkit-transform: scale(calc(v-bind(scale) * 0.927));
   }
   30% {
-    -webkit-transform: scale(calc(var(--scale) * 1.051));
+    -webkit-transform: scale(calc(v-bind(scale) * 1.051));
   }
   40% {
-    -webkit-transform: scale(calc(var(--scale) * 0.965));
+    -webkit-transform: scale(calc(v-bind(scale) * 0.965));
   }
   50% {
-    -webkit-transform: scale(calc(var(--scale) * 1.021));
+    -webkit-transform: scale(calc(v-bind(scale) * 1.021));
   }
   60% {
-    -webkit-transform: scale(calc(var(--scale) * 0.987));
+    -webkit-transform: scale(calc(v-bind(scale) * 0.987));
   }
   70% {
-    -webkit-transform: scale(calc(var(--scale) * 1.0027));
+    -webkit-transform: scale(calc(v-bind(scale) * 1.0027));
   }
   80% {
-    -webkit-transform: scale(calc(var(--scale) * 0.9992));
+    -webkit-transform: scale(calc(v-bind(scale) * 0.9992));
   }
   90% {
-    -webkit-transform: scale(calc(var(--scale) * 1.0006));
+    -webkit-transform: scale(calc(v-bind(scale) * 1.0006));
   }
   100% {
-    -webkit-transform: scale(calc(var(--scale) * 0.95));
+    -webkit-transform: scale(calc(v-bind(scale) * 0.95));
   }
 }
 
