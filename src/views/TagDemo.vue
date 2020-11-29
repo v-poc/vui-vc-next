@@ -12,7 +12,7 @@
       size="large"
       shape="circle"
       :fill-color="cMap.base || '#EFEFEF'"
-      @click="showPopup('center', true, cKey, cMap)"
+      @click="showTagPopup('center', true, cKey, cMap)"
     >{{ cKey }}</v-tag>
     <v-popup
       position="center"
@@ -106,6 +106,7 @@ import { computed, ref } from 'vue'
 // import VPopup from '../components/popup/index.vue'
 import colors from '../constants/colors'
 import { kebab, formatColor } from '../utils/index'
+import useShowPopup from '../composables/useShowPopup'
 
 export default {
   name: 'tag-demo',
@@ -118,12 +119,12 @@ export default {
   // },
 
   setup() {
-    const popupShow = ref({})
+    const popup = useShowPopup()
 
-    // show/hide popup
-    const showPopup = (pos, isShow, cKey, cMap) => {
-      const popupShowVal = popupShow.value
-      popupShowVal[pos] = isShow
+    // show/hide popup for tag demo
+    const showTagPopup = (type, isShow, cKey, cMap) => {
+      const popupShowVal = popup.mapping.value
+      popupShowVal[type] = isShow
       popupShowVal['cKey'] = cKey
       popupShowVal['cMap'] = cMap
     }
@@ -156,8 +157,8 @@ export default {
 
     return {
       computedColors,
-      popupShow,
-      showPopup,
+      popupShow: popup.mapping,
+      showTagPopup,
       rowCls,
       rowStyle,
       formatSubColorKey

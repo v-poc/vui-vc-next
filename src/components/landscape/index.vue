@@ -32,6 +32,7 @@ import { computed, ref, watchEffect } from 'vue'
 import VPopup from '../popup/index.vue'
 import VIcon from '../icon/index.vue'
 import usePopupBase from '../../composables/usePopupBase'
+import useShowPopup from '../../composables/useShowPopup'
 
 export default {
   name: 'v-landscape',
@@ -67,7 +68,7 @@ export default {
   },
 
   setup(props, { emit }) {
-    const popupShow = ref({})
+    const popup = useShowPopup()
 
     const effect = computed(() => {
       let effect = 'v-bounce'
@@ -110,14 +111,9 @@ export default {
       ]
     })
 
-    // show/hide popup
-    const showPopup = (type, isShow) => {
-      popupShow.value[type] = isShow
-    }
-
     // update:value
     const onUpdate = () => {
-      // showPopup('landscape', val)
+      // popup.showPopup('landscape', val)
       // emit('input', false)
       emit('update:value', false)
     }
@@ -139,21 +135,21 @@ export default {
 
     // close popup
     const close = () => {
-      showPopup('landscape', false)
+      popup.showPopup('landscape', false)
     }
 
     watchEffect(() => {
-      showPopup('landscape', props.value)
+      popup.showPopup('landscape', props.value)
     })
 
     return {
-      popupShow,
+      popupShow: popup.mapping,
+      showPopup: popup.showPopup,
       effect,
       iconName,
       cls,
       bodyCls,
-      btnCls,
-      showPopup,
+      btnCls,      
       onUpdate,
       onShow,
       onHide,

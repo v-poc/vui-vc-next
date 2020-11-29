@@ -118,6 +118,7 @@ import { ref } from 'vue'
 import { logInfo } from '../utils/index'
 import Toast from '../components/toast/index'
 import VLikeButton from '../components/misc/like-button.vue'
+import useShowPopup from '../composables/useShowPopup'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
 // import VPopupTitleBar from '../components/popup/title-bar.vue'
@@ -135,12 +136,7 @@ export default {
   },
 
   setup() {
-    const popupShow = ref({})
-
-    // show/hide popup
-    const showPopup = (pos, isShow) => {
-      popupShow.value[pos] = isShow
-    }
+    const popup = useShowPopup()
 
     // show info in console log
     const showInfo = (content) => {
@@ -149,7 +145,7 @@ export default {
     }
 
     const hidePopupTitleBar = (info) => {
-      showPopup('bottom', false)
+      popup.showPopup('bottom', false)
       showInfo(`${info} hide popup-title-bar`)
     }
 
@@ -161,8 +157,8 @@ export default {
     }    
 
     return {
-      popupShow,
-      showPopup,
+      popupShow: popup.mapping,
+      showPopup: popup.showPopup,
       showInfo,
       hidePopupTitleBar,
       onClickButton

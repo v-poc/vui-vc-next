@@ -1,3 +1,7 @@
+# 0.6.0 (2020-11-29)
+
+Refactor: useShowPopup composable function.
+
 # 0.5.11 (2020-11-25)
 
 Refactor: support new versions of experimental features in `@vue/compiler-sfc`

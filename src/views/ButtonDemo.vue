@@ -116,6 +116,7 @@ import { ref } from 'vue'
 import Toast from '../components/toast/index'
 import VCoolButton from '../components/misc/cool-button.vue'
 import VLikeButton from '../components/misc/like-button.vue'
+import useShowPopup from '../composables/useShowPopup'
 // import VButton from '../components/button/index.vue'
 // import VIcon from '../components/icon/index.vue'
 // import VPopup from '../components/popup/index.vue'
@@ -136,12 +137,7 @@ export default {
   },
 
   setup() {
-    const popupShow = ref({})
-
-    // show/hide popup
-    const showPopup = (pos, isShow) => {
-      popupShow.value[pos] = isShow
-    }
+    const popup = useShowPopup()
 
     const onClickButton = () => {
       Toast({
@@ -152,8 +148,8 @@ export default {
     }
 
     return {
-      popupShow,
-      showPopup,
+      popupShow: popup.mapping,
+      showPopup: popup.showPopup,
       onClickButton
     }
   }

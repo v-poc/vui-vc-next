@@ -51,6 +51,7 @@
 
 <script>
 import { reactive, ref, onMounted } from 'vue'
+import useShowPopup from '../composables/useShowPopup'
 // import VAmount from '../components/amount/index.vue'
 // import VButton from '../components/button/index.vue'
 // import VPopup from '../components/popup/index.vue'
@@ -71,12 +72,7 @@ export default {
       val: 1000
     })
 
-    const popupShow = ref({})
-
-    // show/hide popup
-    const showPopup = (pos, isShow) => {
-      popupShow.value[pos] = isShow
-    }
+    const popup = useShowPopup()
 
     onMounted(() => {
       setTimeout(() => {
@@ -90,8 +86,8 @@ export default {
 
     return {
       state,
-      popupShow,
-      showPopup
+      popupShow: popup.mapping,
+      showPopup: popup.showPopup
     }
   }
 }

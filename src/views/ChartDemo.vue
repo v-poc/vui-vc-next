@@ -65,6 +65,7 @@
 
 <script>
 import { ref } from 'vue'
+import useShowPopup from '../composables/useShowPopup'
 // import VChart from '../components/chart/index.vue'
 // import VButton from '../components/button/index.vue'
 // import VPopup from '../components/popup/index.vue'
@@ -81,18 +82,13 @@ export default {
   // },
 
   setup() {
-    const popupShow = ref({})
-
-    // show/hide popup
-    const showPopup = (pos, isShow) => {
-      popupShow.value[pos] = isShow
-    }
+    const popup = useShowPopup()
 
     const format = (val) => `${val}%`
 
     return {
-      popupShow,
-      showPopup,
+      popupShow: popup.mapping,
+      showPopup: popup.showPopup,
       format
     }
   }

@@ -30,6 +30,7 @@
 
 <script>
 import { ref } from 'vue'
+import useShowPopup from '../composables/useShowPopup'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
 
@@ -58,11 +59,8 @@ export default {
       'Slide Left',
       'Slide Right'
     ])
-    const popupShow = ref({})
 
-    const showPopup = (index, isShow) => {
-      popupShow.value[index] = isShow
-    }
+    const popup = useShowPopup()
 
     const detailInfo = (name) => {
       const arr = name.split(' ')
@@ -78,8 +76,8 @@ export default {
 
     return {
       effects,
-      popupShow,
-      showPopup,
+      popupShow: popup.mapping,
+      showPopup: popup.showPopup,
       detailInfo,
       convertName
     }

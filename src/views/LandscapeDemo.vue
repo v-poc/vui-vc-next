@@ -63,6 +63,7 @@
 import { ref } from 'vue'
 import { logInfo } from '../utils/index'
 import Toast from '../components/toast/index'
+import useShowPopup from '../composables/useShowPopup'
 // import VOnePiece from '../components/misc/op.vue'
 // import VLandscape from '../components/landscape/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -79,12 +80,7 @@ export default {
   // },
 
   setup() {
-    const popupShow = ref({})
-
-    // show/hide popup
-    const showPopup = (pos, isShow) => {
-      popupShow.value[pos] = isShow
-    }
+    const popup = useShowPopup()
 
     // show info in console log
     const showInfo = (content) => {
@@ -97,8 +93,8 @@ export default {
     }
 
     return {
-      popupShow,
-      showPopup,
+      popupShow: popup.mapping,
+      showPopup: popup.showPopup,
       showInfo
     }
   }

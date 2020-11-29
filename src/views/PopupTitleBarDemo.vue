@@ -93,6 +93,7 @@ import { reactive, ref } from 'vue'
 import { logInfo, debounce } from '../utils/index'
 import { PHOTOS_DATA } from '../assets/mock/index'
 import Toast from '../components/toast/index'
+import useShowPopup from '../composables/useShowPopup'
 // import VOnePiece from '../components/misc/op.vue'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -117,12 +118,7 @@ export default {
       listPhotoData: PHOTOS_DATA
     })
 
-    const popupShow = ref({})
-
-    // show/hide popup
-    const showPopup = (pos, isShow) => {
-      popupShow.value[pos] = isShow
-    }
+    const popup = useShowPopup()
 
     // show info in console log
     const showInfo = (content) => {
@@ -131,8 +127,8 @@ export default {
     }
 
     const hidePopupTitleBar = (info) => {
-      showPopup('bottom', false)
-      showPopup('bottomView', false)
+      popup.showPopup('bottom', false)
+      popup.showPopup('bottomView', false)
       showInfo(`${info} hide popup-title-bar`)
     }
 
@@ -144,8 +140,8 @@ export default {
 
     return {
       state,
-      popupShow,
-      showPopup,
+      popupShow: popup.mapping,
+      showPopup: popup.showPopup,
       showInfo,
       hidePopupTitleBar,
       onScroll
