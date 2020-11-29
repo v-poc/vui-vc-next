@@ -97,7 +97,7 @@ export default {
     }
 
     return {
-      popupShow: popupShow.value,
+      popupShow,
       showPopup,
       showInfo
     }

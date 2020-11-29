@@ -77,8 +77,8 @@ export default {
     }
 
     return {
-      effects: effects.value,
-      popupShow: popupShow.value,
+      effects,
+      popupShow,
       showPopup,
       detailInfo,
       convertName

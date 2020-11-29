@@ -156,7 +156,7 @@ export default {
 
     return {
       computedColors,
-      popupShow: popupShow.value,
+      popupShow,
       showPopup,
       rowCls,
       rowStyle,

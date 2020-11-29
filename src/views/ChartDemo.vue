@@ -91,7 +91,7 @@ export default {
     const format = (val) => `${val}%`
 
     return {
-      popupShow: popupShow.value,
+      popupShow,
       showPopup,
       format
     }

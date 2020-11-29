@@ -90,7 +90,7 @@ export default {
 
     return {
       state,
-      popupShow: popupShow.value,
+      popupShow,
       showPopup
     }
   }

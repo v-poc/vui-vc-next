@@ -147,7 +147,7 @@ export default {
     })
 
     return {
-      popupShow: popupShow.value,
+      popupShow,
       effect,
       iconName,
       cls,
