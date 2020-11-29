@@ -3,7 +3,6 @@
 node_modules
 dist
 /dist
-src/components/tab-bar
 
 # local env files
 .env.local
