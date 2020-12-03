@@ -1,3 +1,7 @@
+# 0.6.2 (2020-12-03)
+
+Updated version for vue and compiler-sfc.
+
 # 0.6.0 (2020-11-29)
 
 Refactor: useShowPopup composable function.
