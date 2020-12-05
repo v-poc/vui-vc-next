@@ -96,7 +96,7 @@ export default {
   },
 
   setup(props) {
-    const root = ref(null)
+    const root = ref()
     const sizeStyle = ref({})
 
     // container css class

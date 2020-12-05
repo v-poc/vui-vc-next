@@ -105,7 +105,7 @@ export default {
   },
 
   setup(props, { emit, slots }) {
-    const root = ref(null)
+    const root = ref()
 
     const state = reactive({
       content: null,

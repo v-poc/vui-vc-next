@@ -60,7 +60,7 @@ export default {
   },
 
   setup(props, { emit }) {
-    const root = ref(null)
+    const root = ref()
     const state = reactive({
       // take effect on mask and popup box
       isPopupShow: false,

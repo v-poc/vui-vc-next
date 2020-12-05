@@ -55,7 +55,7 @@ export default {
   },
 
   setup(props) {
-    const root = ref(null)
+    const root = ref()
 
     const rollerProcess = computed(() => {
       if (props.isRefreshing) {
