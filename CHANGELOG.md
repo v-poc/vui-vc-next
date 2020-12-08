@@ -1,3 +1,7 @@
+# 0.7.0 (2020-12-08)
+
+Added Cube demo.
+
 # 0.6.2 (2020-12-03)
 
 Updated version for vue and compiler-sfc.

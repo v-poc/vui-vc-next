@@ -40,6 +40,40 @@
       </div>
     </v-landscape>
   </div>
+  <div class="v-example">
+    <p>Popup TitleBar (largeRadius)</p>
+    <v-button
+      type="primary"
+      size="small"
+      inline
+      round
+      @click="showPopup('cube', true)"
+    >Test popup from bottom (largeRadius)</v-button>
+    <v-popup
+      position="bottom"
+      v-model:value="popupShow.cube"
+    >
+      <v-popup-title-bar
+        only-close
+        large-radius
+        title-align="center"
+        title="The Cube Demo"
+        describe="powered by vui.next"
+        @cancel="hidePopupTitleBar('closeButton')"
+      ></v-popup-title-bar>
+      <div class="v-example-popup v-example-popup-bottom">
+        <v-cube
+          :scale="1.2"
+          front="Vue3"
+          back="Vite"
+          top="UI"
+          bottom="Sass"
+          left="Niko"
+          right="VUI"
+        />
+      </div>
+    </v-popup>
+  </div>
   <div class="v-example v-example-popup-scroll-view">
     <p>Popup TitleBar - ScrollView</p>
     <v-button
@@ -94,6 +128,7 @@ import { logInfo, debounce } from '../utils/index'
 import { PHOTOS_DATA } from '../assets/mock/index'
 import Toast from '../components/toast/index'
 import useShowPopup from '../composables/useShowPopup'
+import VCube from '../components/misc/cube.vue'
 // import VOnePiece from '../components/misc/op.vue'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -105,13 +140,14 @@ export default {
 
   inheritAttrs: false,
 
-  // components: {
-  //   VOnePiece
-  //   VPopup,
-  //   VButton,
-  //   VPopupTitleBar,
-  //   VLandscape
-  // },
+  components: {
+    VCube
+    //   VOnePiece
+    //   VPopup,
+    //   VButton,
+    //   VPopupTitleBar,
+    //   VLandscape
+  },
 
   setup() {
     const state = reactive({
@@ -129,6 +165,7 @@ export default {
     const hidePopupTitleBar = (info) => {
       popup.showPopup('bottom', false)
       popup.showPopup('bottomView', false)
+      popup.showPopup('cube', false)
       showInfo(`${info} hide popup-title-bar`)
     }
 
