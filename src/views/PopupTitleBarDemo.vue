@@ -70,6 +70,7 @@
           bottom="Sass"
           left="Niko"
           right="VUI"
+          @click="showPopup('maskClosableMode', true)"
         />
       </div>
     </v-popup>
