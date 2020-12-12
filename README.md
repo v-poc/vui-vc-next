@@ -6,7 +6,7 @@
 
 - [x] [Vue](https://v3.vuejs.org/) [![beta](https://img.shields.io/npm/v/vue/next.svg)](https://www.npmjs.com/package/vue/v/next)
 - [x] [Vue Router](https://router.vuejs.org/) [![alpha](https://img.shields.io/npm/v/vue-router/next.svg)](https://www.npmjs.com/package/vue-router/v/next)
-- [x] [Vite](https://github.com/vitejs/vite) [![beta](https://img.shields.io/npm/v/vite.svg)](https://www.npmjs.com/package/vite)
+- [x] [Vite](https://github.com/vitejs/vite) [![beta](https://img.shields.io/npm/v/vite.svg)](https://www.npmjs.com/package/vite) [![node](https://img.shields.io/node/v/vite.svg)](https://nodejs.org/en/about/releases/)
   - [x] [HMR](https://github.com/vitejs/vite#hot-module-replacement)
   - [x] [Dev Server Proxy](https://github.com/vitejs/vite#dev-server-proxy)
   - [x] [CSS Pre-processors](https://github.com/vitejs/vite#css-pre-processors)
