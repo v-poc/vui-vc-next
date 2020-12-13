@@ -3,13 +3,16 @@
     to="/"
     class="v-back"
   >&lt; Home</router-link>
-  <div class="v-example">
+  <div class="v-example v-example-agree">
     <p>Agree - {{state.isChecked ? 'Checked' : 'Unchecked' }} {{state.isDisabled ? '- Disabled' : '' }}</p>
-    <v-agree
-      v-model:value="state.isChecked"
-      :disabled="state.isDisabled"
-      @change="showInfo"
-    >Some agreement text</v-agree>
+    <fieldset>
+      <legend>Email preferences</legend>
+      <v-agree
+        v-model:value="state.isChecked"
+        :disabled="state.isDisabled"
+        @change="showInfo"
+      >Send me occasional product updates and offers.</v-agree>
+    </fieldset>
   </div>
   <div class="v-example">
     <p>Agree - Toggle Disabled state</p>
@@ -65,4 +68,16 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.v-example-agree {
+  fieldset {
+    padding: 0.1rem 0.15rem 0.15rem 0.15rem;
+
+    legend {
+      font-size: 0.3rem;
+      font-weight: bold;
+      padding: 0 0.1rem;
+    }
+  }
+}
 </style>
