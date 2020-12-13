@@ -57,7 +57,7 @@
       size="small"
       inline
       round
-      @click="showPopup('center', true)"
+      @click="onTestCoolButton"
     >Test Cool Button</v-button>
     <v-popup
       position="center"
@@ -65,11 +65,23 @@
       v-model:value="popupShow.center"
     >
       <div class="v-example-popup v-example-popup-center">
+        <div class="v-example-panda">
+          <img
+            v-lazy="'https://nikoni.top/images/others/panda-normal.png'"
+            v-show="state.isNormal"
+          />
+          <img
+            v-lazy="'https://nikoni.top/images/others/panda-cover-eyes.png'"
+            :style="coverStyle"
+          />
+        </div>
         <p>Touch center point</p>
-        <v-cool-button
-          :scale="1.1"
-          @on-click="showPopup('fullscreenMode', true)"
-        />
+        <div @click="state.isNormal=false">
+          <v-cool-button
+            :scale="1.1"
+            @on-click="showPopup('fullscreenMode', true)"
+          />
+        </div>
       </div>
     </v-popup>
     <v-landscape
@@ -105,14 +117,14 @@
     >
       <div class="v-example-popup v-example-popup-center">
         <p>Touch heart point</p>
-        <v-like-button @on-click="showPopup('like', false);showPopup('center', true)" />
+        <v-like-button @on-click="onTestLikeButton" />
       </div>
     </v-popup>
   </div>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import Toast from '../components/toast/index'
 import VCoolButton from '../components/misc/cool-button.vue'
 import VLikeButton from '../components/misc/like-button.vue'
@@ -137,7 +149,17 @@ export default {
   },
 
   setup() {
+    const state = reactive({
+      isNormal: true
+    })
+
     const popup = useShowPopup()
+
+    const coverStyle = computed(() => {
+      return {
+        opacity: state.isNormal ? 0 : 1
+      }
+    })
 
     const onClickButton = () => {
       Toast({
@@ -147,10 +169,24 @@ export default {
       })
     }
 
+    const onTestCoolButton = () => {
+      state.isNormal = true
+      popup.showPopup('center', true)
+    }
+
+    const onTestLikeButton = () => {
+      popup.showPopup('like', false)
+      onTestCoolButton()
+    }
+
     return {
+      state,
       popupShow: popup.mapping,
       showPopup: popup.showPopup,
-      onClickButton
+      coverStyle,
+      onClickButton,
+      onTestCoolButton,
+      onTestLikeButton
     }
   }
 }
@@ -158,6 +194,23 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.v-example-popup-center {
+  .v-example-panda {
+    position: relative;
+    width: 3rem;
+    height: 2rem;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0.4rem;
+      width: 2.5rem;
+      height: 2rem;
+    }
+  }
+}
 
 .btn-lt {
   position: absolute;
