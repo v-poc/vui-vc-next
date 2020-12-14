@@ -14,7 +14,9 @@
   },
   "keywords": [
     "vue",
+    "vue-components",
     "vue3",
+    "vue3-components",
     "vite",
     "vui",
     "vue-ui",
@@ -23,7 +25,8 @@
     "vue3-vite-ui",
     "vue-composition-api",
     "vitepress",
-    "vue3-vite-vitepress"
+    "vue3-vite-vitepress",
+    "vue3-vite-vitepress-ui"
   ],
   "author": "Niko Ni",
   "license": "MIT",

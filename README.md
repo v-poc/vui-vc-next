@@ -1,16 +1,16 @@
 # vui-vc-next (aka vui.next)
 
-> Yet another **lightweight** Mobile web UI components based on **Vue 3** and **Vite**
+> Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **Vue 3** and **Vite**.
 
 ### Contains
 
-- [x] [Vue](https://v3.vuejs.org/) [![beta](https://img.shields.io/npm/v/vue/next.svg)](https://www.npmjs.com/package/vue/v/next)
-- [x] [Vue Router](https://router.vuejs.org/) [![alpha](https://img.shields.io/npm/v/vue-router/next.svg)](https://www.npmjs.com/package/vue-router/v/next)
-- [x] [Vite](https://github.com/vitejs/vite) [![beta](https://img.shields.io/npm/v/vite.svg)](https://www.npmjs.com/package/vite) [![node](https://img.shields.io/node/v/vite.svg)](https://nodejs.org/en/about/releases/)
+- [x] [Vue](https://v3.vuejs.org/) [![npm](https://img.shields.io/npm/v/vue/next.svg)](https://www.npmjs.com/package/vue/v/next)
+- [x] [Vue Router](https://router.vuejs.org/) [![npm](https://img.shields.io/npm/v/vue-router/next.svg)](https://www.npmjs.com/package/vue-router/v/next)
+- [x] [Vite](https://github.com/vitejs/vite) [![npm](https://img.shields.io/npm/v/vite.svg)](https://www.npmjs.com/package/vite) [![node](https://img.shields.io/node/v/vite.svg)](https://nodejs.org/en/about/releases/)
   - [x] [HMR](https://github.com/vitejs/vite#hot-module-replacement)
   - [x] [Dev Server Proxy](https://github.com/vitejs/vite#dev-server-proxy)
   - [x] [CSS Pre-processors](https://github.com/vitejs/vite#css-pre-processors)
-    - [x] [Sass](https://sass-lang.com/) [![pub](https://img.shields.io/pub/v/sass.svg)](https://www.npmjs.com/package/sass)
+    - [x] [Sass](https://sass-lang.com/) [![npm](https://img.shields.io/pub/v/sass.svg)](https://www.npmjs.com/package/sass)
 - [x] [Vitepress](https://github.com/vuejs/vitepress) [![npm](https://img.shields.io/npm/v/vitepress)](https://www.npmjs.com/package/vitepress)
 
 ### Preview
@@ -21,9 +21,9 @@ You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to acces
 
 ### Status
 
-- More UI components WIP.
+- More UI components WIP based on Vue 3.
 - Currently JavaScript version only, will provide TypeScript codebase in next major version.
-- About project test, will provide unit and e2e test in next major version.
+- About project test, will provide unit/e2e test in next major version.
 
 ### Usage
 
