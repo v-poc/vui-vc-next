@@ -1,3 +1,4 @@
+import { defineAsyncComponent } from 'vue'
 import { componentsVUI } from '../components/index'
 
 const componentsMap = {}
@@ -7,7 +8,7 @@ componentsVUI.forEach((name) => {
   componentsMap[name] = {
     routeName,
     routePath: `/${routeName}`,
-    routeComponent: () => import(`../views/${name}Demo.vue`)
+    routeComponent: defineAsyncComponent(() => import(`../views/${name}Demo.vue`))
   }
 })
 
