@@ -25,6 +25,7 @@ import VActionSheet from './action-sheet/action-sheet.vue'
 import VWatermark from './watermark/index.vue'
 import VScrollView from './scroll-view/index.vue'
 import VAgree from './agree/index.vue'
+import VTabBar from './tab-bar/index.vue'
 
 // components collection
 const components = {
@@ -48,7 +49,8 @@ const components = {
   VActionSheet,
   VWatermark,
   VScrollView,
-  VAgree
+  VAgree,
+  VTabBar
 }
 
 // components desc array
@@ -120,5 +122,6 @@ export {
   VActionSheet,
   VWatermark,
   VScrollView,
-  VAgree
+  VAgree,
+  VTabBar
 }

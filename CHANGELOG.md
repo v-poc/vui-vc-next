@@ -1,3 +1,7 @@
+# 0.8.0 (2020-12-19)
+
+Added TabBar demo.
+
 # 0.7.0 (2020-12-08)
 
 Added Cube demo.
