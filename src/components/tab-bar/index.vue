@@ -170,10 +170,17 @@ export default {
     }
 
     const onScroll = ({ scrollLeft }) => {
+      const scrollerComp = scrollerRef.value
+      if (!scrollerComp) {
+        state.isShowMaskStart = false
+        state.isShowMaskEnd = false
+        return
+      }
+
       state.isShowMaskStart = scrollLeft > 0
 
       state.isShowMaskEnd =
-        scrollLeft < scrollerRef.value.contentW - scrollerRef.value.containerW
+        scrollLeft < scrollerComp.state.contentW - scrollerComp.state.containerW
     }
 
     const onClickItem = (item, index) => {
