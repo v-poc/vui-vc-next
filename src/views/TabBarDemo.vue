@@ -40,8 +40,8 @@ export default {
       })
     })
 
-    const onChangeItem = (item) => {
-      logInfo(`Click item: ${JSON.stringify(item)}`)
+    const onChangeItem = (item, index, prevIndex) => {
+      logInfo(`Click item: ${JSON.stringify(item)}, currIndex: ${index}, prevIndex: ${prevIndex}`)
     }
 
     return {
