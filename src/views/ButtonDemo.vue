@@ -50,7 +50,7 @@
       loading
     >Round Loading Button</v-button>
   </div>
-  <div class="v-example">
+  <div class="v-example v-example-cool">
     <p>Cool Button playground</p>
     <v-button
       type="warning"
@@ -195,20 +195,25 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
 
-.v-example-popup-center {
-  .v-example-panda {
-    position: relative;
-    width: 3rem;
-    height: 2rem;
-    overflow: hidden;
+.v-example-cool {
+  ::v-deep(.v-popup-box) {
+    overflow: visible;
 
-    img {
+    .v-example-panda {
       position: absolute;
-      top: 0;
-      left: 0.4rem;
-      width: 2.5rem;
+      top: -1.5rem;
+      width: 3rem;
       height: 2rem;
-    }
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0.4rem;
+        width: 2.5rem;
+        height: 2rem;
+      }
+    }    
   }
 }
 
