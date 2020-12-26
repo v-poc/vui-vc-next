@@ -12,7 +12,7 @@
 <script>
 import { reactive, onMounted, computed, watch } from 'vue'
 import useAnimate from '../../composables/useAnimate'
-import useNumberCapital from '../../composables/useNumberCapital'
+import amountNumberCapital from '../utils/numberCapital'
 import { noop, isInBrowser, formatValueByGapStep } from '../../utils/index'
 
 export default {
@@ -113,7 +113,7 @@ export default {
     }
 
     const doCapital = (value) => {
-      return useNumberCapital(value)
+      return amountNumberCapital(value)
     }
 
     const doAnimate = (fromValue = 0, toValue = 0) => {

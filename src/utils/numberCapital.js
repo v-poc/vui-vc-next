@@ -1,4 +1,5 @@
 import { CN_AMOUNT } from '../constants/index'
+
 const cnNums = CN_AMOUNT.NUMS
 const cnIntRadice = CN_AMOUNT.INT_RADICE // 拾 \u62fe 佰 \u4f70 仟 \u4edf
 const cnIntUnits = CN_AMOUNT.INT_UNITS // 万 \u4e07 亿 \u4ebf 兆 \u5146
@@ -10,7 +11,7 @@ const cnNegative = CN_AMOUNT.NEGATIVE // 负
 // Maximum number
 const maxNum = 999999999999999.9999
 
-const useNumberCapital = function (number) {
+const amountNumberCapital = function (number) {
   let negative
   let integerNum // Integral part
   let decimalNum // Decimal part
@@ -96,4 +97,4 @@ const useNumberCapital = function (number) {
   return capitalStr
 }
 
-export default useNumberCapital
+export default amountNumberCapital

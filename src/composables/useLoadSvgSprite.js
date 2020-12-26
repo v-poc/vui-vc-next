@@ -1,5 +1,5 @@
 import { SVG_SPRITE_NODE_ID } from '../constants/index'
-import useDefaultSvgList from './useDefaultSvgList'
+import { getDefaultSvgList } from '../../utils/index'
 
 const svgSprite = (contents) => `
 <svg
@@ -15,7 +15,7 @@ const svgSprite = (contents) => `
 `
 
 const renderSvgSprite = (svgList) => {
-  const list = svgList ? svgList : useDefaultSvgList()
+  const list = svgList ? svgList : getDefaultSvgList()
   const symbols = Object.keys(list)
     .map(iconName => {
       const svgContent = list[iconName].split('svg')[1]
