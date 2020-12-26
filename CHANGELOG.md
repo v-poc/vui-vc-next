@@ -1,3 +1,7 @@
+# 0.8.5 (2020-12-26)
+
+Refactor: utilities and composables.
+
 # 0.8.0 (2020-12-19)
 
 Added TabBar demo.

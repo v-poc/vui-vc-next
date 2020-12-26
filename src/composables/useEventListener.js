@@ -1,9 +1,14 @@
+import { ref } from 'vue'
+
 const useEventListener = function ({
   isBind = true,
-  node = document,
+  el = ref(document),
   name = '',
   handler = () => {}
 }) {
+  // unwrap el
+  const node = el.value
+
   let performEvent = () => {}
   if (isBind) {
     // add event

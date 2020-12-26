@@ -1,6 +1,6 @@
-import { root } from '../utils/index'
+import { root } from './index'
 
-const useAnimate = () => {
+const animateUtil = () => {
   const global = root
 
   const nowTime = Date.now || (() => +new Date())
@@ -203,4 +203,4 @@ const useAnimate = () => {
   }
 }
 
-export default useAnimate
+export default animateUtil

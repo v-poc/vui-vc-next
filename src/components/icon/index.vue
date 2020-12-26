@@ -17,7 +17,7 @@
 
 <script>
 import { computed } from 'vue'
-import { getDefaultSvgList } from '../../utils/index'
+import { DEFAULT_SVG_LIST } from '../../constants/index'
 import VIconFont from './icon-font.vue'
 import VIconSvg from './icon-svg.vue'
 
@@ -54,8 +54,7 @@ export default {
 
   setup(props, { emit }) {
     const isDefaultSvg = computed(() => {
-      const defaultSvgList = getDefaultSvgList()
-      return defaultSvgList[props.name]
+      return !!DEFAULT_SVG_LIST[props.name]
     })
 
     const onIconClick = (evt) => {

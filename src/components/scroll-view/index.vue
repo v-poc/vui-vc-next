@@ -60,7 +60,7 @@ import {
   onUnmounted
 } from 'vue'
 import { debounce, render } from '../../utils/index'
-import useScroller from '../../composables/useScroller'
+import scrollerUtil from '../../utils/scroller'
 
 export default {
   name: 'v-scroll-view',
@@ -187,7 +187,7 @@ export default {
       const content = state.content
       const rect = container.getBoundingClientRect()
 
-      scroller = useScroller(
+      scroller = scrollerUtil(
         (left, top) => {
           render(content, left, top)
 

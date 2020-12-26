@@ -11,7 +11,7 @@
 <script>
 import { computed, onMounted } from 'vue'
 import { SVG_SPRITE_NODE_ID } from '../../constants/index'
-import useLoadSvgSprite from '../../composables/useLoadSvgSprite'
+import loadSvgSprite from '../../utils/loadSvgSprite'
 
 export default {
   name: 'v-icon-svg',
@@ -51,7 +51,7 @@ export default {
 
     onMounted(() => {
       const svgNode = document.getElementById(SVG_SPRITE_NODE_ID)
-      !svgNode && useLoadSvgSprite()
+      !svgNode && loadSvgSprite()
     })
 
     return {

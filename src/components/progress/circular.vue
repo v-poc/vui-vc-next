@@ -20,7 +20,7 @@
 <script>
 import { reactive, onMounted, watch } from 'vue'
 import VActivityIndicatorRoller from '../activity-indicator/roller.vue'
-import useAnimate from '../../composables/useAnimate'
+import animateUtil from '../../utils/animate'
 import { noop, isInBrowser } from '../../utils/index'
 
 export default {
@@ -95,7 +95,7 @@ export default {
       }
 
       const verify = (id) => id
-      const animate = useAnimate()
+      const animate = animateUtil()
       animate.start(step, verify, noop, props.duration, null, null)
     }
 

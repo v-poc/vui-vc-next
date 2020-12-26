@@ -11,8 +11,8 @@
 
 <script>
 import { reactive, onMounted, computed, watch } from 'vue'
-import useAnimate from '../../composables/useAnimate'
-import amountNumberCapital from '../utils/numberCapital'
+import animateUtil from '../../utils/animate'
+import amountNumberCapital from '../../utils/numberCapital'
 import { noop, isInBrowser, formatValueByGapStep } from '../../utils/index'
 
 export default {
@@ -125,7 +125,7 @@ export default {
         state.formatValue = fromValue + (toValue - fromValue) * percent
       }
       const verify = (id) => id
-      const animate = useAnimate()
+      const animate = animateUtil()
       animate.start(step, verify, noop, props.duration, null, null)
     }
 

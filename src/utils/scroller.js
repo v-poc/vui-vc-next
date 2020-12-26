@@ -1,10 +1,10 @@
 /*
  * Inspired by Scroller | MIT License (http://github.com/zynga/scroller)
  */
-import useAnimate from './useAnimate'
-import { noop, extend, logInfo, easeOutCubic, easeInOutCubic } from '../utils/index'
+import animateUtil from './animate'
+import { noop, extend, logInfo, easeOutCubic, easeInOutCubic } from './index'
 
-const Animate = useAnimate()
+const animate = animateUtil()
 
 const members = {
   _isSingleTouch: false,
@@ -207,7 +207,7 @@ class Scroller {
   scrollTo(left, top, isAnimate, zoom = 1) {
     // Stop deceleration
     if (this._isDecelerating) {
-      Animate.stop(this._isDecelerating)
+      animate.stop(this._isDecelerating)
       this._isDecelerating = false
     }
 
@@ -284,7 +284,7 @@ class Scroller {
 
     // Stop deceleration
     if (this._isDecelerating) {
-      Animate.stop(this._isDecelerating)
+      animate.stop(this._isDecelerating)
       this._isDecelerating = false
     }
 
@@ -344,14 +344,14 @@ class Scroller {
 
     // Stop deceleration
     if (this._isDecelerating) {
-      Animate.stop(this._isDecelerating)
+      animate.stop(this._isDecelerating)
       this._isDecelerating = false
       this._interruptedAnimation = true
     }
 
     // Stop animation
     if (this._isAnimating) {
-      Animate.stop(this._isAnimating)
+      animate.stop(this._isAnimating)
       this._isAnimating = false
       this._interruptedAnimation = true
     }
@@ -668,7 +668,7 @@ class Scroller {
     const wasAnimating = this._isAnimating
 
     if (wasAnimating) {
-      Animate.stop(wasAnimating)
+      animate.stop(wasAnimating)
       this._isAnimating = false
     }
 
@@ -722,7 +722,7 @@ class Scroller {
 
       const doAnimation = () => {
         // When continuing based on previous animation we choose an ease-out animation instead of ease-in-out
-        this._isAnimating = Animate.start(
+        this._isAnimating = animate.start(
           step,
           verify,
           completed,
@@ -732,7 +732,7 @@ class Scroller {
       }
 
       if (this.options.inRequestAnimationFrame) {
-        Animate.requestAnimationFrame(() => {
+        animate.requestAnimationFrame(() => {
           doAnimation()
         })
       } else {
@@ -819,7 +819,7 @@ class Scroller {
     }
 
     // Start animation and switch on flag
-    this._isDecelerating = Animate.start(step, verify, completed)
+    this._isDecelerating = animate.start(step, verify, completed)
   }
 
   _stepThroughDeceleration(render) {
@@ -913,8 +913,8 @@ class Scroller {
 
 extend(Scroller.prototype, members)
 
-const useScroller = function(callback = noop, options) {
+const scrollerUtil = function(callback = noop, options) {
   return new Scroller(callback, options)
 }
 
-export default useScroller
+export default scrollerUtil
