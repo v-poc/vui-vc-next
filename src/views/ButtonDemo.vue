@@ -38,7 +38,7 @@
     >Message text</v-button>
   </div>
   <div class="v-example">
-    <p>Button w loading state</p>
+    <p>Button w/ loading state</p>
     <v-button
       type="default"
       plain

@@ -30,8 +30,7 @@
 
 <script>
 import { computed, reactive, ref, watch, onMounted } from 'vue'
-import usePopupBase from '../../composables/usePopupBase'
-import useTransition from '../../composables/useTransition'
+import { getPopupBase, getTransition } from '../../utils/index'
 import useEventListener from '../../composables/useEventListener'
 
 export default {
@@ -39,7 +38,7 @@ export default {
 
   props: {
     // Merge base props
-    ...usePopupBase(),
+    ...getPopupBase(),
     // The position of popup
     position: {
       type: String,
@@ -69,7 +68,7 @@ export default {
       // whether display animation effect
       isAnimation: false,
       // The animation effect of popup
-      transition: props.transition || useTransition(props.position)
+      transition: props.transition || getTransition(props.position)
     })
 
     const cls = computed(() => {

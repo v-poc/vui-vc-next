@@ -29,9 +29,9 @@
 
 <script>
 import { computed, ref, watchEffect } from 'vue'
+import { getPopupBase } from '../../utils/index'
 import VPopup from '../popup/index.vue'
 import VIcon from '../icon/index.vue'
-import usePopupBase from '../../composables/usePopupBase'
 import useShowPopup from '../../composables/useShowPopup'
 
 export default {
@@ -44,7 +44,7 @@ export default {
 
   props: {
     // Merge base props
-    ...usePopupBase(),
+    ...getPopupBase(),
     // Whether scroll enabled
     scroll: {
       type: Boolean,
