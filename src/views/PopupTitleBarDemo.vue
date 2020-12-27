@@ -57,21 +57,28 @@
         only-close
         large-radius
         title-align="center"
-        title="The Cube Demo"
+        title="Cube Animation Demo"
         describe="powered by vui.next"
         @cancel="hidePopupTitleBar('closeButton')"
       ></v-popup-title-bar>
       <div class="v-example-popup v-example-popup-bottom">
-        <v-cube
+        <v-cube-anim
           :scale="1.2"
           front="Vue3"
           back="Vite"
-          top="UI"
           bottom="Sass"
-          left="Niko"
           right="VUI"
           @click="showPopup('maskClosableMode', true)"
-        />
+        >
+          <template #top>
+            <img v-lazy="'https://nikoni.top/images/others/mj.png'"/>
+          </template>
+          <template #left>
+            <div class="v-example-op-cube">
+              <v-one-piece :scale="0.8" />
+            </div>
+          </template>          
+        </v-cube-anim>
       </div>
     </v-popup>
   </div>
@@ -129,7 +136,7 @@ import { logInfo, debounce } from '../utils/index'
 import { PHOTOS_DATA } from '../assets/mock/index'
 import Toast from '../components/toast/index'
 import useShowPopup from '../composables/useShowPopup'
-import VCube from '../components/misc/cube.vue'
+import VCubeAnim from '../components/misc/cube-anim.vue'
 // import VOnePiece from '../components/misc/op.vue'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -142,7 +149,7 @@ export default {
   inheritAttrs: false,
 
   components: {
-    VCube
+    VCubeAnim
     //   VOnePiece
     //   VPopup,
     //   VButton,
@@ -203,6 +210,10 @@ export default {
 .v-example-op-default {
   height: 3.5rem;
   background: #fff;
+}
+
+.v-example-op-cube {
+  margin-top: -0.5rem;
 }
 
 .v-example-popup-scroll-view {

@@ -2,12 +2,24 @@
   <div class="cube-wrapper">
     <div class="cube">
       <ul>
-        <li class="front">{{ front }}</li>
-        <li class="back">{{ back }}</li>
-        <li class="top">{{ top }}</li>
-        <li class="bottom">{{ bottom }}</li>
-        <li class="left">{{ left }}</li>
-        <li class="right">{{ right }}</li>
+        <li class="front">
+          <slot name="front">{{ front }}</slot>
+        </li>
+        <li class="back">
+          <slot name="back">{{ back }}</slot>
+        </li>
+        <li class="top">
+          <slot name="top">{{ top }}</slot>
+        </li>
+        <li class="bottom">
+          <slot name="bottom">{{ bottom }}</slot>
+        </li>
+        <li class="left">
+          <slot name="left">{{ left }}</slot>
+        </li>
+        <li class="right">
+          <slot name="right">{{ right }}</slot>
+        </li>
       </ul>
     </div>
   </div>
@@ -17,7 +29,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'v-cube',
+  name: 'v-cube-anim',
 
   props: {
     scale: {
@@ -26,27 +38,27 @@ export default defineComponent({
     },
     front: {
       type: String,
-      default: '1'
+      default: 'Front'
     },
     back: {
       type: String,
-      default: '2'
+      default: 'Back'
     },
     top: {
       type: String,
-      default: '3'
+      default: 'Top'
     },
     bottom: {
       type: String,
-      default: '4'
+      default: 'Bottom'
     },
     left: {
       type: String,
-      default: '5'
+      default: 'Left'
     },
     right: {
       type: String,
-      default: '6'
+      default: 'Right'
     }
   }
 })
