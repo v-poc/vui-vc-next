@@ -1,3 +1,7 @@
+# 0.9.0 (2020-12-30)
+
+Updated version for vite, vue3, vitepress, sass.
+
 # 0.8.5 (2020-12-26)
 
 Refactor: utilities and composables.
