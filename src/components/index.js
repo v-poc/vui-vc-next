@@ -26,6 +26,7 @@ import VWatermark from './watermark/index.vue'
 import VScrollView from './scroll-view/index.vue'
 import VAgree from './agree/index.vue'
 import VTabBar from './tab-bar/index.vue'
+import VCubeAnim from './misc/cube-anim.vue'
 
 // components collection
 const components = {
@@ -50,7 +51,8 @@ const components = {
   VWatermark,
   VScrollView,
   VAgree,
-  VTabBar
+  VTabBar,
+  VCubeAnim
 }
 
 // components desc array
@@ -123,5 +125,6 @@ export {
   VWatermark,
   VScrollView,
   VAgree,
-  VTabBar
+  VTabBar,
+  VCubeAnim
 }
