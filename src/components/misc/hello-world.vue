@@ -1,4 +1,5 @@
 <template>
+  <!-- START VTag -->
   <section>
     <v-tag
       type="fill"
@@ -8,6 +9,8 @@
       @click="showPopup(true)"
     >{{ msg }}</v-tag>    
   </section>
+  <!-- END VTag -->
+  <!-- START VProgress -->
   <v-progress-circular
     :size="80"
     :color="state.strokeColor"
@@ -25,6 +28,8 @@
     ></v-amount>
     <span class="unit">%</span>
   </v-progress-circular>
+  <!-- END VProgress -->
+  <!-- START VPopup -->
   <v-popup
     position="bottom"
     v-model:value="state.isShowPopupTitleBar"
@@ -37,10 +42,28 @@
       @confirm="state.isShowPopupTitleBar=false"
       @cancel="state.isShowPopupTitleBar=false"
     ></v-popup-title-bar>
-    <div class="v-example-op-default">
-      <v-one-piece @click="showPopup(true)" />
+    <div class="v-example-popup-bottom">
+      <v-cube-anim
+        :scale="1.2"
+        front="Vue3"
+        back="Vite"
+        bottom="Sass"
+        right="VUI"
+        @click="showPopup(true)"
+      >
+        <template #top>
+          <img v-lazy="'https://nikoni.top/images/others/mj.png'" />
+        </template>
+        <template #left>
+          <div class="v-example-op-cube">
+            <v-one-piece :scale="0.8" />
+          </div>
+        </template>
+      </v-cube-anim>
     </div>
-  </v-popup>  
+  </v-popup>
+  <!-- END VPopup -->
+  <!-- START VLandscape -->  
   <v-landscape
     v-model:value="state.isShowPopup"
     mask-closable
@@ -51,12 +74,15 @@
       <v-one-piece :scale="1.8"/>
     </div>    
   </v-landscape>
+  <!-- END VLandscape -->
+  <!-- START VActionBar -->
   <v-action-bar :actions="state.actionData"></v-action-bar>
+  <!-- END VActionBar -->
 </template>
 
 <script>
 import { computed, reactive } from 'vue'
-// import { VActionBar, VAmount, VProgress, VTag, VLandscape, VOnePiece, VPopup, VPopupTitleBar } from 'vui-vc-next'
+// import { VActionBar, VAmount, VProgress, VTag, VLandscape, VOnePiece, VPopup, VPopupTitleBar, VCubeAnim } from 'vui-vc-next'
 // import VActionBar from '../action-bar/index.vue'
 // import VAmount from '../amount/index.vue'
 // import VProgressCircular from '../progress/circular.vue'
@@ -65,6 +91,7 @@ import { computed, reactive } from 'vue'
 // import VOnePiece from './op.vue'
 // import VPopup from '../popup/index.vue'
 // import VPopupTitleBar from '../popup/title-bar.vue'
+// import VCubeAnim from './cube-anim.vue'
 
 export default {
   name: 'v-hello-world',
@@ -77,7 +104,8 @@ export default {
   //   VLandscape,
   //   VOnePiece,
   //   VPopup,
-  //   VPopupTitleBar
+  //   VPopupTitleBar,
+  //   VCubeAnim
   // },
 
   props: {
@@ -96,9 +124,7 @@ export default {
           text: 'Reset',
           type: computed(() => (state.count > 0 ? 'default' : 'disabled')),
           icon: 'clear',
-          onClick: () => {
-            state.count = 0
-          }
+          onClick: () => (state.count = 0)
         },
         {
           text: computed(() => `Count is: ${state.count}`),
