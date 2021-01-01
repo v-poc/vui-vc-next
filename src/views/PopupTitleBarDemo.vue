@@ -57,7 +57,7 @@
         only-close
         large-radius
         title-align="center"
-        title="Cube Animation Demo"
+        title="Simple Cube Animation"
         describe="powered by vui.next"
         @cancel="hidePopupTitleBar('closeButton')"
       ></v-popup-title-bar>
@@ -66,19 +66,12 @@
           :scale="1.2"
           front="Vue3"
           back="Vite"
+          top="UI"
           bottom="Sass"
+          left="Hello"
           right="VUI"
           @click="showPopup('maskClosableMode', true)"
-        >
-          <template #top>
-            <img v-lazy="'https://nikoni.top/images/others/mj.png'"/>
-          </template>
-          <template #left>
-            <div class="v-example-op-cube">
-              <v-one-piece :scale="0.8" />
-            </div>
-          </template>          
-        </v-cube-anim>
+        ></v-cube-anim>
       </div>
     </v-popup>
   </div>
