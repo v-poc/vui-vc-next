@@ -52,7 +52,7 @@
         @click="showPopup(true)"
       >
         <template #top>
-          <img v-lazy="'https://nikoni.top/images/others/mj.png'" />
+          <img v-lazy="'https://vuejs.org/images/logo.png'" />
         </template>
         <template #left>
           <div class="v-example-op-cube">
