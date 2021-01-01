@@ -3,6 +3,8 @@ title: TabBar
 preview: https://nikoni.top/vui-vc-next/#/tabbar-demo
 ---
 
+# VTabBar
+
 The TabBar screen without a content area
 
 ## Import

@@ -121,7 +121,11 @@ function getConfigSidebar() {
       {
         text: 'VAgree',
         link: '/components/agree'
-      }
+      },
+      {
+        text: 'VTabBar',
+        link: '/components/tab-bar'
+      }      
     ]
   }]
 }
