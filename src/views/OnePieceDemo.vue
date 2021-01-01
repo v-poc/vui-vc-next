@@ -92,6 +92,13 @@ export default {
   height: 5.5rem;
 }
 
+::v-deep(.v-example-popup-bottom) {
+  background-color: #fff;
+  .v-example-op-cube {
+    margin-top: -0.5rem;
+  }
+}
+
 .v-example-poc {
   display: flex;
   flex-direction: column;
@@ -100,11 +107,6 @@ export default {
   img {
     width: 50%;
   }
-}
-
-::v-deep(.v-example-op-default) {
-  height: 3.5rem;
-  background: #fff;
 }
 
 @media (min-width: 640px) {
