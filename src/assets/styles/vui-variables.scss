@@ -140,8 +140,8 @@ $popup-zindex: 900;
 
 $font-family-normal: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
 $font-family-number: $font-family-normal;
-$icon-font-family: url("../../assets/fonts/iconfont.woff") format("woff"), url("../../assets/fonts/iconfont.ttf") format("truetype");
-$amount-font-family: url("../../assets/fonts/DINPro-Medium.ttf") format("truetype");
+$icon-font-family: url(/src/assets/fonts/iconfont.woff) format("woff"), url(/src/assets/fonts/iconfont.ttf) format("truetype");
+$amount-font-family: url(/src/assets/fonts/DINPro-Medium.ttf) format("truetype");
 
 $switch-fill: $color-primary;
 $switch-fill-inverse: $color-bg-disabled;
