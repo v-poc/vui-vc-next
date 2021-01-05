@@ -1,3 +1,7 @@
+# 0.9.8 (2021-01-05)
+
+Updated version for vite (v2.0.0-beta.5) and fix components in /src/components/misc.
+
 # 0.9.0 (2020-12-30)
 
 Updated version for vite, vue3, vitepress, sass.
