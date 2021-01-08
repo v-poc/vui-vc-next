@@ -70,7 +70,7 @@ npm run build-docs
 
 ### Customize configuration
 
-About vite and vitepress, please check Configuration Reference - [vite](https://github.com/vitejs/vite), [vitepress](https://vitepress.vuejs.org).
+About vite and vitepress, please check Configuration Reference - [vite](https://vitejs.dev/config/), [vitepress](https://vitepress.vuejs.org).
 
 ## License
 
