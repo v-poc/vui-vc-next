@@ -8,7 +8,7 @@ componentsVUI.forEach((name) => {
   componentsMap[name] = {
     routeName,
     routePath: `/${routeName}`,
-    routeComponent: defineAsyncComponent(() => import(`../views/${name}Demo.vue`))
+    routeComponent: defineAsyncComponent(() => import(/* @vite-ignore */ `/src/views/${name}Demo.vue`))
   }
 })
 
