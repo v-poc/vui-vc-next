@@ -3,7 +3,8 @@
   "version": "0.9.16",
   "description": "Mobile web UI components based on Vue 3 and Vite",
   "files": [
-    "dist",
+    "dist/style.css",
+    "dist/vui-vc-next.es.js",
     "src"
   ],
   "main": "src/components/index.js",
