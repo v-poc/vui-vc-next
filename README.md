@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/vui-vc-next)](https://www.npmjs.com/package/vui-vc-next) <a href="https://nikoni.top/vui-vc-next/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a>
 
-> Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **Vue 3** and **Vite**.
+> Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **Vue 3** and **Vite 2**. VUI.next is for Vite 2.x and onward. Vite 1.x's demo is archived.
 
 ### Contains
 
@@ -52,8 +52,15 @@ npm run dev
 ```
 
 ### Compiles and minifies for production
+
+#### build lib
 ```
 npm run build
+```
+
+#### build demo
+```
+npm run build-demo
 ```
 
 ## Project docs - [VUI-docs](https://nikoni.top/vui-vc-next/docs)
