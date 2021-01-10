@@ -9,6 +9,7 @@
 - [x] [Vue](https://v3.vuejs.org/) [![npm](https://img.shields.io/npm/v/vue/next.svg)](https://www.npmjs.com/package/vue/v/next)
 - [x] [Vue Router](https://router.vuejs.org/) [![npm](https://img.shields.io/npm/v/vue-router/next.svg)](https://www.npmjs.com/package/vue-router/v/next)
 - [x] [Vite](https://github.com/vitejs/vite) [![npm](https://img.shields.io/npm/v/vite.svg)](https://www.npmjs.com/package/vite) [![node](https://img.shields.io/node/v/vite.svg)](https://nodejs.org/en/about/releases/)
+  - [x] [Vue 3 SFC support via @vitejs/plugin-vue](https://github.com/vitejs/vite/tree/main/packages/plugin-vue) [![npm](https://img.shields.io/npm/v/@vitejs/plugin-vue.svg)](https://npmjs.com/package/@vitejs/plugin-vue)
   - [x] [HMR](https://github.com/vitejs/vite#hot-module-replacement)
   - [x] [Dev Server Proxy](https://github.com/vitejs/vite#dev-server-proxy)
   - [x] [CSS Pre-processors](https://github.com/vitejs/vite#css-pre-processors)
