@@ -149,12 +149,7 @@ export default {
       showInfo(`${info} hide popup-title-bar`)
     }
 
-    const onClickButton = () => {
-      Toast({
-        icon: 'warn',
-        content: 'So cool, nice feeling!'
-      })
-    }    
+    const onClickButton = () => Toast.succeed('So cool, nice feeling!')   
 
     return {
       popupShow: popup.mapping,

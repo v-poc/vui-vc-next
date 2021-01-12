@@ -163,7 +163,7 @@ export default {
 
     const onClickButton = () => {
       Toast({
-        icon: 'warn',
+        icon: 'success',
         content: 'So cool, nice feeling!',
         position: 'bottom'
       })
