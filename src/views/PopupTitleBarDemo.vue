@@ -238,11 +238,11 @@ export default {
 
   .v-example-scroll-view-lazy {
     border-radius: 0;
-  }
-}
 
-.v-example-popup {
-  margin: 0 auto;
-  width: 80vw;
+    .v-example-popup {
+      margin: 0 auto;
+      width: 80vw;
+    }    
+  }
 }
 </style>
