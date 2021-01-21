@@ -107,6 +107,7 @@
               v-for="item in state.listPhotoData"
               class="item"
               :key="item.id"
+              @click="onPreview(item.imgUrl)"
             >
               <div class="icon">
                 <img v-lazy="item.imgUrl" />
@@ -118,6 +119,16 @@
             </li>
           </ul>
         </v-scroll-view>
+        <v-popup
+          position="center"
+          transition="v-punch"
+          v-model:value="popupShow.center"
+        >
+          <div class="v-example-popup v-example-popup-center">
+            <p>image preview</p>
+            <img v-if="state.imgUrl" :src="state.imgUrl" />
+          </div>
+        </v-popup>        
       </div>
     </v-popup>
   </div>
@@ -152,7 +163,8 @@ export default {
 
   setup() {
     const state = reactive({
-      listPhotoData: PHOTOS_DATA
+      listPhotoData: PHOTOS_DATA,
+      imgUrl: ''
     })
 
     const popup = useShowPopup()
@@ -176,13 +188,19 @@ export default {
       )
     }, 50)
 
+    const onPreview = (imgUrl) => {
+      state.imgUrl = imgUrl
+      popup.showPopup('center', true)
+    }
+
     return {
       state,
       popupShow: popup.mapping,
       showPopup: popup.showPopup,
       showInfo,
       hidePopupTitleBar,
-      onScroll
+      onScroll,
+      onPreview
     }
   }
 }
@@ -221,5 +239,10 @@ export default {
   .v-example-scroll-view-lazy {
     border-radius: 0;
   }
+}
+
+.v-example-popup {
+  margin: 0 auto;
+  width: 80vw;
 }
 </style>

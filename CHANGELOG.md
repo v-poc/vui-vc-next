@@ -1,3 +1,7 @@
+# 0.9.25 (2021-01-21)
+
+Updated PopupTitleBar demo.
+
 # 0.9.8 (2021-01-05)
 
 Updated version for vite (v2.0.0-beta.5) and fix components in /src/components/misc.
