@@ -135,7 +135,7 @@
 </template>
 
 <script>
-import { reactive, ref } from 'vue'
+import { reactive } from 'vue'
 import { logInfo, debounce } from '../utils/index'
 import { PHOTOS_DATA } from '../assets/mock/index'
 import Toast from '../components/toast/index'

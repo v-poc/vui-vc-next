@@ -16,6 +16,7 @@
             v-for="item in state.listPhotoData"
             class="item"
             :key="item.id"
+            @click="onPreview(item.imgUrl)"
           >
             <div class="icon">
               <img v-lazy="item.imgUrl" />
@@ -27,6 +28,16 @@
           </li>
         </ul>
       </v-scroll-view>
+      <v-popup
+        position="center"
+        transition="v-punch"
+        v-model:value="popupShow.center"
+      >
+        <div class="v-example-popup v-example-popup-center">
+          <p>image preview</p>
+          <img v-if="state.imgUrl" :src="state.imgUrl" />
+        </div>
+      </v-popup>      
     </div>
   </div>
   <div class="v-example">
@@ -110,6 +121,7 @@ import { reactive, ref } from 'vue'
 import { logInfo, debounce } from '../utils/index'
 import { PHOTOS_DATA } from '../assets/mock/index'
 import Toast from '../components/toast/index'
+import useShowPopup from '../composables/useShowPopup'
 import VScrollViewMore from '../components/scroll-view/more.vue'
 import VScrollViewRefresh from '../components/scroll-view/refresh.vue'
 // import VScrollView from '../components/scroll-view/index.vue'
@@ -139,8 +151,11 @@ export default {
       isRefreshActive: false,
       listX: 12,
       listRefresh: 5,
-      listPhotoData: PHOTOS_DATA
+      listPhotoData: PHOTOS_DATA,
+      imgUrl: ''
     })
+
+    const popup = useShowPopup()
 
     const onItemClick = (item) => {
       Toast.info(`Click item: ${item}`)
@@ -151,6 +166,11 @@ export default {
         `[ScrollViewDemo] onScroll - scrollLeft: ${scrollLeft}, scrollTop: ${scrollTop}`
       )
     }, 50)
+
+    const onPreview = (imgUrl) => {
+      state.imgUrl = imgUrl
+      popup.showPopup('center', true)
+    }    
 
     const onAddItems = () => {
       if (state.isFinished) {
@@ -205,8 +225,10 @@ export default {
       scrollViewMoreRef,
       scrollViewRefreshRef,
       state,
+      popupShow: popup.mapping,
       onItemClick,
       onScroll,
+      onPreview,
       onAddItems,
       onEndReached,
       onRefreshing,
@@ -218,6 +240,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+.v-example-scroll-view-lazy {
+  .v-example-popup {
+    margin: 0 auto;
+    width: 80vw;
+  }    
+}
 
 .v-example-scroll-view-more {
   height: 5rem;
