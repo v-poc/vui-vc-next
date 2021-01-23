@@ -4,8 +4,8 @@ export default {
   plugins: [
     vue() // for vue plugin
   ],
+  base: '/vui-vc-next/', // for production
   build: {
-    base: '/vui-vc-next/', // for production
     outDir: 'dist/vui-vc-next' // npm run serve-build => http://localhost:3000/vui-vc-next/
   },
   server: {
