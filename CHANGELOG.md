@@ -1,3 +1,7 @@
+# 0.10.0 (2021-01-29)
+
+Added Tabs demo.
+
 # 0.9.25 (2021-01-21)
 
 Updated PopupTitleBar demo.
