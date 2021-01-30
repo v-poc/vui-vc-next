@@ -1,3 +1,7 @@
+# 0.10.2 (2021-01-30)
+
+Refactor: skip router components support.
+
 # 0.10.0 (2021-01-29)
 
 Added Tabs demo.
