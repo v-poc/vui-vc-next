@@ -16,15 +16,7 @@
 </template>
 
 <script>
-import {
-  getCurrentInstance,
-  ref,
-  reactive,
-  computed,
-  watch,
-  provide,
-  onMounted
-} from 'vue'
+import { ref, reactive, computed, watch, provide, onMounted } from 'vue'
 import VTabBar from '../tab-bar/index.vue'
 
 export default {
