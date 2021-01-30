@@ -114,10 +114,9 @@
 </template>
 
 <script>
-import { ref } from 'vue'
 import { logInfo } from '../utils/index'
 import Toast from '../components/toast/index'
-import VLikeButton from '../components/misc/like-button.vue'
+// import VLikeButton from '../components/misc/like-button.vue'
 import useShowPopup from '../composables/useShowPopup'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
@@ -128,12 +127,12 @@ export default {
 
   inheritAttrs: false,
 
-  components: {
-    VLikeButton
+  // components: {
+  //   VLikeButton,
   //   VPopup,
   //   VButton,
   //   VPopupTitleBar
-  },
+  // },
 
   setup() {
     const popup = useShowPopup()

@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { reactive, ref, onMounted } from 'vue'
+import { reactive, onMounted } from 'vue'
 import useShowPopup from '../composables/useShowPopup'
 // import VAmount from '../components/amount/index.vue'
 // import VButton from '../components/button/index.vue'

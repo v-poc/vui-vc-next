@@ -64,7 +64,6 @@
 </template>
 
 <script>
-import { ref } from 'vue'
 import useShowPopup from '../composables/useShowPopup'
 // import VChart from '../components/chart/index.vue'
 // import VButton from '../components/button/index.vue'

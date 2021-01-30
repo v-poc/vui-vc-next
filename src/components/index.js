@@ -20,15 +20,21 @@ import VProgress from './progress/circular.vue'
 import VResultPage from './result-page/index.vue'
 import VActionBar from './action-bar/index.vue'
 import VOnePiece from './misc/op.vue'
+import VCoolButton from './misc/cool-button.vue'
+import VLikeButton from './misc/like-button.vue'
 import VSwitch from './switch/index.vue'
 import VActionSheet from './action-sheet/action-sheet.vue'
 import VWatermark from './watermark/index.vue'
 import VScrollView from './scroll-view/index.vue'
+import VScrollViewMore from './scroll-view/more.vue'
+import VScrollViewRefresh from './scroll-view/refresh.vue'
 import VAgree from './agree/index.vue'
 import VTabBar from './tab-bar/index.vue'
 import VCubeAnim from './misc/cube-anim.vue'
+import VTabs from './tabs/index.vue'
+import VTabPane from './tabs/tab-pane.vue'
 
-// components collection
+// components collection (keep router)
 const components = {
   VSkeleton,
   VTag,
@@ -51,20 +57,33 @@ const components = {
   VWatermark,
   VScrollView,
   VAgree,
-  VTabBar,
-  VCubeAnim
+  VTabBar
 }
 
+// components collection (skip router)
+const skipRouterComponents = {
+  VCubeAnim,
+  VCoolButton,
+  VLikeButton,
+  VScrollViewMore,
+  VScrollViewRefresh,
+  VTabs,
+  VTabPane
+}
+
+// components collection
+const componentsCollection = { ...components, ...skipRouterComponents }
+
 // components desc array
-const componentsDesc = Object.keys(components).map((item) => {
-  const component = components[item]
+const componentsDesc = Object.keys(componentsCollection).map((item) => {
+  const component = componentsCollection[item]
   return {
     name: component.name || 'v-comp', // kebab-case
     component
   }
 })
 
-// components VUI array
+// components VUI array for demo showcase
 const componentsVUI = Object.keys(components).map((item) => item.slice(1))
 
 // install function
@@ -81,7 +100,7 @@ const install = function (app) {
     app.component(camelCaseName, registerComponent) // camelCase
   })
 
-  // Register global custom directive
+  // register global custom directive
   addDirective({
     app,
     defaultImage: DEFAULT_IMG_PLACEHOLDER
@@ -126,5 +145,11 @@ export {
   VScrollView,
   VAgree,
   VTabBar,
-  VCubeAnim
+  VCubeAnim,
+  VCoolButton,
+  VLikeButton,
+  VScrollViewMore,
+  VScrollViewRefresh,
+  VTabs,
+  VTabPane
 }

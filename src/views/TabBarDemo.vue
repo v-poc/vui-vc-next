@@ -43,8 +43,8 @@
 <script>
 import { reactive } from 'vue'
 import { logInfo } from '../utils/index'
-import VTabs from '../components/tabs/index.vue'
-import VTabPane from '../components/tabs/tab-pane.vue'
+// import VTabs from '../components/tabs/index.vue'
+// import VTabPane from '../components/tabs/tab-pane.vue'
 // import VTabBar from '../components/tab-bar/index.vue'
 
 export default {
@@ -52,11 +52,11 @@ export default {
 
   inheritAttrs: false,
 
-  components: {
-    VTabs,
-    VTabPane
-    //   VTabBar
-  },
+  // components: {
+  //   VTabs,
+  //   VTabPane,
+  //   VTabBar
+  // },
 
   setup() {
     const state = reactive({

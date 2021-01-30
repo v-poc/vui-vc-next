@@ -124,10 +124,10 @@
 </template>
 
 <script>
-import { ref, reactive, computed } from 'vue'
+import { reactive, computed } from 'vue'
 import Toast from '../components/toast/index'
-import VCoolButton from '../components/misc/cool-button.vue'
-import VLikeButton from '../components/misc/like-button.vue'
+// import VCoolButton from '../components/misc/cool-button.vue'
+// import VLikeButton from '../components/misc/like-button.vue'
 import useShowPopup from '../composables/useShowPopup'
 // import VButton from '../components/button/index.vue'
 // import VIcon from '../components/icon/index.vue'
@@ -139,14 +139,14 @@ export default {
 
   inheritAttrs: false,
 
-  components: {
-    VCoolButton,
-    VLikeButton
-    //   VButton,
-    //   VIcon,
-    //   VPopup,
-    //   VLandscape
-  },
+  // components: {
+  //   VCoolButton,
+  //   VLikeButton,
+  //   VButton,
+  //   VIcon,
+  //   VPopup,
+  //   VLandscape
+  // },
 
   setup() {
     const state = reactive({

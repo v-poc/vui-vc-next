@@ -88,7 +88,7 @@
 import { computed, reactive } from 'vue'
 import { logInfo } from '../utils/index'
 import Toast from '../components/toast/index'
-import VCoolButton from '../components/misc/cool-button.vue'
+// import VCoolButton from '../components/misc/cool-button.vue'
 // import VActionBar from '../components/action-bar/index.vue'
 // import VButton from '../components/button/index.vue'
 
@@ -97,11 +97,11 @@ export default {
 
   inheritAttrs: false,
 
-  components: {
-    VCoolButton
+  // components: {
+  //   VCoolButton,
   //   VActionBar,
   //   VButton
-  },
+  // },
 
   setup() {
     const onClick1 = () => Toast.succeed('Click primary button')

@@ -122,8 +122,8 @@ import { logInfo, debounce } from '../utils/index'
 import { PHOTOS_DATA } from '../assets/mock/index'
 import Toast from '../components/toast/index'
 import useShowPopup from '../composables/useShowPopup'
-import VScrollViewMore from '../components/scroll-view/more.vue'
-import VScrollViewRefresh from '../components/scroll-view/refresh.vue'
+// import VScrollViewMore from '../components/scroll-view/more.vue'
+// import VScrollViewRefresh from '../components/scroll-view/refresh.vue'
 // import VScrollView from '../components/scroll-view/index.vue'
 // import VButton from '../components/button/index.vue'
 
@@ -132,12 +132,12 @@ export default {
 
   inheritAttrs: false,
 
-  components: {
-    VScrollViewMore,
-    VScrollViewRefresh
-    //   VScrollView,
-    //   VButton
-  },
+  // components: {
+  //   VScrollViewMore,
+  //   VScrollViewRefresh,
+  //   VScrollView,
+  //   VButton
+  // },
 
   setup() {
     const scrollViewMoreRef = ref('scrollViewMoreRef')
