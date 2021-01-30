@@ -54,8 +54,6 @@ export default {
   },
 
   setup(props, { emit }) {
-    provide('rootTabs', getCurrentInstance().ctx)
-
     const compRef = ref('compRef')
 
     const state = reactive({
@@ -97,7 +95,10 @@ export default {
     })
 
     const onChangeItem = (tab, index, prevIndex) => {
-      console.log('onChangeItem', tab)
+      if (!tab) {
+        return
+      }
+
       state.currentName = tab.name
       state.prevIndex = prevIndex
       emit('update:value', tab.name)
@@ -127,6 +128,13 @@ export default {
       const comp = compRef && compRef.value
       comp && comp.reflow()
     }
+
+    provide('rootTabs', {
+      state,
+      currentIndex,
+      addPane,
+      removePane
+    })
 
     return {
       compRef,

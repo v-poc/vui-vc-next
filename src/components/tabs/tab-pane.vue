@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { getCurrentInstance, computed, inject, onUnmounted } from 'vue'
+import { computed, inject, onMounted, onUnmounted } from 'vue'
 
 export default {
   name: 'v-tab-pane',
@@ -34,9 +34,11 @@ export default {
 
   setup(props) {
     const rootTabs = inject('rootTabs')
-    const ctx = getCurrentInstance().ctx
-
-    rootTabs.addPane(ctx)
+    const paneItem = {
+      name: props.name,
+      label: props.label,
+      disabled: props.disabled
+    }
 
     const activePane = computed(() => rootTabs.state.currentName === props.name)
 
@@ -49,18 +51,8 @@ export default {
         }`
     )
 
-    // watch: {
-    //   label() {
-    //     rootTabs.$forceUpdate()
-    //   },
-    //   disabled() {
-    //     rootTabs.$forceUpdate()
-    //   }
-    // }
-
-    onUnmounted(() => {
-      rootTabs.removePane(ctx)
-    })
+    onMounted(() => rootTabs.addPane(paneItem))
+    onUnmounted(() => rootTabs.removePane(paneItem))
 
     return {
       rootTabs,
