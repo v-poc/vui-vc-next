@@ -100,6 +100,7 @@
         @on-click="onClickButton"
       />
       <video
+        v-if="popupShow.fullscreenMode"
         width="100%"
         src="https://nikoni.top/images/others/ppmm.mp4"
         poster="https://nikoni.top/images/others/video-poster.jpg"
