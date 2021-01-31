@@ -101,7 +101,7 @@
 </template>
 
 <script>
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 // import VTag from '../components/tag/index.vue'
 // import VPopup from '../components/popup/index.vue'
 import colors from '../constants/colors'

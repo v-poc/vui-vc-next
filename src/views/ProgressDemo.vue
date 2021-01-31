@@ -177,7 +177,7 @@
 </template>
 
 <script>
-import { computed, reactive, ref } from 'vue'
+import { computed, reactive } from 'vue'
 // import VProgressCircular from '../components/progress/circular.vue'
 // import VAmount from '../components/amount/index.vue'
 // import VButton from '../components/button/index.vue'
