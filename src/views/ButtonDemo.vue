@@ -99,6 +99,16 @@
         class="btn-rt"
         @on-click="onClickButton"
       />
+      <video
+        width="100%"
+        src="https://nikoni.top/images/others/ppmm.mp4"
+        poster="https://nikoni.top/images/others/video-poster.jpg"
+        controls="controls"
+        autoplay="autoplay"
+        loop="loop"
+      >
+        video is not supported.
+      </video>
     </v-landscape>
   </div>
   <div class="v-example">
@@ -213,7 +223,11 @@ export default {
         width: 2.5rem;
         height: 2rem;
       }
-    }    
+    }
+  }
+
+  video {
+    width: 100%;
   }
 }
 
