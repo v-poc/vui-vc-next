@@ -26,6 +26,7 @@ title: Index
 - [`VScrollView`](./components/scroll-view)
 - [`VAgree`](./components/agree)
 - [`VTabBar`](./components/tab-bar)
+- [`VTabs`](./components/tabs)
 
 ## License
 
