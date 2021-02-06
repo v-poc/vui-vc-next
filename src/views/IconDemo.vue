@@ -224,8 +224,8 @@ export default {
 
 .v-icon.icon-svg {
   &.v-icon-svg-vite.lg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
   &.v-icon-svg-recording.lg {
