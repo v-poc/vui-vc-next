@@ -79,18 +79,7 @@
           </template>          
         </v-cube-anim>
       </div>
-    </v-popup>
-    <v-landscape
-      v-model:value="popupShow.maskClosableMode"
-      @mask-click="showInfo('click mask to close landscape popup')"
-      mask-closable
-      :show-close="false"
-      transition="v-bounce"
-    >
-      <div class="v-example-op">
-        <v-one-piece :scale="1.8" />
-      </div>
-    </v-landscape>    
+    </v-popup>    
   </div>
   <div class="v-example">
     <p>Popup TitleBar (largeRadius)</p>
