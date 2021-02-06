@@ -43,6 +43,7 @@
     "build": "vite build --config lib/vite.config.js",
     "build-demo": "vite build",
     "build-docs": "cd docs && npx vitepress build",
+    "serve": "vite preview",
     "serve-build": "vite build && cd ./dist && vite"
   },
   "devDependencies": {
