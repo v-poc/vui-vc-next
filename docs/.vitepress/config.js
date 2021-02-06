@@ -125,7 +125,11 @@ function getConfigSidebar() {
       {
         text: 'VTabBar',
         link: '/components/tab-bar'
-      }      
+      },
+      {
+        text: 'VTabs',
+        link: '/components/tabs'
+      }
     ]
   }]
 }
