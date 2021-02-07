@@ -182,7 +182,7 @@ export default {
     display: flex;
 
     span {
-      font-size: 50%;
+      font-size: 0.2rem;
     }
 
     span.caption {

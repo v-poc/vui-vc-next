@@ -4,6 +4,7 @@ import { DEFAULT_IMG_PLACEHOLDER } from '../constants/index'
 import useLazyLoadImage from '../composables/useLazyLoadImage'
 
 import '../assets/styles/vui-reset.scss'
+import '../assets/styles/vui-animation.scss'
 import VSkeleton from './skeleton/index.vue'
 import VTag from './tag/index.vue'
 import VPopup from './popup/index.vue'

@@ -387,7 +387,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/vui.scss';
+@import '../../assets/styles/vui-variables.scss';
 
 .v-chart {
   line {

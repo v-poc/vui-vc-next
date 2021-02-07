@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/vui.scss';
+@import '../../assets/styles/vui-variables.scss';
 
 .v-icon.icon-font {
   font-family: 'VC-Icon' !important;
@@ -77,7 +77,7 @@ export default {
 }
 .v-icon.icon-font.xss {
   // font-size: $icon-size-xxs;
-  font-size: 16px;
+  font-size: 0.16rem;
 }
 .v-icon.icon-font.xs {
   // font-size: $icon-size-xs;

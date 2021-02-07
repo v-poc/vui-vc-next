@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/vui.scss';
+@import '../../assets/styles/vui-variables.scss';
 
 .v-scroll-view-more {
   padding: $v-gap-lg 0;

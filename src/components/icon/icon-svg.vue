@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/vui.scss';
+@import '../../assets/styles/vui-utils.scss';
 
 .v-icon.icon-svg.xss {
   width: 0.16rem;

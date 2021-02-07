@@ -204,7 +204,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/vui.scss';
+@import '../../assets/styles/vui-variables.scss';
+@import '../../assets/styles/vui-utils.scss';
 
 .v-watermark {
   position: relative;

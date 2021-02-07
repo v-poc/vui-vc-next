@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/vui.scss';
+@import '../../assets/styles/vui-utils.scss';
 
 .v-activity-indicator-spinning {
   @include clearfix();
