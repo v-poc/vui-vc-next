@@ -1,5 +1,5 @@
 module.exports = {
-  // base: '/vui-vc-next/docs', // base url for build
+  base: '/vui-vc-next/docs', // base url for build
   lang: 'en-US',
   title: 'VUI docs',
   description: 'The docs of VUI.next',
