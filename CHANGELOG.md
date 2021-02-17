@@ -1,3 +1,9 @@
+# 0.10.10 (2021-02-17)
+
+Updated version for vite, vitepress. All deps are out of beta.
+
+> [Vite 2.0.0 is released](https://github.com/vitejs/vite/releases/tag/v2.0.0) on 17 Feb.
+
 # 0.10.2 (2021-01-30)
 
 Refactor: skip router components support.
