@@ -1,6 +1,6 @@
 {
   "name": "vui-vc-next",
-  "version": "0.10.11",
+  "version": "0.10.12",
   "description": "Mobile web UI components based on Vue 3 and Vite",
   "files": [
     "dist/style.css",
@@ -39,21 +39,21 @@
   "homepage": "https://github.com/bluepower/vui-vc-next/blob/dev/README.md",
   "scripts": {
     "dev": "vite",
-    "dev-docs": "cd docs && npx vitepress",
+    "dev-docs": "cd docs && vitepress",
     "build": "vite build --config lib/vite.config.js",
     "build-demo": "vite build",
-    "build-docs": "cd docs && npx vitepress build",
+    "build-docs": "cd docs && vitepress build",
     "serve": "vite preview",
     "serve-build": "vite build && cd ./dist && vite"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.4",
     "@vue/compiler-sfc": "^3.0.5",
-    "sass": "^1.32.7",
+    "sass": "^1.32.8",
     "vite": "^2.0.1",
     "vitepress": "^0.12.2",
     "vue": "^3.0.5",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.4"
   },
   "engines": {
     "node": ">=12.0.0"

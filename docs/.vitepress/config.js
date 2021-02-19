@@ -10,7 +10,7 @@ module.exports = {
     docsDir: 'docs',
 
     editLinks: true,
-    editLinkText: 'Edit this page on GitHub',
+    editLinkText: 'Suggest changes to this page',
 
     nav: [
       {
@@ -20,14 +20,23 @@ module.exports = {
       {
         text: 'Changelog',
         link: 'https://github.com/bluepower/vui-vc-next/blob/dev/CHANGELOG.md'
-      },      
-      {
-        text: 'VUI Poc',
-        link: 'https://github.com/bluepower/vui-poc'
       },
       {
-        text: 'VUI Taro',
-        link: 'https://github.com/bluepower/vui-taro'
+        text: 'Links',
+        items: [
+          {
+            text: 'VUI Poc',
+            link: 'https://github.com/bluepower/vui-poc'
+          },
+          {
+            text: 'VUI Taro',
+            link: 'https://github.com/bluepower/vui-taro'
+          },
+          {
+            text: 'Vite CubeUI Poc',
+            link: 'https://github.com/bluepower/vite-cubeui-poc'
+          }
+        ]
       }
     ],
 
