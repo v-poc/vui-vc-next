@@ -2,6 +2,7 @@
 .http
 node_modules
 dist
+dist-ssr
 /dist
 
 # local env files
