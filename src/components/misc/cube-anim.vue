@@ -78,7 +78,10 @@ $length: $width;
     transform: scale(v-bind(scale));
     width: $width;
     height: $height;
-    perspective: 1000px;
+    // perspective: 1000px;
+    perspective: 1000;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
     ul {
       position: relative;
       width: 100%;
