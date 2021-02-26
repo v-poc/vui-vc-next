@@ -47,7 +47,7 @@
     "serve-build": "vite build && cd ./dist && vite"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.1.4",
+    "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.6",
     "sass": "^1.32.8",
     "vite": "^2.0.3",
