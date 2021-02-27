@@ -16,6 +16,8 @@
   - [x] [Dev Server Proxy](https://github.com/vitejs/vite#dev-server-proxy)
   - [x] [CSS Pre-processors](https://github.com/vitejs/vite#css-pre-processors)
     - [x] [Sass](https://sass-lang.com/) [![npm](https://img.shields.io/pub/v/sass.svg)](https://www.npmjs.com/package/sass)
+  - [x] [PostCSS](https://vitejs.dev/guide/features.html#postcss)
+    - [x] [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) [![npm](https://badge.fury.io/js/postcss-pxtorem.svg)](https://www.npmjs.com/package/postcss-pxtorem)
 - [x] [Vitepress](https://github.com/vuejs/vitepress) [![npm](https://img.shields.io/npm/v/vitepress)](https://www.npmjs.com/package/vitepress)
 
 ### Preview
