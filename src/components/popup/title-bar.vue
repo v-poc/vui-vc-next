@@ -157,7 +157,7 @@ export default {
     display: flex;
     float: left;
     height: 100%;
-    padding-top: 0.6rem;
+    padding-top: 60px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -191,7 +191,7 @@ export default {
     }
 
     p.describe {
-      margin-top: 0.15rem;
+      margin-top: 15px;
       font-size: $popup-title-bar-font-size-describe;
       color: $popup-title-bar-color-describe;
     }

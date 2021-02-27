@@ -113,7 +113,7 @@ export default {
 }
 
 .v-example-op {
-  padding-top: 1.5rem;
-  height: 5.5rem;
+  padding-top: 150px;
+  height: 550px;
 }
 </style>

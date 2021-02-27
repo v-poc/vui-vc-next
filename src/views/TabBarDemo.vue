@@ -92,16 +92,16 @@ export default {
 
 .v-example {
   .tab-pane-content {
-    margin: 0.12rem 0;
-    font-size: 0.28rem;
+    margin: 12px 0;
+    font-size: 28px;
     background-color: #fff;
-    padding: 0.2rem;
+    padding: 20px;
     line-height: 1.5;
     box-sizing: border-box;
   }
 
   .v-tabs-content {
-    min-height: 2rem;
+    min-height: 200px;
     background-color: #fff;
   }
 }

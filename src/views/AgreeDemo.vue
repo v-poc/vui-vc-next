@@ -71,12 +71,12 @@ export default {
 
 .v-example-agree {
   fieldset {
-    padding: 0.1rem 0.15rem 0.15rem 0.15rem;
+    padding: 10px 15px 15px 15px;
 
     legend {
-      font-size: 0.3rem;
+      font-size: 30px;
       font-weight: bold;
-      padding: 0 0.1rem;
+      padding: 0 10px;
     }
   }
 }

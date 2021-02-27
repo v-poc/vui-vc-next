@@ -249,14 +249,14 @@ export default {
 }
 
 .v-example-scroll-view-more {
-  height: 5rem;
+  height: 500px;
   background: #fff;
   border-bottom: 0 none;
 
   .scroll-view-item {
-    padding: 0.3rem 0;
+    padding: 30px 0;
     text-align: center;
-    font-size: 0.28rem;
+    font-size: 28px;
     border-bottom: 1px solid #fff;
   }
 
@@ -272,7 +272,7 @@ export default {
 }
 
 .v-example-scroll-view-x {
-  height: 1rem;
+  height: 100px;
   background: #fff;
 
   .v-scroll-view {
@@ -282,12 +282,12 @@ export default {
 
     .scroll-view-list {
       display: flex;
-      width: 10rem;
+      width: 1000px;
 
       .scroll-view-item {
         flex: 1;
         text-align: center;
-        font-size: 0.28rem;
+        font-size: 28px;
         border-right: 1px solid #fff;
       }
     }
@@ -295,13 +295,13 @@ export default {
 }
 
 .v-example-scroll-view-refresh {
-  height: 8rem;
+  height: 800px;
   background-color: #fff;
 
   .scroll-view-item {
-    padding: 0.3rem 0;
+    padding: 30px 0;
     text-align: center;
-    font-size: 0.28rem;
+    font-size: 28px;
     border-bottom: 1px solid #fff;
   }
 
@@ -312,7 +312,7 @@ export default {
 
 .v-example {
   .v-button {
-    margin-top: 0.3rem;
+    margin-top: 30px;
   }
 }
 </style>

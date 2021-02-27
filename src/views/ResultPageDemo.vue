@@ -71,7 +71,7 @@ export default {
 @import '../assets/styles/vui-example.scss';
 
 ::v-deep(.v-icon.icon-svg.v-icon-no-result.lg) {
-  width: 1.3rem;
-  height: 0.9rem;
+  width: 130px;
+  height: 90px;
 }
 </style>

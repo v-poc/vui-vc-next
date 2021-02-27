@@ -106,8 +106,8 @@ export default {
   position: relative;
   margin-right: $h-gap-sm;
   color: $agree-fill;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 50px;
+  height: 50px;
 
   .v-agree-icon-container {
     position: relative;
@@ -148,7 +148,7 @@ export default {
 
 .v-agree-content {
   flex: 1 1 0%;
-  font-size: 0.24rem;
+  font-size: 24px;
   // line-height: 1.5;
 }
 </style>

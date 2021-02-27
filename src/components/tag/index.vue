@@ -186,7 +186,7 @@ export default {
 
 .v-tag {
   color: $color-text-base;
-  font-size: 0.28rem;
+  font-size: 28px;
   text-align: center;
   display: inline-block;
   -webkit-user-select: none;
@@ -196,18 +196,18 @@ export default {
     border-color: $tag-color;
   }
   .shape-square {
-    padding: 0 0.12rem;
+    padding: 0 12px;
     border-radius: 0;
   }
   .shape-fillet {
-    padding: 0.02rem 0.08rem;
+    padding: 2px 8px;
     border-radius: $tag-fillet-radius;
   }
   .shape-quarter {
     position: relative;
     display: flex;
-    width: 0.56rem;
-    height: 0.56rem;
+    width: 56px;
+    height: 56px;
     background: transparent !important;
     overflow: hidden;
     .quarter-content {
@@ -230,34 +230,34 @@ export default {
     }
     .quarter-wrap {
       display: inline-block;
-      padding: 0.16rem 0.12rem 0.1rem 0.26rem;
+      padding: 16px 12px 10px 26px;
     }
     .quarter-wrap-hidden {
       visibility: hidden;
       display: inline-block;
-      padding: 0.16rem 0.12rem 0.1rem 0.26rem;
+      padding: 16px 12px 10px 26px;
     }
     &.size-small {
-      width: 0.4rem;
-      height: 0.4rem;
+      width: 40px;
+      height: 40px;
     }
     &.size-tiny {
-      width: 0.24rem;
-      height: 0.24rem;
+      width: 24px;
+      height: 24px;
     }
   }
   .shape-coupon {
     position: relative;
-    padding: 0 0.1rem;
+    padding: 0 10px;
     background: transparent !important;
     .coupon-container {
-      padding: 0.02rem 0;
+      padding: 2px 0;
     }
     .left-coupon,
     .right-coupon {
       position: absolute;
       top: 0;
-      width: 0.1rem;
+      width: 10px;
       height: 100%;
     }
     .left-coupon {
@@ -267,33 +267,33 @@ export default {
       right: 0;
     }
     &.size-small {
-      padding: 0 0.08rem;
+      padding: 0 8px;
       .left-coupon,
       .right-coupon {
-        width: 0.08rem;
+        width: 8px;
       }
     }
     &.size-tiny {
-      padding: 0 0.05rem;
+      padding: 0 5px;
       .left-coupon,
       .right-coupon {
-        width: 0.05rem;
+        width: 5px;
       }
     }
   }
   .shape-bubble {
-    width: 0.5rem;
-    padding: 0.06rem 0;
+    width: 50px;
+    padding: 6px 0;
     border-radius: $radius-circle;
     border-bottom-left-radius: 0;
     box-sizing: border-box;
     &.size-small {
-      width: 0.38rem;
-      padding: 0.03rem 0;
+      width: 38px;
+      padding: 3px 0;
     }
     &.size-tiny {
-      width: 0.24rem;
-      padding: 0.02rem 0;
+      width: 24px;
+      padding: 2px 0;
     }
   }
   .size-large {

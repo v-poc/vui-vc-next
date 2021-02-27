@@ -57,9 +57,9 @@ export default {
 .v-switch {
   box-sizing: border-box;
   position: relative;
-  width: 0.8rem;
-  height: 0.48rem;
-  border-radius: 0.48rem;
+  width: 80px;
+  height: 48px;
+  border-radius: 48px;
   background-color: $switch-fill-inverse;
 
   &.disabled {
@@ -75,17 +75,17 @@ export default {
   &::before {
     top: 0;
     left: 0;
-    width: 0.8rem;
-    height: 0.48rem;
-    border-radius: 0.24rem;
+    width: 80px;
+    height: 48px;
+    border-radius: 24px;
     background-color: $switch-fill-inverse;
   }
 
   &::after {
-    top: 0.04rem;
-    left: 0.04rem;
-    width: 0.4rem;
-    height: 0.4rem;
+    top: 4px;
+    left: 4px;
+    width: 40px;
+    height: 40px;
     background-color: $switch-handle-color;
     border-radius: 50%;
   }
@@ -99,7 +99,7 @@ export default {
   }
 
   &.active::after {
-    transform: translateX(0.32rem);
+    transform: translateX(32px);
   }
 }
 </style>

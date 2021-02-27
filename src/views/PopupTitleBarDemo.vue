@@ -256,17 +256,17 @@ export default {
 }
 
 .v-example-op {
-  padding-top: 1.5rem;
-  height: 5.5rem;
+  padding-top: 150px;
+  height: 550px;
 }
 
 .v-example-op-default {
-  height: 3.5rem;
+  height: 350px;
   background: #fff;
 }
 
 .v-example-op-cube {
-  margin-top: -0.5rem;
+  margin-top: -50px;
 }
 
 .v-example-popup-scroll-view {

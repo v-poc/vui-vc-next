@@ -186,8 +186,8 @@ export default {
 
     .v-icon.v-landscape-close {
       position: absolute;
-      right: 0.25rem;
-      top: 0.25rem;
+      right: 25px;
+      top: 25px;
       margin: auto;
     }
   }
@@ -200,11 +200,11 @@ export default {
   .v-icon.v-landscape-close {
     position: relative;
     display: block;
-    margin: 0.5rem auto 0.2rem auto;
-    font-size: 0.5rem;
-    width: 0.5rem;
-    height: 0.5rem;
-    line-height: 0.5rem;
+    margin: 50px auto 20px auto;
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     color: $color-text-base-inverse;
 

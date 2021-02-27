@@ -145,15 +145,15 @@ export default {
 }
 .v-button-loading {
   .v-activity-indicator-svg {
-    width: 0.35rem !important;
-    height: 0.35rem !important;
+    width: 35px !important;
+    height: 35px !important;
     margin-right: 10px;
   }
 }
 .v-button-content {
   display: flex;
   align-items: center;
-  padding: 0 0.06rem;
+  padding: 0 6px;
   .v-icon {
     padding: 0;
   }
@@ -164,7 +164,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 0.06rem;
+    padding: 0 6px;
   }
   &.default {
     background: $button-default-fill;

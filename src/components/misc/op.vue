@@ -149,13 +149,13 @@ export default {
 
   .head {
     width: 100px;
-    height: calc(100px - 0.9rem);
+    height: calc(100px - 90px);
     border: 3px solid #010101;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 0.9rem;
+    padding-bottom: 90px;
     position: relative;
     background: #FFF;
     z-index: 3;

@@ -94,22 +94,22 @@ export default {
 <style lang="scss">
 .v-scroll-view-refresh {
   display: flex;
-  padding: 0.5rem 0;
+  padding: 50px 0;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 
   .v-activity-indicator-rolling {
     .v-activity-indicator-svg {
-      width: 0.32rem !important;
-      height: 0.32rem !important;
+      width: 32px !important;
+      height: 32px !important;
       transform: rotateZ(-45deg);
     }
   }
 
   .refresh-tip {
-    margin-left: 0.15rem;
-    font-size: 0.24rem;
+    margin-left: 15px;
+    font-size: 24px;
     color: #999;
   }
 }

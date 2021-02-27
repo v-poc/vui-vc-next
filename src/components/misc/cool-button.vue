@@ -69,8 +69,8 @@ export default defineComponent({
 .v-btn-star {
   display: block;
   position: absolute;
-  top: 3px;
-  left: 11px;
+  top: 3Px;
+  left: 11Px;
   z-index: 18;
   color: #c45c3c;
   transform: scale(0.35);
@@ -80,38 +80,38 @@ export default defineComponent({
 .v-btn-chi {
   cursor: grabbing;
   position: absolute;
-  top: 50px;
-  left: 55px;
-  width: 40px;
-  height: 40px;
+  top: 50Px;
+  left: 55Px;
+  width: 40Px;
+  height: 40Px;
   z-index: 3;
   background: #fac3b4;
-  border-radius: 20px;
-  box-shadow: 0 3px 20px #ed9c86;
+  border-radius: 20Px;
+  box-shadow: 0 3Px 20Px #ed9c86;
   transform-origin: center center;
   transform: scaleY(0.92) scaleX(0.91);
 
   &:before {
     position: absolute;
-    top: 11px;
-    left: 13px;
+    top: 11Px;
+    left: 13Px;
     content: '';
-    width: 16px;
-    height: 16px;
+    width: 16Px;
+    height: 16Px;
     background: #ffb7a4;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px #ec8d73;
+    border-radius: 8Px;
+    box-shadow: 0 2Px 5Px #ec8d73;
   }
 
   &:after {
     position: absolute;
-    top: 13px;
-    left: 15px;
+    top: 13Px;
+    left: 15Px;
     content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #fff;
+    width: 10Px;
+    height: 10Px;
+    border-radius: 5Px;
+    box-shadow: 0 0 5Px #fff;
   }
 }
 
@@ -119,15 +119,15 @@ export default defineComponent({
   cursor: grab;
   position: relative;
   margin: 0 auto;
-  width: 150px;
-  height: 150px;
+  width: 150Px;
+  height: 150Px;
   background: #ffe0a9;
-  border-radius: 75px;
+  border-radius: 75Px;
   transform-origin: center center;
   transform: scaleY(0.95);
   background-image: -webkit-gradient(radial, 50 50, 0, 50 30, 150, from(rgba(255, 255, 255, 0.5)), color-stop(70%, rgba(253, 212, 142, 1)), color-stop(95%, rgba(240, 188, 120, 1)), to(rgba(255, 255, 255, 0))),
     -webkit-gradient(radial, 20 20, 0, 80 80, 90, from(rgba(255, 255, 255, 0.5)), color-stop(50%, rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1Px 10Px rgba(0, 0, 0, 0.1);
 
   &.pururun {
     animation-name: pururun;
@@ -183,37 +183,37 @@ export default defineComponent({
 
 @keyframes pururin {
   0% {
-    transform: translate(0, 0px);
+    transform: translate(0, 0);
   }
   10% {
-    transform: translate(0, -35px);
+    transform: translate(0, -35Px);
   }
   20% {
-    transform: translate(0, 25px);
+    transform: translate(0, 25Px);
   }
   30% {
-    transform: translate(0, -22px);
+    transform: translate(0, -22Px);
   }
   40% {
-    transform: translate(0, 18px);
+    transform: translate(0, 18Px);
   }
   50% {
-    transform: translate(0, -15px);
+    transform: translate(0, -15Px);
   }
   60% {
-    transform: translate(0, 12px);
+    transform: translate(0, 12Px);
   }
   70% {
-    transform: translate(0, -9px);
+    transform: translate(0, -9Px);
   }
   80% {
-    transform: translate(0, 6px);
+    transform: translate(0, 6Px);
   }
   90% {
-    transform: translate(0, -3px);
+    transform: translate(0, -3Px);
   }
   100% {
-    transform: translate(0, 0px);
+    transform: translate(0, 0Px);
   }
 }
 </style>

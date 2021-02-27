@@ -144,18 +144,18 @@ export default {
   box-sizing: border-box;
   display: flex;
   .v-skeleton-avatar {
-    width: 0.8rem;
-    height: 0.8rem;
-    margin-right: 0.32rem;
+    width: 80px;
+    height: 80px;
+    margin-right: 32px;
     border-radius: 50%;
     @include placeHolder();
     &.v-skeleton-avatar-large {
-      width: 0.96rem;
-      height: 0.96rem;
+      width: 96px;
+      height: 96px;
     }
     &.v-skeleton-avatar-small {
-      width: 0.64rem;
-      height: 0.64rem;
+      width: 64px;
+      height: 64px;
     }
   }
   .v-skeleton-content {
@@ -164,8 +164,8 @@ export default {
   .v-skeleton-title,
   .v-skeleton-row {
     box-sizing: border-box;
-    height: 0.32rem;
-    margin-bottom: 0.24rem;
+    height: 32px;
+    margin-bottom: 24px;
     border: 0;
     border-radius: 0;
     @include placeHolder();

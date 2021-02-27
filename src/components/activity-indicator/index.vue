@@ -119,7 +119,7 @@ export default {
     align-items: center;
 
     .indicator-text {
-      margin: 0 0 0 0.15rem;
+      margin: 0 0 0 15px;
       color: $color-text-minor;
     }
 
@@ -128,7 +128,7 @@ export default {
       justify-content: center;
 
       .indicator-text {
-        margin: 0.15rem 0 0 0;
+        margin: 15px 0 0 0;
       }
     }
   }

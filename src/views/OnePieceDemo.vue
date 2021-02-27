@@ -71,7 +71,7 @@ export default {
 
 ::v-deep(.v-tag) {
   .size-large {
-    font-size: 0.5rem;
+    font-size: 50px;
   }
 }
 
@@ -80,16 +80,16 @@ export default {
 }
 
 ::v-deep(.v-progress) {
-  margin-top: 0.2rem;
+  margin-top: 20px;
 
   span.unit {
-    font-size: 0.25rem;
+    font-size: 25px;
   }
 }
 
 ::v-deep(.v-example-op) {
-  padding-top: 1.5rem;
-  height: 5.5rem;
+  padding-top: 150px;
+  height: 550px;
 }
 
 ::v-deep(.v-example-popup-bottom) {
@@ -98,7 +98,7 @@ export default {
     width: 80%;
   }  
   .v-example-op-cube {
-    margin-top: -0.5rem;
+    margin-top: -50px;
   }
 }
 
@@ -114,7 +114,7 @@ export default {
 
 @media (min-width: 640px) {
   .v-example-poc img {
-    width: 4rem;
+    width: 400px;
   }
 }
 </style>

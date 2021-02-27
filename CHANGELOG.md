@@ -1,3 +1,7 @@
+# 0.11.0 (2021-02-27)
+
+Refactor: support CSS post-processor that converts px to rem.
+
 # 0.10.10 (2021-02-17)
 
 Updated version for vite, vitepress. All deps are out of beta.

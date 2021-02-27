@@ -61,7 +61,7 @@ export default {
 @import '../assets/styles/vui-example.scss';
 
 .activity-indicator-container {
-  padding: 0.15rem 0.2rem;
+  padding: 15px 20px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
 }

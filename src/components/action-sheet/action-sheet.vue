@@ -221,15 +221,15 @@ export default {
 }
 
 .v-action-sheet-cancel {
-  height: 1.12rem;
-  line-height: 1rem;
+  height: 112px;
+  line-height: 100px;
   color: $action-sheet-color-cancel;
   font-weight: $font-weight-medium;
 
   &::before {
     display: block;
     content: '';
-    height: 0.12rem;
+    height: 12px;
     background: $action-sheet-cancel-gap-bg;
   }
 }

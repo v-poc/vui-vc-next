@@ -1,23 +1,23 @@
 .nav-wrapper {
   margin: 0 auto;
   padding: 0;
-  font-size: 0.4rem;
-  width: 6rem;
+  font-size: 40px;
+  width: 600px;
 
   p {
-    padding: 0.2rem 0;
-    font-size: 0.3rem;
+    padding: 20px 0;
+    font-size: 30px;
   }
   
   .title {    
     text-transform: uppercase;
-    font-size: 0.5rem;
+    font-size: 50px;
     font-weight: bold;
   }
 
   sub {
-    margin-right: 0.3rem;
-    bottom: 0.1rem;
+    margin-right: 30px;
+    bottom: 10px;
     position: relative;
     opacity: 0.5;
 
@@ -32,7 +32,7 @@
   
   a {
     font-weight: bold;
-    font-size: 0.3rem;
+    font-size: 30px;
     color: #2c3e50;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(187, 222, 251, 0.6);
@@ -45,19 +45,19 @@
 
 .v-back {
   display: block;
-  margin: 0.2rem;
-  font-size: 0.3rem;
+  margin: 20px;
+  font-size: 30px;
   text-decoration: none;
 }
 
 .v-example {
-  margin: 0.2rem;
-  padding-bottom: 0.4rem;
-  font-size: 0.4rem;
+  margin: 20px;
+  padding-bottom: 40px;
+  font-size: 40px;
   border-bottom: 1px solid #ccc;
 
   p {
-    padding-bottom: 0.2rem;
+    padding-bottom: 20px;
   }
 
   > p {
@@ -70,7 +70,7 @@
   }
 
   span {
-    margin-left: 0.2rem;
+    margin-left: 20px;
     font-size: 75%;
   }
 
@@ -86,12 +86,12 @@
   }  
   
   .v-tag {
-    margin-right: 0.5rem;
+    margin-right: 50px;
   }
 
   .v-button {
     display: block;
-    margin-bottom: 0.1rem;
+    margin-bottom: 10px;
   }
   
   .v-popup.left .v-popup-box,
@@ -101,9 +101,9 @@
 
   &-item {
     display: inline-block;
-    margin-left: 0.6rem;
+    margin-left: 60px;
     p {
-      font-size: 0.2rem;
+      font-size: 20px;
       color: #666;
       text-align: center;
     }
@@ -116,14 +116,14 @@
 
 .v-example-popup {
   position: relative;
-  // font-size: 0.28rem;
+  // font-size: 28px;
   font-weight: 500;
   box-sizing: border-box;
   text-align: center;
   background-color: #FFF;
 
   p {
-    margin-bottom: 0.3rem;
+    margin-bottom: 30px;
   }
 
   span.v-amount {
@@ -132,7 +132,7 @@
 }
 
 .v-example-popup-center {
-  padding: 0.5rem;
+  padding: 50px;
   border-radius: 4px;
 
   span.amount-title {
@@ -142,14 +142,14 @@
 
 .v-example-popup-top {
   width: 100%;
-  height: 0.75rem;
-  line-height: 0.75rem;
+  height: 75px;
+  line-height: 75px;
   background: #607D8B;
   color: #FFF;
 
   button {
     position: absolute;
-    right: 0.2rem;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -157,17 +157,17 @@
 
 .v-example-popup-bottom {
   width: 100%;
-  padding: 0.25rem 0 0.5rem 0;
+  padding: 25px 0 50px 0;
 
   p {
-    line-height: 0.5rem;
+    line-height: 50px;
   }
 }
 
 .v-example-popup-left,
 .v-example-popup-right {
   height: 100%;
-  padding: 0 0.15rem;
+  padding: 0 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,10 +177,10 @@
 .v-example-svg {
   display: flex;
   align-items: center;
-  margin-bottom: 0.2rem;
+  margin-bottom: 20px;
 
   .icon-svg {
-    margin-right: 0.2rem;
+    margin-right: 20px;
   }
 
   span {
@@ -189,11 +189,11 @@
 }
 
 .v-example-img {
-  height: 4rem;
+  height: 400px;
 }
 
 .v-example-row {
-  margin-bottom: 0.2rem;
+  margin-bottom: 20px;
 }
 
 .v-example-center {
@@ -213,18 +213,18 @@
     }
 
     input[type='text'] {
-      margin-right: 0.1rem;
+      margin-right: 10px;
       padding-left: 3px;
       width: 100%;
-      height: 0.5rem;
+      height: 50px;
       border: 1px solid #CCC;
       border-radius: 4px;
     }
 
     p.tasks {
-      margin-top: 0.3rem;
+      margin-top: 30px;
       padding: 0;      
-      width: 1.6rem;
+      width: 160px;
       font-size: 100%;
       color: #4CAF50;
     }    
@@ -236,12 +236,12 @@
     align-items: start;
 
     p {
-      margin-top: 0.2rem;
+      margin-top: 20px;
       padding: 0;
     }
 
     p.remaining {
-      margin-right: 0.6rem;
+      margin-right: 60px;
       font-size: 80%;
       color: #36C;
     }
@@ -254,15 +254,15 @@
 
   .main-ft {    
     .row {
-      margin-bottom: 0.15rem;
-      padding-bottom: 0.15rem;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
       display: flex;
       justify-content: start;
       align-items: center;
       border-bottom: 1px solid #EFEFEF;
 
       .content {
-        margin-left: 0.5rem;
+        margin-left: 50px;
         color: #000;
         text-decoration: none;
         font-size: 80%;
@@ -281,29 +281,29 @@
     justify-content: flex-end;
 
     .v-icon {
-      margin-right: 0.2rem;
+      margin-right: 20px;
     }
   }  
 }
 
 .v-example-scroll-view-lazy {
-  height: 6rem;
+  height: 600px;
   background-color: #333;
   border-radius: 4px;
 
   .lazy-list {
-    padding-top: 0.1rem;
+    padding-top: 10px;
 
     .item {
       display: flex;
       box-sizing: border-box;
       align-items: center;
-      padding: 0 0.2rem 0.2rem 0.2rem;
+      padding: 0 20px 20px 20px;
 
       .icon {
-        flex: 0 0 1rem;
-        width: 1rem;
-        padding-right: 0.2rem;
+        flex: 0 0 100px;
+        width: 100px;
+        padding-right: 20px;
       }
 
       .text {
@@ -312,10 +312,10 @@
         justify-content: center;
         flex: 1;
         overflow: hidden;
-        font-size: 0.14rem;
+        font-size: 14px;
 
         .name {
-          margin-bottom: 0.1rem;
+          margin-bottom: 10px;
           color: #fff;
         }
 

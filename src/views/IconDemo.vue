@@ -224,33 +224,33 @@ export default {
 
 .v-icon.icon-svg {
   &.v-icon-svg-vite.lg {
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 140px;
+    height: 140px;
   }
 
   &.v-icon-svg-recording.lg {
-    width: 1.2rem;
-    height: 1rem;
+    width: 120px;
+    height: 100px;
   }
 
   &.v-icon-svg-message.lg {
-    width: 1rem;
-    height: 0.8rem;
+    width: 100px;
+    height: 80px;
   }
 
   &.v-icon-svg-github.lg {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 50px;
+    height: 50px;
   }
 
   &.v-icon-svg-trolley.lg {
-    width: 0.45rem;
-    height: 0.45rem;
+    width: 45px;
+    height: 45px;
   }
 
   &.v-icon-no-result.lg {
-    width: 1.3rem;
-    height: 0.8rem;
+    width: 130px;
+    height: 80px;
   }
 }
 </style>

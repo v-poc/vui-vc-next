@@ -1,14 +1,14 @@
 // global style variables
 $color-primary: #2196F3;
 $color-text-highlight: $color-primary;
-$border-width-base: 0.02rem;
+$border-width-base: 2px;
 
-$font-body-large: 0.28rem;
-$font-body-normal: 0.26rem;
-$font-caption-large: 0.36rem;
-$font-caption-normal: 0.32rem;
-$font-minor-large: 0.24rem;
-$font-minor-normal: 0.2rem;
+$font-body-large: 28px;
+$font-body-normal: 26px;
+$font-caption-large: 36px;
+$font-caption-normal: 32px;
+$font-minor-large: 24px;
+$font-minor-normal: 20px;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 
@@ -43,17 +43,17 @@ $checkbox-active-border-color: $color-primary;
 $checkbox-border-color: $color-border-element;
 $checkbox-border-radius: $radius-normal;
 
-$result-page-image-size: 3.2rem;
+$result-page-image-size: 320px;
 $result-page-title-font-size: $font-caption-normal;
 $result-page-describe-font-size: $font-body-large;
 $result-page-title-color: $color-text-base;
 $result-page-describe-color: $color-text-caption;
 
-$h-gap-xs: 0.08rem;
-$h-gap-sm: 0.12rem;
-$h-gap-md: 0.2rem;
-$h-gap-lg: 0.32rem;
-$h-gap-sl: 0.4rem;
+$h-gap-xs: 8px;
+$h-gap-sm: 12px;
+$h-gap-md: 20px;
+$h-gap-lg: 32px;
+$h-gap-sl: 40px;
 $v-gap-xs: $h-gap-xs;
 $v-gap-sm: $h-gap-sm;
 $v-gap-md: $h-gap-md;
@@ -62,7 +62,7 @@ $v-gap-sl: $h-gap-sl;
 
 $ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
 
-$action-sheet-height: 1rem;
+$action-sheet-height: 100px;
 $action-sheet-padding-h: $h-gap-sl;
 $action-sheet-color: $color-text-body;
 $action-sheet-color-highlight: $color-primary;
@@ -91,45 +91,45 @@ $button-default-plain-color: $button-default-color;
 $button-primary-plain-color: $button-primary-fill;
 $button-warning-plain-color: $button-warning-fill;
 $button-disabled-plain-color: $color-text-disabled;
-$button-height: 1rem;
+$button-height: 100px;
 $button-font-size: $font-caption-large;
 $button-font-weight: $font-weight-medium;
-$button-small-height: 0.64rem;
+$button-small-height: 64px;
 $button-small-font-size: $font-body-large;
 $button-radius: $radius-normal;
 
 $action-bar-width: 100%;
-$action-bar-height: 1rem;
+$action-bar-height: 100px;
 $action-bar-padding-v: $v-gap-md;
 $action-bar-padding-h: $h-gap-sl;
-$action-bar-button-gap: 0.22rem;
+$action-bar-button-gap: 22px;
 $action-bar-slot-height: $button-height;
 $action-bar-zindex: 100;
 
 $chart-line-color: #CCC;
 $chart-path-color: $color-primary;
 $chart-text-color: $color-text-minor;
-$chart-label-size: 0.22rem;
-$chart-value-size: 0.2rem;
+$chart-label-size: 22px;
+$chart-value-size: 20px;
 
-$landscape-width: 5.4rem;
+$landscape-width: 540px;
 $landscape-fullscreen-bg: $color-bg-inverse;
 $landscape-zindex: 960;
 
 $tag-color: $color-primary;
-$tag-fillet-radius: 0.02rem;
+$tag-fillet-radius: 2px;
 $tag-large-font-size: $font-body-normal;
 $tag-small-font-size: $font-minor-normal;
-$tag-tiny-font-size: 0.12rem;
+$tag-tiny-font-size: 12px;
 
 $popup-title-bar-bg: $color-bg-inverse;
-$popup-title-bar-height: 1.2rem;
-$popup-title-bar-height-large: 1.8rem;
+$popup-title-bar-height: 120px;
+$popup-title-bar-height-large: 180px;
 $popup-title-bar-radius: 8px;
-$popup-title-bar-radius-large: 0.4rem;
+$popup-title-bar-radius-large: 40px;
 $popup-title-bar-font-size-button: $font-caption-large;
 $popup-title-bar-font-weight-button: $font-weight-medium;
-$popup-title-bar-font-size-title: 0.4rem;
+$popup-title-bar-font-size-title: 40px;
 $popup-title-bar-font-size-describe: $font-body-large;
 $popup-title-bar-color-title: $color-text-base;
 $popup-title-bar-color-describe: $color-text-caption;
@@ -154,7 +154,7 @@ $tab-text-color: $color-text-minor;
 $tab-active-color: $color-primary;
 $tab-disabled-color: $color-text-disabled;
 $tab-bg: $color-bg-base;
-$tab-height: 1rem;
+$tab-height: 100px;
 $tab-ink-height: 3px;
 $tab-offset: $h-gap-sl;
 $tab-item-gap: $h-gap-md;
@@ -163,5 +163,5 @@ $toast-fill: rgba(65, 72, 93, .77);
 $toast-font-size: $font-body-large;
 $toast-color: #FFF;
 $toast-radius: $radius-normal;
-$toast-padding: 0.2rem 0.3rem;
+$toast-padding: 20px 30px;
 $toast-zindex: 970;

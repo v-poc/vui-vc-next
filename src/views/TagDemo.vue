@@ -174,15 +174,15 @@ export default {
   width: 80vw;
 
   h3 {
-    margin-bottom: 0.3rem;
+    margin-bottom: 30px;
   }
 
   .row-item {
-    padding: 0.2rem;
+    padding: 20px;
     display: flex;
 
     span {
-      font-size: 0.2rem;
+      font-size: 20px;
     }
 
     span.caption {

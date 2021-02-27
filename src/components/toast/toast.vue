@@ -152,7 +152,7 @@ export default {
   }
   .v-popup {
     .v-popup-box {
-      width: 5.4rem;
+      width: 540px;
       display: flex;
       justify-content: center;
     }
@@ -163,7 +163,7 @@ export default {
   &.bottom {
     .v-popup .v-popup-box {
       position: absolute;
-      bottom: 0.5rem;
+      bottom: 50px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -171,7 +171,7 @@ export default {
   &.top {
     .v-popup .v-popup-box {
       position: absolute;
-      top: 0.5rem;
+      top: 50px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -182,7 +182,7 @@ export default {
   display: inline-flex;
   align-items: center;
   max-width: 100%;
-  min-width: 0.8rem;
+  min-width: 80px;
   padding: $toast-padding;
   border-radius: $toast-radius;
   font-size: $toast-font-size;

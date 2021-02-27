@@ -212,17 +212,17 @@ export default {
 
     .v-example-panda {
       position: absolute;
-      top: -1.5rem;
-      width: 3rem;
-      height: 2rem;
+      top: -150px;
+      width: 300px;
+      height: 200px;
       overflow: hidden;
 
       img {
         position: absolute;
         top: 0;
-        left: 0.4rem;
-        width: 2.5rem;
-        height: 2rem;
+        left: 40px;
+        width: 250px;
+        height: 200px;
       }
     }
   }
@@ -234,14 +234,14 @@ export default {
 
 .btn-lt {
   position: absolute;
-  top: 1.8rem;
-  left: 1.4rem;
+  top: 180px;
+  left: 140px;
 }
 
 .btn-rt {
   position: absolute;
-  top: 1.8rem;
-  left: 2.9rem;
+  top: 180px;
+  left: 290px;
 }
 
 ::v-deep(.v-landscape .v-icon.v-landscape-close.dark) {
@@ -250,7 +250,7 @@ export default {
 
 @media (min-width: 640px) {
   .v-landscape img {
-    width: 6.2rem;
+    width: 620px;
   }
 }
 </style>

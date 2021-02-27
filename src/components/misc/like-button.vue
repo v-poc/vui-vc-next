@@ -90,7 +90,7 @@ $easing: cubic-bezier(0.7, 0, 0.3, 1);
 $duration: 500ms;
 
 .like-container {
-  padding: 0.5rem 0;
+  padding: 50px 0;
 }
 
 .like-btn {
@@ -104,7 +104,7 @@ $duration: 500ms;
   appearance: none;
   background-color: #fff;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 200px;
   transition: all $duration $easing;
   outline: none;
 

@@ -64,7 +64,7 @@ export default {
 
 .v-icon.icon-font {
   font-family: 'VC-Icon' !important;
-  font-size: 0.16rem;
+  font-size: 16px;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -77,23 +77,23 @@ export default {
 }
 .v-icon.icon-font.xss {
   // font-size: $icon-size-xxs;
-  font-size: 0.16rem;
+  font-size: 16px;
 }
 .v-icon.icon-font.xs {
   // font-size: $icon-size-xs;
-  font-size: 0.2rem;
+  font-size: 20px;
 }
 .v-icon.icon-font.sm {
   // font-size: $icon-size-sm;
-  font-size: 0.24rem;
+  font-size: 24px;
 }
 .v-icon.icon-font.md {
   // font-size: $icon-size-md;
-  font-size: 0.32rem;
+  font-size: 32px;
 }
 .v-icon.icon-font.lg {
   // font-size: $icon-size-lg;
-  font-size: 0.42rem;
+  font-size: 42px;
 }
 .v-icon.icon-font:before {
   position: relative;

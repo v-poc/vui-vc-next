@@ -152,23 +152,23 @@ export default {
 
   img {
     width: 100%;
-    margin-bottom: 0.4rem;
+    margin-bottom: 40px;
   }
   
   .v-icon.icon-svg.v-icon-no-result.lg {
-    width: 1.2rem;
-    height: 0.7rem;
+    width: 120px;
+    height: 70px;
   }  
 }
 
 .v-result-text {
-  margin: 0.2rem 0.2rem 0 0;
+  margin: 20px 20px 0 0;
   color: $result-page-title-color;
   font-size: $result-page-title-font-size;
 }
 
 .v-result-subtext {
-  margin: 0.16rem 0 0.2rem 0;
+  margin: 16px 0 20px 0;
   color: $result-page-describe-color;
   font-size: $result-page-describe-font-size;
 }
@@ -177,7 +177,7 @@ export default {
   display: flex;
 
   .v-button {
-    margin: 0.1rem;
+    margin: 10px;
   }
 }
 </style>

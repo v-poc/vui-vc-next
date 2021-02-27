@@ -65,20 +65,20 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-$width: 150px;
+$width: 150Px;
 $height: $width;
 $length: $width;
 
 .cube-wrapper {
   display: flex;
   justify-content: center;
-  padding: 60px 0;
+  padding: 60Px 0;
 
   .cube {
     transform: scale(v-bind(scale));
     width: $width;
     height: $height;
-    // perspective: 1000px;
+    // perspective: 1000Px;
     perspective: 1000;
     backface-visibility: hidden;
     transform-style: preserve-3d;
@@ -98,7 +98,7 @@ $length: $width;
       width: $width;
       height: $height;
       opacity: 0.8;
-      font-size: 50px;
+      font-size: 50Px;
       color: #fff;
       &.front {
         background-color: #f66;
