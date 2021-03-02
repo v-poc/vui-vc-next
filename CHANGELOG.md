@@ -1,3 +1,7 @@
+# 0.11.2 (2021-03-02)
+
+Rollback vue from `3.0.7` to `3.0.6` as Landscape-close is broken in prod build.
+
 # 0.11.0 (2021-02-27)
 
 Refactor: support CSS post-processor that converts px to rem.
@@ -22,7 +26,7 @@ Updated PopupTitleBar demo.
 
 # 0.9.8 (2021-01-05)
 
-Updated version for vite (v2.0.0-beta.5) and fix components in /src/components/misc.
+Updated version for vite (`v2.0.0-beta.5`) and fix components in `/src/components/misc`.
 
 # 0.9.0 (2020-12-30)
 

@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { computed, ref, watchEffect } from 'vue'
+import { computed, watchEffect } from 'vue'
 import { getPopupBase } from '../../utils/index'
 import VPopup from '../popup/index.vue'
 import VIcon from '../icon/index.vue'

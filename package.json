@@ -1,6 +1,6 @@
 {
   "name": "vui-vc-next",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Mobile web UI components based on Vue 3 and Vite",
   "files": [
     "dist/style.css",
@@ -48,12 +48,12 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.5",
-    "@vue/compiler-sfc": "^3.0.7",
+    "@vue/compiler-sfc": "^3.0.6",
     "postcss-pxtorem": "^5.1.1",
     "sass": "^1.32.8",
     "vite": "^2.0.4",
     "vitepress": "^0.12.2",
-    "vue": "^3.0.7",
+    "vue": "^3.0.6",
     "vue-router": "^4.0.4"
   },
   "engines": {
