@@ -1,14 +1,14 @@
 {
   "name": "vui-vc-next",
-  "version": "0.11.4",
+  "version": "0.11.5",
   "description": "Mobile web UI components based on Vue 3 and Vite",
   "files": [
-    "./dist/style.css",
-    "./dist/vui-vc-next.es.js",
-    "./dist/vui-vc-next.umd.js"
+    "dist/style.css",
+    "dist/vui-vc-next.es.js",
+    "dist/vui-vc-next.umd.js"
   ],
-  "main": "./dist/vui-vc-next.umd.js",
-  "module": "./dist/vui-vc-next.es.js",
+  "main": "dist/vui-vc-next.umd.js",
+  "module": "dist/vui-vc-next.es.js",
   "exports": {
     ".": {
       "import": "./dist/vui-vc-next.es.js",
