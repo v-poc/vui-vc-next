@@ -1,3 +1,7 @@
+# 0.11.5 (2021-03-06)
+
+Refactor: improve lib mode.
+
 # 0.11.2 (2021-03-02)
 
 Rollback vue from `3.0.7` to `3.0.6` as Landscape-close is broken in prod build.
