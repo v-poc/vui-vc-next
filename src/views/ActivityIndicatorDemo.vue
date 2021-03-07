@@ -41,19 +41,62 @@
       >Light color...</v-activity-indicator>
     </div>
   </div>
+  <div class="v-example">
+    <p>Carousel</p>
+    <div class="v-example-center">
+      <v-activity-indicator
+        type="carousel"
+        :size="20"
+      />
+      <br />
+      <v-button
+        type="default"
+        round
+        inline
+        @click="onTest"
+      >
+        <v-activity-indicator
+          v-if="state.loading"
+          type="carousel"
+          :size="15"
+          color="#ccc"
+        />
+        <span v-else>Click to view Carousel</span>
+      </v-button>
+    </div>
+  </div>
 </template>
 
 <script>
+import { reactive } from 'vue'
 // import VActivityIndicator from '../components/activity-indicator/index.vue'
 
 export default {
   name: 'activity-indicator-demo',
 
-  inheritAttrs: false
+  inheritAttrs: false,
 
   // components: {
   //   VActivityIndicator
   // }
+
+  setup() {
+    const state = reactive({
+      loading: false
+    })
+
+    const onTest = () => {
+      state.loading = true
+      setTimeout(() => {
+        state.loading = false
+      }, 3000)
+    }
+
+    return {
+      state,
+      onTest
+    }
+  }
 }
 </script>
 

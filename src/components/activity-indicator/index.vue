@@ -15,6 +15,12 @@
             :color="color"
           ></v-activity-indicator-spinner>
         </template>
+        <template v-else-if="type === 'carousel'">
+          <v-activity-indicator-carousel-circle
+            :size="size"
+            :color="color"
+          ></v-activity-indicator-carousel-circle>
+        </template>
       </div>
       <div
         class="v-activity-indicator-text indicator-text"
@@ -30,13 +36,15 @@
 import { computed } from 'vue'
 import VActivityIndicatorRoller from './roller.vue'
 import VActivityIndicatorSpinner from './spinner.vue'
+import VActivityIndicatorCarouselCircle from './carousel-circle.vue'
 
 export default {
   name: 'v-activity-indicator',
 
   components: {
     VActivityIndicatorRoller,
-    VActivityIndicatorSpinner
+    VActivityIndicatorSpinner,
+    VActivityIndicatorCarouselCircle
   },
 
   props: {

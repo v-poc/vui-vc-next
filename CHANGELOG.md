@@ -1,3 +1,7 @@
+# 0.12.0 (2021-03-07)
+
+Added ActivityIndicator demo for Carousel.
+
 # 0.11.5 (2021-03-06)
 
 Refactor: improve lib mode.
