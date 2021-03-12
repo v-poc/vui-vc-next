@@ -26,6 +26,7 @@
       </div>
     </v-popup>
   </div>
+  <v-fab :distance="100"></v-fab>
 </template>
 
 <script>
@@ -33,6 +34,7 @@ import { ref } from 'vue'
 import useShowPopup from '../composables/useShowPopup'
 // import VPopup from '../components/popup/index.vue'
 // import VButton from '../components/button/index.vue'
+// import VFab from '../components/button/fab.vue'
 
 export default {
   name: 'transition-demo',
@@ -41,7 +43,8 @@ export default {
 
   // components: {
   //   VPopup,
-  //   VButton
+  //   VButton,
+  //   VFab
   // },
 
   setup() {

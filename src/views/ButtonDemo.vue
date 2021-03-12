@@ -138,6 +138,11 @@
       </div>
     </v-popup>
   </div>
+  <v-fab
+    @on-click="onClickButton"
+    :right="25"
+    :distance="80"
+  ></v-fab>
 </template>
 
 <script>
@@ -150,6 +155,7 @@ import useShowPopup from '../composables/useShowPopup'
 // import VIcon from '../components/icon/index.vue'
 // import VPopup from '../components/popup/index.vue'
 // import VLandscape from '../components/landscape/index.vue'
+// import VFab from '../components/button/fab.vue'
 
 export default {
   name: 'button-demo',
@@ -162,7 +168,8 @@ export default {
   //   VButton,
   //   VIcon,
   //   VPopup,
-  //   VLandscape
+  //   VLandscape,
+  //   VFab
   // },
 
   setup() {

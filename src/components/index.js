@@ -34,6 +34,7 @@ import VTabBar from './tab-bar/index.vue'
 import VCubeAnim from './misc/cube-anim.vue'
 import VTabs from './tabs/index.vue'
 import VTabPane from './tabs/tab-pane.vue'
+import VFab from './button/fab.vue'
 
 // components collection (keep router)
 const components = {
@@ -69,7 +70,8 @@ const skipRouterComponents = {
   VScrollViewMore,
   VScrollViewRefresh,
   VTabs,
-  VTabPane
+  VTabPane,
+  VFab
 }
 
 // components collection
@@ -152,5 +154,6 @@ export {
   VScrollViewMore,
   VScrollViewRefresh,
   VTabs,
-  VTabPane
+  VTabPane,
+  VFab
 }

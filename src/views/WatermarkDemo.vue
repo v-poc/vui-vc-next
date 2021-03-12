@@ -25,10 +25,12 @@
       </p>
     </v-watermark>
   </div>
+  <v-fab :distance="70"></v-fab>
 </template>
 
 <script>
 // import VWatermark from '../components/watermark/index.vue'
+// import VFab from '../components/button/fab.vue'
 
 export default {
   name: 'watermark-demo',
@@ -36,7 +38,8 @@ export default {
   inheritAttrs: false
 
   // components: {
-  //   VWatermark
+  //   VWatermark,
+  //   VFab
   // }
 }
 </script>

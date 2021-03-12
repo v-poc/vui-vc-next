@@ -1,3 +1,7 @@
+# 0.13.0 (2021-03-12)
+
+Added FAB (Floating Action Button) demo.
+
 # 0.12.0 (2021-03-07)
 
 Added ActivityIndicator demo for Carousel.
