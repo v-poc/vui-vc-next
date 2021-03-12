@@ -63,7 +63,7 @@
     "sass": "^1.32.8",
     "vite": "^2.0.5",
     "vitepress": "^0.12.2",
-    "vue-router": "^4.0.4"
+    "vue-router": "^4.0.5"
   },
   "engines": {
     "node": ">=12.0.0"
