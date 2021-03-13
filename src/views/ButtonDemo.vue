@@ -19,6 +19,19 @@
       type="primary"
       inactive
     >Primary Button (inactive)</v-button>
+    <v-button
+      type="default"
+      icon="success"
+      inline
+      round
+    >Inline Button</v-button>
+    <v-button
+      type="primary"
+      icon="edit"
+      size="small"
+      inline
+      round
+    ></v-button>    
   </div>
   <div class="v-example">
     <p>Button Text link</p>
@@ -262,6 +275,16 @@ export default {
 
 ::v-deep(.v-landscape .v-icon.v-landscape-close.dark) {
   opacity: 1;
+}
+
+.v-example {
+  ::v-deep(.v-button.inline.small) {
+    padding: 0 10px;
+
+    .v-button-content {
+      padding: 0;
+    }
+  }
 }
 
 @media (min-width: 640px) {
