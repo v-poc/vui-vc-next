@@ -15,12 +15,13 @@
             @keydown.enter="createTask"
           />
           <v-button
-            :inactive="!state.taskItem"
+            class="v-example-icon-btn"
             type="primary"
             icon="edit"
             size="small"
             inline
             round
+            :inactive="!state.taskItem"
             @click="createTask"
           ></v-button>
         </div>
@@ -285,4 +286,12 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/styles/vui-example.scss';
+
+::v-deep(.v-example-icon-btn) {
+  padding: 0 10px;
+
+  .v-button-content {
+    padding: 0;
+  }
+}
 </style>
