@@ -12,7 +12,7 @@
         size="small"
         inline
         round
-      ></v-button>      
+      ></v-button>
     </slot>
   </div>
 </template>
@@ -54,7 +54,12 @@ export default {
     elId: {
       type: String,
       default: ''
-    }
+    },
+    // Whether the backTop functionality is enabled
+    backTop: {
+      type: Boolean,
+      default: true
+    }    
   },
 
   setup(props, { emit }) {
@@ -84,10 +89,13 @@ export default {
     })
 
     const onBtnClick = () => {
-      if (scrollEl === window) {
-        window.scrollTo(0, 0)
-      } else if (scrollEl instanceof HTMLElement) {
-        scrollEl.scrollTop = 0
+      // Whether the backTop functionality is enabled
+      if (props.backTop) {
+        if (scrollEl === window) {
+          window.scrollTo(0, 0)
+        } else if (scrollEl instanceof HTMLElement) {
+          scrollEl.scrollTop = 0
+        }
       }
       emit('on-click')
     }

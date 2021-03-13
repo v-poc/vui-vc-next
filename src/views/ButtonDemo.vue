@@ -24,14 +24,21 @@
       icon="success"
       inline
       round
-    >Inline Button</v-button>
+    >Inline Default Button</v-button>
+    <v-button
+      type="primary"
+      icon="setting"
+      size="small"
+      inline
+      round
+    >Inline Primary Button</v-button>
     <v-button
       type="primary"
       icon="edit"
       size="small"
       inline
       round
-    ></v-button>    
+    ></v-button>
   </div>
   <div class="v-example">
     <p>Button Text link</p>
@@ -152,12 +159,27 @@
     </v-popup>
   </div>
   <v-fab
-    @on-click="onClickButton"
     :right="25"
-    :distance="80"
+    :distance="60"
+    @on-click="onClickButton"
   >
     <img v-lazy="'https://nikoni.top/images/others/mj.png'" />
     BackTop
+  </v-fab>
+  <v-fab
+    :back-top="false"
+    :bottom="200"
+    :distance="80"
+    @on-click="showPopup('like', true)"
+  >
+    <v-button
+      class="v-fab-btn"
+      type="warning"
+      icon="share"
+      size="small"
+      inline
+      round
+    ></v-button>  
   </v-fab>
 </template>
 
