@@ -5,25 +5,29 @@
     @click="onBtnClick"
   >
     <slot>
-      <v-icon
-        class="v-fab-icon"
-        name="arrow-up"
-        size="lg"
-      ></v-icon>
+      <v-button
+        class="v-fab-btn"
+        type="primary"
+        icon="arrow-up"
+        size="small"
+        inline
+        round
+      ></v-button>      
     </slot>
   </div>
 </template>
 
 <script>
 import { computed, reactive, ref, onMounted, onUnmounted } from 'vue'
-import VIcon from '../icon/index.vue'
+import VButton from './index.vue'
 import useEventListener from '../../composables/useEventListener'
 
 export default {
   name: 'v-fab',
 
   components: {
-    VIcon
+    // VIcon,
+    VButton
   },
 
   props: {
@@ -138,8 +142,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/vui-variables.scss';
-
 .v-fab {
   display: none;
   position: fixed;
@@ -149,13 +151,10 @@ export default {
 
   &.show-fab {
     display: block;
-    width: 80px;
-    height: 80px;
-    background: $color-primary;
-    color: $color-bg-base;
-    border: 1px solid rgba(224, 224, 224, 1);
-    border-radius: 50%;
-    display: flex;    
+    min-width: 80px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;   
     justify-content: center;
     align-items: center;
   }
@@ -167,5 +166,13 @@ export default {
   &-icon {
     transition: all 300ms ease-in-out;
   }
+
+  &-btn.v-button.inline.small {
+    padding: 0 10px;
+
+    .v-button-content {
+      padding: 0;
+    }    
+  }  
 }
 </style>
