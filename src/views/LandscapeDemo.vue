@@ -117,9 +117,4 @@ export default {
     width: auto;
   }
 }
-
-.v-example-op {
-  padding-top: 150px;
-  height: 550px;
-}
 </style>

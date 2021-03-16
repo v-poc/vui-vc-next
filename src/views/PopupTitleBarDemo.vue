@@ -255,11 +255,6 @@ export default {
   width: 100vw;
 }
 
-.v-example-op {
-  padding-top: 150px;
-  height: 550px;
-}
-
 .v-example-op-default {
   height: 350px;
   background: #fff;

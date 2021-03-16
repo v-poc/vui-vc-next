@@ -135,9 +135,4 @@ export default {
 ::v-deep(.v-landscape-content) {
   width: 100vw;
 }
-
-.v-example-op {
-  padding-top: 150px;
-  height: 550px;
-}
 </style>
