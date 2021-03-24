@@ -1,6 +1,6 @@
-module.exports = () => {
+module.exports = (ctx) => {
   const plugins = {
-    'postcss-pxtorem': {
+    'postcss-pxtorem': /docs$/.test(ctx.cwd) ? {} : {
       rootValue: 100,
       minPixelValue: 2,
       propWhiteList: []

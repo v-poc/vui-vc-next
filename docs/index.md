@@ -31,3 +31,9 @@ title: Index
 ## License
 
 <img src="https://nikoni.top/images/niko-mit.png" alt="MIT License" width="396" height="250"/>
+
+<v-fab>BackTop</v-fab> 
+
+<script setup>
+import VFab from '../src/components/button/fab.vue'
+</script>
