@@ -47,3 +47,9 @@ Button click event
 |Props | Description | Type |
 |----|-----|------|
 |action|object corresponding to the clicked button in the actions list|Object: ActionOptions|
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

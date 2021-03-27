@@ -33,15 +33,9 @@ title: Index
 <img src="https://nikoni.top/images/niko-mit.png" alt="MIT License" width="396" height="250"/>
 
 <v-one-piece />
-<v-fab v-if="compFlag">BackTop</v-fab>
+<v-back-top />
 
 <script setup>
-import { ref, onMounted } from 'vue'
 import VOnePiece from '../src/components/misc/op.vue'
-import VFab from '../src/components/button/fab.vue'
-
-const isDev = import.meta.env.DEV
-const compFlag = ref(isDev)
-
-onMounted(() => !isDev && (compFlag.value = true))
+import VBackTop from './components/misc/backTop.vue'
 </script>

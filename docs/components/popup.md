@@ -54,3 +54,9 @@ Popup will be hiden
 
 ##### @hide()
 Hide popup
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

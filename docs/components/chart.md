@@ -41,3 +41,9 @@ Array of objects, each object defines a set of polyline-relevant attributes.
   values: [15, 20]  // array
 }
 ```
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

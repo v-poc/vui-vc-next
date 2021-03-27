@@ -35,3 +35,9 @@ app.component(VButton.name, VButton)
 
 ##### @click(event)
 Button click event
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

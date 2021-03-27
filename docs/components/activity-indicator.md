@@ -27,3 +27,9 @@ app.component(VActivityIndicator.name, VActivityIndicator)
 |text-color|The text color|String|`#999`|or reset `.md-activity-indicator-text` style directly|
 |text-size|The text font size|String|`70px`|or reset `.md-activity-indicator-text` style directly|
 |vertical|Whether the icon and text are displayed vertically|Boolean|`false`|-|
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

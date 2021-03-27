@@ -41,3 +41,9 @@ app.component(VResultPage.name, VResultPage)
 |iconSvg |use svg icon|Boolean|`false`|-|
 |inactive |-|Boolean|`false`|-|
 |loading |-|Boolean|`false`|-|
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

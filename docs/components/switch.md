@@ -26,3 +26,9 @@ app.component(VSwitch.name, VSwitch)
 #### Switch Instance Events
 
 ##### @change(e)
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

@@ -49,3 +49,9 @@ Show ActionSheet
 ##### @hide()
 
 Hide ActionSheet
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

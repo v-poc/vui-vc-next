@@ -38,3 +38,9 @@ slot inside circle, generally used to add text
 
 ##### defs
 slot inside circle svg, generally used to add `defs`, `use` elements, etc
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

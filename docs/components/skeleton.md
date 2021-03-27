@@ -27,3 +27,9 @@ app.component(VSkeleton.name, VSkeleton)
 |title-width|The width of title placeholders|Number, String| 40%|-|
 |row|The number of rows|Number|3|-|
 |row-width|The width of rows|String, Number, Array\<String\|Number\>|100%|-|
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

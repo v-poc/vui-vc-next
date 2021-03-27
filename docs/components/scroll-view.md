@@ -53,3 +53,9 @@ app.component(VScrollView.name, VScrollView)
 |is-finished | all loaded | Boolean | `false` | - |
 |loading-text | loading text | String | `Loading more...` | - |
 |finished-text | loaded text | String | `Already loaded.` | - |
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

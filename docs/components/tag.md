@@ -27,3 +27,9 @@ app.component(VTag.name, VTag)
 |fill-color|The background color of tag|String|`rgba(0,0,0,0)`|`rgba` or `hex number`|
 |font-color|The font color of tag|String|`#fc9153`|`rgba` or `hex number`|
 |font-weight|The font weight of tag|String|`normal`|`normal`, `bold`, `bolder`|
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

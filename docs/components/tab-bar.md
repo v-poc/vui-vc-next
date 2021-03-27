@@ -41,3 +41,9 @@ selected item index changes
 | item | object of previous selected menu | Object |
 | index | index of current selected menu | Number |
 | index | index of previous selected menu | Number |
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

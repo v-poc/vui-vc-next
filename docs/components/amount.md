@@ -28,3 +28,9 @@ app.component(VAmount.name, VAmount)
 |is-capital|Whether the number should be converted to Chinese capital|Boolean|`false`|-|
 |is-animated|Whether show animation when value changes|Boolean|`false`|-|
 |duration|The animation duration|Number|`1000`|unit `ms`|
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

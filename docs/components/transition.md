@@ -24,3 +24,9 @@ Transition effects
 - `v-bounce`
 - `v-punch`
 - `v-zoom`
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

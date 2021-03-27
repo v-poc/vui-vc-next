@@ -24,3 +24,9 @@ app.component(VIcon.name, VIcon)
 |size|The icon size|String|`md`|`xs`, `sm`, `md`, `lg`|
 |color|The icon color|String|`currentColor`|this color value is set as the value of `fill` on the `svg` icon|
 |svg|Whether use SVG icon|Boolean|`false`|-|
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

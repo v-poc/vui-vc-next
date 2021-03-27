@@ -28,3 +28,9 @@ app.component(VAgree.name, VAgree)
 
 ##### @change(name, checked)
 Invoked when checked state is changed
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

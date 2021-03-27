@@ -44,3 +44,9 @@ when user selects tab
 |Props | Description | Type|
 |----|-----|------|
 | tab | object of selected tab | Object:{name: String, label: String, disabled: Boolean}|
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>

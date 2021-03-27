@@ -34,3 +34,9 @@ Default slot of content
 
 ##### watermark
 scoped slot of watermark content
+
+<v-back-top />
+
+<script setup>
+import VBackTop from './misc/backTop.vue'
+</script>
