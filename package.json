@@ -54,11 +54,11 @@
     "serve-build": "vite build && cd ./dist && vite"
   },
   "dependencies": {
-    "vue": "^3.0.8"
+    "vue": "^3.0.9"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.0",
-    "@vue/compiler-sfc": "^3.0.8",
+    "@vue/compiler-sfc": "^3.0.9",
     "postcss-pxtorem": "^6.0.0",
     "sass": "^1.32.8",
     "vite": "^2.1.3",
