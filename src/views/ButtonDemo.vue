@@ -133,6 +133,7 @@
       </video>
       <v-button
         type="primary"
+        size="small"
         round
         @click="showPopup('fullscreenMode', false)"
       >Close the popup</v-button>

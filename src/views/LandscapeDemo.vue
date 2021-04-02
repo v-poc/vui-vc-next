@@ -53,14 +53,8 @@
     <v-landscape
       v-model:value="popupShow.fullscreenMode"
       fullscreen
-      :show-close="false"
     >
-      <img v-lazy="'https://nikoni.top/images/others/kongfu.png'" />
-      <v-button
-        type="primary"
-        round
-        @click="showPopup('fullscreenMode', false)"
-      >Close the popup</v-button>      
+      <img v-lazy="'https://nikoni.top/images/others/kongfu.png'" />      
     </v-landscape>
   </div>
 </template>
