@@ -1,6 +1,6 @@
 {
   "name": "vui-vc-next",
-  "version": "0.13.9",
+  "version": "0.13.10",
   "description": "Mobile web UI components based on Vue 3 and Vite",
   "files": [
     "dist/style.css",
