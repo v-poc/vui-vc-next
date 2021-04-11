@@ -14,6 +14,7 @@
   - [x] [Vue 3 SFC support via @vitejs/plugin-vue](https://github.com/vitejs/vite/tree/main/packages/plugin-vue) [![npm](https://img.shields.io/npm/v/@vitejs/plugin-vue.svg)](https://npmjs.com/package/@vitejs/plugin-vue)
   - [x] [HMR](https://vitejs.dev/guide/features.html#hot-module-replacement)
   - [x] [Dev Server Proxy](https://vitejs.dev/config/#server-proxy)
+  - [x] [Library Mode](https://vitejs.dev/guide/build.html#library-mode)
   - [x] [CSS Pre-processors](https://vitejs.dev/guide/features.html#css-pre-processors)
     - [x] [Sass](https://sass-lang.com/) [![npm](https://img.shields.io/pub/v/sass.svg)](https://www.npmjs.com/package/sass)
   - [x] [PostCSS](https://vitejs.dev/guide/features.html#postcss)
