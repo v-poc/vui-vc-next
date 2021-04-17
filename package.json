@@ -13,7 +13,8 @@
     ".": {
       "import": "./dist/vui-vc-next.es.js",
       "require": "./dist/vui-vc-next.umd.js"
-    }
+    },
+    "./": "./dist"
   },
   "repository": {
     "type": "git",
