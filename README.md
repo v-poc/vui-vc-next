@@ -3,10 +3,8 @@
 [![npm](https://img.shields.io/npm/v/vui-vc-next)](https://www.npmjs.com/package/vui-vc-next) <a href="https://nikoni.top/vui-vc-next/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a>
 
 > Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **Vue 3** and **Vite 2**.
->
-> `VUI.next` is for `Vite 2.x` and onward. Vite 1.x's demo is [archived](https://www.npmjs.com/package/vui-vc-next?activeTab=versions).
 
-### Contains
+## Contains
 
 - [x] [Vue](https://v3.vuejs.org/) [![npm](https://img.shields.io/npm/v/vue/next.svg)](https://www.npmjs.com/package/vue/v/next)
 - [x] [Vue Router](https://router.vuejs.org/) [![npm](https://img.shields.io/npm/v/vue-router/next.svg)](https://www.npmjs.com/package/vue-router/v/next)
@@ -21,19 +19,19 @@
     - [x] [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) [![npm](https://badge.fury.io/js/postcss-pxtorem.svg)](https://www.npmjs.com/package/postcss-pxtorem)
 - [x] [Vitepress](https://github.com/vuejs/vitepress) [![npm](https://img.shields.io/npm/v/vitepress)](https://www.npmjs.com/package/vitepress)
 
-### Preview
+## Preview
 
 You can scan the [QR code](https://nikoni.top/images/vui-vc-qrcode.png) to access the examples on mobile/tablet device:
 
 <img src="https://nikoni.top/images/vui-vc-qrcode.png" alt="VUI Examples" width="222" height="242"/>
 
-### Status
+## Status
 
 - More UI components WIP based on Vue 3.
 - Currently JavaScript version only, will provide TypeScript codebase in next major version.
 - About project test, will provide unit/e2e test in next major version.
 
-### Usage
+## Usage
 
 Select the components you need to build your web App. Please check [VUI-POC](https://github.com/bluepower/vui-poc) for some reference.
 
@@ -44,6 +42,8 @@ Select the components you need to build your web App. Please check [VUI-POC](htt
 - react native
 
 > The mobile-first responsive-UI is also fit for desktop web.
+>
+> `VUI.next` is for `Vite 2.x` (Library Mode) and onward. Vite 1.x's demo is [archived](https://www.npmjs.com/package/vui-vc-next?activeTab=versions).
 
 ## Project setup
 
@@ -81,7 +81,7 @@ npm run dev-docs
 npm run build-docs
 ```
 
-### Customize configuration
+## Customize configuration
 
 About vite and vitepress, please check Configuration Reference - [vite](https://vitejs.dev/config/), [vitepress](https://vitepress.vuejs.org).
 
