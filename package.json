@@ -63,7 +63,7 @@
     "postcss-pxtorem": "^6.0.0",
     "sass": "^1.32.11",
     "vite": "^2.2.3",
-    "vitepress": "^0.13.0",
+    "vitepress": "^0.13.2",
     "vue-router": "^4.0.6"
   },
   "engines": {
