@@ -28,6 +28,10 @@ title: Index
 - [`VTabBar`](./components/tab-bar)
 - [`VTabs`](./components/tabs)
 
+## Preview
+
+Try [QR code SFC playground](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRlPlxuICA8aDE+VlVJLm5leHQ8L2gxPlxuICA8aDM+c2NhbiB0aGUgUVIgY29kZSB0byBhY2Nlc3MgdGhlIGV4YW1wbGVzIG9uIG1vYmlsZS90YWJsZXQgZGV2aWNlOjwvaDM+XG4gIDxkaXYgdi1odG1sPVwiaW1nXCI+PC9kaXY+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0IHNldHVwPlxuaW1wb3J0IHFyY29kZSBmcm9tICd2LXFyLWNvZGUtbmV4dCdcblxuY29uc3QgdHlwZU51bWJlciA9IDgsIGVycm9yQ29ycmVjdGlvbkxldmVsID0gJ0wnXG5jb25zdCBxciA9IHFyY29kZSh0eXBlTnVtYmVyLCBlcnJvckNvcnJlY3Rpb25MZXZlbClcbnFyLmFkZERhdGEoJ2h0dHBzOi8vbmlrb25pLnRvcC92dWktdmMtbmV4dC8nKS5tYWtlKClcblxuY29uc3QgaW1nID0gcXIuY3JlYXRlSW1nVGFnKClcbjwvc2NyaXB0PlxuIiwiaW1wb3J0LW1hcC5qc29uIjoie1xuICBcImltcG9ydHNcIjoge1xuICAgIFwidi1xci1jb2RlLW5leHRcIjogXCJodHRwczovL3VucGtnLmNvbS92LXFyLWNvZGUtbmV4dEAwLjEuNi9kaXN0L3YtcXItY29kZS1uZXh0LmVzLmpzXCJcbiAgfVxufSJ9) to scan to access the examples on mobile/tablet device.
+
 ## License
 
 <img src="https://nikoni.top/images/niko-mit.png" alt="MIT License" width="396" height="250"/>
