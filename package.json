@@ -62,7 +62,7 @@
     "@vue/compiler-sfc": "^3.0.11",
     "postcss-pxtorem": "^6.0.0",
     "sass": "^1.32.12",
-    "vite": "^2.2.3",
+    "vite": "^2.2.4",
     "vitepress": "^0.13.2",
     "vue-router": "^4.0.6"
   },
