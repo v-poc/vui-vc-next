@@ -1,3 +1,7 @@
+# 0.13.19 (2021-06-16)
+
+Updated deps.
+
 # 0.13.0 (2021-03-12)
 
 Added FAB (Floating Action Button) demo.
