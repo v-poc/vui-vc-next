@@ -97,7 +97,7 @@ export default {
           ? `${props.titleWidth}%`
           : props.titleWidth
       }
-      return DEFAULT_TITLE_WIDTH
+      return SKELETON_WIDTH.DEFAULT_TITLE
     }
 
     // get row width
@@ -113,7 +113,7 @@ export default {
             : props.rowWidth
         }
       }
-      return DEFAULT_ROW_WIDTH
+      return SKELETON_WIDTH.DEFAULT_ROW
     }
 
     // row width style
