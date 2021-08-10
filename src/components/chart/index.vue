@@ -401,21 +401,21 @@ export default {
     stroke-width: 1;
     stroke-linecap: butt;
   }
-}
 
-.v-chart-axis-y {
-  text {
-    fill: $chart-text-color;
-    font-size: $chart-value-size;
-    text-anchor: end;
+  &-axis-y {
+    text {
+      fill: $chart-text-color;
+      font-size: $chart-value-size;
+      text-anchor: end;
+    }
   }
-}
 
-.v-chart-axis-x {
-  text {
-    fill: $chart-text-color;
-    font-size: $chart-label-size;
-    text-anchor: middle;
+  &-axis-x {
+    text {
+      fill: $chart-text-color;
+      font-size: $chart-label-size;
+      text-anchor: middle;
+    }
   }
 }
 </style>
