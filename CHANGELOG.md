@@ -2,7 +2,7 @@
 
 Updated deps for Vue.js `3.2` "Quintessential Quintuplets".
 
-> [Vue 3.2.0 is released](https://blog.vuejs.org/posts/vue-3.2.html) on 9 Aug.
+> [Vue 3.2 is released](https://blog.vuejs.org/posts/vue-3.2.html) on 5 Aug (or 9 Aug maybe).
 
 # 0.13.19 (2021-06-16)
 
