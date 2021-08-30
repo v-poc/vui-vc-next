@@ -54,6 +54,7 @@ class ImageManager {
     if (src !== currentSrc) {
       this.src = src
       this.state = LoadImageState.loading
+      this.load()
     }
   }
 
