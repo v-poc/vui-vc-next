@@ -5,7 +5,7 @@ module.exports = {
   description: 'The docs of VUI.next',
 
   themeConfig: {
-    repo: 'bluepower/vui-vc-next',
+    repo: 'v-poc/vui-vc-next',
     repoLabel: 'VUI.next',
     docsDir: 'docs',
 
@@ -19,22 +19,22 @@ module.exports = {
       },
       {
         text: 'Changelog',
-        link: 'https://github.com/bluepower/vui-vc-next/blob/dev/CHANGELOG.md'
+        link: 'https://github.com/v-poc/vui-vc-next/blob/dev/CHANGELOG.md'
       },
       {
         text: 'Links',
         items: [
           {
             text: 'VUI Poc',
-            link: 'https://github.com/bluepower/vui-poc'
+            link: 'https://github.com/v-poc/vui-poc'
           },
           {
             text: 'VUI Taro',
-            link: 'https://github.com/bluepower/vui-taro'
+            link: 'https://github.com/bluepower/vui-taro-poc'
           },
           {
             text: 'Vite CubeUI Poc',
-            link: 'https://github.com/bluepower/vite-cubeui-poc'
+            link: 'https://github.com/v-poc/vite-cubeui-poc'
           }
         ]
       }
