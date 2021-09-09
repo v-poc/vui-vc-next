@@ -65,6 +65,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@use "sass:math";
+
 $width: 150Px;
 $height: $width;
 $length: $width;
@@ -102,27 +104,27 @@ $length: $width;
       color: #fff;
       &.front {
         background-color: #f66;
-        transform: translateZ($length / 2);
+        transform: translateZ(math.div($length, 2));
       }
       &.back {
         background-color: #66f;
-        transform: rotateY(180deg) translateZ($length / 2);
+        transform: rotateY(180deg) translateZ(math.div($length, 2));
       }
       &.top {
         background-color: #f90;
-        transform: rotateX(90deg) translateZ($height / 2);
+        transform: rotateX(90deg) translateZ(math.div($height, 2));
       }
       &.bottom {
         background-color: #09f;
-        transform: rotateX(-90deg) translateZ($height / 2);
+        transform: rotateX(-90deg) translateZ(math.div($height, 2));
       }
       &.left {
         background-color: #9c3;
-        transform: rotateY(-90deg) translateZ($width / 2);
+        transform: rotateY(-90deg) translateZ(math.div($width, 2));
       }
       &.right {
         background-color: #3c9;
-        transform: rotateY(90deg) translateZ($width / 2);
+        transform: rotateY(90deg) translateZ(math.div($width, 2));
       }
     }
   }

@@ -1,3 +1,7 @@
+# 0.13.24 (2021-09-09)
+
+Fixed sass warning to use math.div(...).
+
 # 0.13.21 (2021-08-10)
 
 Updated deps for Vue.js `3.2` "Quintessential Quintuplets".
