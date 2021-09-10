@@ -59,9 +59,9 @@
     "@vitejs/plugin-vue": "^1.6.2",
     "@vue/compiler-sfc": "^3.2.11",
     "postcss-pxtorem": "^6.0.0",
-    "sass": "^1.39.0",
+    "sass": "^1.39.2",
     "vite": "^2.5.6",
-    "vitepress": "^0.17.2",
+    "vitepress": "^0.17.3",
     "vue": "^3.2.11",
     "vue-router": "^4.0.11"
   },
