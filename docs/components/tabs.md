@@ -43,7 +43,7 @@ when user selects tab
 
 |Props | Description | Type|
 |----|-----|------|
-| tab | object of selected tab | Object:{name: String, label: String, disabled: Boolean}|
+| tab | object of selected tab | `Object:{name: String, label: String, disabled: Boolean}`|
 
 <v-back-top />
 

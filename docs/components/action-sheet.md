@@ -36,7 +36,7 @@ Select event
 
 |Props | Description | Type |
 |----|-----|------|
-|item|selected value|Object: {label, value}|
+|item|selected value|`Object: {label, value}`|
 
 ##### @cancel()
 
