@@ -1,6 +1,6 @@
 # 0.13.25 (2021-09-29)
 
-Updated version for vite (`v2.6.0`).
+Updated to pin version for vite (`v2.5.10`) as `v2.6.0` builds bigger size for `es` lib.
 
 # 0.13.24 (2021-09-09)
 
