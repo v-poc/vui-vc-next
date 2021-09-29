@@ -1,3 +1,7 @@
+# 0.13.25 (2021-09-29)
+
+Updated version for vite (`v2.6.0`).
+
 # 0.13.24 (2021-09-09)
 
 Fixed sass warning to use math.div(...).

@@ -54,12 +54,12 @@ Select the components you need to build your web App. Please check [VUI-POC](htt
 
 ### How to setup your project
 ```
-npm install
+npm i
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run dev
+npm start
 ```
 
 ### Compiles and minifies for production
