@@ -18,11 +18,11 @@ app.component(VAgree.name, VAgree)
 ## API
 
 #### Agree Props
-| Props | Description | Type | Default |
+| Props | Description | Type | Default | Note |
 |----|-----|------|------|------|
-| v-model | checked | Boolean | `false` |-|
-| disabled | - | Boolean | `false` |-|
-| size | size of icon | String | `md` | refer to `VIcon` for optional values |
+| v-model | checked | `Boolean` | `false` | - |
+| disabled | - | `Boolean` | `false` | - |
+| size | size of icon | `String` | `md` | refer to `VIcon` for optional values |
 
 #### Agree Instance Events
 

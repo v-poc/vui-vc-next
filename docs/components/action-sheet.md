@@ -20,14 +20,14 @@ app.component(VActionSheet.name, VActionSheet)
 
 #### ActionSheet Props
 |Props | Description | Type | Default | Note |
-|----|-----|------|------|------|------|
-|v-model|display ActionSheet or not|Boolean|`false`|-|
-|title|title of ActionSheet|String|-|-|
-|options|options of ActionSheet|Array<{label, value}>| [] |-|
-|default-index|default selected index|Boolean|0|-|
-|invalid-index|invalid index|Number|-1|-|
-|cancel-text|cancel text|String|`Cancel`|-|
-|large-radius|large radius|Boolean|`true`|-|
+|----|-----|------|------|------|
+|v-model|display ActionSheet or not| `Boolean` | `false` | - |
+|title|title of ActionSheet| `String` | - | - |
+|options|options of ActionSheet|`Array<{label, value}>`| `[]` | - |
+|default-index|default selected index| `Boolean` | `0` | - |
+|invalid-index|invalid index| `Number` | `-1` | - |
+|cancel-text|cancel text| `String` | `Cancel` | - |
+|large-radius|large radius| `Boolean` | `true` | - |
 
 #### ActionSheet Events
 
@@ -36,7 +36,7 @@ Select event
 
 |Props | Description | Type |
 |----|-----|------|
-|item|selected value|`Object: {label, value}`|
+|item|selected value| `Object: {label, value}` |
 
 ##### @cancel()
 
