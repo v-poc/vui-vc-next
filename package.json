@@ -56,13 +56,13 @@
     "start": "vite"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.9.4",
-    "@vue/compiler-sfc": "^3.2.21",
+    "@vitejs/plugin-vue": "^1.10.0",
+    "@vue/compiler-sfc": "^3.2.22",
     "postcss-pxtorem": "^6.0.0",
     "sass": "^1.43.4",
     "vite": "2.5.10",
     "vitepress": "^0.20.1",
-    "vue": "^3.2.21",
+    "vue": "^3.2.22",
     "vue-router": "^4.0.12"
   },
   "engines": {
