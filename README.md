@@ -1,4 +1,4 @@
-# vui-vc-next (aka VUI.next)
+# vui-vc-next (aka VUI.VC.next)
 
 [![npm](https://img.shields.io/npm/v/vui-vc-next)](https://www.npmjs.com/package/vui-vc-next) <a href="https://nikoni.top/vui-vc-next/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a>
 
@@ -38,9 +38,9 @@ Please note that vui-vc-next `v0.13.21+` contains code pre-compiled by Vue >= `3
 
 ## Usage
 
-Select the components you need to build your web App. Please check [VUI-POC](https://github.com/bluepower/vui-poc) for some reference.
+Select the components you need to build your web App. Please check [VUI-POC](https://github.com/v-poc/vui-poc) for some reference.
 
-[VUI (based on vue3)](https://github.com/bluepower/vui-vc-next) is able to run in cross-platform solutions by [Taro3](https://github.com/NervJS/taro). Please check [VUI-Taro](https://github.com/bluepower/vui-taro-poc) for some reference.
+[VUI (based on vue3)](https://github.com/v-poc/vui-vc-next) is able to run in cross-platform solutions by [Taro3](https://github.com/NervJS/taro). Please check [VUI-Taro](https://github.com/bluepower/vui-taro-poc) for some reference.
 - miniprogram (weapp/swan/alipay/tt/qq/jd) - `zh-CN` project
 - quickapp - `zh-CN` project
 - h5
@@ -48,7 +48,7 @@ Select the components you need to build your web App. Please check [VUI-POC](htt
 
 > The mobile-first responsive-UI is also fit for desktop web.
 >
-> `VUI.next` is for `Vite 2.x` (Library Mode) and onward. Vite 1.x's demo is [archived](https://www.npmjs.com/package/vui-vc-next?activeTab=versions).
+> `vui-vc-next` is for `Vite 2.x` (Library Mode) and onward. Vite 1.x's demo is [archived](https://www.npmjs.com/package/vui-vc-next?activeTab=versions). `VUI.VC.next` is the playground project of [`v-poc`](https://github.com/v-poc) Organization, the naming `VUI next` is not relavant to [`vue ui`](https://cli.vuejs.org/guide/creating-a-project.html#using-the-gui).
 
 ## Project setup
 
@@ -74,7 +74,7 @@ npm run build
 npm run build-demo
 ```
 
-## Project docs - [VUI-docs](https://nikoni.top/vui-vc-next/docs)
+## Project docs - [`VUI.VC.next` docs](https://nikoni.top/vui-vc-next/docs)
 
 ### Compiles docs for development
 ```
