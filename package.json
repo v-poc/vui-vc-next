@@ -5,7 +5,10 @@
   "files": [
     "dist/style.css",
     "dist/vui-vc-next.es.js",
-    "dist/vui-vc-next.umd.js"
+    "dist/vui-vc-next.umd.js",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
   ],
   "main": "dist/vui-vc-next.umd.js",
   "module": "dist/vui-vc-next.es.js",
