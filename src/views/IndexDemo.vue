@@ -2,7 +2,7 @@
   <div class="nav-wrapper">
     <p>
       <span class="title">vui</span>
-      <sub>.next</sub>
+      <sub>.vc.next</sub>
       <sub>v{{ state.version }}</sub>      
     </p>
     <dl>
