@@ -1,6 +1,12 @@
+# 0.13.28 (2022-02-07)
+
+Updated deps.
+
+> [Vue 3 is now the new default version](https://blog.vuejs.org/posts/vue-3-as-the-new-default.html) on 7 Feb.
+
 # 0.13.25 (2021-09-29)
 
-Updated to pin version for vite (`v2.5.10`) as `v2.6.0` builds bigger size for `es` lib.
+Updated to pin version for vite (`v2.5.10`) as `v2.6.0+` builds bigger size for `es` lib.
 
 # 0.13.24 (2021-09-09)
 
