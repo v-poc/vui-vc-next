@@ -40,6 +40,6 @@ Try [QR code SFC playground](https://sfc.vuejs.org/#eyJBcHAudnVlIjoiPHRlbXBsYXRl
 <v-back-top />
 
 <script setup>
-import VOnePiece from '../src/components/misc/op.vue'
+// import VOnePiece from '../src/components/misc/op.vue'
 import VBackTop from './components/misc/backTop.vue'
 </script>

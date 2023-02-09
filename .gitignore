@@ -4,6 +4,7 @@ node_modules
 dist
 dist-ssr
 /dist
+docs/.vitepress/cache
 
 # local env files
 .env.local

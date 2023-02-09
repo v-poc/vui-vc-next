@@ -8,6 +8,9 @@ module.exports = {
     repo: 'v-poc/vui-vc-next',
     repoLabel: 'VUI.next',
     docsDir: 'docs',
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/v-poc/vui-vc-next' }
+    ],
 
     editLinks: true,
     editLinkText: 'Suggest changes to this page',
@@ -50,7 +53,7 @@ module.exports = {
 function getConfigSidebar() {
   return [{
     text: 'VUI Components',
-    children: [
+    items: [
       {
         text: 'Index page',
         link: '/'

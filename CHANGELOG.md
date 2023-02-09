@@ -1,3 +1,7 @@
+# 0.13.29 (2023-02-09)
+
+Updated to switch to Vite 4.
+
 # 0.13.28 (2022-02-07)
 
 Updated deps.
@@ -143,6 +147,7 @@ Added Watermark demo.
 # 0.1.0 (2020-10-11)
 
 VUI (based on vue3) is able to run in cross-platform solutions by [Taro3](https://github.com/NervJS/taro).
+
 - miniprogram (weapp/swan/alipay/tt/qq/jd) - `zh-CN` project
 - quickapp - `zh-CN` project
 - h5
