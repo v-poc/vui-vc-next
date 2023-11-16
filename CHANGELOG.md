@@ -1,3 +1,7 @@
+# 0.13.33 (2023-11-16)
+
+Updated to switch to [Vite 5](https://vitejs.dev/blog/announcing-vite5).
+
 # 0.13.32 (2022-05-13)
 
 Updated to upgrade to `vue@3.3.2`.
