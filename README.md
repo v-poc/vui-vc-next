@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/vui-vc-next)](https://www.npmjs.com/package/vui-vc-next) <a href="https://nikoni.top/vui-vc-next/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a>
 
-> Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **Vue 3** and **Vite 4**.
+> Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **Vue 3** and **Vite 5**.
 
 ## Contains
 
@@ -48,7 +48,7 @@ Select the components you need to build your web App. Please check [VUI-POC](htt
 
 > The mobile-first responsive-UI is also fit for desktop web.
 >
-> `vui-vc-next` is for `Vite 4.x` (Library Mode) and onward. Vite 1.x's demo is [archived](https://www.npmjs.com/package/vui-vc-next?activeTab=versions). `VUI.VC.next` is the playground project of [`v-poc`](https://github.com/v-poc) Organization, the naming `VUI next` is not relavant to [`vue ui`](https://cli.vuejs.org/guide/creating-a-project.html#using-the-gui).
+> `vui-vc-next` is for `Vite 5.x` (Library Mode) and onward. Vite 1.x's demo is [archived](https://www.npmjs.com/package/vui-vc-next?activeTab=versions). `VUI.VC.next` is the playground project of [`v-poc`](https://github.com/v-poc) Organization, the naming `VUI next` is not relavant to [`vue ui`](https://cli.vuejs.org/guide/creating-a-project.html#using-the-gui).
 
 ## Project setup
 
