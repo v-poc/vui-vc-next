@@ -1,3 +1,7 @@
+# 0.13.35 (2024-12-27)
+
+Updated to switch to [Vite 6](https://vitejs.dev/blog/announcing-vite6).
+
 # 0.13.33 (2023-11-16)
 
 Updated to switch to [Vite 5](https://vitejs.dev/blog/announcing-vite5).

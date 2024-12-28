@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/vui-vc-next)](https://www.npmjs.com/package/vui-vc-next) <a href="https://nikoni.top/vui-vc-next/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a>
 
-> Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **Vue 3** and **Vite 5**.
+> Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **Vue 3** and **Vite 6**.
 
 ## Contains
 
@@ -48,20 +48,20 @@ Select the components you need to build your web App. Please check [VUI-POC](htt
 
 > The mobile-first responsive-UI is also fit for desktop web.
 >
-> `vui-vc-next` is for `Vite 5.x` (Library Mode) and onward. Vite 1.x's demo is [archived](https://www.npmjs.com/package/vui-vc-next?activeTab=versions). `VUI.VC.next` is the playground project of [`v-poc`](https://github.com/v-poc) Organization, the naming `VUI next` is not relavant to [`vue ui`](https://cli.vuejs.org/guide/creating-a-project.html#using-the-gui).
+> `vui-vc-next` is for `Vite 6.x` (Library Mode) and onward. Vite 1.x's demo is [archived](https://www.npmjs.com/package/vui-vc-next?activeTab=versions). `VUI.VC.next` is the playground project of [`v-poc`](https://github.com/v-poc) Organization, the naming `VUI next` is not relavant to [`vue ui`](https://cli.vuejs.org/guide/creating-a-project.html#using-the-gui).
 
 ## Project setup
 
 ### How to setup your project
 
 ```
-npm i
+pnpm i
 ```
 
 ### Compiles and hot-reloads for development
 
 ```
-npm start
+pnpm start
 ```
 
 ### Compiles and minifies for production
@@ -69,13 +69,13 @@ npm start
 #### build lib
 
 ```
-npm run build
+pnpm run build
 ```
 
 #### build demo
 
 ```
-npm run build-demo
+pnpm run build-demo
 ```
 
 ## Project docs - [`VUI.VC.next` docs](https://nikoni.top/vui-vc-next/docs)
@@ -83,13 +83,13 @@ npm run build-demo
 ### Compiles docs for development
 
 ```
-npm run dev-docs
+pnpm run dev-docs
 ```
 
 ### Compiles and minifies docs for production
 
 ```
-npm run build-docs
+pnpm run build-docs
 ```
 
 ## Customize configuration

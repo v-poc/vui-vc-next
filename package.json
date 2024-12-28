@@ -1,7 +1,7 @@
 {
   "name": "vui-vc-next",
-  "version": "0.13.34",
-  "description": "Mobile web UI components based on Vue 3 and Vite 5",
+  "version": "0.13.35",
+  "description": "Mobile web UI components based on Vue 3 and Vite 6",
   "files": [
     "dist/style.css",
     "dist/vui-vc-next.es.js",
@@ -38,9 +38,7 @@
     "vitepress",
     "vue3-vite-vitepress",
     "vue3-vite-vitepress-ui",
-    "vite5",
-    "vue3-vite5-ui",
-    "vue3-vite5-vitepress-ui"
+    "vite6"
   ],
   "author": "Niko Ni",
   "license": "MIT",
@@ -59,17 +57,19 @@
     "start": "vite"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.1.3",
+    "@vitejs/plugin-vue": "^5.2.1",
     "postcss-pxtorem": "^6.1.0",
     "sass": "1.77.6",
-    "vite": "^5.4.3",
-    "vitepress": "^1.3.4",
-    "vue": "^3.5.1",
-    "vue-router": "^4.4.3"
+    "vite": "^6.0.6",
+    "vitepress": "^1.5.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "engines": {
-    "node": "^18.0.0 || >=20.0.0"
+    "node": "^18.0.0 || >=20.0.0",
+    "pnpm": ">= 8"
   },
+  "packageManager": "pnpm@9.15.2",
   "browserslist": [
     "iOS >= 8",
     "Android > 4.0"
