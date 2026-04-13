@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/vui-vc-next)](https://www.npmjs.com/package/vui-vc-next) <a href="https://nikoni.top/vui-vc-next/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=3366cc" alt="docs & demos" /></a>
 
-> Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **Vue 3** and **Vite 6**.
+> Yet another **lightweight** and **Vite-powered** Mobile web UI components based on **Vue 3** and **Vite 7**.
 
 ## Contains
 
